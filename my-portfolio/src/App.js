@@ -2,47 +2,35 @@ import React from 'react';
 import './App.css';
 import './css/constants.css'
 
+// Run using:
+//cd my-portfolio
+//npm start
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* Navigation bar or menu could go here */}
-        <h1>Guadalupe<br></br>Cruz</h1>
-        <h2>Software Engineer</h2>
+
+      <nav className="Navigation">
+        <a href="#home" className="Name-link">Lupe</a>
+        <div className="Nav-links">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+        <div className = "App-title">
+          <h1>Guadalupe Cruz</h1>
+          <h2>Software Engineer</h2>
+        </div>
+
       </header>
-      <main>
-        {/* About Me Section */}
-        <section id="about">
-          <h2>About Me</h2>
-          <p>
-            Hello! I'm a software engineering student at CSUSM, graduating in Fall 2023. 
-            I'm passionate about building software that makes a difference.
-          </p>
-          {/* Add more personal details and a photo if you like */}
-        </section>
+      <main className = "App-main">
         
-        {/* Projects Section */}
-        <section id="projects">
-          <h2>Projects</h2>
-          {/* List a few projects here */}
-          <div className="project-item">
-            <h3>Project Name</h3>
-            <p>Short description of the project. What did you build, why, and what tools did you use?</p>
-            {/* Add a link to the project or a code repository */}
-          </div>
-          {/* Repeat for other projects */}
-        </section>
-        
-        {/* Contact Section */}
-        <section id="contact">
-          <h2>Contact Me</h2>
-          <p>You can reach me at my-email@example.com or follow me on GitHub.</p>
-          {/* Add a contact form or additional contact details */}
-        </section>
       </main>
       <footer>
-        {/* Footer content like social media links could go here */}
-        <p>© 2023 by Your Name. All rights reserved.</p>
+        <p>© 2023 by Guadalupe Cruz. All rights reserved.</p>
       </footer>
     </div>
   );

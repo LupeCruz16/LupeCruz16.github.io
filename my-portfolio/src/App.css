@@ -1,16 +1,7 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: var(--bg-200);
+  font-family: var(--font-primary),var(--font-secondary);
 }
 
 .App-header {
@@ -23,22 +14,69 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--bg-100);
+  color: var(--text-100);
+  position: relative;
+  z-index: 2;
 }
 
-.App-header h1{
+.Navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+  position: absolute;
+  top: 0;
+}
+
+.Navigation a{
+  color: var(--text-100);
+  text-decoration: none;
+  font-size: calc(5px + 2vmin);
+}
+
+.Name-link {
+  text-align: left;
+  flex-grow: 0;
+}
+
+.Nav-links {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 20px;
+}
+
+.App-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.App-title h1{
   font-size: calc(120px + 2vmin);
+  margin: 0;
+  padding-bottom: 0.5em;
 }
 
-.App-link {
-  color: #61dafb;
+.App-title h2{
+  font-size: calc(50px + 2vmin);
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-main {
+  background-image: url('./images/background_cont.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 300vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  top: -5vh;
 }
