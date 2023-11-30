@@ -7,7 +7,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         {/* Navigation bar or menu could go here */}
-        <h1>Welcome to My Portfolio</h1>
+        <h1>Guadalupe<br></br>Cruz</h1>
+        <h2>Software Engineer</h2>
       </header>
       <main>
         {/* About Me Section */}
