@@ -1,0 +1,19 @@
+{
+  "name": "My Portfolio",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "forwardPorts": [3000],
+
+  "customizations": {
+    "vscode": {
+        "settings": {"terminal.integrated.shell.linux": "/bin/bash"},
+        "extensions": [
+          "yandeu.five-server", 
+          "dbaeumer.vscode-eslint",
+          "ms-azuretools.vscode-docker"
+          ]
+        }
+  }
+}

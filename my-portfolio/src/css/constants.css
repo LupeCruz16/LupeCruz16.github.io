@@ -1,0 +1,17 @@
+:root{
+    /* Color Variables */
+    --primary-100:#8FBF9F;
+    --primary-200:#73a283;
+    --primary-300:#346145;
+    --accent-100:#856666;
+    --accent-200:#fff7f7;
+    --text-100:#FFFFFF;
+    --text-200:#e0e0e0;
+    --bg-100:#1f1f1f;
+    --bg-200:#2e2e2e;
+    --bg-300:#464646;
+    
+    /* Font Variables */
+    --font-primary: 'Open Sans', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
