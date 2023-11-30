@@ -13,7 +13,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   color: var(--text-100);
   position: relative;
   z-index: 2;
@@ -21,37 +20,42 @@
 
 .Navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 10px;
-  position: absolute;
+  position: relative;
   top: 0;
+  left: 0;
 }
 
 .Navigation a{
   color: var(--text-100);
   text-decoration: none;
   font-size: calc(5px + 2vmin);
+  padding: 30px;
 }
 
 .Name-link {
-  text-align: left;
-  flex-grow: 0;
+  position: absolute;
+  left: 60px;
+  top: 0;
 }
 
 .Nav-links {
+  position: relative;
   display: flex;
-  justify-content: center;
-  flex-grow: 1;
   gap: 20px;
+  justify-content: center;
 }
 
 .App-title {
-  display: flex;
-  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   align-items: center;
   justify-content: center; 
+  z-index: 1;
 }
 
 .App-title h1{
