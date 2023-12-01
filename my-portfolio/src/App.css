@@ -1,11 +1,23 @@
 .App {
   text-align: center;
+  color: var(--text-100);
   background-color: var(--bg-200);
   font-family: var(--font-primary),var(--font-secondary);
 }
 
+.App h1{
+  font-size: calc(50px + 2vmin);
+}
+
+.App h2{
+  font-size: calc(30px + 2vmin);
+}
+.App p{
+  font-size: calc(2px + 2vmin);
+}
+
 .App-header {
-  background-image: url('./images/background.png');
+  background-image: url('./images/bonsai_background_1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,9 +25,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--text-100);
   position: relative;
   z-index: 2;
+}
+
+.App-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, rgba(194,194,194,0), rgba(194,194,194,1));
+  z-index: -1;
 }
 
 .Navigation {
@@ -36,12 +58,6 @@
   padding: 30px;
 }
 
-.Name-link {
-  position: absolute;
-  left: 60px;
-  top: 0;
-}
-
 .Nav-links {
   position: relative;
   display: flex;
@@ -51,7 +67,7 @@
 
 .App-title {
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
   align-items: center;
   justify-content: center; 
@@ -69,8 +85,40 @@
   margin: 0;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease forwards;
+}
+
+.scroll-arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  animation: fadeIn 2s ease forwards, bounce 4s infinite;
+  user-select: none;
+}
+
+/* Keyframes for the bounce effect */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
 .App-main {
-  background-image: url('./images/background_cont.png');
+  background-image: url('./images/bonsai_background_2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -78,9 +126,66 @@
   height: 300vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
   z-index: 1;
   top: -5vh;
+}
+
+.About-me, .Projects{
+  display: flex;
+  align-items: center;
+  width: 100%; 
+  max-width: 1200px;
+  margin: auto; 
+  padding: 50px; 
+}
+.About-me-content, .Current-project{
+  text-align: left;
+  flex: 1;
+  padding-right: 30px;
+  max-width: 600px;
+}
+
+.About-me img{
+  flex: 1;
+  border-radius: 1%;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.Current-project h2, p{
+  margin-bottom: 0;
+}
+
+.Current-project-skills {
+  color: var(--accent-100);
+  margin-top: 0;
+  margin-left: 0;
+  position: relative;
+  display: flex;
+  gap: 60px;
+  justify-content: left;
+}
+
+.Projects img{
+  flex: 1;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-effect {
+  animation: spin 10s linear infinite;
 }
