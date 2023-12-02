@@ -152,11 +152,11 @@
   top: -5vh;
 }
 
-.App-main p{
+.App-main p {
   margin-top: 0;
 }
 
-.App-main h2{
+.App-main h2 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 2.5rem;
@@ -164,72 +164,16 @@
   line-height: 1.25;
 }
 
+.App-main img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.App-main *{
+  box-sizing: border-box;
+}
+
 /* Old stuff below */
-.Projects{
-  display: flex;
-  align-items: center;
-  width: 100%; 
-  max-width: 1200px;
-  margin: auto; 
-  padding: 50px; 
-}
-
-.Current-project{
-  text-align: left;
-  flex: 1;
-  padding-right: 30px;
-  max-width: 600px;
-}
-
-.Current-project h2 {
-  margin-bottom: 0;
-}
-
-.Current-project-skills button {
-  color: var(--accent-200);
-  background-color: var(--accent-100);
-  font-size: calc(2px + 2vmin);
-  margin-top: 0;
-  border: 2px solid var(--accent-100);
-  border-radius: 10px;
-}
-
-.githubLogo{
-  flex: 1;
-  width: 20%;
-  max-width: 40px;
-  height: auto;
-}
-
-.Current-project-skills {
-  margin-top: 0;
-  margin-left: 0;
-  position: relative;
-  display: flex;
-  gap: 20px;
-  justify-content: left;
-}
-
-.awsLogo{
-  flex: 1;
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.spin-effect {
-  animation: spin 10s linear infinite;
-}
-
 .Contact{
   display: flex;
   align-items: center;
@@ -260,8 +204,25 @@
   padding-bottom: 5rem;
 }
 
-.paddingSmall {
+.paddingSection-M-Bottom {
+  padding-bottom: 8rem;
+}
+
+.padding-S {
   padding: 1rem;
+}
+
+.padding-XS {
+  padding: 0.5rem;
+}
+
+.marginBottom {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .bottomMargin-XXL{
@@ -273,8 +234,28 @@
   margin-bottom: 0;
 }
 
+.textStyleCaption {
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.skillButton {
+  font-size: 1.2rem;
+  color: var(--accent-200);
+  background-color: var(--accent-100);
+  margin-top: 0;
+  border: 2px solid var(--accent-100);
+  border-radius: 5px;
+  margin-right: 20px
+}
+
+.backgroundColor-Secondary{
+  background-color: var(--bg-300);
+}
+
 /* Add new component sections as theyre made */
-.aboutMeComponent, .projectsComponent {
+.aboutMeComponent, .current-projectsComponent, .featured-ProjectsComponent {
   display: block;
 }
 
@@ -313,11 +294,8 @@
 }
 /* End of About Me Section */
 
-.backgroundColor-Secondary{
-  background-color: var(--bg-300);
-}
-
-.projectsComponent {
+/* Start of Current Project Section */
+.current-ProjectsComponent {
   grid-column-gap: 3rem;
   grid-row-gap: 3rem;
   background-color: var(--bg-300);
@@ -329,16 +307,63 @@
   display: grid;
 }
 
-.projectsContent-Left {
+.current-projectsContent-Left {
   text-align: left;
   max-width: 21rem;
 }
 
-.projectContents-Right {
+.current-projectContents-Right {
   grid-column-gap: 2rem;
   grid-row-gap: 4rem;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
   display: grid;
+}
+/* End of Current Project Section */
+
+/* Start of Existing Project Section */
+.featuredProjectsContent-top{
+  text-align: left;
+}
+
+.featuredProjectsContent-bottom {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
+.featuredProjectsContent-column {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
+.projectImages {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.divBlock4, .divBlock2 {
+  overflow: hidden;
+}
+
+.divBlock3 {
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-align: right;
+}
+
+.divBlock {
+  margin-top: 20px;
+  overflow: hidden;
+  text-align: left;
 }

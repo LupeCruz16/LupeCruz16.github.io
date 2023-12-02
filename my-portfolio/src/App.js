@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import './css/constants.css'
-import awsLogo from './images/aws_logo.png'
-import githubLogo from './images/github_logo.png'
 import disney from './images/disney.png'
 import museum from './images/museum.png'
 import concert from './images/taylor_swift_concert.png'
+import chatbot from './images/chatbot.png'
+import bookez from './images/bookEz.png'
 
 // Run using:
 //cd my-portfolio
@@ -134,8 +134,8 @@ function App() {
                         <br></br>
                         Or I am on another adventure with my girlfriend.
                       </p>
-                      <div className = "paddingSmall"></div>
-                      <div className = "bottomMargin-XXL"></div>
+                      <div className = "padding-S"></div>
+                      <div className = "marginBottom bottomMargin-XXL"></div>
                     </div>
                   </div>
 
@@ -162,17 +162,70 @@ function App() {
             <div className = "backgroundColor-Secondary">
               <div className = "paddingGlobal">
                 <div className= "largeContainer">
-                  <div className= "projectsComponent">
+                  <div className= "current-ProjectsComponent">
 
-                    <div className= "projectsContent-Left">
+                    <div className= "current-projectsContent-Left">
                       <h2>Projects</h2>
                       <p className = "textSizeL">
                         My current focus is on developing internal tools for SigParser by utilizing Large Language Models.
                       </p>
+                      <div className= "padding-XS"></div>
+                      <button className = "skillButton">AWS Bedrock</button>
+                      <button className = "skillButton">Langchain</button>
                     </div>
 
-                    <div className= "projectsContent-Right">
+                    <div className= "current-projectsContent-Right">
+                    <div class="imageWrapper">
+                        <img src={chatbot} alt="Chatbot"/>
+                      </div>
+                    </div>
 
+                  </div>
+                  <div className = "paddingSection-M-Bottom">
+                    <div className = "featured-ProjectsComponent">
+                      <div className = "marginBottom bottomMargin-XXL">
+                        <div className = "featuredProjectsContent-top">
+                          <div className = "textStyleCaption">Featured Projects</div>
+                          <div className = "padding-S"></div>
+                          <h2>I love exploring programming niches.</h2>
+                        </div>
+                      </div>
+                      <div className = "featuredProjectsContent-bottom">
+                        <div className = "featuredProjectsContent-column">
+                          <div className = "divBlock4">
+                            <img src = {bookez} 
+                            loading = "lazy"
+                            // sizes = "(max-width: 479px) 100vw, (max-width: 767px) 46vw, (max-width: 991px) 44vw, 46vw" 
+                            // srcset is used to display multople image sizes ex. img-500png, img-1080.png
+                            className = "projectImages"
+                            alt = "Project 1"/>
+                          </div>
+                          <div className = "divBlock3">
+                            <div className = "textStyleCaption">RoamReady</div>
+                            <p className = "textSizeL">
+                              A website designed to make ease of use when choosing a new travel location.
+                            </p>
+                            <button className = "skillButton">SQL</button>
+                          </div>
+                        </div>
+                        <div className = "featuredProjectsContent-column">
+                          <div className = "divBlock">
+                            <div className = "textStyleCaption">BookEz</div>
+                            <p className = "textSizeL">
+                              Bookkeeping management tool for eBay sellers.
+                            </p>
+                            <button className = "skillButton">Java</button>
+                          </div>
+                          <div className = "divBlock2">
+                            <img src = {bookez} 
+                              loading = "lazy"
+                              // sizes = "(max-width: 479px) 100vw, (max-width: 767px) 46vw, (max-width: 991px) 44vw, 46vw" 
+                              // srcset is used to display multople image sizes ex. img-500png, img-1080.png
+                              className = "projectImages"
+                              alt = "Project 1"/>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -181,33 +234,6 @@ function App() {
           </div>
         </div>
 
-        <div className = "Projects">
-          <div className = "Current-project">
-            <h1>Projects</h1>
-            <h2>Current Focus</h2>
-            <p>I am developing internal tools at <strong>SigParser</strong> by harnessing the capabilities of Large Language Models.</p>
-            <div className = "Current-project-skills">
-              <img src = {githubLogo} alt = "Github Logo" className = "githubLogo"></img>
-              <button>S3</button>
-              <button>Lambda</button>
-              <button>Langchain</button>
-            </div>
-          </div>
-          <div>
-            <img src = {awsLogo} alt = "Current Project" className = "spin-effect awsLogo"></img>
-          </div>
-        </div>
-
-        <div className = "Contact">
-          <div className = "Contact-content">
-
-          </div>
-          <h2>Open to freelance opportunities</h2>
-          <p>Have an exciting project idea you need help with?</p>
-          <p>Send me an email!</p>
-
-          <p></p>
-        </div>
       </main>
 
       <footer>
