@@ -2,18 +2,9 @@
   text-align: center;
   color: var(--text-100);
   background-color: var(--bg-200);
+  font-size: 1rem;
+  line-height: 1.6;
   font-family: var(--font-primary),var(--font-secondary);
-}
-
-.App h1{
-  font-size: calc(50px + 2vmin);
-}
-
-.App h2{
-  font-size: calc(30px + 2vmin);
-}
-.App p{
-  font-size: calc(2px + 2vmin);
 }
 
 .App-header {
@@ -49,20 +40,52 @@
   position: relative;
   top: 0;
   left: 0;
+  z-index: 10;
 }
 
 .Navigation a{
   color: var(--text-100);
   text-decoration: none;
   font-size: calc(5px + 2vmin);
-  padding: 30px;
+  padding-top: 30px;
 }
 
 .Nav-links {
   position: relative;
   display: flex;
-  gap: 20px;
+  gap: 50px;
   justify-content: center;
+}
+
+.Resume-button{
+  color: var(--accent-200);
+  background-color: var(--primary-100);
+  text-decoration: none;
+  font-size: calc(5px + 2vmin);
+  margin-top: 26px;
+  border: 2px solid var(--primary-100);
+  border-radius: 10px;
+}
+
+@keyframes dropdown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.sticky {
+  position: fixed;
+  background-color: rgba(194,194,194, 0.7); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  padding-bottom: 30px;
+  width: 100%;
+  animation: dropdown 0.5s ease-in-out forwards;
 }
 
 .App-title {
@@ -96,7 +119,7 @@
 
 .scroll-arrow {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
@@ -124,16 +147,25 @@
   background-repeat: no-repeat;
   width: 100vw;
   height: 300vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
   position: relative;
   z-index: 1;
   top: -5vh;
 }
 
-.About-me, .Projects{
+.App-main p{
+  margin-top: 0;
+}
+
+.App-main h2{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+/* Old stuff below */
+.Projects{
   display: flex;
   align-items: center;
   width: 100%; 
@@ -141,36 +173,44 @@
   margin: auto; 
   padding: 50px; 
 }
-.About-me-content, .Current-project{
+
+.Current-project{
   text-align: left;
   flex: 1;
   padding-right: 30px;
   max-width: 600px;
 }
 
-.About-me img{
-  flex: 1;
-  border-radius: 1%;
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-}
-
-.Current-project h2, p{
+.Current-project h2 {
   margin-bottom: 0;
 }
 
+.Current-project-skills button {
+  color: var(--accent-200);
+  background-color: var(--accent-100);
+  font-size: calc(2px + 2vmin);
+  margin-top: 0;
+  border: 2px solid var(--accent-100);
+  border-radius: 10px;
+}
+
+.githubLogo{
+  flex: 1;
+  width: 20%;
+  max-width: 40px;
+  height: auto;
+}
+
 .Current-project-skills {
-  color: var(--accent-100);
   margin-top: 0;
   margin-left: 0;
   position: relative;
   display: flex;
-  gap: 60px;
+  gap: 20px;
   justify-content: left;
 }
 
-.Projects img{
+.awsLogo{
   flex: 1;
   width: 100%;
   max-width: 600px;
@@ -188,4 +228,117 @@
 
 .spin-effect {
   animation: spin 10s linear infinite;
+}
+
+.Contact{
+  display: flex;
+  align-items: center;
+  width: 100%; 
+  max-width: 1200px;
+  margin: auto; 
+  padding: 50px; 
+}
+
+/* Everything that has been newly added */
+/* Constant styling */
+.paddingGlobal {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.largeContainer {
+  margin-right: auto !important;
+  margin-left: auto !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 80rem;
+}
+
+.paddingSection-M {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.paddingSmall {
+  padding: 1rem;
+}
+
+.bottomMargin-XXL{
+  margin: 5rem;
+}
+
+.textSizeL {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* Add new component sections as theyre made */
+.aboutMeComponent, .projectsComponent {
+  display: block;
+}
+
+/* About Me section */
+.aboutMeComponent {
+  flex-direction: column;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1.75fr;
+  grid-auto-columns: 1fr;
+  text-align: left;
+}
+
+.aboutMeContent {
+  grid-column-gap: 3rem;
+  grid-row-gap: 1.25rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1.75fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
+.lifestyleGallery {
+  display: flex; 
+  justify-content: space-around;
+  gap: 20px; 
+}
+
+.imageWrapper {
+  flex: 1; 
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 90%;
+  border-radius: 10px;
+}
+/* End of About Me Section */
+
+.backgroundColor-Secondary{
+  background-color: var(--bg-300);
+}
+
+.projectsComponent {
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+  background-color: var(--bg-300);
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1.75fr;
+  grid-auto-columns: 1fr;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  display: grid;
+}
+
+.projectsContent-Left {
+  text-align: left;
+  max-width: 21rem;
+}
+
+.projectContents-Right {
+  grid-column-gap: 2rem;
+  grid-row-gap: 4rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
 }

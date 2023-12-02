@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import './css/constants.css'
-import headshotImage from './images/headshot.jpg'
 import awsLogo from './images/aws_logo.png'
+import githubLogo from './images/github_logo.png'
+import disney from './images/disney.png'
+import museum from './images/museum.png'
+import concert from './images/taylor_swift_concert.png'
 
 // Run using:
 //cd my-portfolio
 //npm start
+
 function App() {
   // Create state to manage hover style for individual links
   const [hoveredLink, setHoveredLink] = React.useState(null);
@@ -26,6 +30,22 @@ function App() {
     transition: 'transform 0.3s ease',
   });
 
+  //Adding Navigation bar effect
+  const [isSticky, setSticky] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    setSticky(offset > 400);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
   // Create state for Software Engineer effect
   const [fadeIn, setFadeIn] = useState(false);
 
@@ -50,7 +70,7 @@ function App() {
     <div className="App">
 
       <header className="App-header">
-        <nav className="Navigation">
+        <nav className={`Navigation ${isSticky ? 'sticky' : ''}`}>
           <div className="Nav-links">
             <a 
               href="#aboutMe"
@@ -73,6 +93,14 @@ function App() {
               onMouseLeave={handleMouseLeave}
               >Contact
             </a>
+            <button 
+              href="#resume" 
+              className = "Resume-button"
+              style={linkStyle('resume')} 
+              onMouseEnter={() => handleMouseEnter('resume')} 
+              onMouseLeave={handleMouseLeave}
+              >Resume
+            </button>
           </div>
         </nav>
 
@@ -88,14 +116,68 @@ function App() {
       </header>
 
       <main className = "App-main">
-        <div className = "About-me">
-          <div className = "About-me-content">
-            <h1>About Me</h1>
-            <p>I am a Software Engineering student that has found a passion for programming.</p>
-            <p>Currently, my focus is on developing internal tools at SigParser, where I harness the capabilities of Large Language Models (LLMs) to enhance productivity and efficiency.</p>
+
+        <div className = "aboutMeSection">
+          <div className = "paddingGlobal">
+            <div className = "largeContainer">
+              <div className = "paddingSection-M">
+                <div className = "aboutMeComponent">
+
+                  <div className = "aboutMeContent">
+                    <div className = "aboutMeContent-Left">
+                      <h2>About Me</h2>
+                    </div>
+
+                    <div className = "aboutMeContent-Right">
+                      <p className = "textSizeL">Hi there, I am Lupe! When I am not at my computer I am at my computer watching anime.
+                        <br></br>
+                        <br></br>
+                        Or I am on another adventure with my girlfriend.
+                      </p>
+                      <div className = "paddingSmall"></div>
+                      <div className = "bottomMargin-XXL"></div>
+                    </div>
+                  </div>
+
+                  <div class="lifestyleGallery">
+                      <div class="imageWrapper">
+                        <img src={disney} alt="Disney"/>
+                      </div>
+                      <div class="imageWrapper">
+                        <img src={museum} alt = "Museum"/>
+                      </div>
+                      <div class="imageWrapper">
+                        <img src={concert} alt = "Taylor Swift Concert"/>
+                      </div>
+                    </div>
+
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <img src = {headshotImage} alt = "Guadalupes Headshot"></img>
+        </div>
+        
+        <div className = "projectsSection">
+          <div className = "paddingSection-M">
+            <div className = "backgroundColor-Secondary">
+              <div className = "paddingGlobal">
+                <div className= "largeContainer">
+                  <div className= "projectsComponent">
+
+                    <div className= "projectsContent-Left">
+                      <h2>Projects</h2>
+                      <p className = "textSizeL">
+                        My current focus is on developing internal tools for SigParser by utilizing Large Language Models.
+                      </p>
+                    </div>
+
+                    <div className= "projectsContent-Right">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -103,15 +185,16 @@ function App() {
           <div className = "Current-project">
             <h1>Projects</h1>
             <h2>Current Focus</h2>
-            <p>Developing internal tools at <strong>SigParser</strong> by harnessing the capabilities of Large Language Models.</p>
+            <p>I am developing internal tools at <strong>SigParser</strong> by harnessing the capabilities of Large Language Models.</p>
             <div className = "Current-project-skills">
-              <p>S3</p>
-              <p>Lambda</p>
-              <p>Langchain</p>
+              <img src = {githubLogo} alt = "Github Logo" className = "githubLogo"></img>
+              <button>S3</button>
+              <button>Lambda</button>
+              <button>Langchain</button>
             </div>
           </div>
           <div>
-            <img src = {awsLogo} alt = "Current Project" className = "spin-effect"></img>
+            <img src = {awsLogo} alt = "Current Project" className = "spin-effect awsLogo"></img>
           </div>
         </div>
 

@@ -1,15 +1,15 @@
 :root{
     /* Color Variables */
-    --primary-100:#ba9f81;
-    --primary-200:#9c8366;
-    --primary-300:#987e61;
-    --accent-100:#c9e4ca;
-    --accent-200:#6a826b;
+    --primary-100:#6a826b;
+    --primary-200:#98b299;
+    --primary-300:#fcfffd;
+    --accent-100:#776a82;
+    --accent-200:#fffcff;
     --text-100:#333333;
     --text-200:#5c5c5c;
-    --bg-100:#f6e9da;
-    --bg-200:#ecdfd0;
-    --bg-300:#c3b7a8;
+    --bg-100:#cccccc;
+    --bg-200:#c2c2c2;
+    --bg-300:#9b9b9b;
       
     /* Font Variables */
     --font-primary: 'Open Sans', sans-serif;
