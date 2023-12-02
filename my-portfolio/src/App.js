@@ -170,8 +170,8 @@ function App() {
                         My current focus is on developing internal tools for SigParser by utilizing Large Language Models.
                       </p>
                       <div className= "padding-XS"></div>
+                      <button className = "skillButton">Python</button>
                       <button className = "skillButton">AWS Bedrock</button>
-                      <button className = "skillButton">Langchain</button>
                     </div>
 
                     <div className= "current-projectsContent-Right">
@@ -183,6 +183,7 @@ function App() {
                   </div>
                   <div className = "paddingSection-M-Bottom">
                     <div className = "featured-ProjectsComponent">
+
                       <div className = "marginBottom bottomMargin-XXL">
                         <div className = "featuredProjectsContent-top">
                           <div className = "textStyleCaption">Featured Projects</div>
@@ -190,6 +191,7 @@ function App() {
                           <h2>I love exploring programming niches.</h2>
                         </div>
                       </div>
+
                       <div className = "featuredProjectsContent-bottom">
                         <div className = "featuredProjectsContent-column">
                           <div className = "divBlock4">
@@ -226,6 +228,7 @@ function App() {
                           </div>
                         </div>
                       </div>
+                      
                     </div>
                   </div>
                 </div>
@@ -234,6 +237,75 @@ function App() {
           </div>
         </div>
 
+        <div className = "tesimonialsSection">
+          <div className = "paddingGlobal">
+            <div className = "largeContainer">
+              <div className = "paddingSection-M">
+
+                <div className = "marginBottom bottomMargin-XXL">
+                  <div className = "maxWidth-M">
+                    <div className = "textStyleCaption testimonialsCaption">Testimonials</div>
+                  </div>
+                </div>
+
+                <div className = "testimonialsComponent">
+
+                  <div className = "testimonial">
+                    <p className = "textSizeL">Text</p>
+                    <div className = "testimonialClient">
+                      <div className = "testimonialImageWrapper">
+                        <img src = {disney} 
+                        loading = "lazy"
+                        class = "testimonialImage"
+                        alt = "testimonialClient1"
+                        />
+                      </div>
+                      <div className = "testimonialClientDetails">
+                        <div className = "textSizeM">Text</div>
+                        <div className = "textStyleMuted">Text</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className = "testimonial">
+                    <p className = "textSizeL">Text</p>
+                    <div className = "testimonialClient">
+                      <div className = "testimonialImageWrapper">
+                        <img src = {museum} 
+                        loading = "lazy"
+                        class = "testimonialImage"
+                        alt = "testimonialClient1"
+                        />
+                      </div>
+                      <div className = "testimonialClientDetails">
+                        <div className = "textSizeM">Text</div>
+                        <div className = "textStyleMuted">Text</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className = "testimonial">
+                    <p className = "textSizeL">Text</p>
+                    <div className = "testimonialClient">
+                      <div className = "testimonialImageWrapper">
+                        <img src = {concert} 
+                        loading = "lazy"
+                        class = "testimonialImage"
+                        alt = "testimonialClient1"
+                        />
+                      </div>
+                      <div className = "testimonialClientDetails">
+                        <div className = "textSizeM">Text</div>
+                        <div className = "textStyleMuted">Text</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
 
       <footer>
