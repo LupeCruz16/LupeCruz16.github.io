@@ -4,8 +4,7 @@
 Hi there! Welcome to the repository for my personal portfolio website. 
 
 ## Live Website
-You can access the live version of the website here: [Portfolio Website](#https://lupecruz16.github.io/)
-
+You can access the live version of the website here: https://lupecruz16.github.io/
 ## About the Website
 This portfolio website is hosted on GitHub Pages and was meticulously crafted using React. It showcases my projects, skills, and professional growth.
 
