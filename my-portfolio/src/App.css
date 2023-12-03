@@ -1,3 +1,9 @@
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
   color: var(--text-100);
@@ -47,7 +53,10 @@
   color: var(--text-100);
   text-decoration: none;
   font-size: calc(5px + 2vmin);
-  padding-top: 30px;
+}
+
+.navLinks {
+  margin-top: 30px;
 }
 
 .Nav-links {
@@ -57,14 +66,17 @@
   justify-content: center;
 }
 
-.Resume-button{
-  color: var(--accent-200);
+.resumeButton{
   background-color: var(--primary-100);
   text-decoration: none;
   font-size: calc(5px + 2vmin);
   margin-top: 26px;
   border: 2px solid var(--primary-100);
   border-radius: 10px;
+}
+
+.resumeText {
+  color: var(--accent-200);
 }
 
 @keyframes dropdown {
@@ -146,7 +158,6 @@
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 250vh;
   position: relative;
   z-index: 1;
   top: -5vh;

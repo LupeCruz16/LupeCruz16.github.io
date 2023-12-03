@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
 import './App.css';
 import './css/constants.css'
 import disney from './images/disney.png'
@@ -6,12 +7,13 @@ import museum from './images/museum.png'
 import concert from './images/taylor_swift_concert.png'
 import chatbot from './images/chatbot.png'
 import bookez from './images/bookEz.png'
+import roamReady from './images/roam_ready.png'
 import headshot from './images/headshot.jpg'
+import pacificTech from './images/pacific_tech_client.jpg'
 
 // Run using:
 //cd my-portfolio
 //npm start
-
 function App() {
   // Create state to manage hover style for individual links
   const [hoveredLink, setHoveredLink] = React.useState(null);
@@ -73,35 +75,55 @@ function App() {
       <header className="App-header">
         <nav className={`Navigation ${isSticky ? 'sticky' : ''}`}>
           <div className="Nav-links">
-            <a 
-              href="#aboutMe"
+            <Link
+              to="aboutMe"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={200}
+              className = "navLinks"
               style={linkStyle('aboutMe')} 
               onMouseEnter={() => handleMouseEnter('aboutMe')} 
               onMouseLeave={handleMouseLeave} 
-              >About Me
-            </a>
-            <a 
-              href="#projects" 
+            >
+              About Me
+            </Link>
+            <Link
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={200}
+              className = "navLinks"
               style={linkStyle('projects')} 
               onMouseEnter={() => handleMouseEnter('projects')} 
-              onMouseLeave={handleMouseLeave}
-              >Projects
-            </a>
-            <a 
-              href="#contact" 
+              onMouseLeave={handleMouseLeave} 
+            >
+              Projects
+            </Link>
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={200}
+              className = "navLinks"
               style={linkStyle('contact')} 
               onMouseEnter={() => handleMouseEnter('contact')} 
-              onMouseLeave={handleMouseLeave}
-              >Contact
-            </a>
-            <button 
-              href="#resume" 
-              className = "Resume-button"
+              onMouseLeave={handleMouseLeave} 
+            >
+              Contact
+            </Link>
+            <a 
+              href="https://drive.google.com/uc?export=download&id=1mz-kv3cklhquFyz3WkPtWWkQ2pnzbj7t" 
+              download
+              className = "resumeButton"
               style={linkStyle('resume')} 
               onMouseEnter={() => handleMouseEnter('resume')} 
               onMouseLeave={handleMouseLeave}
-              >Resume
-            </button>
+            >
+            <div className = "resumeText">Resume</div>
+            </a>
           </div>
         </nav>
 
@@ -118,7 +140,7 @@ function App() {
 
       <main className = "App-main">
 
-        <div className = "aboutMeSection">
+        <div id = "aboutMe" className = "aboutMeSection">
           <div className = "paddingGlobal">
             <div className = "largeContainer">
               <div className = "paddingSection-M">
@@ -158,7 +180,7 @@ function App() {
           </div>
         </div>
         
-        <div className = "projectsSection">
+        <div id = "projects" className = "projectsSection">
           <div className = "paddingSection-M">
             <div className = "backgroundColor-Secondary">
               <div className = "paddingGlobal">
@@ -176,7 +198,7 @@ function App() {
                     </div>
 
                     <div className= "current-projectsContent-Right">
-                    <div class="imageWrapper">
+                      <div class="imageWrapper">
                         <img src={chatbot} alt="Chatbot"/>
                       </div>
                     </div>
@@ -220,12 +242,12 @@ function App() {
                             <button className = "skillButton">Java</button>
                           </div>
                           <div className = "divBlock2">
-                            <img src = {bookez} 
+                            <img src = {roamReady} 
                               loading = "lazy"
                               // sizes = "(max-width: 479px) 100vw, (max-width: 767px) 46vw, (max-width: 991px) 44vw, 46vw" 
                               // srcset is used to display multople image sizes ex. img-500png, img-1080.png
                               className = "projectImages"
-                              alt = "Project 1"/>
+                              alt = "Project 1"/> 
                           </div>
                         </div>
                       </div>
@@ -252,30 +274,35 @@ function App() {
                 <div className = "testimonialsComponent">
 
                   <div className = "testimonial">
-                    <p className = "textSizeL">Text</p>
+                    <p className = "textSizeL textAlign-Left">
+                      "Working with Guadalupe on the redesign of our appliance repair company's website was a game-changing experience. 
+                      From the initial consultation to the final launch, their approach was professional, creative, and focused on our 
+                      unique business needs. The new design has not only modernized our online presence but also streamlined the customer 
+                      experience, making it easier for clients to navigate our services and book repairs"
+                      </p>
                     <div className = "testimonialClient">
                       <div className = "testimonialImageWrapper">
-                        <img src = {disney} 
+                        <img src = {pacificTech} 
                         loading = "lazy"
                         class = "testimonialImage"
-                        alt = "testimonialClient1"
+                        alt = "Client Testimonial 1"
                         />
                       </div>
                       <div className = "testimonialClientDetails">
-                        <div className = "textSizeM">Text</div>
-                        <div className = "textStyleMuted">Text</div>
+                        <div className = "textSizeM">Pedro Cruz</div>
+                        <div className = "textStyleMuted">Pacific Tech Appliance Repair Founder</div>
                       </div>
                     </div>
                   </div>
 
-                  <div className = "testimonial">
+                  {/* <div className = "testimonial">
                     <p className = "textSizeL">Text</p>
                     <div className = "testimonialClient">
                       <div className = "testimonialImageWrapper">
                         <img src = {museum} 
                         loading = "lazy"
                         class = "testimonialImage"
-                        alt = "testimonialClient1"
+                        alt = "Client Testimonial 2"
                         />
                       </div>
                       <div className = "testimonialClientDetails">
@@ -292,7 +319,7 @@ function App() {
                         <img src = {concert} 
                         loading = "lazy"
                         class = "testimonialImage"
-                        alt = "testimonialClient1"
+                        alt = "Client Testimonial 3"
                         />
                       </div>
                       <div className = "testimonialClientDetails">
@@ -300,7 +327,7 @@ function App() {
                         <div className = "textStyleMuted">Text</div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                 </div>
               </div>
@@ -309,7 +336,7 @@ function App() {
         </div>
       </main>
 
-      <footer className = "footerComponent">
+      <footer id = "contact" className = "footerComponent">
         <div className = "paddingGlobal">
           <div className = "largeContainer">
 
