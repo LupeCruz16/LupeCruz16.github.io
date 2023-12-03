@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f2e9c76e.css",
+    "main.js": "/static/js/main.ee8d990f.js",
+    "static/js/787.fc1d3d14.chunk.js": "/static/js/787.fc1d3d14.chunk.js",
+    "static/media/taylor_swift_concert.png": "/static/media/taylor_swift_concert.92670611225617aa2648.png",
+    "static/media/roam_ready.png": "/static/media/roam_ready.169409ac18956906fc4e.png",
+    "static/media/museum.png": "/static/media/museum.f71872497de8f826319f.png",
+    "static/media/disney.png": "/static/media/disney.6fa59ea5ed1495b3a362.png",
+    "static/media/bonsai_background_1.png": "/static/media/bonsai_background_1.eb66601e832fc4e753e2.png",
+    "static/media/pacific_tech_client.jpg": "/static/media/pacific_tech_client.a48fa0df959a7524f397.jpg",
+    "static/media/bookEz.png": "/static/media/bookEz.acada231bc2101e5107a.png",
+    "static/media/bonsai_background_2.png": "/static/media/bonsai_background_2.d896f113223deb3f2c62.png",
+    "static/media/chatbot.png": "/static/media/chatbot.a7773cf0d089727e21cf.png",
+    "static/media/headshot.jpg": "/static/media/headshot.737a73d8da681320c003.jpg",
+    "index.html": "/index.html",
+    "main.f2e9c76e.css.map": "/static/css/main.f2e9c76e.css.map",
+    "main.ee8d990f.js.map": "/static/js/main.ee8d990f.js.map",
+    "787.fc1d3d14.chunk.js.map": "/static/js/787.fc1d3d14.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f2e9c76e.css",
+    "static/js/main.ee8d990f.js"
+  ]
+}
