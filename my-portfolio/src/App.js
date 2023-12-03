@@ -275,10 +275,10 @@ function App() {
 
                   <div className = "testimonial">
                     <p className = "textSizeL textAlign-Left">
-                      "Working with Guadalupe on the redesign of our appliance repair company's website was a game-changing experience. 
-                      From the initial consultation to the final launch, their approach was professional, creative, and focused on our 
-                      unique business needs. The new design has not only modernized our online presence but also streamlined the customer 
-                      experience, making it easier for clients to navigate our services and book repairs"
+                      "Working with Guadalupe on the redesign of my appliance repair company's website was a game-changing experience. 
+                      From the initial consultation to the final launch, his approach was professional, creative, and focused on my 
+                      unique business needs. The new design has not only modernized my online presence but also streamlined the customer 
+                      experience, making it easier for clients to navigate my services and book repairs"
                       </p>
                     <div className = "testimonialClient">
                       <div className = "testimonialImageWrapper">
