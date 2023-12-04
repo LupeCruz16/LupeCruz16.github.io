@@ -2,16 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import './App.css';
 import './css/constants.css'
-import disney from './images/disney.png'
-import museum from './images/museum.png'
-import concert from './images/taylor_swift_concert.png'
-import chatbot from './images/chatbot.png'
-import bookez from './images/bookEz.png'
-import roamReady from './images/roam_ready.png'
-import headshot from './images/headshot.jpg'
-import pacificTech from './images/pacific_tech_client.jpg'
+import './css/common.css'
+import { disney, museum, concert, chatbot, bookez, roamReady, headshot, pacificTech } from './js/images.js';
 
-// Run using:
+//Run using:
 //cd my-portfolio
 //npm start
 function App() {
@@ -144,7 +138,7 @@ function App() {
           <div className = "paddingGlobal">
             <div className = "largeContainer">
               <div className = "paddingSection-M">
-                <div className = "aboutMeComponent">
+                <div className = "aboutMeComponent textAlign-Left">
 
                   <div className = "aboutMeContent">
                     <div className = "aboutMeContent-Left">
@@ -187,7 +181,7 @@ function App() {
                 <div className= "largeContainer">
                   <div className= "current-ProjectsComponent">
 
-                    <div className= "current-projectsContent-Left">
+                    <div className= "current-projectsContent-Left textAlign-Left">
                       <h2>Projects</h2>
                       <p className = "textSizeL">
                         My current focus is on developing internal tools for SigParser by utilizing Large Language Models.
@@ -208,7 +202,7 @@ function App() {
                     <div className = "featured-ProjectsComponent">
 
                       <div className = "marginBottom bottomMargin-XXL">
-                        <div className = "featuredProjectsContent-top">
+                        <div className = "featuredProjectsContent-top textAlign-Left">
                           <div className = "textStyleCaption">Featured Projects</div>
                           <div className = "padding-S"></div>
                           <h2>I love exploring programming niches.</h2>
@@ -225,7 +219,7 @@ function App() {
                             className = "projectImages"
                             alt = "Project 1"/>
                           </div>
-                          <div className = "divBlock3">
+                          <div className = "divBlock3 textAlign-Left">
                             <div className = "textStyleCaption">RoamReady</div>
                             <p className = "textSizeL">
                               A website designed to make ease of use when choosing a new travel location.
@@ -234,7 +228,7 @@ function App() {
                           </div>
                         </div>
                         <div className = "featuredProjectsContent-column">
-                          <div className = "divBlock">
+                          <div className = "divBlock textAlign-Left">
                             <div className = "textStyleCaption">BookEz</div>
                             <p className = "textSizeL">
                               Bookkeeping management tool for eBay sellers.
@@ -267,7 +261,7 @@ function App() {
 
                 <div className = "marginBottom bottomMargin-XXL">
                   <div className = "maxWidth-M">
-                    <div className = "textStyleCaption testimonialsCaption">Testimonials</div>
+                    <div className = "textStyleCaption textAlign-Left">Testimonials</div>
                   </div>
                 </div>
 
@@ -288,7 +282,7 @@ function App() {
                         alt = "Client Testimonial 1"
                         />
                       </div>
-                      <div className = "testimonialClientDetails">
+                      <div className = "testimonialClientDetails textAlign-Left">
                         <div className = "textSizeM">Pedro Cruz</div>
                         <div className = "textStyleMuted">Pacific Tech Appliance Repair Founder</div>
                       </div>
@@ -343,7 +337,7 @@ function App() {
             <div className = "paddingSection-M">
               <div className = "footerTop">
 
-                <div className = "footerLeft">
+                <div className = "footerLeft textAlign-Left">
                   <div className = "textStyleCaption">Available to opportunities</div>
                   <h2>Have a project? Let's talk</h2>
                   <div className = "paddingSection-M-Bottom"></div>

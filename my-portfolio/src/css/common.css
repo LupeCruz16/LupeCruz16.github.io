@@ -1,0 +1,125 @@
+.paddingGlobal {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  
+  .largeContainer {
+    margin-right: auto !important;
+    margin-left: auto !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 80rem;
+  }
+  
+  .paddingSection-M {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  .paddingSection-M-Bottom {
+    padding-bottom: 5rem;
+  }
+  
+  .paddingSection-L-Bottom {
+    padding-bottom: 8rem;
+  }
+  
+  .padding-S {
+    padding: 1rem;
+  }
+  
+  .padding-XS {
+    padding: 0.5rem;
+  }
+  
+  .marginBottom {
+    margin-top: 0rem !important;
+    margin-right: 0rem !important;
+    margin-left: 0rem !important;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .bottomMargin-XS{
+    margin: 0.5rem;
+  }
+  
+  .bottomMargin-M{
+    margin: 2rem;
+  }
+  
+  .bottomMargin-XXL{
+    margin: 5rem;
+  }
+  
+  .marginLeft {
+    margin-top: 0rem !important;
+    margin-right: 0rem !important;
+    margin-bottom: 0rem !important;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  
+  .margin-M {
+    margin: 2rem;
+  }
+  
+  .textSizeM {
+    font-size: 1.25rem;
+  }
+  
+  .textSizeL {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  
+  .textSizeXL {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+  
+  .textStyleCaption {
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  .textStyleMuted {
+    opacity: 0.6;
+  }
+  
+  .textWeight-M {
+    font-weight: 500;
+  }
+  
+  .textAlign-Left {
+    text-align: left;
+  }
+  
+  .skillButton {
+    font-size: 1.2rem;
+    color: var(--accent-200);
+    background-color: var(--accent-100);
+    margin-top: 0;
+    border: 2px solid var(--accent-100);
+    border-radius: 5px;
+    margin-right: 20px
+  }
+  
+  .backgroundColor-Secondary{
+    background-color: var(--bg-300);
+  }
+  
+  .maxWidth-M {
+    width: 100%;
+    min-width: 32rem;
+  }
+  
+  .inlineBlockElem {
+    max-width: 100%;
+    display: inline-block;
+  }
+  
