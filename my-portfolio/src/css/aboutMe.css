@@ -1,4 +1,8 @@
 .aboutMeComponent {
+  display: block;
+}
+
+.aboutMeComponent {
     flex-direction: column;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1.75fr;

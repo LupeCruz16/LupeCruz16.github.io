@@ -1,0 +1,52 @@
+.tesimonialsSection {
+    display: block;
+  }
+
+.testimonialsComponent {
+    width: 100%;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    background-color: transparent;
+    grid-template: "Area"/1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+    position: relative;
+}
+  
+.testimonial {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    background-color: var(--bg-300);
+    flex-direction: column;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+    align-content: start;
+    justify-content: start;
+    align-items: stretch;
+    justify-items: start;
+    padding: 3rem 2rem;
+    display: grid;
+    border-radius: 10px;
+}
+  
+.testimonialClient {
+    grid-template-rows: auto;
+    grid-template-columns: auto 1fr;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    display: flex;
+}
+  
+.testimonialImageWrapper {
+    flex: none;
+    margin-right: 1rem;
+}
+  
+.testimonialImage {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+  

@@ -1,5 +1,4 @@
 import { disney, museum, concert } from './images.js';
-import '../App.css';
 import '../css/constants.css'
 import '../css/common.css'
 import '../css/aboutMe.css'
@@ -11,6 +10,7 @@ function AbuoutMe () {
           <div className = "paddingGlobal">
             <div className = "largeContainer">
               <div className = "paddingSection-M">
+                <div className = "paddingSection-M-Top"></div>
                 <div className = "aboutMeComponent textAlign-Left">
 
                   <div className = "aboutMeContent">

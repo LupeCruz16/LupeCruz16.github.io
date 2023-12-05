@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import '../App.css';
 import '../css/constants.css'
 import '../css/common.css'
 import '../css/navigation.css'
