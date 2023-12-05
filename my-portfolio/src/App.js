@@ -1,8 +1,11 @@
 import NavigationBar from "./js/NavigationBar.js"
+import AboutMe from "./js/AboutMe.js"
+import Projects from "./js/Projects.js"
+
 import './App.css';
 import './css/constants.css'
 import './css/common.css'
-import { disney, museum, concert, chatbot, bookez, roamReady, headshot, pacificTech } from './js/images.js';
+import { headshot, pacificTech } from './js/images.js';
 
 function App() {
 
@@ -15,125 +18,8 @@ function App() {
 
       <main className = "App-main">
 
-        <div id = "aboutMe" className = "aboutMeSection">
-          <div className = "paddingGlobal">
-            <div className = "largeContainer">
-              <div className = "paddingSection-M">
-                <div className = "aboutMeComponent textAlign-Left">
-
-                  <div className = "aboutMeContent">
-                    <div className = "aboutMeContent-Left">
-                      <h2>About Me</h2>
-                    </div>
-
-                    <div className = "aboutMeContent-Right">
-                      <p className = "textSizeL">Hi there, I am Lupe! When I am not at my computer I am at my computer watching anime.
-                        <br></br>
-                        <br></br>
-                        Or I am on another adventure with my girlfriend.
-                      </p>
-                      <div className = "padding-S"></div>
-                      <div className = "marginBottom bottomMargin-XXL"></div>
-                    </div>
-                  </div>
-
-                  <div class="lifestyleGallery">
-                      <div class="imageWrapper">
-                        <img src={disney} alt="Disney"/>
-                      </div>
-                      <div class="imageWrapper">
-                        <img src={museum} alt = "Museum"/>
-                      </div>
-                      <div class="imageWrapper">
-                        <img src={concert} alt = "Taylor Swift Concert"/>
-                      </div>
-                    </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div id = "projects" className = "projectsSection">
-          <div className = "paddingSection-M">
-            <div className = "backgroundColor-Secondary">
-              <div className = "paddingGlobal">
-                <div className= "largeContainer">
-                  <div className= "current-ProjectsComponent">
-
-                    <div className= "current-projectsContent-Left textAlign-Left">
-                      <h2>Projects</h2>
-                      <p className = "textSizeL">
-                        My current focus is on developing internal tools for SigParser by utilizing Large Language Models.
-                      </p>
-                      <div className= "padding-XS"></div>
-                      <button className = "skillButton">Python</button>
-                      <button className = "skillButton">AWS Bedrock</button>
-                    </div>
-
-                    <div className= "current-projectsContent-Right">
-                      <div class="imageWrapper">
-                        <img src={chatbot} alt="Chatbot"/>
-                      </div>
-                    </div>
-
-                  </div>
-                  <div className = "paddingSection-L-Bottom">
-                    <div className = "featured-ProjectsComponent">
-
-                      <div className = "marginBottom bottomMargin-XXL">
-                        <div className = "featuredProjectsContent-top textAlign-Left">
-                          <div className = "textStyleCaption">Featured Projects</div>
-                          <div className = "padding-S"></div>
-                          <h2>I love exploring programming niches.</h2>
-                        </div>
-                      </div>
-
-                      <div className = "featuredProjectsContent-bottom">
-                        <div className = "featuredProjectsContent-column">
-                          <div className = "divBlock4">
-                            <img src = {bookez} 
-                            loading = "lazy"
-                            // sizes = "(max-width: 479px) 100vw, (max-width: 767px) 46vw, (max-width: 991px) 44vw, 46vw" 
-                            // srcset is used to display multople image sizes ex. img-500png, img-1080.png
-                            className = "projectImages"
-                            alt = "Project 1"/>
-                          </div>
-                          <div className = "divBlock3 textAlign-Left">
-                            <div className = "textStyleCaption">RoamReady</div>
-                            <p className = "textSizeL">
-                              A website designed to make ease of use when choosing a new travel location.
-                            </p>
-                            <button className = "skillButton">SQL</button>
-                          </div>
-                        </div>
-                        <div className = "featuredProjectsContent-column">
-                          <div className = "divBlock textAlign-Left">
-                            <div className = "textStyleCaption">BookEz</div>
-                            <p className = "textSizeL">
-                              Bookkeeping management tool for eBay sellers.
-                            </p>
-                            <button className = "skillButton">Java</button>
-                          </div>
-                          <div className = "divBlock2">
-                            <img src = {roamReady} 
-                              loading = "lazy"
-                              // sizes = "(max-width: 479px) 100vw, (max-width: 767px) 46vw, (max-width: 991px) 44vw, 46vw" 
-                              // srcset is used to display multople image sizes ex. img-500png, img-1080.png
-                              className = "projectImages"
-                              alt = "Project 1"/> 
-                          </div>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <AboutMe />
+        <Projects />
 
         <div className = "tesimonialsSection">
           <div className = "paddingGlobal">

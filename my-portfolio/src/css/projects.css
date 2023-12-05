@@ -1,0 +1,68 @@
+.current-projectsComponent, .featured-ProjectsComponent {
+    display: block;
+}
+
+.current-ProjectsComponent {
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+    background-color: var(--bg-300);
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1.75fr;
+    grid-auto-columns: 1fr;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    display: grid;
+}
+  
+.current-projectsContent-Left {
+    max-width: 21rem;
+}
+  
+.current-projectContents-Right {
+    grid-column-gap: 2rem;
+    grid-row-gap: 4rem;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+
+/* Start of Existing Project Section */
+.featuredProjectsContent-bottom {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+  
+.featuredProjectsContent-column {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+  
+.projectImages {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+  
+.divBlock4, .divBlock2 {
+    overflow: hidden;
+}
+  
+.divBlock3 {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+  
+.divBlock {
+    margin-top: 20px;
+    overflow: hidden;
+}

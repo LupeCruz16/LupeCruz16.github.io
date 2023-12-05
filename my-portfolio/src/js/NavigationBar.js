@@ -5,7 +5,7 @@ import '../css/constants.css'
 import '../css/common.css'
 import '../css/navigation.css'
 
-function NavigationBar (){
+function NavigationBar () {
   // Create state to manage hover style for individual links
   const [hoveredLink, setHoveredLink] = React.useState(null);
 

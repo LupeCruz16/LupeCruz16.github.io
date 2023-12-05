@@ -98,6 +98,10 @@
   .textAlign-Left {
     text-align: left;
   }
+
+  .textAlign-Right {
+    text-align: right;
+  }
   
   .skillButton {
     font-size: 1.2rem;
