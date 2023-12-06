@@ -10,7 +10,6 @@ function AbuoutMe () {
           <div className = "paddingGlobal">
             <div className = "largeContainer">
               <div className = "paddingSection-M">
-                <div className = "paddingSection-M-Top"></div>
                   <div className = "aboutMeContent">
                     
                     <div className = "aboutMeContent-Left textAlign-Left">

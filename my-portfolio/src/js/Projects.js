@@ -98,8 +98,9 @@ function Projects () {
                           </button>
                         </div>
                       </div>
-
+                  
                     </div>
+                    <div className = "paddingS"></div>
                   </div>
                 </div>
               </div>   
