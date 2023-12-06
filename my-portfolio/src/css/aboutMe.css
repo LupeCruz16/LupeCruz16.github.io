@@ -1,36 +1,50 @@
-.aboutMeComponent {
-  display: block;
+.aboutMeContent {
+  grid-column-gap: 3rem;
+  grid-row-gap: 1.25rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1.75fr;
+  grid-auto-columns: 1fr;
+  display: grid;
 }
 
-.aboutMeComponent {
-    flex-direction: column;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1.75fr;
-    grid-auto-columns: 1fr;
-  }
+.aboutMeContent-Left {
+  width: 50rem;
+  max-width: 50rem;
+}
+
+.aboutMeContent-Right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.imageWrapper {
+  flex: 1; 
+}
   
-  .aboutMeContent {
-    grid-column-gap: 3rem;
-    grid-row-gap: 1.25rem;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1.75fr;
-    grid-auto-columns: 1fr;
-    display: grid;
-  }
+.imageWrapper img {
+  border-radius: 5%;
+  width: 30%;
+  height: auto;
+  display: block;
+  position: relative;
+  margin-left: auto;
+}
   
-  .lifestyleGallery {
-    display: flex; 
-    justify-content: space-around;
-    gap: 20px; 
-  }
-  
-  .imageWrapper {
-    flex: 1; 
-  }
-  
-  .imageWrapper img {
-    width: 100%;
-    height: 90%;
-    border-radius: 10px;
-  }
-  
+.aboutMeTopImage {
+  z-index: 1;
+  margin-right: 25%;
+}
+
+.aboutMeBottomImage {
+  position: absolute; 
+  border-radius: 15%;
+  width: 100%;
+  height: 100%;
+}
+
+.negativeMarginS {
+  margin-top: -5rem;
+}

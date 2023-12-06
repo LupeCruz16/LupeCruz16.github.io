@@ -150,12 +150,12 @@ function HeroSection () {
               onMouseEnter={() => handleMouseEnter('resume')}
               onMouseLeave={handleMouseLeave}
               >
-              <div className="resumeText textSizeS">View My Resume</div>
+              <div className="textSizeS textColor-Secondary">View My Resume</div>
             </button>
           </div>
           <div className = "heroSection-Right">
-            <div class="imageWrapper">
-              <div className = "backgroundShape"></div>
+            <div class="heroSection-imageWrapper">
+              <div className = "heroSection-backgroundShape"></div>
               <img src={headshot} 
               alt="Guadalupe Cruz"
               loading = "lazy"

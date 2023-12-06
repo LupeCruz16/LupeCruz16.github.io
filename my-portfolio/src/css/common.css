@@ -9,7 +9,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 80rem;
+    max-width: 110rem;
   }
   
   .paddingSection-M {
@@ -71,6 +71,10 @@
     margin: 1.7rem;
   }
 
+  .margin-L {
+    margin: 15rem;
+  }
+
 /* Text Styling */
   .textSizeXS {
     font-size: 2rem;
@@ -106,11 +110,7 @@
   .textStyleMuted {
     opacity: 0.6;
   }
-  
-  .textWeight-M {
-    font-weight: 500;
-  }
-  
+
   .textAlign-Left {
     text-align: left;
   }
@@ -132,6 +132,10 @@
   
   .backgroundColor-Secondary{
     background-color: var(--bg-200);
+  }
+
+  .textColor-Secondary{
+    color: var(--text-200);
   }
   
   .maxWidth-M {
