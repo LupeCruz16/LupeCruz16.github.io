@@ -25,9 +25,14 @@
   text-decoration: none;
 }
 
-.navLinks-Left, .navLinks-right{
+.navLinks-Left, .navLinks-Right{
   display: flex;
   gap: 5rem;
+}
+
+.navLinks-Right {
+  display: flex;
+  flex-direction: row;
 }
   
 .resumeButton{
@@ -40,7 +45,7 @@
 
 .sticky {
   position: fixed;
-  background-color: rgba(210,221,205, 0.5); 
+  background-color: rgba(210,221,205, 0.7); 
   backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(10px);
   height: 5rem;

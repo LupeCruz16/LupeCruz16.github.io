@@ -29,7 +29,7 @@ function HeroSection () {
 
   const handleScroll = () => {
     const offset = window.scrollY;
-    setSticky(offset > 400);
+    setSticky(offset > 200);
   };
 
   useEffect(() => {
@@ -67,7 +67,7 @@ function HeroSection () {
             </Link>
           </div>
 
-          <div className = "navLinks-right">
+          <div className = "navLinks-Right">
             <Link
               to="home"
               spy={true}
