@@ -43,3 +43,7 @@
     display: block;
     position: relative;
 }
+
+.projectIconStyling {
+    fill: var(--bg-200);
+}

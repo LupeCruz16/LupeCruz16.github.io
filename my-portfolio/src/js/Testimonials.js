@@ -16,7 +16,7 @@ function Testimonials () {
 
                 <div className = "testimonialsComponent">
 
-                  <div className = "testimonial">
+                  <div className = "testimonial backgroundColor-Secondary">
                     <p className = "textSizeXS textAlign-Left textColor-Secondary">
                       "Working with Guadalupe on the redesign of my appliance repair company's website was a game-changing experience. 
                       From the initial consultation to the final launch, his approach was professional, creative, and focused on my 

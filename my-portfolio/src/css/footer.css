@@ -55,7 +55,7 @@
     transition: color .3s ease-out;
 }
   
-.footerSocialIcon {
+.svgIcon {
     width: 2.5rem;
     height: 2.5rem;
 }

@@ -43,7 +43,7 @@ function Footer () {
                     target = "_blank" 
                     rel = "noopener noreferrer"
                     className = "footerSocialLink inlineBlockElem">
-                      <div className = "footerSocialIcon">
+                      <div className = "svgIcon">
                         <svg aria-hidden="true" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           <title>GitHub</title>
                           <path 
@@ -57,7 +57,7 @@ function Footer () {
                     target = "_blank" 
                     rel = "noopener noreferrer"
                     className = "footerSocialLink inlineBlockElem">
-                      <div className = "footerSocialIcon">
+                      <div className = "svgIcon">
                         <svg aria-hidden="true" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title>LinkedIn</title>
                         <path 
