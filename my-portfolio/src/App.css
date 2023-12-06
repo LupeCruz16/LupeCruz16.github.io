@@ -7,65 +7,24 @@ html {
 .App {
   text-align: center;
   color: var(--text-100);
-  background-color: var(--bg-200);
+  background-color: var(--bg-100);
   font-size: 1rem;
   line-height: 1.6;
   font-family: var(--font-primary),var(--font-secondary);
 }
 
 .App-header {
-  background-image: url('./images/bonsai_background_1.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 2;
-}
-
-.App-header::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(to top, rgba(194,194,194,0), rgba(194,194,194,1));
-  z-index: -1;
-}
-
-.App-title {
-  position: absolute;
-  top: 45%;
-  transform: translateY(-50%);
-  align-items: center;
-  justify-content: center; 
-  z-index: 1;
-}
-
-.App-title h1{
-  font-size: calc(120px + 2vmin);
-  margin: 0;
-  padding-bottom: 0.5em;
-}
-
-.App-title h2{
-  font-size: calc(50px + 2vmin);
-  margin: 0;
 }
 
 .App-main {
-  background-image: url('./images/bonsai_background_2.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: var(--bg-100);
   width: 100vw;
   position: relative;
-  z-index: 1;
-  top: -5vh;
 }
 
 .App-main p {

@@ -1,0 +1,85 @@
+.Navigation {
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  z-index: 1000;
+  height: 5rem;
+}
+  
+.navLinks {
+  height: 5rem;
+  width: 100%;
+  max-width: 90rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.navLinkElem {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  color: var(--text-100);
+  text-decoration: none;
+}
+
+.navLinks-Left, .navLinks-right{
+  display: flex;
+  gap: 5rem;
+}
+  
+.resumeButton{
+  padding: 10px;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--accent-200);
+}
+  
+.resumeText {
+  color: var(--text-200);
+}
+
+.sticky {
+  position: fixed;
+  background-color: rgba(194,194,194, 0.7); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  padding-bottom: 30px;
+  width: 100%;
+  animation: dropdown 0.5s ease-in-out forwards;
+}
+  
+@keyframes dropdown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.heroSection {
+  height: 95vh;
+  width: 100%;
+  max-width: 90rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 2s ease forwards;
+  }
+

@@ -1,6 +1,6 @@
 .paddingGlobal {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
   }
   
   .largeContainer {
@@ -70,18 +70,25 @@
   .margin-M {
     margin: 2rem;
   }
-  
-  .textSizeM {
-    font-size: 1.25rem;
+
+/* Text Styling */
+  .textSizeXS {
+    font-size: 1.7rem;
+  }
+
+  .textSizeS {
+    font-size: calc(5px + 2vmin);
   }
   
-  .textSizeL {
-    font-size: 1.5rem;
+  .textSizeM {
+    font-size: calc(30px + 2vmin);
+    margin: 0;
     margin-bottom: 0;
   }
   
-  .textSizeXL {
-    font-size: 2rem;
+  .textSizeL {
+    font-size: calc(120px + 2vmin);
+    margin: 0;
     line-height: 1.25;
   }
   
@@ -106,10 +113,11 @@
   .textAlign-Right {
     text-align: right;
   }
-  
+
+/* Other styling */
   .skillButton {
     font-size: 1.2rem;
-    color: var(--accent-200);
+    color: var(--text-200);
     background-color: var(--accent-100);
     margin-top: 0;
     border: 2px solid var(--accent-100);
@@ -118,7 +126,7 @@
   }
   
   .backgroundColor-Secondary{
-    background-color: var(--bg-300);
+    background-color: var(--bg-200);
   }
   
   .maxWidth-M {

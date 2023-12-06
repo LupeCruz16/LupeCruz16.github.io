@@ -1,17 +1,16 @@
 :root{
     /* Color Variables */
-    --primary-100:#6a826b;
-    --primary-200:#98b299;
-    --primary-300:#fcfffd;
-    --accent-100:#776a82;
-    --accent-200:#fffcff;
-    --text-100:#333333;
-    --text-200:#5c5c5c;
-    --bg-100:#cccccc;
-    --bg-200:#c2c2c2;
-    --bg-300:#9b9b9b;
+    --text-100: #000000;
+    --text-200: #FFFFFF;
+    --accent-100: #707B6A;
+    --accent-200: #76B162;
+    --bg-100: #D2DDCD;
+    --bg-200: #404A3B;
       
     /* Font Variables */
+    /* --font-primary: 'Erode', serif;
+    --font-secondary: 'Satoshi', sans-serif; */
+
     --font-primary: 'Open Sans', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
 }
