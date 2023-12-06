@@ -9,7 +9,7 @@
 .navLinks {
   height: 5rem;
   width: 100%;
-  max-width: 90rem;
+  max-width: 110rem;
   justify-content: space-between;
   align-items: center;
   margin-left: auto;
@@ -66,7 +66,7 @@
 .heroSection {
   height: 95vh;
   width: 100%;
-  max-width: 90rem;
+  max-width: 110rem;
   justify-content: space-between;
   align-items: center;
   margin-left: auto;
@@ -83,3 +83,31 @@
     animation: fadeIn 2s ease forwards;
   }
 
+.heroSection-Right {
+  margin-right: 2.5rem;
+}
+
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+.imageWrapper img {
+  border-radius: 15%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.backgroundShape {
+  position: absolute; 
+  border-radius: 15%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-200); 
+  margin-left: 2.5rem;
+}

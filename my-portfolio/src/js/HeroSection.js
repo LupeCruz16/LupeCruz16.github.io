@@ -155,6 +155,7 @@ function HeroSection () {
           </div>
           <div className = "heroSection-Right">
             <div class="imageWrapper">
+              <div className = "backgroundShape"></div>
               <img src={headshot} 
               alt="Guadalupe Cruz"
               loading = "lazy"
