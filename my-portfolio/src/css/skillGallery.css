@@ -1,0 +1,12 @@
+.skillGalleryContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skillGalleryIconStyling {
+    width: 5rem;
+    height: auto;
+    transition: transform 0.5s ease;
+}

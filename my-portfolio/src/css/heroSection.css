@@ -44,7 +44,7 @@
   backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(10px);
   height: 5rem;
-  width: 100%;
+  max-width: 100%;
   animation: dropdown 0.5s ease-in-out forwards;
 }
   
@@ -62,12 +62,13 @@
 .heroSection {
   height: 95vh;
   width: 100%;
-  max-width: 110rem;
+  max-width: 100%;
   justify-content: space-between;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  gap: 100px;
 }
 
 @keyframes fadeIn {
