@@ -8,6 +8,8 @@ You can access the live version of the website here: https://guadalupecruz.com/
 ## About the Website
 This portfolio website meticulously crafted using React. I also used react-scroll. It showcases my projects, skills, and professional growth.
 
+Check out the Wiki for versions of my portfolio website!
+
 ## How to Update A React Website Hosted on Github Pages
 To make updates to the website, follow these steps:
 
