@@ -13,8 +13,8 @@ function AbuoutMe () {
                   <div className = "aboutMeContent">
                     
                     <div className = "aboutMeContent-Left textAlign-Left">
-                      <h2 className = "textSizeM textColor-Secondary">About Me</h2>
-                      <p className = "textSizeS textColor-Secondary">
+                      <div className = "textSizeM textColor-Secondary">About Me</div>
+                      <p className = "textSizeS textColor-Secondary marginLeft-S">
                         I enjoy forgetting semi colons in Python. 
                         I have discovered a passion and interest in web development which drove me here.
                         <br></br>
@@ -30,12 +30,14 @@ function AbuoutMe () {
                           loading = "lazy"
                           alt = "Disney"/>
                       </div>
+                      <div className = "paddingS"></div>
                       <div className = "imageWrapper">
                         <img src = {museum} 
                           className = "aboutMeBottomImage negativeMarginS"
                           loading = "lazy"
                           alt = "Museum"/>
                       </div>
+                      <div className = "paddingS"></div>
                       <div className = "imageWrapper">
                         <img src = {concert} 
                           className = "aboutMeTopImage negativeMarginS"

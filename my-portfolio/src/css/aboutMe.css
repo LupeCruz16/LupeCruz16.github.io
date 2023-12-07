@@ -1,6 +1,6 @@
 .aboutMeContent {
-  grid-column-gap: 3rem;
-  grid-row-gap: 1.25rem;
+  grid-column-gap: 3vw;
+  grid-row-gap: 1.25sw;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1.75fr;
   grid-auto-columns: 1fr;
@@ -8,8 +8,7 @@
 }
 
 .aboutMeContent-Left {
-  width: 50rem;
-  max-width: 50rem;
+  width: 100%;
 }
 
 .aboutMeContent-Right {
@@ -26,7 +25,7 @@
   
 .imageWrapper img {
   border-radius: 5%;
-  width: 30%;
+  width: 20%;
   height: auto;
   display: block;
   position: relative;
@@ -35,7 +34,7 @@
   
 .aboutMeTopImage {
   z-index: 1;
-  margin-right: 25%;
+  margin-right: 15%;
 }
 
 .aboutMeBottomImage {
@@ -46,5 +45,5 @@
 }
 
 .negativeMarginS {
-  margin-top: -5rem;
+  margin-top: -5vw;
 }
