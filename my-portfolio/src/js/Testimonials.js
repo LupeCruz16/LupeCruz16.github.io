@@ -10,14 +10,14 @@ function Testimonials () {
             <div className = "largeContainer">
               <div className = "paddingSection-M">
 
-                <div className = "marginBottom bottomMargin-XXL">
+                <div className = "bottomMargin-XXL">
                   <div className = "textSizeM textAlign-Left">Testimonials</div>
                 </div>
 
-                <div className = "testimonialsComponent">
+                <div className = "testimonialsComponent marginLeft-S">
 
                   <div className = "testimonial backgroundColor-Secondary">
-                    <p className = "textSizeXS textAlign-Left textColor-Secondary">
+                    <p className = "textSizeS textAlign-Left textColor-Secondary">
                       "Working with Guadalupe on the redesign of my appliance repair company's website was a game-changing experience. 
                       From the initial consultation to the final launch, his approach was professional, creative, and focused on my 
                       unique business needs. The new design has not only modernized my online presence but also streamlined the customer 
@@ -33,7 +33,7 @@ function Testimonials () {
                       </div>
                       <div className = "testimonialClientDetails textAlign-Left textColor-Secondary">
                         <div className = "textSizeS">Pedro Cruz</div>
-                        <div className = "textStyleMuted">Pacific Tech Appliance Repair Founder</div>
+                        <div className = "textSizeXS textStyleMuted">Pacific Tech Appliance Repair Founder</div>
                       </div>
                     </div>
                   </div>

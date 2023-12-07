@@ -31,6 +31,10 @@
   margin-left: 2vw;;
 }
 
+.bottomMargin-XXL{
+  margin-bottom: 5vw;
+}
+
 /* Text Styling */
 .textSizeXS {
   font-size: 1vw;
