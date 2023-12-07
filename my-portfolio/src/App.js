@@ -1,6 +1,6 @@
 import HeroSection from "./js/HeroSection.js"
 // import Testimonials from "./js/Testimonials.js";
-// import Projects from "./js/Projects.js"
+import Projects from "./js/Projects.js"
 // import SkillGallery from "./js/SkillGallery.js"
 import AboutMe from "./js/AboutMe.js"
 // import Footer from "./js/Footer.js"
@@ -14,6 +14,7 @@ function App() {
       <main className = "App-main">
         <HeroSection />
         <AboutMe />
+        <Projects />
         {/* 
         <Projects />
         <SkillGallery />

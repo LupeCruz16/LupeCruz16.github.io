@@ -17,7 +17,7 @@ function Projects () {
                     </div>
                     <div className = "paddingS"></div>
 
-                    <div className = "projectsContent-Bottom">
+                    <div className = "projectsContent-Bottom marginLeft-S">
                       <div className = "projectColumn">
                         <div className = "projectImageWrapper">
                           <img src = {chatbot} 
