@@ -26,6 +26,7 @@ To make updates to the website, follow these steps:
    - Push changes to GitHub: `git push origin main`
 
 3. **Deploy:**
+   - Ensure you are in your react app directory
    - Run the deployment script: `npm run deploy`
    - This command builds the project and pushes it to the `gh-pages` branch.
 
