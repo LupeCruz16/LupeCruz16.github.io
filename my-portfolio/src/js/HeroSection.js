@@ -48,124 +48,136 @@ function HeroSection () {
   }, []);
 
   return (
-    <>
-      <nav className={`Navigation paddingGlobal ${isSticky ? 'sticky' : ''}`}>
-        <div className="navLinks">
-          <div className = "navLinks-Left">
-            <Link
-              to="home"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={200}
-              className="navLinkElem textSizeS"
-              style={linkStyle('gc')}
-              onMouseEnter={() => handleMouseEnter('gc')}
-              onMouseLeave={handleMouseLeave}
-            >
-              gc
-            </Link>
-          </div>
+    <div className = "paddingGlobal">
+      <div className = "largeContainer">
 
-          <div className = "navLinks-Right">
-            <Link
-              to="home"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={200}
-              className="navLinkElem textSizeS"
-              style={linkStyle('home')}
-              onMouseEnter={() => handleMouseEnter('home')}
-              onMouseLeave={handleMouseLeave}
-            >
-              Home
-            </Link>
-            <Link
-              to="aboutMe"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={200}
-              className="navLinkElem textSizeS"
-              style={linkStyle('aboutMe')}
-              onMouseEnter={() => handleMouseEnter('aboutMe')}
-              onMouseLeave={handleMouseLeave}
-            >
-              About Me
-            </Link>
-            <Link
-              to="projects"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={200}
-              className="navLinkElem textSizeS"
-              style={linkStyle('projects')}
-              onMouseEnter={() => handleMouseEnter('projects')}
-              onMouseLeave={handleMouseLeave}
-            >
-              Projects
-            </Link>
-            <Link
-              to="testimonials"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={200}
-              className="navLinkElem textSizeS"
-              style={linkStyle('testimonials')}
-              onMouseEnter={() => handleMouseEnter('testimonials')}
-              onMouseLeave={handleMouseLeave}
-            >
-              Testimonials
-            </Link>
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={200}
-              className="navLinkElem textSizeS"
-              style={linkStyle('contact')}
-              onMouseEnter={() => handleMouseEnter('contact')}
-              onMouseLeave={handleMouseLeave}
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
-      </nav>
+        <nav className={`Navigation ${isSticky ? 'sticky' : ''}`}>
+          <div className = "paddingGlobal">
+            <div className = "largeContainer">
+              <div className="navLinks">
+                <div className = "navLinks-Left">
+                  <Link
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={200}
+                    className="navLinkElem textSizeS"
+                    style={linkStyle('gc')}
+                    onMouseEnter={() => handleMouseEnter('gc')}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    gc
+                  </Link>
+                </div>
 
-      <div id = "home" className = "paddingGlobal">
-      <div className = "heroSection largeContainer">
-          <div className={`heroSection-Left textAlign-Left ${fadeIn ? 'fade-in' : ''}`}>
-            <h2 className = "textSizeM">Hello, I'm</h2>
-            <h1 className = "textSizeL">Guadalupe Cruz</h1>
-            <h2 className = "textSizeM">A Software Engineer</h2>
-            <button
-              href="https://drive.google.com/uc?export=download&id=1mz-kv3cklhquFyz3WkPtWWkQ2pnzbj7t"
-              download
-              className="resumeButton"
-              style={linkStyle('resume')}
-              onMouseEnter={() => handleMouseEnter('resume')}
-              onMouseLeave={handleMouseLeave}
-              >
-              <div className="textSizeS textColor-Secondary">View My Resume</div>
-            </button>
+                <div className = "navLinks-Right">
+                  <Link
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={200}
+                    className="navLinkElem textSizeS"
+                    style={linkStyle('home')}
+                    onMouseEnter={() => handleMouseEnter('home')}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    to="aboutMe"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={200}
+                    className="navLinkElem textSizeS"
+                    style={linkStyle('aboutMe')}
+                    onMouseEnter={() => handleMouseEnter('aboutMe')}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    About Me
+                  </Link>
+                  <Link
+                    to="projects"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={200}
+                    className="navLinkElem textSizeS"
+                    style={linkStyle('projects')}
+                    onMouseEnter={() => handleMouseEnter('projects')}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    Projects
+                  </Link>
+                  <Link
+                    to="testimonials"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={200}
+                    className="navLinkElem textSizeS"
+                    style={linkStyle('testimonials')}
+                    onMouseEnter={() => handleMouseEnter('testimonials')}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    Testimonials
+                  </Link>
+                  <Link
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={200}
+                    className="navLinkElem textSizeS"
+                    style={linkStyle('contact')}
+                    onMouseEnter={() => handleMouseEnter('contact')}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    Contact
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className = "heroSection-Right">
-            <div class="heroSection-imageWrapper">
-              <div className = "heroSection-backgroundShape"></div>
-              <img src={headshot} 
-              alt="Guadalupe Cruz"
-              loading = "lazy"
-              />
+        </nav>
+
+        <div className = "paddingSectionM-Top"></div>
+
+        <div id = "home">
+          <div className = "largeContainer">
+            <div className = "heroSection">
+              <div className={`heroSection-Left textAlign-Left ${fadeIn ? 'fade-in' : ''}`}>
+                <h2 className = "textSizeM">Hello, I'm</h2>
+                <h1 className = "textSizeL">Guadalupe Cruz</h1>
+                <h2 className = "textSizeM">A Software Engineer</h2>
+                <div className = "paddingXS"></div>
+                <button
+                  href="https://drive.google.com/uc?export=download&id=1mz-kv3cklhquFyz3WkPtWWkQ2pnzbj7t"
+                  download
+                  className="resumeButton"
+                  style={linkStyle('resume')}
+                  onMouseEnter={() => handleMouseEnter('resume')}
+                  onMouseLeave={handleMouseLeave}
+                  >
+                  <div className="textSizeS textColor-Secondary">View My Resume</div>
+                </button>
+              </div>
+              <div className = "heroSection-Right">
+                <div class="heroSection-imageWrapper">
+                  <div className = "heroSection-backgroundShape"></div>
+                  <img src={headshot} 
+                  alt="Guadalupe Cruz"
+                  loading = "lazy"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
     
   )
 }

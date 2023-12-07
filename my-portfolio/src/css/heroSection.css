@@ -3,18 +3,23 @@
   left: 0%;
   right: 0%;
   z-index: 1000;
-  height: 5rem;
+  height: 5vw;
 }
   
 .navLinks {
-  height: 5rem;
+  height: 5vw;
   width: 100%;
-  max-width: 110rem;
   justify-content: space-between;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
   display: flex;
+}
+
+@media screen and (max-width: 100%){
+  .navLinks, .navLinks-Left, .navLinks-Right {
+      width: 100%;
+  }
 }
 
 .navLinkElem {
@@ -23,24 +28,22 @@
   display: flex;
   color: var(--text-100);
   text-decoration: none;
+  width: 100%;
+  max-height: 50%;
 }
 
 .navLinks-Left, .navLinks-Right{
-  display: flex;
-  gap: 5rem;
+  gap: 5vw;
+  float: left;
+}
+
+.navLinks-Left {
+  width: 78%;
 }
 
 .navLinks-Right {
   display: flex;
-  flex-direction: row;
-}
-  
-.resumeButton{
-  padding: 10px;
-  text-decoration: none;
-  border: none;
-  border-radius: 10px;
-  background-color: var(--accent-200);
+  flex-direction: row;  
 }
 
 .sticky {
@@ -65,7 +68,6 @@
 }
 
 .heroSection {
-  height: 95vh;
   width: 100%;
   max-width: 100%;
   justify-content: space-between;
@@ -73,20 +75,36 @@
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  gap: 100px;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
   
-  .fade-in {
-    animation: fadeIn 2s ease forwards;
-  }
+.fade-in {
+  animation: fadeIn 2s ease forwards;
+}
+
+.heroSection-Left, .heroSection-Right {
+  float: left;
+}
+
+.heroSection-Left {
+  width: 100%;
+}
+
+.resumeButton{
+  padding: 1vw;
+  text-decoration: none;
+  border: none;
+  border-radius: 1vw;
+  background-color: var(--accent-200);
+}
 
 .heroSection-Right {
-  margin-right: 2.5rem;
+  width: 30%;
+  margin-right: 2.5vw;
 }
 
 .heroSection-imageWrapper {
@@ -111,5 +129,5 @@
   width: 100%;
   height: 100%;
   background-color: var(--bg-200); 
-  margin-left: 2.5rem;
+  margin-left: 2.5vw;
 }
