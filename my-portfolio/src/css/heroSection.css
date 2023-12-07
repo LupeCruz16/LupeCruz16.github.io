@@ -11,8 +11,6 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
 }
 
@@ -51,7 +49,7 @@
   background-color: rgba(210,221,205, 0.7); 
   backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(10px);
-  height: 5rem;
+  height: 5vw;
   max-width: 100%;
   animation: dropdown 0.5s ease-in-out forwards;
 }

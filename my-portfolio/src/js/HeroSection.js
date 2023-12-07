@@ -96,7 +96,7 @@ function HeroSection () {
                     onMouseEnter={() => handleMouseEnter('aboutMe')}
                     onMouseLeave={handleMouseLeave}
                   >
-                    About Me
+                    About&nbsp;Me
                   </Link>
                   <Link
                     to="projects"
