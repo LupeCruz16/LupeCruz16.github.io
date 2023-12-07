@@ -99,6 +99,13 @@
   border: none;
   border-radius: 1vw;
   background-color: var(--accent-200);
+  width: 25%;
+}
+
+.resumeButtonLink{
+  text-decoration: none;
+  border: none;
+  background-color: var(--accent-200);
 }
 
 .heroSection-Right {

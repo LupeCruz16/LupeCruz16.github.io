@@ -153,16 +153,19 @@ function HeroSection () {
                 <h1 className = "textSizeL">Guadalupe Cruz</h1>
                 <h2 className = "textSizeM">A Software Engineer</h2>
                 <div className = "paddingXS"></div>
-                <button
-                  href="https://drive.google.com/uc?export=download&id=1mz-kv3cklhquFyz3WkPtWWkQ2pnzbj7t"
-                  download
-                  className="resumeButton"
-                  style={linkStyle('resume')}
-                  onMouseEnter={() => handleMouseEnter('resume')}
-                  onMouseLeave={handleMouseLeave}
-                  >
-                  <div className="textSizeS textColor-Secondary">View My Resume</div>
-                </button>
+                <div className="resumeButton"
+                style={linkStyle('resume')}
+                onMouseEnter={() => handleMouseEnter('resume')}
+                onMouseLeave={handleMouseLeave}>
+                  <a
+                    href="https://drive.google.com/uc?export=download&id=1mz-kv3cklhquFyz3WkPtWWkQ2pnzbj7t"
+                    rel="noopener noreferrer"
+                    download
+                    className="resumeButtonLink"
+                    >
+                    <div className="textSizeS textColor-Secondary">View My Resume</div>
+                  </a>
+                </div>
               </div>
               <div className = "heroSection-Right">
                 <div class="heroSection-imageWrapper">
