@@ -137,7 +137,7 @@ function HeroSection () {
         </div>
       </nav>
 
-      <div className = "paddingGlobal">
+      <div id = "home" className = "paddingGlobal">
       <div className = "heroSection largeContainer">
           <div className={`heroSection-Left textAlign-Left ${fadeIn ? 'fade-in' : ''}`}>
             <h2 className = "textSizeM">Hello, I'm</h2>

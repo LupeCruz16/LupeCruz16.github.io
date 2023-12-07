@@ -5,7 +5,7 @@ import '../css/testimonials.css'
 
 function Testimonials () {
     return (
-        <div className = "tesimonialsSection">
+        <div id = "testimonials" className = "tesimonialsSection">
           <div className = "paddingGlobal">
             <div className = "largeContainer">
               <div className = "paddingSection-M">
