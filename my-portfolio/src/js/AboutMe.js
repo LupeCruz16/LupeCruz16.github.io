@@ -13,7 +13,9 @@ function AbuoutMe () {
                   <div className = "aboutMeContent">
                     
                     <div className = "aboutMeContent-Left textAlign-Left">
-                      <div className = "textSizeM textColor-Secondary">About Me</div>
+                      <div className = "bottomMarginL">
+                        <div className = "textSizeM textColor-Secondary">About Me</div>
+                      </div>
                       <p className = "textSizeS textColor-Secondary marginLeft-S">
                         I enjoy forgetting semi colons in Python. 
                         I have discovered a passion and interest in web development which drove me here.

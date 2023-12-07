@@ -10,7 +10,7 @@ function Testimonials () {
             <div className = "largeContainer">
               <div className = "paddingSection-M">
 
-                <div className = "bottomMargin-XXL">
+                <div className = "bottomMarginL">
                   <div className = "textSizeM textAlign-Left">Testimonials</div>
                 </div>
 

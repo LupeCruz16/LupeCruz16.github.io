@@ -12,10 +12,9 @@ function Projects () {
                 <div className= "largeContainer">
                   <div className = "projectsComponent">
 
-                    <div className = "projectsContent-Top">
+                    <div className = "projectsContent-Top bottomMarginL">
                       <h2 className = "textSizeM textAlign-Left">Projects</h2>
                     </div>
-                    <div className = "paddingS"></div>
 
                     <div className = "projectsContent-Bottom marginLeft-S">
                       <div className = "projectColumn">
