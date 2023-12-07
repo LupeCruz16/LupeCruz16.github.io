@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.897498a9.css",
-    "main.js": "/static/js/main.b571ecf5.js",
+    "main.js": "/static/js/main.0596b872.js",
     "static/js/787.fc1d3d14.chunk.js": "/static/js/787.fc1d3d14.chunk.js",
     "static/media/taylor_swift_concert.png": "/static/media/taylor_swift_concert.92670611225617aa2648.png",
     "static/media/roam_ready.png": "/static/media/roam_ready.169409ac18956906fc4e.png",
@@ -13,11 +13,11 @@
     "static/media/headshot.jpg": "/static/media/headshot.737a73d8da681320c003.jpg",
     "index.html": "/index.html",
     "main.897498a9.css.map": "/static/css/main.897498a9.css.map",
-    "main.b571ecf5.js.map": "/static/js/main.b571ecf5.js.map",
+    "main.0596b872.js.map": "/static/js/main.0596b872.js.map",
     "787.fc1d3d14.chunk.js.map": "/static/js/787.fc1d3d14.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.897498a9.css",
-    "static/js/main.b571ecf5.js"
+    "static/js/main.0596b872.js"
   ]
 }
