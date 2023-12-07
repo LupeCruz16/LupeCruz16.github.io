@@ -31,9 +31,9 @@ function Footer () {
                       alt = "Guadalupe"
                       />
                     </div>
-                    <div className = "marginLeft margin-M">
+                    <div className = "marginLeft-S">
                       <div className = "textSizeM textWeightM textAlign-Left">Guadalupe Cruz</div>
-                      <div className = "marginBottom bottomMargin-XS"></div>
+                      <div className = "bottomMarginXS"></div>
                     </div>
                   </div>
                   <div className = "marginBottom bottomMargin-M"></div>

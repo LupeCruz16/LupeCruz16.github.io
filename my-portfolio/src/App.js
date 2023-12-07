@@ -3,7 +3,7 @@ import Testimonials from "./js/Testimonials.js";
 import Projects from "./js/Projects.js"
 import SkillGallery from "./js/SkillGallery.js"
 import AboutMe from "./js/AboutMe.js"
-// import Footer from "./js/Footer.js"
+import Footer from "./js/Footer.js"
 import './App.css';
 import './css/constants.css'
 
@@ -18,7 +18,7 @@ function App() {
         <SkillGallery />
         <Testimonials />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

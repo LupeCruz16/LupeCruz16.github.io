@@ -35,6 +35,10 @@
   margin-bottom: 4vw;
 }
 
+.bottomMarginXS {
+  margin-bottom: 2vw;
+}
+
 /* Text Styling */
 .textSizeXS {
   font-size: 1vw;
