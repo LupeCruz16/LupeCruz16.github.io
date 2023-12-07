@@ -13,13 +13,15 @@ function Footer () {
               <div className = "footerTop">
 
                 <div className = "footerLeft textAlign-Left">
-                  <h2 className = "textSizeM">Have a project? Let's talk</h2>
-                  <div className = "paddingSection-M-Bottom"></div>
-                  <div className = "textSizeS textStyleMuted">Say Hi!</div>
-                  <a href="mailto:guacruz.16@gmail.com?subject=Let's%20create%20something%20awesome!"
-                  className = "footerEmailLink inlineBlockElem">
-                    <div class = "textSizeS textColor-Secondary">guacruz.16@gmail.com</div>
-                  </a>
+                  <div className = "textSizeM">Have a project? Let's talk</div>
+                  <div className = "paddingSection-S-Bottom"></div>
+                  <div className = "marginLeft-S">
+                    <div className = "textSizeS textStyleMuted">Say Hi!</div>
+                    <a href="mailto:guacruz.16@gmail.com?subject=Let's%20create%20something%20awesome!"
+                    className = "footerEmailLink inlineBlockElem">
+                      <div class = "textSizeS textColor-Secondary">guacruz.16@gmail.com</div>
+                    </a>
+                  </div>
                 </div>
 
                 <div className = "footerRight">
@@ -36,7 +38,7 @@ function Footer () {
                       <div className = "bottomMarginXS"></div>
                     </div>
                   </div>
-                  <div className = "marginBottom bottomMargin-M"></div>
+                  <div className = "bottomMargin-M"></div>
                   <div className = "footerSocialWrapper">
                     <a aria-label= "Github" 
                     href = "https://github.com/LupeCruz16" 
@@ -72,7 +74,7 @@ function Footer () {
               </div>
             </div>
 
-            <div className = "paddingSection-M-Bottom">
+            <div className = "paddingSection-S-Bottom">
               <div className = "footerBottom">
                 <div className = " textSizeXS textStyleMuted">© 2023 by Guadalupe Cruz. All rights reserved.</div>
               </div>
