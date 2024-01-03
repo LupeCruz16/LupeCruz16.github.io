@@ -33,7 +33,7 @@ function Testimonials () {
                       </div>
                       <div className = "testimonialClientDetails textAlign-Left textColor-Secondary">
                         <div className = "textSizeS">Pedro Cruz</div>
-                        <div className = "textSizeXS textStyleMuted">Pacific Tech Appliance Repair Founder</div>
+                        <div className = "textSizeXS textStyleMuted">Pacific Tech Appliance Repair</div>
                       </div>
                     </div>
                   </div>
