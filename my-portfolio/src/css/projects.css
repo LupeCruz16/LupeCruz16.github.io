@@ -49,3 +49,7 @@
 .projectIconStyling {
     fill: var(--bg-200);
 }
+
+.projectImageWrapper, .projectText {
+    margin-bottom: 1vw;
+}

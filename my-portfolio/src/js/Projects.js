@@ -19,54 +19,36 @@ function Projects () {
                     <div className = "projectsContent-Bottom marginLeft-S">
                       <div className = "projectColumn">
                         <div className = "projectImageWrapper">
-                          <img src = {chatbot} 
-                          loading = "lazy"
-                          className = "projectImage"
-                          alt = "AI Chatbot"
-                          />
+                          <img src = {chatbot} loading = "lazy" className = "projectImage" alt = "AI Chatbot"/>
                         </div>
-                        <p className = "projectText textSizeS textAlign-Left">
-                          AI Tools
-                          <br></br>
-                            Developing internal system tools for Sigparser.
-                        </p>
+                        <div className = "projectText textSizeS textAlign-Left">
+                          <p>AI Chatbot</p>
+                          <p className = "textStyleMuted">SigParser customer support chatbot using AI.</p>
+                        </div>
                         <div className = "projectsSkillsSection">
-                          <button 
-                          className = "skillButton"
-                          >
+                          <button className = "skillButton">
                           <div className = "textColor-Secondary textAlign-Left textSizeXS">Python</div>
                           </button>
-                          <button 
-                          className = "skillButton"
-                          >
-                          <div className = "textColor-Secondary textAlign-Left textSizeXS">AWS</div>
+                          <button className = "skillButton">
+                            <div className = "textColor-Secondary textAlign-Left textSizeXS">AWS</div>
                           </button>
                         </div>
                       </div>
                       
                       <div className = "projectColumn">
                         <div className = "projectImageWrapper">
-                          <img src = {roamReady} 
-                          loading = "lazy"
-                          className = "projectImage"
-                          alt = "Roam Ready"
-                          />
+                          <img src = {roamReady} loading = "lazy" className = "projectImage" alt = "Roam Ready"/>
                         </div>
-                        <p className = "projectText textSizeS textAlign-Left">
-                          Roam Ready
-                          <br></br>
-                          Designed to make choosing a new travel location easier.
-                        </p>
+                        <div className = "projectText textSizeS textAlign-Left">
+                          <p>RoamReady</p>
+                          <p className = "textStyleMuted">Designed to make choosing a new travel location easier.</p>
+                        </div>
                         <div className = "projectsSkillsSection">
-                          <button 
-                          className = "skillButton"
-                          >
-                          <div className = "textColor-Secondary textAlign-Left textSizeXS">PHP</div>
+                          <button className = "skillButton">
+                            <div className = "textColor-Secondary textAlign-Left textSizeXS">PHP</div>
                           </button>
-                          <button 
-                          className = "skillButton"
-                          >
-                          <div className = "textColor-Secondary textAlign-Left textSizeXS">SQL</div>
+                          <button className = "skillButton">
+                            <div className = "textColor-Secondary textAlign-Left textSizeXS">SQL</div>
                           </button>
                           <div class="svgIcon">
                             <a href="https://github.com/LupeCruz16/RoamReady" target="_blank" rel="noopener noreferrer">
@@ -89,27 +71,18 @@ function Projects () {
 
                       <div className = "projectColumn">
                         <div className = "projectImageWrapper">
-                          <img src = {bookez} 
-                          loading = "lazy"
-                          className = "projectImage"
-                          alt = "BookEz"
-                          />
+                          <img src = {bookez} loading = "lazy" className = "projectImage" alt = "BookEz"/>
                         </div>
-                        <p className = "projectText textSizeS textAlign-Left">
-                          BookEz
-                          <br></br>
-                          Bookkeeping management tool for eBay sellers.
-                        </p>
+                        <div className = "projectText textSizeS textAlign-Left">
+                          <p>BookEz</p>
+                          <p className = "textStyleMuted">Bookkeeping management tool for eBay sellers.</p>
+                        </div>
                         <div className = "projectsSkillsSection">
-                          <button 
-                          className = "skillButton"
-                          >
-                          <div className = "textColor-Secondary textAlign-Left textSizeXS">Java</div>
+                          <button className = "skillButton">
+                            <div className = "textColor-Secondary textAlign-Left textSizeXS">Java</div>
                           </button>
-                          <button 
-                          className = "skillButton"
-                          >
-                          <div className = "textColor-Secondary textAlign-Left textSizeXS">Apache PDF Box</div>
+                          <button className = "skillButton">
+                            <div className = "textColor-Secondary textAlign-Left textSizeXS">Apache PDF Box</div>
                           </button>
                           <div class="svgIcon">
                             <a href="https://github.com/LupeCruz16/BookEz" target="_blank" rel="noopener noreferrer">
