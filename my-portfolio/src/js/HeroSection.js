@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { headshot } from './images.js';
+import { headshot } from './Images.js';
 import { Link } from 'react-scroll';
 import '../css/constants.css'
 import '../css/common.css'

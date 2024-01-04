@@ -1,4 +1,4 @@
-import { disney, museum, concert } from './images.js';
+import { disney, museum, concert } from './Images.js';
 import '../css/constants.css'
 import '../css/common.css'
 import '../css/aboutMe.css'
@@ -16,7 +16,7 @@ function AbuoutMe () {
                       <div className = "bottomMarginL">
                         <div className = "textSizeM textColor-Secondary">About Me</div>
                       </div>
-                      <p className = "textSizeS textColor-Secondary marginLeft-S">
+                      <p className = "aboutMeText textSizeS textColor-Secondary">
                         I enjoy forgetting semi colons in Python. 
                         I have discovered a passion and interest in web development which drove me here.
                         <br></br>

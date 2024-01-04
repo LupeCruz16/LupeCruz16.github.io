@@ -1,4 +1,4 @@
-import { headshot } from './images.js';
+import { headshot } from './Images.js';
 import '../css/constants.css'
 import '../css/common.css'
 import '../css/footer.css'
