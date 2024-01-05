@@ -16,23 +16,23 @@ function GitHubSVGIcon ({href}) {
   );
 };
 
-function MoreInformationSVGIcon ({href}) {
+function MoreInformationSVGIcon () {
   return (
     <div class="projectSVGIcons">
-      <a href={href} target="_blank" rel="noopener noreferrer">
-        <svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className = "projectIconStyling">
-          <title>More Information</title>
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-          <g id="SVGRepo_iconCarrier"> <g> <g> 
-          <path d="M256,0C114.837,0,0,114.843,0,256s114.837,256,256,256s256-114.843,256-256S397.163,0,256,0z M289.391,389.565 c0,18.442-14.949,33.391-33.391,33.391s-33.391-14.949-33.391-33.391V222.609c0-18.442,14.949-33.391,33.391-33.391 s33.391,14.949,33.391,33.391V389.565z M256,155.826c-18.442,0-33.391-14.949-33.391-33.391S237.558,89.044,256,89.044 s33.391,14.949,33.391,33.391S274.442,155.826,256,155.826z"></path> </g> </g> </g>
-        </svg>
-      </a>
+      <svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className = "projectIconStyling">
+        <title>More Information</title>
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier"> <g> <g> 
+        <path d="M256,0C114.837,0,0,114.843,0,256s114.837,256,256,256s256-114.843,256-256S397.163,0,256,0z M289.391,389.565 c0,18.442-14.949,33.391-33.391,33.391s-33.391-14.949-33.391-33.391V222.609c0-18.442,14.949-33.391,33.391-33.391 s33.391,14.949,33.391,33.391V389.565z M256,155.826c-18.442,0-33.391-14.949-33.391-33.391S237.558,89.044,256,89.044 s33.391,14.949,33.391,33.391S274.442,155.826,256,155.826z"></path> </g> </g> </g>
+      </svg>
     </div>
   )
 }
 
 /*
+
+// To be used in case of a live site
 function OpenInWindow ({href}) {
   return (
     <div class="projectSVGIcons">
