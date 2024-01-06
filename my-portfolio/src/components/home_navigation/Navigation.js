@@ -6,7 +6,7 @@ function Navigation() {
     //Hover effect
     const { handleMouseEnter, handleMouseLeave, getScaleStyle } = useHoverScale();
 
-    //Adding Navigation bar effect
+    //Adding Navigation bar dropdown blur effect
     const [isSticky, setSticky] = useState(false);
 
     const handleScroll = () => {
@@ -22,6 +22,27 @@ function Navigation() {
         };
     }, []);
 
+    // Function to create a navigation link
+    const scrollLink = (to, label) => {
+        const isGcLink = label.toLowerCase() === 'gc';
+
+        return (
+            <Link
+                to={isGcLink ? 'home' : to}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={200}
+                className="navLinkElem textSizeS"
+                style={getScaleStyle(isGcLink ? 'gc' : to)}
+                onMouseEnter={() => handleMouseEnter(isGcLink ? 'gc' : to)}
+                onMouseLeave={handleMouseLeave}
+            >
+                {label}
+            </Link>
+        );
+    };
+
     return (
         <div className = "paddingGlobal">
             <div className = "largeContainer">
@@ -29,87 +50,15 @@ function Navigation() {
                     <div className = "paddingGlobal">
                         <div className="navLinks">
                             <div className = "navLinks-Left">
-                            <Link
-                                to="home"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={200}
-                                className="navLinkElem textSizeS"
-                                style={getScaleStyle('gc')}
-                                onMouseEnter={() => handleMouseEnter('gc')}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                gc
-                            </Link>
+                                {scrollLink('home', 'gc')}
                             </div>
 
                             <div className = "navLinks-Right">
-                            <Link
-                                to="home"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={200}
-                                className="navLinkElem textSizeS"
-                                style={getScaleStyle('home')}
-                                onMouseEnter={() => handleMouseEnter('home')}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                Home
-                            </Link>
-                            <Link
-                                to="aboutMe"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={200}
-                                className="navLinkElem textSizeS"
-                                style={getScaleStyle('aboutMe')}
-                                onMouseEnter={() => handleMouseEnter('aboutMe')}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                About&nbsp;Me
-                            </Link>
-                            <Link
-                                to="projects"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={200}
-                                className="navLinkElem textSizeS"
-                                style={getScaleStyle('projects')}
-                                onMouseEnter={() => handleMouseEnter('projects')}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                Projects
-                            </Link>
-                            <Link
-                                to="testimonials"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={200}
-                                className="navLinkElem textSizeS"
-                                style={getScaleStyle('testimonials')}
-                                onMouseEnter={() => handleMouseEnter('testimonials')}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                Testimonials
-                            </Link>
-                            <Link
-                                to="contact"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={200}
-                                className="navLinkElem textSizeS"
-                                style={getScaleStyle('contact')}
-                                onMouseEnter={() => handleMouseEnter('contact')}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                Contact
-                            </Link>
+                                {scrollLink('home', 'Home')}
+                                {scrollLink('aboutMe', 'About\u00A0Me')}
+                                {scrollLink('projects', 'Projects')}
+                                {scrollLink('testimonials', 'Testimonials')}
+                                {scrollLink('contact', 'Contact')}
                             </div>
                         </div>
                     </div>
