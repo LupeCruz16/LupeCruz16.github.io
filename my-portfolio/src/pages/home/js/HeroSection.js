@@ -8,7 +8,6 @@ function HeroSection () {
   return (
     <div className = "paddingGlobal">
       <div id = "home" className = "largeContainer">
-        <div className = "paddingSectionM-Top"></div>
         <div className = "heroSection">
           <div className= "heroSection-Left textAlign-Left">
             <h2 className = "textSizeM">Hello, I'm</h2>

@@ -5,6 +5,8 @@
     display: grid;
     width: 100%;
     gap: 2vw;
+    padding-top: 10vw;
+    padding-bottom: 5vw;
 }
 
 .chatbotDetails {
