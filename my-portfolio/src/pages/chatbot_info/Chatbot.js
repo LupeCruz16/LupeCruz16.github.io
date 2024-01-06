@@ -2,7 +2,13 @@
 
 function Chatbot () {
     return (
-        <div>Hi</div>
+        <div className = "paddingsection-M">
+            <div className = "paddingGlobal">
+                <div className = "largeContainer">
+                    
+                </div>
+            </div>
+        </div>
     );
 }
 
