@@ -1,13 +1,10 @@
 import "./description.css"
-import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
 import { chatbot } from '../../assets/Images.js';
 
 function Description () {
-    const fadeIn = useFadeIn();
-
     return (
         <div className = "paddingGlobal">
-            <div className = {`largeContainer ${fadeIn ? 'fade-in' : ''}`}>
+            <div className = "largeContainer">
                 <div className = "projectContainer paddingSection-M">
 
                     <div className = 'chatbotDetails'>

@@ -1,3 +1,4 @@
+import useFadeIn from '../../../effects/FadeIn/useFadeIn.js';
 import Navigation from "../../../components/home_navigation/Navigation.js";
 import HeroSection from "./HeroSection.js"
 import Testimonials from "./Testimonials.js";
@@ -7,9 +8,10 @@ import AboutMe from "./AboutMe.js";
 import Footer from "../../../components/footer/Footer.js";
 
 function Home() {
+  const fadeIn = useFadeIn();
 
   return (
-    <div className="App">
+    <div className= {`App ${fadeIn ? 'fade-in' : ''}`}>
       <main className = "App-main">
         <Navigation />
         <HeroSection />

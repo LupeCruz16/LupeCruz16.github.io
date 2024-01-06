@@ -1,18 +1,16 @@
 import useHoverScale from '../../../effects/useHoverScale.js';
-import useFadeIn from '../../../effects/FadeIn/useFadeIn.js';
 import { headshot } from '../../../assets/Images.js';
 import '../css/heroSection.css'
 
 function HeroSection () {
   const { handleMouseEnter, handleMouseLeave, getScaleStyle } = useHoverScale();
-  const fadeIn = useFadeIn();
 
   return (
     <div className = "paddingGlobal">
       <div id = "home" className = "largeContainer">
         <div className = "paddingSectionM-Top"></div>
         <div className = "heroSection">
-          <div className= {`heroSection-Left textAlign-Left ${fadeIn ? 'fade-in' : ''}`}>
+          <div className= "heroSection-Left textAlign-Left">
             <h2 className = "textSizeM">Hello, I'm</h2>
             <h1 className = "textSizeL">Guadalupe Cruz</h1>
             <h2 className = "textSizeM">A Software Engineer</h2>
