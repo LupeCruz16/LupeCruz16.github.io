@@ -2,7 +2,7 @@ import './globalCSS/App.css';
 import './globalCSS/common.css';
 import './globalCSS/constants.css';
 import Home from './pages/home/js/Home.js'
-import Chatbot from './pages/chatbot_info/Chatbot.js'
+import Chatbot from './pages/chatbot/Chatbot.js'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {

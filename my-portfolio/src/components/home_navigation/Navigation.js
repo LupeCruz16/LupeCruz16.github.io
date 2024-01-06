@@ -1,24 +1,10 @@
+import useHoverScale from '../../effects/useHoverScale.js';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 
 function Navigation() {
-    // Create state to manage hover style for individual links
-    const [hoveredLink, setHoveredLink] = React.useState(null);
-
-    // Event handlers for mouse enter and leave
-    const handleMouseEnter = (link) => {
-        setHoveredLink(link);
-    };
-
-    const handleMouseLeave = () => {
-        setHoveredLink(null);
-    };
-
-    // Function to determine style based on hovered link
-    const linkStyle = (link) => ({
-        transform: hoveredLink === link ? 'scale(1.1)' : 'none',
-        transition: 'transform 0.3s ease',
-    });
+    //Hover effect
+    const { handleMouseEnter, handleMouseLeave, getScaleStyle } = useHoverScale();
 
     //Adding Navigation bar effect
     const [isSticky, setSticky] = useState(false);
@@ -41,7 +27,6 @@ function Navigation() {
             <div className = "largeContainer">
                 <nav className={`Navigation ${isSticky ? 'sticky' : ''}`}>
                     <div className = "paddingGlobal">
-                        <div className = "largeContainer">
                         <div className="navLinks">
                             <div className = "navLinks-Left">
                             <Link
@@ -51,7 +36,7 @@ function Navigation() {
                                 offset={-70}
                                 duration={200}
                                 className="navLinkElem textSizeS"
-                                style={linkStyle('gc')}
+                                style={getScaleStyle('gc')}
                                 onMouseEnter={() => handleMouseEnter('gc')}
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -67,7 +52,7 @@ function Navigation() {
                                 offset={-70}
                                 duration={200}
                                 className="navLinkElem textSizeS"
-                                style={linkStyle('home')}
+                                style={getScaleStyle('home')}
                                 onMouseEnter={() => handleMouseEnter('home')}
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -80,7 +65,7 @@ function Navigation() {
                                 offset={-70}
                                 duration={200}
                                 className="navLinkElem textSizeS"
-                                style={linkStyle('aboutMe')}
+                                style={getScaleStyle('aboutMe')}
                                 onMouseEnter={() => handleMouseEnter('aboutMe')}
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -93,7 +78,7 @@ function Navigation() {
                                 offset={-70}
                                 duration={200}
                                 className="navLinkElem textSizeS"
-                                style={linkStyle('projects')}
+                                style={getScaleStyle('projects')}
                                 onMouseEnter={() => handleMouseEnter('projects')}
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -106,7 +91,7 @@ function Navigation() {
                                 offset={-70}
                                 duration={200}
                                 className="navLinkElem textSizeS"
-                                style={linkStyle('testimonials')}
+                                style={getScaleStyle('testimonials')}
                                 onMouseEnter={() => handleMouseEnter('testimonials')}
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -119,14 +104,13 @@ function Navigation() {
                                 offset={-70}
                                 duration={200}
                                 className="navLinkElem textSizeS"
-                                style={linkStyle('contact')}
+                                style={getScaleStyle('contact')}
                                 onMouseEnter={() => handleMouseEnter('contact')}
                                 onMouseLeave={handleMouseLeave}
                             >
                                 Contact
                             </Link>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </nav>

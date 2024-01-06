@@ -1,6 +1,6 @@
 .aboutMeContent {
   grid-column-gap: 3vw;
-  grid-row-gap: 1.25sw;
+  grid-row-gap: 1.25vw;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1.75fr;
   grid-auto-columns: 1fr;

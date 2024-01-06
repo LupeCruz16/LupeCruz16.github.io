@@ -1,4 +1,4 @@
-import Navigation from "../../../components/navigation/Navigation.js";
+import Navigation from "../../../components/home_navigation/Navigation.js";
 import HeroSection from "./HeroSection.js"
 import Testimonials from "./Testimonials.js";
 import Projects from "./Projects.js";

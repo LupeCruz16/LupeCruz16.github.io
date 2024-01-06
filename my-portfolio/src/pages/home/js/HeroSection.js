@@ -1,44 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import useHoverScale from '../../../effects/useHoverScale.js';
+import useFadeIn from '../../../effects/FadeIn/useFadeIn.js';
 import { headshot } from '../../../assets/Images.js';
 import '../css/heroSection.css'
 
 function HeroSection () {
-  // Create state to manage hover style for view resume button
-  const [hoveredLink, setHoveredLink] = React.useState(null);
-
-  // Event handlers for mouse enter and leave
-  const handleMouseEnter = (link) => {
-    setHoveredLink(link);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredLink(null);
-  };
-
-  // Function to determine style based on hovered link
-  const linkStyle = (link) => ({
-    transform: hoveredLink === link ? 'scale(1.1)' : 'none',
-    transition: 'transform 0.3s ease',
-  });
-  
-  // Create state for Software Engineer effect
-  const [fadeIn, setFadeIn] = useState(false);
-
-  useEffect(() => {
-    setFadeIn(true); // Trigger the fade-in effect on component mount
-  }, []);
+  const { handleMouseEnter, handleMouseLeave, getScaleStyle } = useHoverScale();
+  const fadeIn = useFadeIn();
 
   return (
     <div className = "paddingGlobal">
       <div id = "home" className = "largeContainer">
         <div className = "paddingSectionM-Top"></div>
         <div className = "heroSection">
-          <div className={`heroSection-Left textAlign-Left ${fadeIn ? 'fade-in' : ''}`}>
+          <div className= {`heroSection-Left textAlign-Left ${fadeIn ? 'fade-in' : ''}`}>
             <h2 className = "textSizeM">Hello, I'm</h2>
             <h1 className = "textSizeL">Guadalupe Cruz</h1>
             <h2 className = "textSizeM">A Software Engineer</h2>
             <div className = "paddingXS"></div>
-            <div className="resumeButton" style={linkStyle('resume')} onMouseEnter={() => handleMouseEnter('resume')} onMouseLeave={handleMouseLeave}>
+            <div className="resumeButton" style={getScaleStyle('resume')} onMouseEnter={() => handleMouseEnter('resume')} onMouseLeave={handleMouseLeave}>
               <a
                 href="https://drive.google.com/uc?export=download&id=1mz-kv3cklhquFyz3WkPtWWkQ2pnzbj7t"
                 rel="noopener noreferrer"
