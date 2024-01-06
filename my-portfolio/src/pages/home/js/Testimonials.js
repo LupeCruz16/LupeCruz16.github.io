@@ -1,6 +1,4 @@
-import { pacificTech } from './Images.js';
-import '../css/constants.css'
-import '../css/common.css'
+import { pacificTech } from '../../../assets/Images.js';
 import '../css/testimonials.css'
 
 function Testimonials () {

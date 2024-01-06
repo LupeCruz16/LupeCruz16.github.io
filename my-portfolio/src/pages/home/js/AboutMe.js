@@ -1,6 +1,4 @@
-import { disney, museum, concert } from './Images.js';
-import '../css/constants.css'
-import '../css/common.css'
+import { disney, museum, concert } from '../../../assets/Images.js';
 import '../css/aboutMe.css'
 
 function AbuoutMe () {
