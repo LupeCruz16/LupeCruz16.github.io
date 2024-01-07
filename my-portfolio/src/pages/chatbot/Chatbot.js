@@ -4,7 +4,7 @@ import { chatbot } from '../../assets/Images.js'
 import Navigation from '../../components/navigation/Navigation.js';
 import Description from '../../components/projectDescription/Description.js';
 
-function AWSsvgIcon () {
+function AWSSVGIcon () {
     return (
         <svg fill="#404A3B" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -26,19 +26,14 @@ function Chatbot () {
                     title = "AI Customer Support Chatbot"
                     company = "SigParser"
                     duration = "2023-Present"
-                    description =  "Working to enhance SigParser's customer support capabilities, my team and I have successfully 
-                                    mitigated staff challenges by deploying an AI Chatbot. This innovative 
-                                    solution has been meticulously trained using data extracted through web scraping 
-                                    from SigParser's comprehensive documentation. To optimize functionality and 
-                                    cost-efficiency, the Chatbot operates on a robust AWS infrastructure. Effectively 
-                                    reducing operational expenses while securely housing the collected data."
-                    svg = {<AWSsvgIcon />}
+                    description =  "Working to enhance SigParser's customer support capabilities, my team and I have successfully mitigated staff challenges by deploying an AI Chatbot. This innovative solution has been meticulously trained using data extracted through web scraping from SigParser's comprehensive documentation. To optimize functionality and cost-efficiency, the Chatbot operates on a robust AWS infrastructure. Effectively reducing operational expenses while securely housing the collected data."
+                    svg = {<AWSSVGIcon />}
                     imageSrc = {chatbot}
                 />
                 <Footer />
             </main>
         </div>
     );
-}
+};
 
 export default Chatbot;
