@@ -35,3 +35,19 @@
     object-fit: cover;
     border-radius: 0.5vw;
 }
+
+.roamSVGContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.reactSVGIcon {
+    width: 70%;
+    height: auto;
+}
+
+.reactIconStyling {
+    fill: var(--bg-200);
+}
