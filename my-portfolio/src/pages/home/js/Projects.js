@@ -71,7 +71,7 @@ function Projects () {
                       <h2 className = "textSizeM textAlign-Left">Projects</h2>
                     </div>
 
-                    <div className = " projectsSection">
+                    <div className = "projectsSection">
 
                       {/* AI Chatbot and RoamReady */}
                       <div className = "projectRow">
@@ -96,7 +96,7 @@ function Projects () {
                             <div className = "textSizeS textAlign-Left">Travel Location Generator</div>
                             <div className = "projectIconsContainer">
                             <GitHubSVGIcon  href = "https://github.com/LupeCruz16/RoamReady" /> 
-                            <MoreInformationSVGIcon />                           
+                            <MoreInformationSVGIcon href = "/RoamReady"/>                           
                             </div>
                           </div>
                         </div>

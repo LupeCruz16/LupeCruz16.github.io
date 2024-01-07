@@ -3,6 +3,7 @@ import './globalCSS/common.css';
 import './globalCSS/constants.css';
 import Home from './pages/home/js/Home.js'
 import Chatbot from './pages/chatbot/Chatbot.js'
+import RoamReady from './pages/roamReady/RoamReady.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Chatbot" element={<Chatbot />} />
+            <Route path="/RoamReady" element={<RoamReady />} />
           </Routes>
         </Router>
       </main>

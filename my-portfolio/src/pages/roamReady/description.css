@@ -1,4 +1,4 @@
-.chatbotProjectContainer{
+.roamProjectContainer{
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
@@ -9,7 +9,7 @@
     padding-bottom: 5vw;
 }
 
-.chatbotDetails {
+.roamDetails {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,36 +18,20 @@
     gap: 1vw;
 }
 
-.chatbotDescription {
+.roamDescription {
     width: 90%;
 }
 
-.chatbotImageWrapper {
+.roamImageWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: auto;
 }
 
-.chatbotImage {
+.roamImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 0.5vw;
-}
-
-.chatbotSVGContainer {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    width: 100%;
-}
-
-.awsSVGIcon {
-    width: 70%;
-    height: auto;
-}
-
-.awsIconStyling {
-    fill: var(--bg-200);
 }
