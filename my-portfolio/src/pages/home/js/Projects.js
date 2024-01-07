@@ -116,7 +116,7 @@ function Projects () {
                             <div className = "textSizeS textAlign-Left">Bookkeeping Mgmt Tool</div>
                             <div className = "projectIconsContainer">
                             <GitHubSVGIcon  href = "https://github.com/LupeCruz16/BookEz" /> 
-                            <MoreInformationSVGIcon />                           
+                            <MoreInformationSVGIcon href = "/BookEz"/>                           
                             </div>
                           </div>
                         </div>

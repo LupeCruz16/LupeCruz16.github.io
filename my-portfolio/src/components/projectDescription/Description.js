@@ -12,7 +12,7 @@ function Description({ title, company, duration, description, svg, imageSrc }) {
                         <div className="textSizeS textStyleMuted">
                             {/* Display company only if it is provided */}
                             {company && <div>Company: {company}</div>}
-                            <div>Duration: {duration}</div>
+                            <div>{duration}</div>
                         </div>
                         <div className="projectDescription textSizeS">
                             {description}

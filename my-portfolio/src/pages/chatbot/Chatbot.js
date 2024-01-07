@@ -15,7 +15,7 @@ function Chatbot () {
                 <Description 
                     title = "AI Customer Support Chatbot"
                     company = "SigParser"
-                    duration = "2023-Present"
+                    duration = "Ongoing since 2023"
                     description =  "Working to enhance SigParser's customer support capabilities, my team and I have successfully mitigated staff challenges by deploying an AI Chatbot. This innovative solution has been meticulously trained using data extracted through web scraping from SigParser's comprehensive documentation. To optimize functionality and cost-efficiency, the Chatbot operates on a robust AWS infrastructure. Effectively reducing operational expenses while securely housing the collected data."
                     svg = {<AWSSVGIcon />}
                     imageSrc = {chatbot}
