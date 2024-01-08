@@ -2,30 +2,29 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-left: 2vw;
 }
 
-.projectRow {
-    width: 100%;
+.projectCard {
+    background-color: var(--accent-100);
+    border-radius: 3%;
+    justify-content: space-evenly;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 5vw;
+    align-items: center;
+}
+
+.currentProject{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
 }
 
 .projectImageWrapper {
-    margin-bottom: 1vw;
     flex: 1;
-    width: 30vw;
-    height: 18vw;
-}
-
-.projectInfo {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 2vw;
+    width: 55vw;
+    height: auto;
 }
 
 .projectImage {
@@ -48,4 +47,13 @@
 .projectSVGIcons {
     width: 2vw;
     height: 2vw;
+}
+
+.projectArrowSVGIcons {
+    width: 3vw;
+    height: 3vw;
+}
+
+.rightArrow {
+    transform: rotate(180deg); 
 }
