@@ -1,12 +1,36 @@
 import { chatbot, bookez, roamReady } from '../../../assets/Images.js';
 import { GitHubSVGIcon, MoreInformationSVGIcon } from '../../../assets/SVGs.js';
+import React, { useState } from 'react';
 import '../css/projects.css'
 
 /*
   OpenInWindow SVG is not used, this icon is used to open live demos of websites.
 */
+const projects = [
+  {id: 1, projectImgFile: chatbot, imgAlt: "Chatbot", title: "AI Customer Support Chatbot", company: "SigParser", 
+   duration: "Ongoing since 2023", infoSVG: <MoreInformationSVGIcon href = "/Chatbot"/>},
+  {id: 2, projectImgFile: roamReady, imgAlt: "RoamReady", title: "Travel Location Generator", duration: "Completed in 2023", 
+   infoSVG: <MoreInformationSVGIcon href = "/RoamReady"/>, gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/RoamReady" />},
+  {id: 3, projectImgFile: bookez, imgAlt: "BookEz", title: "Java Bookkeeping Application", duration: "Spanning 2022-2023",
+   infoSVG: <MoreInformationSVGIcon href = "/BookEz"/>, gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/BookEz" />}     
+];
 
 function Projects () {
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+
+  const handlePrevClick = () => {
+    setCurrentProjectIndex((prevIndex) => 
+      prevIndex > 0 ? prevIndex - 1 : projects.length - 1
+    );
+  };
+
+  const handleNextClick = () => {
+    setCurrentProjectIndex((prevIndex) => 
+      prevIndex < projects.length - 1 ? prevIndex + 1 : 0
+    );
+  };
+
+  const currentProject = projects[currentProjectIndex];
 
     return (
         <div id = "projects">
@@ -22,7 +46,7 @@ function Projects () {
                       <div className = "projectCard paddingSection-M">
 
                         {/* Left Arrow */}
-                        <div className = "projectArrowSVGIcons">
+                        <div className = "projectArrowSVGIcons" onClick={handlePrevClick}>
                           <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#D2DDCD">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                             <g id="SVGRepo_iconCarrier"> 
@@ -35,18 +59,21 @@ function Projects () {
                         {/* Project Details */}
                         <div className = "currentProject textAlign-Left textColor-Secondary">
                           <div className = "projectImageWrapper">
-                            <img src = {chatbot} loading = "lazy" className = "projectImage" alt = "AI Chatbot"/>
+                            <img src = {currentProject.projectImgFile} loading = "lazy" className = "projectImage" alt = {currentProject.imgAlt}/>
                           </div>
-                          <div className = "textSizeM">AI Customer Support Chatbot</div>
-                          <div className = "textSizeS textStyleMuted">Company: SigParser</div>
-                          <div className = "textSizeS textStyleMuted">Ongoing since 2023</div>
+                          <div className = "textSizeM">{currentProject.title}</div>
+                          {currentProject.company && 
+                            <div className="textSizeS textStyleMuted">Company: {currentProject.company}</div>
+                          }
+                          <div className = "textSizeS textStyleMuted">{currentProject.duration}</div>
                           <div className = "projectIconsContainer">
-                            <MoreInformationSVGIcon href = "/Chatbot"/>                          
+                            {currentProject.infoSVG} 
+                            {currentProject.gitSVG}                            
                           </div>
                         </div>
 
                         {/* Right Arrow */}
-                        <div className = "projectArrowSVGIcons">
+                        <div className = "projectArrowSVGIcons" onClick={handleNextClick}>
                           <svg fill="#D2DDCD" className = "rightArrow" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                             <g id="SVGRepo_iconCarrier"> 
@@ -56,58 +83,6 @@ function Projects () {
                           </svg>
                         </div>
                       </div>
-
-
-                      {/* AI Chatbot and RoamReady */}
-                      {/* <div className = "projectRow">
-
-                        <div className = "project">
-                          <div className = "projectImageWrapper">
-                            <img src = {chatbot} loading = "lazy" className = "projectImage" alt = "AI Chatbot"/>
-                          </div>
-                          <div className = "projectInfo">
-                            <div className = "textSizeS textAlign-Left">AI Customer Support Chatbot</div>
-                            <div className = "projectIconsContainer">
-                            <MoreInformationSVGIcon href = "/Chatbot"/>                          
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className = "project">
-                          <div className = "projectImageWrapper">
-                            <img src = {roamReady} loading = "lazy" className = "projectImage" alt = "Roam Ready"/>
-                          </div>
-                          <div className = "projectInfo">
-                            <div className = "textSizeS textAlign-Left">Travel Location Generator</div>
-                            <div className = "projectIconsContainer">
-                            <GitHubSVGIcon  href = "https://github.com/LupeCruz16/RoamReady" /> 
-                            <MoreInformationSVGIcon href = "/RoamReady"/>                           
-                            </div>
-                          </div>
-                        </div>
-
-                      </div> 
-                      {/* End of row 1 */}
-
-                      {/* BookEz 
-                      <div className = "projectRow">
-
-                        <div className = "project">
-                          <div className = "projectImageWrapper">
-                            <img src = {bookez} loading = "lazy" className = "projectImage" alt = "BookEz"/>
-                          </div>
-
-                          <div className = "projectInfo">
-                            <div className = "textSizeS textAlign-Left">Bookkeeping Mgmt Tool</div>
-                            <div className = "projectIconsContainer">
-                            <GitHubSVGIcon  href = "https://github.com/LupeCruz16/BookEz" /> 
-                            <MoreInformationSVGIcon href = "/BookEz"/>                           
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                      End of row 2 */}
 
                     </div>
                 </div>
