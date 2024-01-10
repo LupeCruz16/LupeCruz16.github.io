@@ -1,5 +1,5 @@
 import { chatbot, bookez, roamReady } from '../../../assets/Images.js';
-import { GitHubSVGIcon } from '../../../assets/SVGs.js';
+import { GitHubSVGIcon, AISVGIcon, PaperAirplaneSVGIcon, ExpensesSVGIcon } from '../../../assets/SVGs.js';
 import useHoverScale from '../../../effects/useHoverScale.js';
 import { useState } from 'react';
 import '../css/projects.css'
@@ -10,13 +10,16 @@ import '../css/projects.css'
 const projects = [
   {id: 1, projectImgFile: chatbot, imgAlt: "Chatbot", title: "AI Customer Support Chatbot", company: "SigParser", 
    duration: "Ongoing since 2023", feature1: "Github Actions for CI/CD", feature2: "AWS Tool Implementation", 
-   feature3: "Webscraping with BeautifulSoup4", feature4: "Comprehensive Testing with TDD"},
+   feature3: "Webscraping with BeautifulSoup4", feature4: "Comprehensive Testing with TDD", funSVG: <AISVGIcon />},
 
   {id: 2, projectImgFile: roamReady, imgAlt: "RoamReady", title: "Travel Location Generator", duration: "Completed in 2023", 
-   gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/RoamReady" />},
+   gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/RoamReady" />, 
+   feature1: "Utilization of HTML, CSS, JS, PHP and SQL", funSVG: <PaperAirplaneSVGIcon />},
    
   {id: 3, projectImgFile: bookez, imgAlt: "BookEz", title: "Java Bookkeeping Application", duration: "Spanning 2022-2023",
-   gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/BookEz" />}     
+   gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/BookEz" />, 
+   feature1: "Java Build Application", feature2: "Apache PDF Box Implmentation", 
+   feature3: "Collaborative Development Across Diverse Teams", funSVG: <ExpensesSVGIcon />}     
 ];
 
 function Projects () {
@@ -58,7 +61,7 @@ function Projects () {
                     </div>
 
                     <div className = "projectsSection">
-                      <div className = "projectCard paddingSection-M">
+                      <div className = "currentProjectBackground paddingSection-M">
 
                         {/* Left Arrow */}
                         <div className = "projectArrowSVGIcons" onClick={handlePrevClick} style={getScaleStyle("leftArrow")} onMouseEnter={() => handleMouseEnter("leftArrow")} onMouseLeave={handleMouseLeave}>
@@ -77,40 +80,63 @@ function Projects () {
                             <img src = {currentProject.projectImgFile} loading = "lazy" className = "projectImage" alt = {currentProject.imgAlt}/>
                           </div>
 
-                          {/* Project title and SVG Icons */}
-                          <div className = "projectSpecificsRow textSizeM">
-                            <div>{currentProject.title}</div>
-                            <div className = "projectIconsContainer">
-                              {currentProject.gitSVG}                            
-                            </div>
-                          </div>
+                          <div className = "currentProjectGrid">
+                            <div className = "currentProjectDetails">
+                              {/* Project title and SVG Icons */}
+                              <div className = "projectSpecificsRow textSizeM">
+                                <div>{currentProject.title}</div>
 
-                          {/* Project Detail Text */}
-                          <div className = "projectSpecificsRow textSizeS textStyleMuted">
-                            {/* Company is only displayed if applicable */}
-                            {currentProject.company && 
-                              <div>Company: {currentProject.company}   |   </div>
-                            }
-                            <div>{currentProject.duration}</div>
-                          </div>
-                          <div className = "textSizeS">
-                            {currentProject.feature1 && 
-                              <div>Features:</div>
-                            }
-                            <ul className = "projectFeatures">
-                              {currentProject.feature1 && 
-                                <li>{currentProject.feature1}</li>
-                              }
-                              {currentProject.feature2 && 
-                                <li>{currentProject.feature2}</li>
-                              }
-                              {currentProject.feature3 && 
-                                <li>{currentProject.feature3}</li>
-                              }
-                              {currentProject.feature3 && 
-                                <li>{currentProject.feature3}</li>
-                              }
-                            </ul>
+                                {/* Only display icons if listed */}
+                                <div className = "projectIconsContainer projectIconStyling">
+                                  {currentProject.gitSVG && 
+                                    <div className = "projectSVGIcons projectIconStyling">
+                                      {currentProject.gitSVG}
+                                    </div>
+                                  }  
+                                  {currentProject.openInWindowSVG && 
+                                    <div className = "projectSVGIcons projectIconStyling">
+                                      {currentProject.openInWindowSVG}
+                                    </div>
+                                  }                           
+                                </div>
+                              </div>
+
+                              {/* Project Detail Text */}
+                              <div className = "projectSpecificsRow textSizeS textStyleMuted">
+
+                                {/* Company is only displayed if listed */}
+                                {currentProject.company && 
+                                  <div>Company: {currentProject.company}   |   </div>
+                                }
+                                <div>{currentProject.duration}</div>
+                              </div>
+
+                              {/* Displaying features in range 1-4 if listed */}
+                              <div className = "textSizeS">
+                                {currentProject.feature1 && 
+                                  <div>Features:</div>
+                                }
+                                <ul className = "projectFeatures">
+                                  {currentProject.feature1 && 
+                                     <li>{currentProject.feature1}</li>
+                                  }
+                                  {currentProject.feature2 && 
+                                    <li>{currentProject.feature2}</li>
+                                  }
+                                  {currentProject.feature3 && 
+                                    <li>{currentProject.feature3}</li>
+                                  }
+                                  {currentProject.feature4 && 
+                                    <li>{currentProject.feature4}</li>
+                                  }
+                                </ul>
+                              </div>
+                            </div>
+                            <div className = "funSVGProjectContainer">
+                              <div className = "funSVGProjectIcon projectIconStyling">
+                                  {currentProject.funSVG}
+                              </div>
+                            </div>
                           </div>
                         </div>
 
