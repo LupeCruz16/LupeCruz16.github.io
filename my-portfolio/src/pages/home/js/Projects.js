@@ -9,9 +9,12 @@ import '../css/projects.css'
 */
 const projects = [
   {id: 1, projectImgFile: chatbot, imgAlt: "Chatbot", title: "AI Customer Support Chatbot", company: "SigParser", 
-   duration: "Ongoing since 2023"},
+   duration: "Ongoing since 2023", feature1: "Github Actions for CI/CD", feature2: "AWS Tool Implementation", 
+   feature3: "Webscraping with BeautifulSoup4", feature4: "Comprehensive Testing with TDD"},
+
   {id: 2, projectImgFile: roamReady, imgAlt: "RoamReady", title: "Travel Location Generator", duration: "Completed in 2023", 
    gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/RoamReady" />},
+   
   {id: 3, projectImgFile: bookez, imgAlt: "BookEz", title: "Java Bookkeeping Application", duration: "Spanning 2022-2023",
    gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/BookEz" />}     
 ];
@@ -73,16 +76,41 @@ function Projects () {
                           <div className = "projectImageWrapper">
                             <img src = {currentProject.projectImgFile} loading = "lazy" className = "projectImage" alt = {currentProject.imgAlt}/>
                           </div>
-                          <div className = "textSizeM">{currentProject.title}</div>
-                          <div className = "projectSpecifics textSizeS textStyleMuted">
+
+                          {/* Project title and SVG Icons */}
+                          <div className = "projectSpecificsRow textSizeM">
+                            <div>{currentProject.title}</div>
+                            <div className = "projectIconsContainer">
+                              {currentProject.gitSVG}                            
+                            </div>
+                          </div>
+
+                          {/* Project Detail Text */}
+                          <div className = "projectSpecificsRow textSizeS textStyleMuted">
                             {/* Company is only displayed if applicable */}
                             {currentProject.company && 
                               <div>Company: {currentProject.company}   |   </div>
                             }
                             <div>{currentProject.duration}</div>
                           </div>
-                          <div className = "projectIconsContainer">
-                            {currentProject.gitSVG}                            
+                          <div className = "textSizeS">
+                            {currentProject.feature1 && 
+                              <div>Features:</div>
+                            }
+                            <ul className = "projectFeatures">
+                              {currentProject.feature1 && 
+                                <li>{currentProject.feature1}</li>
+                              }
+                              {currentProject.feature2 && 
+                                <li>{currentProject.feature2}</li>
+                              }
+                              {currentProject.feature3 && 
+                                <li>{currentProject.feature3}</li>
+                              }
+                              {currentProject.feature3 && 
+                                <li>{currentProject.feature3}</li>
+                              }
+                            </ul>
                           </div>
                         </div>
 
