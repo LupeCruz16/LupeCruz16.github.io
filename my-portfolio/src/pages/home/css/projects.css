@@ -46,6 +46,12 @@
     gap: 1vw;
 }
 
+.projectSpecifics {
+    display: flex;
+    flex-direction: row;
+    white-space: pre-wrap;
+}
+
 .projectIconStyling {
     fill: var(--bg-200);
 }

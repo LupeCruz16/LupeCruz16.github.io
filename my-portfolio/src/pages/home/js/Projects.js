@@ -1,5 +1,5 @@
 import { chatbot, bookez, roamReady } from '../../../assets/Images.js';
-import { GitHubSVGIcon, MoreInformationSVGIcon } from '../../../assets/SVGs.js';
+import { GitHubSVGIcon } from '../../../assets/SVGs.js';
 import useHoverScale from '../../../effects/useHoverScale.js';
 import { useState } from 'react';
 import '../css/projects.css'
@@ -9,11 +9,11 @@ import '../css/projects.css'
 */
 const projects = [
   {id: 1, projectImgFile: chatbot, imgAlt: "Chatbot", title: "AI Customer Support Chatbot", company: "SigParser", 
-   duration: "Ongoing since 2023", infoSVG: <MoreInformationSVGIcon href = "/Chatbot"/>},
+   duration: "Ongoing since 2023"},
   {id: 2, projectImgFile: roamReady, imgAlt: "RoamReady", title: "Travel Location Generator", duration: "Completed in 2023", 
-   infoSVG: <MoreInformationSVGIcon href = "/RoamReady"/>, gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/RoamReady" />},
+   gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/RoamReady" />},
   {id: 3, projectImgFile: bookez, imgAlt: "BookEz", title: "Java Bookkeeping Application", duration: "Spanning 2022-2023",
-   infoSVG: <MoreInformationSVGIcon href = "/BookEz"/>, gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/BookEz" />}     
+   gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/BookEz" />}     
 ];
 
 function Projects () {
@@ -74,12 +74,14 @@ function Projects () {
                             <img src = {currentProject.projectImgFile} loading = "lazy" className = "projectImage" alt = {currentProject.imgAlt}/>
                           </div>
                           <div className = "textSizeM">{currentProject.title}</div>
-                          {currentProject.company && 
-                            <div className="textSizeS textStyleMuted">Company: {currentProject.company}</div>
-                          }
-                          <div className = "textSizeS textStyleMuted">{currentProject.duration}</div>
+                          <div className = "projectSpecifics textSizeS textStyleMuted">
+                            {/* Company is only displayed if applicable */}
+                            {currentProject.company && 
+                              <div>Company: {currentProject.company}   |   </div>
+                            }
+                            <div>{currentProject.duration}</div>
+                          </div>
                           <div className = "projectIconsContainer">
-                            {currentProject.infoSVG} 
                             {currentProject.gitSVG}                            
                           </div>
                         </div>
