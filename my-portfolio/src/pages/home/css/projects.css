@@ -19,6 +19,12 @@
     display: flex;
     flex-direction: column;
     gap: 1vw;
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+}
+  
+.currentProject.show {
+    opacity: 1;
 }
 
 .projectImageWrapper {

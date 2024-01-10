@@ -1,6 +1,7 @@
 import { chatbot, bookez, roamReady } from '../../../assets/Images.js';
 import { GitHubSVGIcon, MoreInformationSVGIcon } from '../../../assets/SVGs.js';
-import React, { useState } from 'react';
+import useHoverScale from '../../../effects/useHoverScale.js';
+import { useState } from 'react';
 import '../css/projects.css'
 
 /*
@@ -16,18 +17,29 @@ const projects = [
 ];
 
 function Projects () {
+  // Hover effect
+  const { handleMouseEnter, handleMouseLeave, getScaleStyle } = useHoverScale();
+  
+  // Starting at beginning of projects array
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 
+  // showDetails effect set to true to begin 
+  const [showDetails, setShowDetails] = useState(true);
+
+  const updateProject = (newIndex) => {
+    setShowDetails(false);
+    setTimeout(() => {
+      setCurrentProjectIndex(newIndex);
+      setShowDetails(true);
+    }, 500); // Delay to allow opacity transition
+  };
+
   const handlePrevClick = () => {
-    setCurrentProjectIndex((prevIndex) => 
-      prevIndex > 0 ? prevIndex - 1 : projects.length - 1
-    );
+    updateProject(currentProjectIndex > 0 ? currentProjectIndex - 1 : projects.length - 1);
   };
 
   const handleNextClick = () => {
-    setCurrentProjectIndex((prevIndex) => 
-      prevIndex < projects.length - 1 ? prevIndex + 1 : 0
-    );
+    updateProject(currentProjectIndex < projects.length - 1 ? currentProjectIndex + 1 : 0);
   };
 
   const currentProject = projects[currentProjectIndex];
@@ -46,7 +58,7 @@ function Projects () {
                       <div className = "projectCard paddingSection-M">
 
                         {/* Left Arrow */}
-                        <div className = "projectArrowSVGIcons" onClick={handlePrevClick}>
+                        <div className = "projectArrowSVGIcons" onClick={handlePrevClick} style={getScaleStyle("leftArrow")} onMouseEnter={() => handleMouseEnter("leftArrow")} onMouseLeave={handleMouseLeave}>
                           <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#D2DDCD">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                             <g id="SVGRepo_iconCarrier"> 
@@ -56,8 +68,8 @@ function Projects () {
                           </svg>
                         </div>
 
-                        {/* Project Details */}
-                        <div className = "currentProject textAlign-Left textColor-Secondary">
+                        {/* Project Details, using fade in/out effect*/}
+                        <div className={`currentProject textAlign-Left textColor-Secondary ${showDetails ? 'show' : ''}`}>
                           <div className = "projectImageWrapper">
                             <img src = {currentProject.projectImgFile} loading = "lazy" className = "projectImage" alt = {currentProject.imgAlt}/>
                           </div>
@@ -73,7 +85,7 @@ function Projects () {
                         </div>
 
                         {/* Right Arrow */}
-                        <div className = "projectArrowSVGIcons" onClick={handleNextClick}>
+                        <div className = "projectArrowSVGIcons" onClick={handleNextClick} style={getScaleStyle("rightArrow")} onMouseEnter={() => handleMouseEnter("rightArrow")} onMouseLeave={handleMouseLeave}>
                           <svg fill="#D2DDCD" className = "rightArrow" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                             <g id="SVGRepo_iconCarrier"> 
