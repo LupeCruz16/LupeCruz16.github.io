@@ -1,6 +1,14 @@
 import { disney, museum, concert } from '../../../assets/Images.js';
 import '../css/aboutMe.css'
 
+const AboutMeImageWrapper = ({ src, className, alt }) => {
+  return (
+    <div className="imageWrapper">
+      <img src={src} className={className} loading="lazy" alt={alt} />
+    </div>
+  );
+};
+
 function AbuoutMe () {
 
     return (
@@ -15,35 +23,26 @@ function AbuoutMe () {
                         <div className = "textSizeM textColor-Secondary">About Me</div>
                       </div>
                       <p className = "aboutMeText textSizeS textColor-Secondary">
-                        I enjoy forgetting semi colons in Python. 
-                        I have discovered a passion and interest in web development which drove me here.
+                        I have a passion for discovering the potential of programming, a journey that has recently led me to the 
+                        exciting realm of web development. 
+
+                        This newfound interest was the spark behind the creation of this website. 
+
+                        Additionally, my senior capstone course opened the doors to the fascinating world of popular AI models, 
+                        further enriching my knowledge and skills.
                         <br></br>
                         <br></br>
-                        Outside of my room I enjoy the opportunity to travel and visit new places! 
+                        Away from my workspace, I embrace the thrill of travel and new experiences. 
+                        
+                        A highlight for me was the unforgettable experience of attending a Taylor Swift concert with my girlfriend, 
+                        a memory that encapsulates my love for adventure and creating special moments.
                       </p>
                     </div>
 
                     <div className = "aboutMeContent-Right">
-                      <div className = "imageWrapper">
-                        <img src = {disney} 
-                          className = "aboutMeTopImage"
-                          loading = "lazy"
-                          alt = "Disney"/>
-                      </div>
-                      <div className = "paddingS"></div>
-                      <div className = "imageWrapper">
-                        <img src = {museum} 
-                          className = "aboutMeBottomImage negativeMarginS"
-                          loading = "lazy"
-                          alt = "Museum"/>
-                      </div>
-                      <div className = "paddingS"></div>
-                      <div className = "imageWrapper">
-                        <img src = {concert} 
-                          className = "aboutMeTopImage negativeMarginS"
-                          loading = "lazy"
-                          alt = "Concert"/> 
-                      </div>  
+                      <AboutMeImageWrapper src = {disney} className = "aboutMeTopImage" alt = "Disney"/>
+                      <AboutMeImageWrapper src = {museum} className = "aboutMeBottomImage negativeMarginS" alt = "Museum"/>
+                      <AboutMeImageWrapper src = {concert} className = "aboutMeTopImage negativeMarginS" alt = "Concert"/>
                     </div>
 
                   </div>  

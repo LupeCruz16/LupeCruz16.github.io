@@ -2,7 +2,7 @@
   grid-column-gap: 3vw;
   grid-row-gap: 1.25vw;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 1.75fr;
+  grid-template-columns: 1.75fr 1fr;
   grid-auto-columns: 1fr;
   display: grid;
 }
@@ -29,7 +29,7 @@
   
 .imageWrapper img {
   border-radius: 5%;
-  width: 25%;
+  width: 60%;
   height: auto;
   display: block;
   position: relative;
@@ -46,8 +46,9 @@
   border-radius: 15%;
   width: 100%;
   height: 100%;
+  padding-bottom: -5vw;
 }
 
 .negativeMarginS {
-  margin-top: -5vw;
+  margin-top: -1.5vw;
 }
