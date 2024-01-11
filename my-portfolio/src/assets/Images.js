@@ -6,5 +6,6 @@ import bookez from './images/bookEz.png';
 import roamReady from './images/roam_ready.png';
 import headshot from './images/headshot.jpg';
 import pacificTech from './images/pacific_tech_client.jpg';
+import arduinos from './images/arduino.jpg'
 
-export { disney, museum, concert, chatbot, bookez, roamReady, headshot, pacificTech };
+export { disney, museum, concert, chatbot, bookez, roamReady, headshot, pacificTech, arduinos };

@@ -1,5 +1,5 @@
-import { chatbot, bookez, roamReady } from '../../../assets/Images.js';
-import { GitHubSVGIcon, AISVGIcon, PaperAirplaneSVGIcon, ExpensesSVGIcon } from '../../../assets/SVGs.js';
+import { chatbot, roamReady, arduinos } from '../../../assets/Images.js';
+import { GitHubSVGIcon, AISVGIcon, PaperAirplaneSVGIcon, RobotSVGIcon } from '../../../assets/SVGs.js';
 import useHoverScale from '../../../effects/useHoverScale.js';
 import { useState } from 'react';
 import '../css/projects.css'
@@ -12,15 +12,28 @@ const projects = [
    duration: "Ongoing since 2023", feature1: "Github Actions for CI/CD", feature2: "AWS Tool Implementation", 
    feature3: "Webscraping with BeautifulSoup4", feature4: "Comprehensive Testing with TDD", funSVG: <AISVGIcon />},
 
-  {id: 2, projectImgFile: roamReady, imgAlt: "RoamReady", title: "Travel Location Generator", duration: "Completed in 2023", 
+  {id: 2, projectImgFile: arduinos, imgAlt: "Arduinos", title: "Arduino Lead Educator", 
+   company: "Treobytes", duration: "In Progress Since 2023", gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/TreobytesSTEMDay2024" />,
+   feature1: "Teaching Programming Fundamentals", feature2: "Problem-Solving Skills Development", 
+   feature3: "Algorithmic Thinking and Logic Building", feature4: "Leading a group of facilitators", 
+   funSVG: <RobotSVGIcon />},
+
+  {id: 3, projectImgFile: roamReady, imgAlt: "RoamReady", title: "Travel Location Generator", duration: "Completed in 2023", 
    gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/RoamReady" />, 
-   feature1: "Utilization of HTML, CSS, JS, PHP and SQL", funSVG: <PaperAirplaneSVGIcon />},
-   
-  {id: 3, projectImgFile: bookez, imgAlt: "BookEz", title: "Java Bookkeeping Application", duration: "Spanning 2022-2023",
-   gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/BookEz" />, 
-   feature1: "Java Build Application", feature2: "Apache PDF Box Implmentation", 
-   feature3: "Collaborative Development Across Diverse Teams", funSVG: <ExpensesSVGIcon />}     
+   feature1: "Utilization of HTML, CSS, JS, PHP and SQL", funSVG: <PaperAirplaneSVGIcon />}
 ];
+
+/*
+Project Archive:
+
+Project: BookEz
+Deleted ExpensesSVGIcon
+{id: 3, projectImgFile: bookez, imgAlt: "BookEz", title: "Java Bookkeeping Application", duration: "Spanning 2022-2023",
+  gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/BookEz" />, 
+  feature1: "Java Build Application", feature2: "Apache PDF Box Implmentation", 
+  feature3: "Collaborative Development Across Diverse Teams", funSVG: <ExpensesSVGIcon />}, 
+
+*/
 
 function Projects () {
   // Hover effect
