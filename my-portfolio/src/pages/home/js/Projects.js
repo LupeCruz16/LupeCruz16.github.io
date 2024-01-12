@@ -15,7 +15,7 @@ const projects = [
   {id: 2, projectImgFile: arduinos, imgAlt: "Arduinos", title: "Arduino Lead Educator", 
    company: "Treobytes", duration: "In Progress Since 2023", gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/TreobytesSTEMDay2024" />,
    feature1: "Teaching Programming Fundamentals", feature2: "Problem-Solving Skills Development", 
-   feature3: "Algorithmic Thinking and Logic Building", feature4: "Leading a group of facilitators", 
+   feature3: "Algorithmic Thinking and Logic Building", feature4: "Lead a Group of Facilitators", 
    funSVG: <RobotSVGIcon />},
 
   {id: 3, projectImgFile: roamReady, imgAlt: "RoamReady", title: "Travel Location Generator", duration: "Completed in 2023", 
