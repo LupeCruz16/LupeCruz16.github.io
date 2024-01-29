@@ -99,5 +99,43 @@
 .inlineBlockElem {
   max-width: 100%;
   display: inline-block;
+}
+
+@media (max-width: 768px) { 
+  .paddingGlobal {
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .paddingGlobal {
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+
+  .textSizeXS {
+    font-size: 2vw;
+  }
+
+  .textSizeS {
+    font-size: 2.5vw;
+  }
+    
+  .textSizeM {
+    font-size: 3.5vw;
+    margin: 0;
+    margin-bottom: 0;
+  }
+
+  .textSizeL {
+    font-size: 4.5vw;
+    margin: 0;
+    line-height: 1;
+    font-weight: 150;
+  }
+
+  .textSizeS, .textSizeM, .textSizeL {
+    line-height: 1.5em;
+  }
+}
