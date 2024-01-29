@@ -110,26 +110,26 @@
 
 @media (max-width: 480px) {
   .paddingGlobal {
-    padding-left: 1vw;
-    padding-right: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
   }
 
   .textSizeXS {
-    font-size: 2vw;
+    font-size: 3vw;
   }
 
   .textSizeS {
-    font-size: 2.5vw;
+    font-size: 4vw;
   }
     
   .textSizeM {
-    font-size: 3.5vw;
+    font-size: 5vw;
     margin: 0;
     margin-bottom: 0;
   }
 
   .textSizeL {
-    font-size: 4.5vw;
+    font-size: 7vw;
     margin: 0;
     line-height: 1;
     font-weight: 150;
