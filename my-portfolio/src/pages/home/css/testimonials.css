@@ -53,3 +53,12 @@
     border-radius: 50%;
 }
   
+@media (max-width: 480px) { 
+    .testimonialImageWrapper {
+        display:none;
+    }
+    
+    .clientCompanyText{
+        line-height: 4vw;
+    }
+}

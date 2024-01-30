@@ -1,5 +1,6 @@
 import { HamburgerMenuSVGIcon, CloseSVGIcon } from '../../assets/SVGs.js';
 import useHoverScale from '../../effects/useHoverScale.js';
+import useMobileView from '../../functions/useMobileView.js';
 import { Link as ScrollLink } from 'react-scroll';
 import { useState, useEffect } from 'react';
 import "./navigation.css"
@@ -46,23 +47,11 @@ function Navigation() {
         );
     };
 
-    //Mobile support
-    const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768); // Set an initial value based on viewport width
+    //Mobile view active for screens less than 768px
+    const isMobileView = useMobileView();
+
+    //Mobile menu used for hamburger menu 
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false); // Declare isMobileMenuOpen state variable
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobileView(window.innerWidth <= 768); // Adjust the breakpoint as needed
-        };
-
-        // Adding a resize event listener to update the mobile view state
-        window.addEventListener('resize', handleResize);
-
-        // Remove the event listener when the component unmounts
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!isMobileMenuOpen);
