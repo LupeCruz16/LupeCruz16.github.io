@@ -64,3 +64,50 @@
       opacity: 1;
     }
 }
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 50%;
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 1001; 
+}
+
+.closeNavSVGWrapper {
+    width: 8vw;
+    height: auto;
+    padding-bottom: 4vw;
+}
+
+.mobile-menu-links {
+    justify-content: center;
+    padding-left: 5vw;
+    padding-top: 5vw;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .hamburgerSVGWrapper {
+        width: 8vw;
+        height: auto;
+    }
+
+    .navLinks {
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: auto;
+    }
+
+    .sticky {
+        height: auto;
+    }
+}

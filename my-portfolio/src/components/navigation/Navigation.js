@@ -1,3 +1,4 @@
+import { HamburgerMenuSVGIcon, CloseSVGIcon } from '../../assets/SVGs.js';
 import useHoverScale from '../../effects/useHoverScale.js';
 import { Link as ScrollLink } from 'react-scroll';
 import { useState, useEffect } from 'react';
@@ -25,7 +26,7 @@ function Navigation() {
 
     // Simplifies the scrolling to different sections on the home page
     // gc directs the user to the top of the home page
-    const scrollLink = (to, label) => {
+    const scrollLink = (to, label, classAttributes) => {
         const isGcLink = label.toLowerCase() === 'gc';
 
         return (
@@ -35,7 +36,7 @@ function Navigation() {
                 smooth={true}
                 offset={-70}
                 duration={200}
-                className="navLinkElem textSizeS"
+                className={`navLinkElem ${classAttributes}`}
                 style={getScaleStyle(isGcLink ? 'gc' : to)}
                 onMouseEnter={() => handleMouseEnter(isGcLink ? 'gc' : to)}
                 onMouseLeave={handleMouseLeave}
@@ -45,22 +46,79 @@ function Navigation() {
         );
     };
 
+    //Mobile support
+    const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768); // Set an initial value based on viewport width
+    const [isMobileMenuOpen, setMobileMenuOpen] = useState(false); // Declare isMobileMenuOpen state variable
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobileView(window.innerWidth <= 768); // Adjust the breakpoint as needed
+        };
+
+        // Adding a resize event listener to update the mobile view state
+        window.addEventListener('resize', handleResize);
+
+        // Remove the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const toggleMobileMenu = () => {
+        setMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    const closeMobileMenu = () => {
+        setMobileMenuOpen(false);
+    };
+
     return (
         <div className = "paddingGlobal">
             <div className = "largeContainer">
                 <nav className={`Navigation ${isSticky ? 'sticky' : ''}`}>
                     <div className = "paddingGlobal">
                         <div className="navLinks">
-                            <div className = "navLinks-Left">
-                                {scrollLink('home', 'gc')}
-                            </div>
+                            {!isMobileView && (
+                                <div className="navLinks-Left">
+                                    {scrollLink('home', 'gc')}
+                                </div>
+                            )}
 
                             <div className = "navLinks-Right">
-                                {scrollLink('home', 'Home')}
-                                {scrollLink('aboutMe', 'About\u00A0Me')}
-                                {scrollLink('projects', 'Projects')}
-                                {scrollLink('testimonials', 'Testimonials')}
-                                {scrollLink('contact', 'Contact')}
+                                {/* Conditionally render regular links or hamburger icon */}
+                                {isMobileView ? (
+                                    // Mobile Hamburger Menu Icon
+                                    <div className="hamburgerSVGWrapper" onClick={toggleMobileMenu}>
+                                        {isMobileView && (
+                                            <HamburgerMenuSVGIcon className={`line ${isMobileMenuOpen ? 'active' : ''}`} />
+                                        )}
+                                    </div>
+                                ) : (
+                                    // Regular Links
+                                    <div className="navLinks-Right">
+                                        {scrollLink('home', 'Home', 'textSizeS')}
+                                        {scrollLink('aboutMe', 'About\u00A0Me', 'textSizeS')}
+                                        {scrollLink('projects', 'Projects', 'textSizeS')}
+                                        {scrollLink('testimonials', 'Testimonials', 'textSizeS')}
+                                        {scrollLink('contact', 'Contact', 'textSizeS')}
+                                    </div>
+                                )}
+
+                                {/* Mobile Menu Overlay */}
+                                {isMobileMenuOpen && (
+                                    <div className="mobile-menu-overlay" onClick={closeMobileMenu}>
+                                        <div className="mobile-menu-links">
+                                            <div className = "closeNavSVGWrapper">
+                                                <CloseSVGIcon onClick={closeMobileMenu}/>
+                                            </div>
+                                            {scrollLink('home', 'Home', 'textSizeM')}
+                                            {scrollLink('aboutMe', 'About\u00A0Me', 'textSizeM')}
+                                            {scrollLink('projects', 'Projects', 'textSizeM')}
+                                            {scrollLink('testimonials', 'Testimonials', 'textSizeM')}
+                                            {scrollLink('contact', 'Contact', 'textSizeM')}
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
