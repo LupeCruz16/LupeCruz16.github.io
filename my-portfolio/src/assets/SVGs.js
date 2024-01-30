@@ -85,6 +85,19 @@ export const LinkedInSVGIcon = ({href, classAttributes, style}) => {
   );
 };
 
+export const ProjectArrowSVGIcon = ({classAttributes}) => {
+  return (
+    <svg className = {classAttributes} viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#D2DDCD">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+      <g id="SVGRepo_iconCarrier"> 
+      <g class="st0" id="grid_system"></g> 
+      <g id="_icons"> <g> 
+      <path d="M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10S17.5,2,12,2z M12,20c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8 S16.4,20,12,20z"></path> <path d="M13.7,8.3c-0.4-0.4-1-0.4-1.4,0l-3,3c-0.4,0.4-0.4,1,0,1.4l3,3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L11.4,12l2.3-2.3C14.1,9.3,14.1,8.7,13.7,8.3z"></path> </g> </g> </g>
+    </svg>
+  );
+};
+
+// Mobile Icons
 export const HamburgerMenuSVGIcon = () => {
   return (
     <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000">

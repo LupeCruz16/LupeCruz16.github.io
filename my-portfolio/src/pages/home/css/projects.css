@@ -105,7 +105,7 @@
 }
 
 @media (max-width: 480px) { 
-    .funSVGProjectContainer {
+    .funSVGProjectContainer, .projectIconsContainer {
         display: none;
     }
 
@@ -118,5 +118,9 @@
         height: 6vw;
         margin-left: 2vw;
         margin-right: 2vw;
+    }
+
+    .projectImage {
+        height: 40vw;
     }
 }
