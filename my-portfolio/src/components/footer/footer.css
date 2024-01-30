@@ -55,8 +55,22 @@
     transition: color .3s ease-out;
 }
   
-.svgIcon {
+.footerSVGIcon {
     width: 2.5vw;
     height: 2.5vw;
 }
   
+@media (max-width: 480px) { 
+    .footerImageWrapper{
+        display: none;
+    }
+
+    .footerSocialWrapper {
+        margin-left: 5vw;
+    }
+
+    .footerSVGIcon {
+        width: 5vw;
+        height: 5vw;
+    }
+}

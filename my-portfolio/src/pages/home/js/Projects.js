@@ -13,13 +13,13 @@ const projects = [
    feature3: "Webscraping with BeautifulSoup4", feature4: "Comprehensive Testing with TDD", funSVG: <AISVGIcon />},
 
   {id: 2, projectImgFile: arduinos, imgAlt: "Arduinos", title: "Arduino Lead Educator", 
-   company: "Treobytes", duration: "In Progress Since 2023", gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/TreobytesSTEMDay2024" />,
+   company: "Treobytes", duration: "In Progress Since 2023", gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/TreobytesSTEMDay2024" classAttributes = "projectIconStyling"/>,
    feature1: "Teaching Programming Fundamentals", feature2: "Problem-Solving Skills Development", 
    feature3: "Algorithmic Thinking and Logic Building", feature4: "Lead a Group of Facilitators", 
    funSVG: <RobotSVGIcon />},
 
   {id: 3, projectImgFile: roamReady, imgAlt: "RoamReady", title: "Travel Location Generator", duration: "Completed in 2023", 
-   gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/RoamReady" />, 
+   gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/RoamReady" classAttributes = "projectIconStyling"/>, 
    feature1: "Utilization of HTML, CSS, JS, PHP and SQL", funSVG: <PaperAirplaneSVGIcon />}
 ];
 
