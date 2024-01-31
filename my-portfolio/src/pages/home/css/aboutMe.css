@@ -58,4 +58,12 @@
     padding-top: 5vw;
     padding-bottom: 5vw;
   }
+
+  .aboutMeContent-Right {
+    display: none;
+  }
+
+  .aboutMeContent {
+    grid-template-columns: 1.75fr;
+  }
 }
