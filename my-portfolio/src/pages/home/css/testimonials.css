@@ -52,7 +52,13 @@
     object-fit: cover;
     border-radius: 50%;
 }
-  
+ 
+@media (max-width: 768px){
+    .testimonial{
+        padding: 3vw 1.5vw;
+    }
+}
+
 @media (max-width: 480px) { 
     .testimonialImageWrapper {
         display:none;

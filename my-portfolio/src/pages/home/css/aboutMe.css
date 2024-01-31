@@ -52,6 +52,11 @@
 .negativeMarginS {
   margin-top: -1.5vw;
 }
+@media (max-width: 768px) {
+  .imageWrapper img {
+    width: 72%;
+  }
+}
 
 @media (max-width: 480px) { 
   .aboutMeSection{

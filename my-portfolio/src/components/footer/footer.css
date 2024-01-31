@@ -59,7 +59,14 @@
     width: 2.5vw;
     height: 2.5vw;
 }
-  
+
+@media (max-width: 768px) { 
+    .footerSVGIcon {
+        width: 3vw;
+        height: 3vw;
+    }
+}
+
 @media (max-width: 480px) { 
     .footerImageWrapper{
         display: none;

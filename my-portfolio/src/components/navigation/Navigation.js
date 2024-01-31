@@ -69,7 +69,7 @@ function Navigation() {
                         <div className="navLinks">
                             {!isMobileView && (
                                 <div className="navLinks-Left">
-                                    {scrollLink('home', 'gc')}
+                                    {scrollLink('home', 'gc', 'textSizeS')}
                                 </div>
                             )}
 

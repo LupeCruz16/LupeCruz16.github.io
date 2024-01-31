@@ -11,6 +11,12 @@
     transition: transform 0.5s ease;
 }
 
+@media (max-width: 768px) { 
+    .skillGalleryIconStyling{
+        width: 8vw;
+    }
+}
+
 @media (max-width: 480px) { 
     .skillGalleryIconStyling{
         width: 10vw;

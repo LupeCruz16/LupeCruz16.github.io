@@ -62,6 +62,16 @@
   margin-left: 2.5vw;
 }
 
+@media (max-width: 768px) { 
+  .resumeButton {
+    width: 31%;
+  }
+
+  .heroSection-Right{
+    width: 35%;
+  }
+}
+
 @media (max-width: 480px) { 
   .heroSection {
     height: 61vw;
