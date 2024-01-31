@@ -5,7 +5,7 @@ function useMobileView() {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobileView(window.innerWidth <= 480); // Adjust the breakpoint as needed
+            setIsMobileView(window.innerWidth <= 480);
         };
 
         // Adding a resize event listener to update the mobile view state

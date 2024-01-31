@@ -104,6 +104,31 @@
     height: auto;
 }
 
+@media (max-width: 1024px) {
+    .projectArrowSVGIcons {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .projectImage {
+        height: 32vw;
+    }
+
+    .currentProjectGrid {
+        grid-template-columns: 1.75fr 0.5fr;
+    }
+
+    .projectSVGIcons {
+        padding-top: 0.5vw;
+        width: 3vw;
+        height: auto;
+    }
+
+    .funSVGProjectIcon {
+        display: flex;
+    }
+}
+
 @media (max-width: 768px) {
     .projectArrowSVGIcons {
         width: 5vw;

@@ -60,6 +60,18 @@
     height: 2.5vw;
 }
 
+@media (max-width: 1024px) { 
+    .footerImage {
+        width: 7vw;
+        height: 7vw;
+    }
+    
+    .footerSVGIcon {
+        width: 4vw;
+        height: 4vw;
+    }
+}
+
 @media (max-width: 768px) { 
     .footerSVGIcon {
         width: 3vw;

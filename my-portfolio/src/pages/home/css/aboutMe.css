@@ -52,6 +52,13 @@
 .negativeMarginS {
   margin-top: -1.5vw;
 }
+
+@media (max-width: 1024px) {
+  .imageWrapper img {
+    width: 83%;
+  }
+}
+
 @media (max-width: 768px) {
   .imageWrapper img {
     width: 72%;
