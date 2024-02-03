@@ -1,5 +1,6 @@
 import useHoverScale from '../../../effects/useHoverScale.js';
 import { headshot } from '../../../assets/Images.js';
+import resume from "../../../assets/resume/Resume.pdf"
 import '../css/heroSection.css'
 
 function HeroSection () {
@@ -15,12 +16,7 @@ function HeroSection () {
             <h2 className = "textSizeM">A Software Engineer</h2>
             <div className = "paddingXS"></div>
             <div className="resumeButton" style={getScaleStyle('resume')} onMouseEnter={() => handleMouseEnter('resume')} onMouseLeave={handleMouseLeave}>
-              <a
-                href="https://drive.google.com/uc?export=download&id=1mz-kv3cklhquFyz3WkPtWWkQ2pnzbj7t"
-                rel="noopener noreferrer"
-                download
-                className="resumeButtonLink"
-                >
+              <a href= {resume} download="Guadalupes_Resume.pdf" className="resumeButtonLink">
                 <div className="textSizeS textColor-Secondary">View My Resume</div>
               </a>
             </div>
