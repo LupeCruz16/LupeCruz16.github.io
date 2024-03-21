@@ -13,7 +13,7 @@ function HeroSection () {
           <div className= "heroSection-Left textAlign-Left">
             <h2 className = "textSizeM">Hello, I'm</h2>
             <h1 className = "textSizeL">Guadalupe Cruz</h1>
-            <h2 className = "textSizeM">A Software Engineer</h2>
+            <h2 className = "textSizeM">Software Engineer</h2>
             <div className = "paddingXS"></div>
             <div className="resumeButton" style={getScaleStyle('resume')} onMouseEnter={() => handleMouseEnter('resume')} onMouseLeave={handleMouseLeave}>
               <a href= {resume} download="Guadalupes_Resume.pdf" className="resumeButtonLink">
