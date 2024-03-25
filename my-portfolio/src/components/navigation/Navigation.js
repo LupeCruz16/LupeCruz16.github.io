@@ -1,5 +1,6 @@
 import { HamburgerMenuSVGIcon, CloseSVGIcon } from '../../assets/SVGs.js';
 import useMobileView from '../../functions/useMobileView.js';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import "./navigation.css"
 
@@ -26,7 +27,7 @@ function Navigation() {
                         <div className="navLinks">
                             {!isMobileView && (
                                 <div className="navLinks-Left">
-                                    <a className = "textSizeS">gc</a>
+                                    <Link to = "/" className = "textSizeS navElem">gc</Link>
                                 </div>
                             )}
 
@@ -42,8 +43,8 @@ function Navigation() {
                                 ) : (
                                     // Regular Links
                                     <div className="navLinks-Right">
-                                        <a className = "textSizeS">About Me</a>
-                                        <a className = "textSizeS">Contact</a>
+                                        <Link to = "/about" className = "textSizeS navElem">About Me</Link>
+                                        <Link to = "/contact" className = "textSizeS navElem">Contact</Link>
                                     </div>
                                 )}
 
@@ -54,9 +55,9 @@ function Navigation() {
                                             <div className = "closeNavSVGWrapper">
                                                 <CloseSVGIcon onClick={closeMobileMenu}/>
                                             </div>
-                                            <a className = "textSizeS">gc</a>
-                                            <a className = "textSizeS">About Me</a>
-                                            <a className = "textSizeS">Contact</a>
+                                            <Link to = "/" className = "textSizeS navElem">gc</Link>
+                                            <Link to = "/about" className = "textSizeS navElem">About Me</Link>
+                                            <Link to = "/contact" className = "textSizeS navElem">Contact</Link>
                                         </div>
                                     </div>
                                 )}
