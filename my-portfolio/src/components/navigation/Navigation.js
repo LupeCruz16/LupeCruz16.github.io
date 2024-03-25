@@ -1,52 +1,9 @@
 import { HamburgerMenuSVGIcon, CloseSVGIcon } from '../../assets/SVGs.js';
-import useHoverScale from '../../effects/useHoverScale.js';
 import useMobileView from '../../functions/useMobileView.js';
-import { Link as ScrollLink } from 'react-scroll';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import "./navigation.css"
 
 function Navigation() {
-    //Hover effect
-    const { handleMouseEnter, handleMouseLeave, getScaleStyle } = useHoverScale();
-    
-    // Adding navigation bar dropdown blur effect
-    const [isSticky, setSticky] = useState(false);
-
-    const handleScroll = () => {
-        const offset = window.scrollY;
-        setSticky(offset > 200);
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    // Simplifies the scrolling to different sections on the home page
-    // gc directs the user to the top of the home page
-    const scrollLink = (to, label, classAttributes) => {
-        const isGcLink = label.toLowerCase() === 'gc';
-
-        return (
-            <ScrollLink
-                to={isGcLink ? 'home' : to}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={200}
-                className={`navLinkElem ${classAttributes}`}
-                style={getScaleStyle(isGcLink ? 'gc' : to)}
-                onMouseEnter={() => handleMouseEnter(isGcLink ? 'gc' : to)}
-                onMouseLeave={handleMouseLeave}
-            >
-                {label}
-            </ScrollLink>
-        );
-    };
-
     //Mobile view active for screens less than 768px
     const isMobileView = useMobileView();
 
@@ -64,12 +21,12 @@ function Navigation() {
     return (
         <div className = "paddingGlobal">
             <div className = "largeContainer">
-                <nav className={`Navigation ${isSticky ? 'sticky' : ''}`}>
+                <nav className= "Navigation">
                     <div className = "paddingGlobal">
                         <div className="navLinks">
                             {!isMobileView && (
                                 <div className="navLinks-Left">
-                                    {scrollLink('home', 'gc', 'textSizeS')}
+                                    <a className = "textSizeS">gc</a>
                                 </div>
                             )}
 
@@ -85,11 +42,8 @@ function Navigation() {
                                 ) : (
                                     // Regular Links
                                     <div className="navLinks-Right">
-                                        {scrollLink('home', 'Home', 'textSizeS')}
-                                        {scrollLink('aboutMe', 'About\u00A0Me', 'textSizeS')}
-                                        {scrollLink('projects', 'Projects', 'textSizeS')}
-                                        {scrollLink('testimonials', 'Testimonials', 'textSizeS')}
-                                        {scrollLink('contact', 'Contact', 'textSizeS')}
+                                        <a className = "textSizeS">About Me</a>
+                                        <a className = "textSizeS">Contact</a>
                                     </div>
                                 )}
 
@@ -100,11 +54,9 @@ function Navigation() {
                                             <div className = "closeNavSVGWrapper">
                                                 <CloseSVGIcon onClick={closeMobileMenu}/>
                                             </div>
-                                            {scrollLink('home', 'Home', 'textSizeM')}
-                                            {scrollLink('aboutMe', 'About\u00A0Me', 'textSizeM')}
-                                            {scrollLink('projects', 'Projects', 'textSizeM')}
-                                            {scrollLink('testimonials', 'Testimonials', 'textSizeM')}
-                                            {scrollLink('contact', 'Contact', 'textSizeM')}
+                                            <a className = "textSizeS">gc</a>
+                                            <a className = "textSizeS">About Me</a>
+                                            <a className = "textSizeS">Contact</a>
                                         </div>
                                     </div>
                                 )}

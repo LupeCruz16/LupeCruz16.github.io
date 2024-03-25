@@ -35,10 +35,6 @@
     float: left;
 }
   
-.navLinks-Left {
-    width: 78%;
-}
-  
 .navLinks-Right {
     display: flex;
     flex-direction: row;  
@@ -89,10 +85,11 @@
 }
 
 .mobile-menu-links {
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     padding-left: 5vw;
     padding-top: 5vw;
-    text-align: center;
+    text-align: left;
 }
 
 @media (max-width: 480px) {

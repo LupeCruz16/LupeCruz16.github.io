@@ -14,12 +14,6 @@ function Home() {
     <div className= {`App ${fadeIn ? 'fade-in' : ''}`}>
       <main className = "App-main">
         <Navigation />
-        <HeroSection />
-        <AboutMe />
-        <Projects />
-        <SkillGallery />
-        <Testimonials />
-        <Footer />
       </main>
     </div>
   );
