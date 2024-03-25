@@ -23,3 +23,7 @@ html {
 .App-main *{
   box-sizing: border-box;
 }
+
+.Home-Page {
+  height: 100vh;
+}
