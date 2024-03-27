@@ -15,6 +15,7 @@ function Home() {
       <main className = "App-main">
         <div className = "Home-Page">
           <Navigation />
+          <Projects />
         </div>
       </main>
     </div>

@@ -1,14 +1,11 @@
-import { GitHubSVGIcon, AISVGIcon, PaperAirplaneSVGIcon, RobotSVGIcon, ProjectArrowSVGIcon } from '../../../assets/SVGs.js';
+import { GitHubSVGIcon, AISVGIcon, PaperAirplaneSVGIcon, RobotSVGIcon } from '../../../assets/SVGs.js';
 import { chatbot, roamReady, arduinos } from '../../../assets/Images.js';
 import useHoverScale from '../../../effects/useHoverScale.js';
 import { useState } from 'react';
 import '../css/projects.css'
 
-/*
-  OpenInWindow SVG is not used, this icon is used to open live demos of websites.
-*/
 const projects = [
-  {id: 1, projectImgFile: chatbot, imgAlt: "Chatbot", title: "AI Customer Support Chatbot", company: "SigParser", 
+  {id: 1, projectImgFile: chatbot, imgAlt: "Chatbot", title: "Next-Gen LLM Innovations", company: "SigParser", 
    duration: "Ongoing since 2023", feature1: "Github Actions for CI/CD", feature2: "AWS Tool Implementation", 
    feature3: "Webscraping with BeautifulSoup4", feature4: "Comprehensive Testing with TDD", funSVG: <AISVGIcon />},
 
@@ -22,18 +19,6 @@ const projects = [
    gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/RoamReady" classAttributes = "projectIconStyling"/>, 
    feature1: "Utilization of HTML, CSS, JS, PHP and SQL", funSVG: <PaperAirplaneSVGIcon />}
 ];
-
-/*
-Project Archive:
-
-Project: BookEz
-Deleted ExpensesSVGIcon
-{id: 3, projectImgFile: bookez, imgAlt: "BookEz", title: "Java Bookkeeping Application", duration: "Spanning 2022-2023",
-  gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/BookEz" />, 
-  feature1: "Java Build Application", feature2: "Apache PDF Box Implmentation", 
-  feature3: "Collaborative Development Across Diverse Teams", funSVG: <ExpensesSVGIcon />}, 
-
-*/
 
 function Projects () {
   // Hover effect
@@ -65,80 +50,48 @@ function Projects () {
 
     return (
         <div id = "projects">
-          <div className = "paddingSection-M">
-              <div className = "paddingGlobal">
                 <div className= "largeContainer"> 
 
-                    <div className = "bottomMarginL">
-                      <h2 className = "textSizeM textAlign-Left">Projects</h2>
-                    </div>
-
                     <div className = "projectsSection">
-                      <div className = "currentProjectBackground paddingSection-M">
+                      <div className = "projectLayout">
 
-                        {/* Left Arrow */}
-                        <div className = "projectArrowSVGIcons" onClick={handlePrevClick} style={getScaleStyle("leftArrow")} onMouseEnter={() => handleMouseEnter("leftArrow")} onMouseLeave={handleMouseLeave}>
-                          <ProjectArrowSVGIcon />
+                        {/* Previous Project Text */}
+                        <div onClick={handlePrevClick} style={getScaleStyle("leftArrow")} onMouseEnter={() => handleMouseEnter("leftArrow")} onMouseLeave={handleMouseLeave}>
+                          <div className = "textSizeS transitionText">Previous</div>
                         </div>
 
                         {/* Project Details, using fade in/out effect*/}
-                        <div className={`currentProject textAlign-Left textColor-Secondary ${showDetails ? 'show' : ''}`}>
+                        <div className={`currentProject textAlign-Left ${showDetails ? 'show' : ''}`}>
                           <div className = "projectImageWrapper">
-                            <img src = {currentProject.projectImgFile} loading = "lazy" className = "projectImage" alt = {currentProject.imgAlt}/>
+                            {/* <img src = {currentProject.projectImgFile} loading = "lazy" className = "projectImage" alt = {currentProject.imgAlt}/> */}
                           </div>
 
                           <div className = "currentProjectGrid">
                             <div className = "currentProjectDetails">
-                              {/* Project title and SVG Icons */}
-                              <div className = "projectSpecificsRow textSizeM">
-                                <div>{currentProject.title}</div>
-
-                                {/* Only display icons if listed */}
-                                <div className = "projectIconsContainer projectIconStyling">
-                                  {currentProject.gitSVG && 
-                                    <div className = "projectSVGIcons projectIconStyling">
-                                      {currentProject.gitSVG}
-                                    </div>
-                                  }  
-                                  {currentProject.openInWindowSVG && 
-                                    <div className = "projectSVGIcons projectIconStyling">
-                                      {currentProject.openInWindowSVG}
-                                    </div>
-                                  }                           
-                                </div>
+                              {/* Project counter */}
+                              <div className="textSizeS">
+                                <span>{currentProjectIndex + 1}</span>
+                                <span className="textStyleMuted">/</span>
+                                <span className="textStyleMuted">{projects.length}</span>
                               </div>
 
-                              {/* Project Detail Text */}
+                              {/* Project title */}
+                              <div className = "projectSpecificsRow textSizeM">
+                                <div>{currentProject.title}</div>
+                              </div>
+
+                              {/* Project detail text */}
                               <div className = "projectSpecificsRow textSizeS textStyleMuted">
 
-                                {/* Company is only displayed if listed */}
+                              {/* Company is only displayed if listed */}
                                 {currentProject.company && 
                                   <div>Company: {currentProject.company}   |   </div>
                                 }
                                 <div>{currentProject.duration}</div>
                               </div>
-
-                              {/* Displaying features in range 1-4 if listed */}
-                              <div className = "textSizeS">
-                                {currentProject.feature1 && 
-                                  <div>Features:</div>
-                                }
-                                <ul className = "projectFeatures">
-                                  {currentProject.feature1 && 
-                                     <li>{currentProject.feature1}</li>
-                                  }
-                                  {currentProject.feature2 && 
-                                    <li>{currentProject.feature2}</li>
-                                  }
-                                  {currentProject.feature3 && 
-                                    <li>{currentProject.feature3}</li>
-                                  }
-                                  {currentProject.feature4 && 
-                                    <li>{currentProject.feature4}</li>
-                                  }
-                                </ul>
-                              </div>
                             </div>
+
+                            {/* Project Eye Catcher */}
                             <div className = "funSVGProjectContainer">
                               <div className = "funSVGProjectIcon projectIconStyling">
                                   {currentProject.funSVG}
@@ -147,16 +100,14 @@ function Projects () {
                           </div>
                         </div>
 
-                        {/* Right Arrow */}
-                        <div className = "projectArrowSVGIcons" onClick={handleNextClick} style={getScaleStyle("rightArrow")} onMouseEnter={() => handleMouseEnter("rightArrow")} onMouseLeave={handleMouseLeave}>
-                          <ProjectArrowSVGIcon classAttributes = "rightArrow" />
+                        {/* Next Project Text */}
+                        <div onClick={handleNextClick} style={getScaleStyle("rightArrow")} onMouseEnter={() => handleMouseEnter("rightArrow")} onMouseLeave={handleMouseLeave}>
+                        <div className = "textSizeS transitionText">Next</div>
                         </div>
                       </div>
 
                     </div>
                 </div>
-              </div>   
-          </div>
         </div>
     )
 }

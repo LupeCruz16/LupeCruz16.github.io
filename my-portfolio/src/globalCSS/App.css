@@ -25,5 +25,10 @@ html {
 }
 
 .Home-Page {
+  display: grid;
+  /* Navigation takes the space it needs, Projects take the remaining space */
+  grid-template-rows: auto 1fr; 
   height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
 }
