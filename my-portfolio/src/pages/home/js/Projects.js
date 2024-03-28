@@ -2,14 +2,14 @@ import '../css/projects.css'
 import { useState } from 'react';
 import Lottie from 'react-lottie';
 import useHoverScale from '../../../effects/useHoverScale.js';
-import AiAnimation from '../../../assets/animations/ai_animation.json'
+import { ai, educator, travel } from '../../../assets/Animations.js'
 
 const projects = [
-  {id: 1, title: "Next-Gen LLM Innovations", company: "SigParser", duration: "Ongoing since 2023", animation: AiAnimation},
+  {id: 1, title: "Next-Gen LLM Innovations", company: "SigParser", duration: "Ongoing since 2023", animation: ai},
 
-  {id: 2, title: "Arduino Lead Educator", company: "Treobytes", duration: "Ongoing since 2023"},
+  {id: 2, title: "Arduino Lead Educator", company: "Treobytes", duration: "Ongoing since 2023", animation: educator},
 
-  {id: 3, title: "Travel Location Generator", duration: "Completed in 2023"}
+  {id: 3, title: "Travel Location Generator", duration: "Completed in 2023", animation: travel}
 ];
 
 function Projects () {
