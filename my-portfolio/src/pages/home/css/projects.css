@@ -1,6 +1,5 @@
 .projectsSection {
     width: 100%;
-    padding-top: 10vh;
     /* Accounting for navigation height */
     height: calc(100vh - 10vh);
     justify-content: space-evenly;

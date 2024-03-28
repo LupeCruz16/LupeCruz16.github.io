@@ -20,53 +20,51 @@ function Navigation() {
     };
 
     return (
-        <div className = "paddingGlobal">
-            <div className = "largeContainer">
-                <nav className= "Navigation">
-                    <div className = "paddingGlobal">
-                        <div className="navLinks">
-                            {!isMobileView && (
-                                <div className="navLinks-Left">
-                                    <Link to = "/" className = "textSizeS navElem">gc</Link>
-                                </div>
-                            )}
+        <header className = "primary-header content-grid">
+            <div className = "breakout">
+                <nav className = "primary-header_layout">
+                    {/* Left side of navigation */}
+                    {!isMobileView && (
+                        <div>
+                            <Link to = "/" className = "textSizeS nav-link">gc</Link>
+                        </div>
+                    )}
 
-                            <div className = "navLinks-Right">
-                                {/* Conditionally render regular links or hamburger icon */}
-                                {isMobileView ? (
-                                    // Mobile Hamburger Menu Icon
-                                    <div className="hamburgerSVGWrapper" onClick={toggleMobileMenu}>
-                                        {isMobileView && (
-                                            <HamburgerMenuSVGIcon className={`line ${isMobileMenuOpen ? 'active' : ''}`} />
-                                        )}
-                                    </div>
-                                ) : (
-                                    // Regular Links
-                                    <div className="navLinks-Right">
-                                        <Link to = "/about" className = "textSizeS navElem">About Me</Link>
-                                        <Link to = "/contact" className = "textSizeS navElem">Contact</Link>
-                                    </div>
-                                )}
-
-                                {/* Mobile Menu Overlay */}
-                                {isMobileMenuOpen && (
-                                    <div className="mobile-menu-overlay" onClick={closeMobileMenu}>
-                                        <div className="mobile-menu-links">
-                                            <div className = "closeNavSVGWrapper">
-                                                <CloseSVGIcon onClick={closeMobileMenu}/>
-                                            </div>
-                                            <Link to = "/" className = "textSizeS navElem">gc</Link>
-                                            <Link to = "/about" className = "textSizeS navElem">About Me</Link>
-                                            <Link to = "/contact" className = "textSizeS navElem">Contact</Link>
-                                        </div>
-                                    </div>
+                    {/* Right side of navigation */}
+                    <div>
+                        {/* Conditionally render regular links or hamburger icon */}
+                        {isMobileView ? (
+                            // Mobile Hamburger Menu Icon
+                            <div className="hamburgerSVGWrapper" onClick={toggleMobileMenu}>
+                                {isMobileView && (
+                                    <HamburgerMenuSVGIcon className={`line ${isMobileMenuOpen ? 'active' : ''}`} />
                                 )}
                             </div>
-                        </div>
+                        ) : (
+                            // Regular Links
+                            <div className = "nav-links-right">
+                                <Link to = "/about" className = "textSizeS nav-link">About Me</Link>
+                                <Link to = "/contact" className = "textSizeS nav-link">Contact</Link>
+                            </div>
+                        )}
+
+                        {/* Mobile Menu Overlay */}
+                        {isMobileMenuOpen && (
+                            <div className="mobile-menu-overlay" onClick={closeMobileMenu}>
+                                <div className="mobile-menu-links">
+                                    <div className = "closeNavSVGWrapper">
+                                        <CloseSVGIcon onClick={closeMobileMenu}/>
+                                    </div>
+                                    <Link to = "/" className = "textSizeS nav-link">gc</Link>
+                                    <Link to = "/about" className = "textSizeS nav-link">About Me</Link>
+                                    <Link to = "/contact" className = "textSizeS nav-link">Contact</Link>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </nav>
             </div>
-        </div>
+        </header>
     );
 }
 
