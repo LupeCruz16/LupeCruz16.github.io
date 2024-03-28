@@ -65,7 +65,7 @@ function Projects () {
 
                               {/* Project title */}
                               <div className = "projectSpecificsRow textSizeM">
-                                <div>{currentProject.title}</div>
+                                <div className = "cursorToPointer">{currentProject.title}</div>
                               </div>
 
                               {/* Project detail text */}
@@ -73,9 +73,9 @@ function Projects () {
 
                               {/* Company is only displayed if listed */}
                                 {currentProject.company && 
-                                  <div>{currentProject.company}   |   </div>
+                                  <div className = "cursorToPointer">{currentProject.company}   |   </div>
                                 }
-                                <div>{currentProject.duration}</div>
+                                <div className = "cursorToPointer">{currentProject.duration}</div>
                               </div>
                             </div>
 

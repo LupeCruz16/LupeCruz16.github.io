@@ -19,7 +19,7 @@
         width: 100%;
     }
 }
-  
+
 .navLinks-Left, .navLinks-Right{
     gap: 5vw;
     float: left;
@@ -34,6 +34,10 @@
     cursor: pointer;
     text-decoration: none;
     color: var(--text-100);
+}
+
+.navElem:hover {
+    color: var(--accent-100)
 }
 
 .mobile-menu-overlay {

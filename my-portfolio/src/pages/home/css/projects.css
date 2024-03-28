@@ -74,6 +74,10 @@
     justify-content: center;
 }
 
+.cursorToPointer {
+    cursor: pointer;
+}
+
 @media (max-width: 1024px) {
     .currentProjectGrid {
         grid-template-columns: 1.75fr 0.5fr;
