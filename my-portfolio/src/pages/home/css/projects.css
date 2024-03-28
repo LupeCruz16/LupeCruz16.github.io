@@ -7,9 +7,6 @@
 
 /* Used to layout the three sections: prev, current, next */
 .projectLayout {
-    height: calc(100vh - 10vh);
-    /* Ensuring the project content is vertically centered */
-    padding-bottom: 10vh; 
     display: grid;
     grid-template-columns: 15vw 1fr 15vw;
     align-items: center;
@@ -18,7 +15,7 @@
 }
 
 .transitionText {
-    transform: rotate(270deg); 
+    transform: rotate(270deg) !important; 
     display: flex;
     justify-content: center;
     align-items: center;

@@ -40,71 +40,77 @@ function Projects () {
 
   const currentProject = projects[currentProjectIndex];
 
-    return (
-        <div id = "projects">
-                <div className= "largeContainer"> 
+  return (
+    <div id="projects" className="largeContainer">
+      <div className="projectsSection">
+        <div className="projectLayout">
+          {/* Previous Project Text */}
+          <div 
+            onClick={handlePrevClick} 
+            style={getScaleStyle("leftArrow")} 
+            onMouseEnter={() => handleMouseEnter("leftArrow")} 
+            onMouseLeave={handleMouseLeave}
+            className="textSizeS transitionText"
+          >
+            Previous
+          </div>
 
-                    <div className = "projectsSection">
-                      <div className = "projectLayout">
-
-                        {/* Previous Project Text */}
-                        <div onClick={handlePrevClick} style={getScaleStyle("leftArrow")} onMouseEnter={() => handleMouseEnter("leftArrow")} onMouseLeave={handleMouseLeave}>
-                          <div className = "textSizeS transitionText">Previous</div>
-                        </div>
-
-                        {/* Project Details, using fade in/out effect*/}
-                        <div className={`currentProject textAlign-Left ${showDetails ? 'show' : ''}`}>
-                          <div className = "currentProjectGrid">
-                            <div className = "currentProjectDetails">
-                              {/* Project counter */}
-                              <div className="textSizeS">
-                                <span>{currentProjectIndex + 1}</span>
-                                <span className="textStyleMuted">/</span>
-                                <span className="textStyleMuted">{projects.length}</span>
-                              </div>
-
-                              {/* Project title */}
-                              <div className = "projectSpecificsRow textSizeM">
-                                <div className = "cursorToPointer">{currentProject.title}</div>
-                              </div>
-
-                              {/* Project detail text */}
-                              <div className = "projectSpecificsRow textSizeS textStyleMuted">
-
-                              {/* Company is only displayed if listed */}
-                                {currentProject.company && 
-                                  <div className = "cursorToPointer">{currentProject.company}   |   </div>
-                                }
-                                <div className = "cursorToPointer">{currentProject.duration}</div>
-                              </div>
-                            </div>
-
-                            {/* Project Eye Catcher */}
-                            <div className = "projectEyeCatcherContainer cursorToPointer">
-                              <Lottie 
-                                options={{
-                                  loop: true,
-                                  autoplay: true,
-                                  animationData: currentProject.animation,
-                                  rendererSettings: {
-                                    preserveAspectRatio: 'xMidYMid slice'
-                                  }
-                                }} 
-                                />
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Next Project Text */}
-                        <div onClick={handleNextClick} style={getScaleStyle("rightArrow")} onMouseEnter={() => handleMouseEnter("rightArrow")} onMouseLeave={handleMouseLeave}>
-                        <div className = "textSizeS transitionText">Next</div>
-                        </div>
-                      </div>
-
-                    </div>
+          {/* Project Details, using fade in/out effect */}
+          <div className={`currentProject textAlign-Left ${showDetails ? 'show' : ''}`}>
+            <div className="currentProjectGrid">
+              <div className="currentProjectDetails">
+                {/* Project counter */}
+                <div className="textSizeS">
+                  <span>{currentProjectIndex + 1}</span>
+                  <span className="textStyleMuted">/</span>
+                  <span className="textStyleMuted">{projects.length}</span>
                 </div>
+
+                {/* Project title */}
+                <div className="projectSpecificsRow textSizeM cursorToPointer">
+                  {currentProject.title}
+                </div>
+
+                {/* Project detail text */}
+                <div className="projectSpecificsRow textSizeS textStyleMuted cursorToPointer">
+                  {/* Company is only displayed if listed */}
+                  {currentProject.company && (
+                    <>{currentProject.company} | </>
+                  )}
+                  {currentProject.duration}
+                </div>
+              </div>
+
+              {/* Project Eye Catcher */}
+              <div className="projectEyeCatcherContainer cursorToPointer">
+                <Lottie
+                  options={{
+                    loop: true,
+                    autoplay: true,
+                    animationData: currentProject.animation,
+                    rendererSettings: {
+                      preserveAspectRatio: 'xMidYMid slice'
+                    }
+                  }} 
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Next Project Text */}
+          <div 
+            onClick={handleNextClick} 
+            style={getScaleStyle("rightArrow")} 
+            onMouseEnter={() => handleMouseEnter("rightArrow")} 
+            onMouseLeave={handleMouseLeave}
+            className="textSizeS transitionText"
+          >
+            Next
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  )
 }
 
 export default Projects
