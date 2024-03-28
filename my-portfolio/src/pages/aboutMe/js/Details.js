@@ -9,7 +9,7 @@ const AboutMeImageWrapper = ({ src, className, alt }) => {
   );
 };
 
-function AbuoutMe () {
+function Details () {
 
     return (
         <div id = "aboutMe" className = "aboutMeSection backgroundColor-Secondary">
@@ -53,4 +53,4 @@ function AbuoutMe () {
     )
 }
 
-export default AbuoutMe;
+export default Details;
