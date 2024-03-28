@@ -9,7 +9,7 @@ const projects = [
 
   {id: 2, title: "Arduino Lead Educator", company: "Treobytes", duration: "Ongoing since 2023", animation: educator},
 
-  {id: 3, title: "Travel Location Generator", duration: "Completed in 2023", animation: travel}
+  {id: 3, title: "Travel Location Generator", company: "Personal Project", duration: "Completed in 2023", animation: travel}
 ];
 
 function Projects () {
@@ -80,21 +80,16 @@ function Projects () {
                             </div>
 
                             {/* Project Eye Catcher */}
-                            <div className = "funSVGProjectContainer">
-                              <div className = "funSVGProjectIcon projectIconStyling">
-                                  <Lottie 
-                                    options={{
-                                      loop: true,
-                                      autoplay: true,
-                                      animationData: currentProject.animation,
-                                      rendererSettings: {
-                                        preserveAspectRatio: 'xMidYMid slice'
-                                      }
-                                    }}
-                                    height={800}
-                                    width={800}
-                                  />
-                              </div>
+                            <div className = "projectEyeCatcherContainer">
+                              <Lottie 
+                                options={{
+                                  loop: true,
+                                  autoplay: true,
+                                  animationData: currentProject.animation,
+                                  rendererSettings: {
+                                    preserveAspectRatio: 'xMidYMid slice'
+                                  }
+                                }} />
                             </div>
                           </div>
                         </div>

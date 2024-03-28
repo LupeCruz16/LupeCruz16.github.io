@@ -1,10 +1,10 @@
 :root{
     /* Color Variables */
-    --text-100: #000000;
-    --text-200: #FFFFFF;
-    --accent-100: #707B6A;
-    --accent-200: #76B162;
-    --bg-100: #D2DDCD;
+    --text-100: #ffffff;
+    --text-200: #2F27CE;
+    --accent-100: #433BFF;
+    --accent-200: #DEDCFF;
+    --bg-100: #0A0A0A;
     --bg-200: #404A3B;
       
     /* Font Variables */
