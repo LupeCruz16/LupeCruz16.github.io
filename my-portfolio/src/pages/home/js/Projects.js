@@ -80,7 +80,7 @@ function Projects () {
                             </div>
 
                             {/* Project Eye Catcher */}
-                            <div className = "projectEyeCatcherContainer">
+                            <div className = "projectEyeCatcherContainer cursorToPointer">
                               <Lottie 
                                 options={{
                                   loop: true,
@@ -89,7 +89,8 @@ function Projects () {
                                   rendererSettings: {
                                     preserveAspectRatio: 'xMidYMid slice'
                                   }
-                                }} />
+                                }} 
+                                />
                             </div>
                           </div>
                         </div>
