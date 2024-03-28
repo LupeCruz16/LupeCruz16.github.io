@@ -9,6 +9,8 @@
 /* Used to layout the three sections: prev, current, next */
 .projectLayout {
     height: calc(100vh - 10vh);
+    /* Ensuring the project content is vertically centered */
+    padding-bottom: 10vh; 
     display: grid;
     grid-template-columns: 15vw 1fr 15vw;
     align-items: center;
@@ -91,16 +93,10 @@
     height: 2vw;
 }
 
-.funSVGProjectContainer {
-    display: block;
+.projectEyeCatcherContainer {
     width: 100%;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
-}
-.funSVGProjectIcon {
-    width: 60%;
-    height: auto;
 }
 
 @media (max-width: 1024px) {
@@ -118,9 +114,6 @@
         height: auto;
     }
 
-    .funSVGProjectIcon {
-        display: flex;
-    }
 }
 
 @media (max-width: 768px) {
@@ -135,14 +128,10 @@
     .projectIconStyling {
         display: none;
     }
-
-    .funSVGProjectIcon {
-        display: flex;
-    }
 }
 
 @media (max-width: 480px) { 
-    .funSVGProjectContainer, .projectIconsContainer {
+    .projectEyeCatcherContainer, .projectIconsContainer {
         display: none;
     }
 

@@ -1,23 +1,15 @@
-import { GitHubSVGIcon, AISVGIcon, PaperAirplaneSVGIcon, RobotSVGIcon } from '../../../assets/SVGs.js';
-import { chatbot, roamReady, arduinos } from '../../../assets/Images.js';
-import useHoverScale from '../../../effects/useHoverScale.js';
-import { useState } from 'react';
 import '../css/projects.css'
+import { useState } from 'react';
+import Lottie from 'react-lottie';
+import useHoverScale from '../../../effects/useHoverScale.js';
+import AiAnimation from '../../../assets/animations/ai_animation.json'
 
 const projects = [
-  {id: 1, projectImgFile: chatbot, imgAlt: "Chatbot", title: "Next-Gen LLM Innovations", company: "SigParser", 
-   duration: "Ongoing since 2023", feature1: "Github Actions for CI/CD", feature2: "AWS Tool Implementation", 
-   feature3: "Webscraping with BeautifulSoup4", feature4: "Comprehensive Testing with TDD", funSVG: <AISVGIcon />},
+  {id: 1, title: "Next-Gen LLM Innovations", company: "SigParser", duration: "Ongoing since 2023", animation: AiAnimation},
 
-  {id: 2, projectImgFile: arduinos, imgAlt: "Arduinos", title: "Arduino Lead Educator", 
-   company: "Treobytes", duration: "Ongoing since 2023", gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/TreobytesSTEMDay2024" classAttributes = "projectIconStyling"/>,
-   feature1: "Teaching Programming Fundamentals", feature2: "Problem-Solving Skills Development", 
-   feature3: "Algorithmic Thinking and Logic Building", feature4: "Lead a Group of Facilitators", 
-   funSVG: <RobotSVGIcon />},
+  {id: 2, title: "Arduino Lead Educator", company: "Treobytes", duration: "Ongoing since 2023"},
 
-  {id: 3, projectImgFile: roamReady, imgAlt: "RoamReady", title: "Travel Location Generator", duration: "Completed in 2023", 
-   gitSVG: <GitHubSVGIcon  href = "https://github.com/LupeCruz16/RoamReady" classAttributes = "projectIconStyling"/>, 
-   feature1: "Utilization of HTML, CSS, JS, PHP and SQL", funSVG: <PaperAirplaneSVGIcon />}
+  {id: 3, title: "Travel Location Generator", duration: "Completed in 2023"}
 ];
 
 function Projects () {
@@ -62,10 +54,6 @@ function Projects () {
 
                         {/* Project Details, using fade in/out effect*/}
                         <div className={`currentProject textAlign-Left ${showDetails ? 'show' : ''}`}>
-                          <div className = "projectImageWrapper">
-                            {/* <img src = {currentProject.projectImgFile} loading = "lazy" className = "projectImage" alt = {currentProject.imgAlt}/> */}
-                          </div>
-
                           <div className = "currentProjectGrid">
                             <div className = "currentProjectDetails">
                               {/* Project counter */}
@@ -85,7 +73,7 @@ function Projects () {
 
                               {/* Company is only displayed if listed */}
                                 {currentProject.company && 
-                                  <div>Company: {currentProject.company}   |   </div>
+                                  <div>{currentProject.company}   |   </div>
                                 }
                                 <div>{currentProject.duration}</div>
                               </div>
@@ -94,7 +82,18 @@ function Projects () {
                             {/* Project Eye Catcher */}
                             <div className = "funSVGProjectContainer">
                               <div className = "funSVGProjectIcon projectIconStyling">
-                                  {currentProject.funSVG}
+                                  <Lottie 
+                                    options={{
+                                      loop: true,
+                                      autoplay: true,
+                                      animationData: currentProject.animation,
+                                      rendererSettings: {
+                                        preserveAspectRatio: 'xMidYMid slice'
+                                      }
+                                    }}
+                                    height={800}
+                                    width={800}
+                                  />
                               </div>
                             </div>
                           </div>
