@@ -1,8 +1,8 @@
 import '../css/aboutMe.css'
-import Details from './Details.js'
+// import Details from './Details.js'
 import HeroSection from "./HeroSection.js"
-import SkillGallery from "./SkillGallery.js";
-import Footer from "../../../components/footer/Footer.js";
+// import SkillGallery from "./SkillGallery.js";
+// import Footer from "../../../components/footer/Footer.js";
 import useFadeIn from '../../../effects/FadeIn/useFadeIn.js';
 import Navigation from "../../../components/navigation/Navigation.js";
 
@@ -13,10 +13,12 @@ function AbuoutMe () {
   return (
     <div className= {`${fadeIn ? 'fade-in' : ''}`}>
       <Navigation />
-      <HeroSection />
-      <Details />
+      <div className = "content-grid">
+        <HeroSection />
+      </div>
+      {/* <Details />
       <SkillGallery />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

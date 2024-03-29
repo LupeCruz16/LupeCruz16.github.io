@@ -1,29 +1,20 @@
 .heroSection {
+  gap: 5vw;
   width: 100%;
-  height: 45.1vw;
-  max-width: 100%;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-}
-
-.heroSection-Left, .heroSection-Right {
-  float: left;
-}
-
-.heroSection-Left {
-  width: 100%;
+  align-items: center;
+  grid-template-columns: 2fr 1fr;
 }
 
 .resumeButton{
-  padding: 1vw;
+  padding: 0.5vw 1vw;
   text-decoration: none;
   border: none;
   border-radius: 1vw;
   background-color: var(--accent-200);
-  width: 25%;
+  width: fit-content;
 }
 
 .resumeButtonLink{
@@ -32,71 +23,15 @@
   background-color: var(--accent-200);
 }
 
-.heroSection-Right {
-  width: 30%;
-  margin-right: 2.5vw;
-}
-
 .heroSection-imageWrapper {
-  position: relative;
-  display: inline-block;
   width: 100%;
   height: auto;
+  position: relative
 }
 
 .heroSection-imageWrapper img {
   border-radius: 15%;
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
-  position: relative;
-  z-index: 1;
-}
-
-.heroSection-backgroundShape {
-  position: absolute; 
-  border-radius: 15%;
-  width: 100%;
-  height: 100%;
-  background-color: var(--bg-200); 
-  margin-left: 2.5vw;
-}
-
-@media (max-width: 1024px) {
-  .resumeButton {
-    width: 33%;
-  }
-
-  .heroSection-Right{
-    width: 40%;
-  }
-}
-
-@media (max-width: 768px) { 
-  .resumeButton {
-    width: 31%;
-  }
-
-  .heroSection-Right{
-    width: 35%;
-  }
-}
-
-@media (max-width: 480px) { 
-  .heroSection {
-    height: 61vw;
-  }
-
-  .resumeButton{
-    width: 47%;
-  }
-
-  .heroSection-Left {
-    width: 80%;
-  }
-
-  .heroSection-Right {
-    padding-top: 1vw;
-    width: 35%;
-  }
 }

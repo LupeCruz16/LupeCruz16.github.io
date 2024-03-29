@@ -1,6 +1,6 @@
 .content-grid {
   --padding-inline: 1rem;
-  --content-max-width: 900px;
+  --content-max-width: 1400px;
   --breakout-max-width: 1800px;
 
   --breakout-size: calc(
@@ -48,9 +48,9 @@ grid-template-columns:
   max-width: 100%;
 }
   
-.paddingSection-M {
-  padding-top: 5vw;
-  padding-bottom: 5vw;
+.large-padding-top-bot {
+  padding-top: 10vw;
+  padding-bottom: 10vw;
 }
   
 .paddingSection-M-Bottom {
@@ -97,7 +97,7 @@ grid-template-columns:
 }
 
 .textSizeL {
-  font-size: 6.5vw;
+  font-size: 4.5vw;
   margin: 0;
   line-height: 1;
   font-weight: 150;
