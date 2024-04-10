@@ -1,6 +1,8 @@
 import useHoverScale from '../../../effects/useHoverScale.js';
 import { headshot } from '../../../assets/Images.js';
 import resume from "../../../assets/resume/Resume.pdf"
+import { arrowDown } from "../../../assets/Animations.js"
+import Lottie from 'react-lottie';
 import '../css/heroSection.css'
 
 function HeroSection () {
@@ -27,6 +29,19 @@ function HeroSection () {
           <div className = "heroSection-backgroundShape"></div>
           <img src={headshot} alt="Guadalupe Cruz" loading = "lazy"/>
         </div>
+      </div>
+
+      <div className = "about-me-lottie-wrapper">
+        <Lottie
+          options={{
+          loop: true,
+          autoplay: true,
+          animationData: arrowDown,
+          rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+          }
+          }} 
+        />
       </div>
     </div>
     

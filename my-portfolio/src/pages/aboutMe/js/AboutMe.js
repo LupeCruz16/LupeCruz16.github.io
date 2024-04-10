@@ -1,5 +1,4 @@
-import '../css/aboutMe.css'
-// import Details from './Details.js'
+import Details from './Details.js'
 import HeroSection from "./HeroSection.js"
 // import SkillGallery from "./SkillGallery.js";
 // import Footer from "../../../components/footer/Footer.js";
@@ -15,8 +14,9 @@ function AbuoutMe () {
       <Navigation />
       <div className = "content-grid">
         <HeroSection />
+        <Details />
       </div>
-      {/* <Details />
+      {/* 
       <SkillGallery />
       <Footer /> */}
     </div>

@@ -1,54 +1,32 @@
-import { disney, museum, concert } from '../../../assets/Images.js';
-import '../css/aboutMe.css'
-
-const AboutMeImageWrapper = ({ src, className, alt }) => {
-  return (
-    <div className="imageWrapper">
-      <img src={src} className={className} loading="lazy" alt={alt} />
-    </div>
-  );
-};
+import '../css/details.css'
 
 function Details () {
 
     return (
-        <div id = "aboutMe" className = "aboutMeSection backgroundColor-Secondary">
-          <div className = "paddingGlobal">
-            <div className = "largeContainer">
-              <div className = "paddingSection-M">
-                  <div className = "aboutMeContent">
-                    
-                    <div className = "aboutMeContent-Left textAlign-Left">
-                      <div className = "bottomMarginL">
-                        <div className = "textSizeM textColor-Secondary">About Me</div>
-                      </div>
-                      <p className = "aboutMeText textSizeS textColor-Secondary">
-                        I have a passion for discovering the potential of programming, a journey that has recently led me to the 
-                        exciting realm of web development. 
+        <div className="breakout">
+        {/* Row 1 - Text on Left, Image on Right */}
+        <div className="grid-item text-item">
+            <p>Your text here for the first item</p>
+        </div>
+        <div className="grid-item image-item">
+            {/* <img src={image1} alt="Description of Image 1" /> */}
+        </div>
 
-                        This newfound interest was the spark behind the creation of this website. 
+        {/* Row 2 - Image on Left, Text on Right */}
+        <div className="grid-item image-item">
+            {/* <img src={image2} alt="Description of Image 2" /> */}
+        </div>
+        <div className="grid-item text-item">
+            <p>Your text here for the second item</p>
+        </div>
 
-                        Additionally, my senior capstone course opened the doors to the fascinating world of popular AI models, 
-                        further enriching my knowledge and skills.
-                        <br></br>
-                        <br></br>
-                        Away from my workspace, I embrace the thrill of travel and new experiences. 
-                        
-                        A highlight for me was the unforgettable experience of attending a Taylor Swift concert with my girlfriend, 
-                        a memory that encapsulates my love for adventure and creating special moments.
-                      </p>
-                    </div>
-
-                    <div className = "aboutMeContent-Right">
-                      <AboutMeImageWrapper src = {disney} className = "aboutMeTopImage" alt = "Disney"/>
-                      <AboutMeImageWrapper src = {museum} className = "aboutMeBottomImage negativeMarginS" alt = "Museum"/>
-                      <AboutMeImageWrapper src = {concert} className = "aboutMeTopImage negativeMarginS" alt = "Concert"/>
-                    </div>
-
-                  </div>  
-              </div>
-            </div>
-          </div>
+        {/* Row 3 - Text on Left, Image on Right */}
+        <div className="grid-item text-item">
+            <p>Your text here for the third item</p>
+        </div>
+        <div className="grid-item image-item">
+            {/* <img src={image3} alt="Description of Image 3" /> */}
+        </div>
         </div>
     )
 }
