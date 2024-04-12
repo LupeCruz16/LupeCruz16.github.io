@@ -1,35 +1,37 @@
-import '../css/details.css'
+import React from 'react';
+import '../css/details.css';
+import { concert, museum, disney } from '../../../assets/Images.js';
 
-function Details () {
-
-    return (
-        <div className="breakout">
-        {/* Row 1 */}
-        <div className="details-grid-item textSizeS">
-            Recently I've been trying to go to a concert at least once a year. 
-            This time we saw ____.
-        </div>
-        <div className="details-grid-item details-image-item">
-            {/* <img src={image1} alt="Description of Image 1" /> */}
+function Details() {
+  return (
+    <>
+        <div className="text-m padding-bottom-m">
+            My Recent Adventures
         </div>
 
-        {/* Row 2 */}
-        <div className="details-grid-item details-image-item">
-            {/* <img src={image2} alt="Description of Image 2" /> */}
+        {/* Bento Box Grid of Images */}
+        <div className="details-container">
+        <div className="details-image-item large-item">
+        <img src={concert} alt="Concert" />
         </div>
-        <div className="details-grid-item textSizeS">
-            Museums are also a must, especially the dinosaur related ones.
+        <div className="details-image-item">
+        <img src={museum} alt="Museum" />
         </div>
-
-        {/* Row 3 */}
-        <div className="grid-item textSizeS">
-            I spend a lot of time at my computer, so touching grass is always good.
+        <div className="details-image-item tall-item">
+        <img src={disney} alt="Disney" />
         </div>
-        <div className="details-grid-item details-image-item">
-            {/* <img src={image3} alt="Description of Image 3" /> */}
+        <div className="details-image-item">
+        <img src={concert} alt="Concert Repeat" />
+        </div>
+        <div className="details-image-item">
+        <img src={museum} alt="Museum Repeat" />
+        </div>
+        <div className="details-image-item large-item">
+        <img src={disney} alt="Disney Repeat" />
         </div>
         </div>
-    )
+    </>
+  );
 }
 
 export default Details;

@@ -26,7 +26,7 @@ function Navigation() {
                 {/* Left side of navigation */}
                 {!isMobileView && (
                     <div className = "nav-links-left">
-                        <Link to = "/" className = "textSizeS nav-link">gc</Link>
+                        <Link to = "/" className = "text-s nav-link">gc</Link>
                     </div>
                 )}
 
@@ -43,8 +43,8 @@ function Navigation() {
                     ) : (
                         // Regular Links
                         <div className = "nav-links-right">
-                            <Link to = "/about" className = "textSizeS nav-link">About Me</Link>
-                            <Link to = "/contact" className = "textSizeS nav-link">Contact</Link>
+                            <Link to = "/about" className = "text-s nav-link">About Me</Link>
+                            <Link to = "/contact" className = "text-s nav-link">Contact</Link>
                         </div>
                     )}
                         
@@ -52,12 +52,12 @@ function Navigation() {
                     {isMobileMenuOpen && (
                         <div className="mobile-menu-overlay" onClick={closeMobileMenu}>
                             <div className="mobile-menu-links">
-                                <div className = "closeNavSVGWrapper">
+                                <div className = "close-nav-svg-wrapper">
                                     <CloseSVGIcon onClick={closeMobileMenu}/>
                                 </div>
-                                <Link to = "/" className = "textSizeS nav-link">gc</Link>
-                                <Link to = "/about" className = "textSizeS nav-link">About Me</Link>
-                                <Link to = "/contact" className = "textSizeS nav-link">Contact</Link>
+                                <Link to = "/" className = "text-s nav-link">gc</Link>
+                                <Link to = "/about" className = "text-s nav-link">About Me</Link>
+                                <Link to = "/contact" className = "text-s nav-link">Contact</Link>
                             </div>
                         </div>
                     )}

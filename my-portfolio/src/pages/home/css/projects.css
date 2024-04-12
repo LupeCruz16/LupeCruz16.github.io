@@ -1,4 +1,4 @@
-.projectsSection {
+.projects-section {
     width: 100%;
     /* Accounting for navigation height */
     height: calc(100vh - 10vh);
@@ -6,7 +6,7 @@
 }
 
 /* Used to layout the three sections: prev, current, next */
-.projectLayout {
+.project-layout {
     display: grid;
     height: calc(100vh - 10vh);
     padding-bottom: 10vh;
@@ -16,7 +16,7 @@
     width: 100%;
 }
 
-.transitionText {
+.transition-text {
     transform: rotate(270deg) !important; 
     display: flex;
     justify-content: center;
@@ -24,11 +24,11 @@
     cursor: pointer;
 }
 
-.transitionText:hover {
+.transition-text:hover {
     color: var(--accent-200)
 }
 
-.currentProject{
+.current-project{
     display: flex;
     flex-direction: column;
     gap: 1vw;
@@ -39,11 +39,11 @@
     overflow: hidden;
 }
   
-.currentProject.show {
+.current-project.show {
     opacity: 1;
 }
 
-.currentProjectGrid {
+.current-project-grid {
     width: 100%;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
@@ -51,20 +51,20 @@
     display: grid;
 }
 
-.currentProjectDetails {
+.current-project-details {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1vw; 
 }
 
-.projectSpecificsRow {
+.project-specifics-row {
     display: flex;
     flex-direction: row;
     white-space: pre-wrap;
 }
 
-.projectEyeCatcherContainer {
+.project-eye-catcher-container {
     width: 100%;
     height: auto;
     display: flex;
@@ -72,7 +72,7 @@
     justify-content: center;
 }
 
-.cursorToPointer {
+.cursor-pointer {
     cursor: pointer;
 }
 

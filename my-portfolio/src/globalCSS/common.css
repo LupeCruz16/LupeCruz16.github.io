@@ -35,34 +35,74 @@ grid-template-columns:
   grid-template-columns: inherit;
 }
 
-/* Old css */
-.paddingGlobal {
-  padding-left: 15vw;
-  padding-right: 15vw;
+/* Padding */
+.padding-xs {
+  padding: 0.4vw;
+}
+
+.padding-bottom-m {
+  padding-bottom: 5vw;
+}
+
+.padding-top-and-bot-l {
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+}
+
+/* Text Styling */
+.text-color-sec{
+  color: var(--text-200);
+}
+
+.text-xs {
+  font-size: 1vw;
+}
+
+.text-s {
+  font-size: 1vw;
 }
   
-.largeContainer {
+.text-m {
+  font-size: 2.5vw;
+  margin: 0;
+  margin-bottom: 0;
+}
+
+.text-l {
+  font-size: 4.5vw;
+  margin: 0;
+  line-height: 1;
+  font-weight: 150;
+}
+
+.text-xs, .text-s, .text-m {
+  font-weight: 100;
+}
+
+.text-muted {
+  opacity: 0.6;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+/* Other */
+.large-container {
   margin-right: auto !important;
   margin-left: auto !important;
   width: 100%;
   max-width: 100%;
 }
-  
-.large-padding-top-bot {
-  padding-top: 10vw;
-  padding-bottom: 10vw;
-}
-  
-.paddingSection-M-Bottom {
-  padding-bottom: 5vw;
+
+/* Old css */
+.paddingGlobal {
+  padding-left: 15vw;
+  padding-right: 15vw;
 }
 
 .paddingSection-S-Bottom {
   padding-bottom: 2.5vw;
-}
-  
-.paddingXS {
-  padding: 0.4vw;
 }
 
 .paddingS {
@@ -80,45 +120,11 @@ grid-template-columns:
 .bottomMarginXS {
   margin-bottom: 2vw;
 }
-
-/* Text Styling */
-.textSizeXS {
-  font-size: 1vw;
-}
-
-.textSizeS {
-  font-size: 1vw;
-}
-  
-.textSizeM {
-  font-size: 2.5vw;
-  margin: 0;
-  margin-bottom: 0;
-}
-
-.textSizeL {
-  font-size: 4.5vw;
-  margin: 0;
-  line-height: 1;
-  font-weight: 150;
-}
-
-.textSizeXS, .textSizeS, .textSizeM {
-  font-weight: 100;
-}
   
 .textStyleCaption {
   letter-spacing: 1.5vw;
   text-transform: uppercase;
   font-weight: 500;
-}
-  
-.textStyleMuted {
-  opacity: 0.6;
-}
-
-.textAlign-Left {
-  text-align: left;
 }
 
 .textAlign-Right {
@@ -128,10 +134,6 @@ grid-template-columns:
 /* Other styling */
 .backgroundColor-Secondary{
   background-color: var(--bg-200);
-}
-
-.textColor-Secondary{
-  color: var(--text-200);
 }
 
 .inlineBlockElem {

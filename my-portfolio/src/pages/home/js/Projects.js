@@ -41,38 +41,38 @@ function Projects () {
   const currentProject = projects[currentProjectIndex];
 
   return (
-    <div id="projects" className="largeContainer">
-      <div className="projectsSection">
-        <div className="projectLayout">
+    <div id="projects" className="large-container">
+      <div className="projects-section">
+        <div className="project-layout">
           {/* Previous Project Text */}
           <div 
             onClick={handlePrevClick} 
-            style={getScaleStyle("leftArrow")} 
-            onMouseEnter={() => handleMouseEnter("leftArrow")} 
+            style={getScaleStyle("prev-text")} 
+            onMouseEnter={() => handleMouseEnter("prev-text")} 
             onMouseLeave={handleMouseLeave}
-            className="textSizeS transitionText"
+            className="text-s transition-text"
           >
             Previous
           </div>
 
           {/* Project Details, using fade in/out effect */}
-          <div className={`currentProject textAlign-Left ${showDetails ? 'show' : ''}`}>
-            <div className="currentProjectGrid">
-              <div className="currentProjectDetails">
+          <div className={`current-project text-align-left ${showDetails ? 'show' : ''}`}>
+            <div className="current-project-grid">
+              <div className="current-project-details">
                 {/* Project counter */}
-                <div className="textSizeS">
+                <div className="text-s">
                   <span>{currentProjectIndex + 1}</span>
-                  <span className="textStyleMuted">/</span>
-                  <span className="textStyleMuted">{projects.length}</span>
+                  <span className="text-muted">/</span>
+                  <span className="text-muted">{projects.length}</span>
                 </div>
 
                 {/* Project title */}
-                <div className="projectSpecificsRow textSizeM cursorToPointer">
+                <div className="project-specifics-row text-m cursor-pointer">
                   {currentProject.title}
                 </div>
 
                 {/* Project detail text */}
-                <div className="projectSpecificsRow textSizeS textStyleMuted cursorToPointer">
+                <div className="project-specifics-row text-s text-muted cursor-pointer">
                   {/* Company is only displayed if listed */}
                   {currentProject.company && (
                     <>{currentProject.company} | </>
@@ -82,7 +82,7 @@ function Projects () {
               </div>
 
               {/* Project Eye Catcher */}
-              <div className="projectEyeCatcherContainer cursorToPointer">
+              <div className="project-eye-catcher-container cursor-pointer">
                 <Lottie
                   options={{
                     loop: true,
@@ -100,10 +100,10 @@ function Projects () {
           {/* Next Project Text */}
           <div 
             onClick={handleNextClick} 
-            style={getScaleStyle("rightArrow")} 
-            onMouseEnter={() => handleMouseEnter("rightArrow")} 
+            style={getScaleStyle("next-text")} 
+            onMouseEnter={() => handleMouseEnter("next-text")} 
             onMouseLeave={handleMouseLeave}
-            className="textSizeS transitionText"
+            className="text-s transition-text"
           >
             Next
           </div>
