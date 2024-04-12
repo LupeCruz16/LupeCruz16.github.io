@@ -21,50 +21,49 @@ function Navigation() {
 
     return (
         <header className = "primary-header content-grid">
-            <div className = "breakout">
-                <nav className = "primary-header_layout">
-                    {/* Left side of navigation */}
-                    {!isMobileView && (
-                        <div>
-                            <Link to = "/" className = "textSizeS nav-link">gc</Link>
+            <div className = "primary-header_layout breakout">
+
+                {/* Left side of navigation */}
+                {!isMobileView && (
+                    <div className = "nav-links-left">
+                        <Link to = "/" className = "textSizeS nav-link">gc</Link>
+                    </div>
+                )}
+
+                {/* Right side of navigation */}
+                <div>
+                    {/* Conditionally render regular links or hamburger icon */}
+                    {isMobileView ? (
+                        // Mobile Hamburger Menu Icon
+                        <div className="hamburgerSVGWrapper" onClick={toggleMobileMenu}>
+                            {isMobileView && (
+                                <HamburgerMenuSVGIcon className={`line ${isMobileMenuOpen ? 'active' : ''}`} />
+                            )}
+                        </div>
+                    ) : (
+                        // Regular Links
+                        <div className = "nav-links-right">
+                            <Link to = "/about" className = "textSizeS nav-link">About Me</Link>
+                            <Link to = "/contact" className = "textSizeS nav-link">Contact</Link>
                         </div>
                     )}
-
-                    {/* Right side of navigation */}
-                    <div>
-                        {/* Conditionally render regular links or hamburger icon */}
-                        {isMobileView ? (
-                            // Mobile Hamburger Menu Icon
-                            <div className="hamburgerSVGWrapper" onClick={toggleMobileMenu}>
-                                {isMobileView && (
-                                    <HamburgerMenuSVGIcon className={`line ${isMobileMenuOpen ? 'active' : ''}`} />
-                                )}
-                            </div>
-                        ) : (
-                            // Regular Links
-                            <div className = "nav-links-right">
+                        
+                    {/* Mobile Menu Overlay */}
+                    {isMobileMenuOpen && (
+                        <div className="mobile-menu-overlay" onClick={closeMobileMenu}>
+                            <div className="mobile-menu-links">
+                                <div className = "closeNavSVGWrapper">
+                                    <CloseSVGIcon onClick={closeMobileMenu}/>
+                                </div>
+                                <Link to = "/" className = "textSizeS nav-link">gc</Link>
                                 <Link to = "/about" className = "textSizeS nav-link">About Me</Link>
                                 <Link to = "/contact" className = "textSizeS nav-link">Contact</Link>
                             </div>
-                        )}
-
-                        {/* Mobile Menu Overlay */}
-                        {isMobileMenuOpen && (
-                            <div className="mobile-menu-overlay" onClick={closeMobileMenu}>
-                                <div className="mobile-menu-links">
-                                    <div className = "closeNavSVGWrapper">
-                                        <CloseSVGIcon onClick={closeMobileMenu}/>
-                                    </div>
-                                    <Link to = "/" className = "textSizeS nav-link">gc</Link>
-                                    <Link to = "/about" className = "textSizeS nav-link">About Me</Link>
-                                    <Link to = "/contact" className = "textSizeS nav-link">Contact</Link>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </nav>
-            </div>
-        </header>
+                        </div>
+                    )}
+                </div>
+        </div>
+    </header>
     );
 }
 

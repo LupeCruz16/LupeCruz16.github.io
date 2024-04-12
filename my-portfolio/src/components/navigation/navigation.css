@@ -19,10 +19,16 @@
     color: var(--accent-100)
 }
 
+.nav-links-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
 .nav-links-right {
     gap: max(5vw, 1rem);
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 .mobile-menu-overlay {
