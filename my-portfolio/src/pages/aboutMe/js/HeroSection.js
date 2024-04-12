@@ -9,13 +9,11 @@ function HeroSection () {
   const { handleMouseEnter, handleMouseLeave, getScaleStyle } = useHoverScale();
 
   return (
-    <div className = "hero-section padding-top-and-bot-l">
+    <div className = "hero-section breakout">
       {/* Left side of hero section */}
       <div className= "text-align-left">
-        <h2 className = "text-m">Hello, I'm</h2>
-        <h1 className = "text-l">Guadalupe Cruz</h1>
-        <h2 className = "text-m">Software Engineer</h2>
-        <div className = "padding-xs"></div>
+        <div className = "text-xs text-muted">About Me</div>
+        <div className = "text-l spacer">Hi, I'm Guadalupe Cruz, Software Engineer.</div>
         <div className="resume-button" style={getScaleStyle('resume')} onMouseEnter={() => handleMouseEnter('resume')} onMouseLeave={handleMouseLeave}>
           <a href= {resume} download="Guadalupes_Resume.pdf" className="resume-button-link">
             <div className="text-s text-color-sec">View My Resume</div>

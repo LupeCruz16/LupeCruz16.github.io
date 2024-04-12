@@ -1,11 +1,12 @@
-import disney from './images/disney.png';
 import museum from './images/museum.png';
-import concert from './images/taylor_swift_concert.png';
-import chatbot from './images/chatbot.png';
-import bookez from './images/bookEz.png';
-import roamReady from './images/roam_ready.png';
+import taylort_swift from './images/taylor_swift.jpg';
+import max from './images/max.jpg';
+import zoo from './images/zoo.jpg';
+import cat_display from './images/cat.jpg';
+import six from './images/six.jpg';
+
 import headshot from './images/headshot.jpg';
 import pacificTech from './images/pacific_tech_client.jpg';
-import arduinos from './images/arduino.jpg'
 
-export { disney, museum, concert, chatbot, bookez, roamReady, headshot, pacificTech, arduinos };
+export { museum, taylort_swift, max, zoo, cat_display, six,
+        headshot, pacificTech };
