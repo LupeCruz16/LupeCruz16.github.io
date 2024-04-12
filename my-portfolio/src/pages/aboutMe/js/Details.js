@@ -4,27 +4,28 @@ function Details () {
 
     return (
         <div className="breakout">
-        {/* Row 1 - Text on Left, Image on Right */}
-        <div className="grid-item text-item">
-            <p>Your text here for the first item</p>
+        {/* Row 1 */}
+        <div className="details-grid-item textSizeS">
+            Recently I've been trying to go to a concert at least once a year. 
+            This time we saw ____.
         </div>
-        <div className="grid-item image-item">
+        <div className="details-grid-item details-image-item">
             {/* <img src={image1} alt="Description of Image 1" /> */}
         </div>
 
-        {/* Row 2 - Image on Left, Text on Right */}
-        <div className="grid-item image-item">
+        {/* Row 2 */}
+        <div className="details-grid-item details-image-item">
             {/* <img src={image2} alt="Description of Image 2" /> */}
         </div>
-        <div className="grid-item text-item">
-            <p>Your text here for the second item</p>
+        <div className="details-grid-item textSizeS">
+            Museums are also a must, especially the dinosaur related ones.
         </div>
 
-        {/* Row 3 - Text on Left, Image on Right */}
-        <div className="grid-item text-item">
-            <p>Your text here for the third item</p>
+        {/* Row 3 */}
+        <div className="grid-item textSizeS">
+            I spend a lot of time at my computer, so touching grass is always good.
         </div>
-        <div className="grid-item image-item">
+        <div className="details-grid-item details-image-item">
             {/* <img src={image3} alt="Description of Image 3" /> */}
         </div>
         </div>

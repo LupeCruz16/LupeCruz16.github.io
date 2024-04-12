@@ -5,13 +5,13 @@
     gap: 20px;
 }
   
-.grid-item {
+.details-grid-item {
     display: flex;
     align-items: center;
     justify-content: center;
 }
   
-.image-item img {
+.details-image-item img {
     width: 100%;
     height: auto;
 }
