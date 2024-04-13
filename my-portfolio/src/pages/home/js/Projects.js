@@ -41,7 +41,7 @@ function Projects () {
   const currentProject = projects[currentProjectIndex];
 
   return (
-    <div id="projects" className="large-container">
+    <div className="large-container">
       <div className="projects-section">
         <div className="project-layout">
           {/* Previous Project Text */}

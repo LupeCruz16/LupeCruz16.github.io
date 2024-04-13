@@ -1,4 +1,4 @@
-import Details from './Details.js'
+import BentoBox from './BentoBox.js'
 import HeroSection from "./HeroSection.js"
 import Footer from "../../../components/footer/Footer.js";
 import useFadeIn from '../../../effects/FadeIn/useFadeIn.js';
@@ -13,7 +13,7 @@ function AbuoutMe () {
       <Navigation />
       <div className = "content-grid">
         <HeroSection />
-        <Details />
+        <BentoBox />
         <Footer />
       </div> 
     </div>
