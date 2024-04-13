@@ -1,7 +1,6 @@
 import Details from './Details.js'
 import HeroSection from "./HeroSection.js"
-// import SkillGallery from "./SkillGallery.js";
-// import Footer from "../../../components/footer/Footer.js";
+import Footer from "../../../components/footer/Footer.js";
 import useFadeIn from '../../../effects/FadeIn/useFadeIn.js';
 import Navigation from "../../../components/navigation/Navigation.js";
 
@@ -15,10 +14,8 @@ function AbuoutMe () {
       <div className = "content-grid">
         <HeroSection />
         <Details />
-      </div>
-      {/* 
-      <SkillGallery />
-      <Footer /> */}
+        <Footer />
+      </div> 
     </div>
   );
 }

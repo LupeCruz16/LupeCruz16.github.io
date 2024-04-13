@@ -124,9 +124,6 @@ grid-template-columns:
 }
 
 /* Other styling */
-.backgroundColor-Secondary{
-  background-color: var(--bg-200);
-}
 
 .inlineBlockElem {
   max-width: 100%;

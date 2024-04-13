@@ -1,95 +1,32 @@
-.footerTop {
-    grid-column-gap: 2vw;
-    grid-row-gap: 4vw;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-columns: 1fr;
-    display: grid;
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw 0vw;
+    gap: 20px;
+    flex-direction: row;
 }
   
-.footerEmailLink {
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.email-link {
+    color: white;
     text-decoration: none;
 }
-  
-.footerRight {
-    justify-self: center;
+
+.email-link:hover {
+    color: var(--accent-100)
 }
   
-.personWrapper {
-    grid-template-rows: auto;
-    grid-template-columns: auto 1fr;
-    grid-auto-columns: 1fr;
-    align-items: center;
+.footer-social-icon {
     display: flex;
-}
-  
-.footerImageWrapper {
-    grid-template-rows: 2vw;
-    grid-row-gap: 2vw;
-    flex: none;
-    grid-template-rows: auto;
-    grid-template-columns: auto 1fr;
-}
-  
-.footerImage {
-    width: 6vw;
-    height: 6vw;
-    object-fit: cover;
-    border-radius: 50%;
-}
-  
-.footerSocialWrapper {
-    grid-column-gap: 1.25vw;
-    grid-row-gap: 1vw;
-    grid-template-rows: auto;
-    grid-template-columns: max-content;
-    grid-auto-columns: max-content;
-    grid-auto-flow: column;
-    display: grid; 
-    margin-left: 8.5vw;
-}
-  
-.footerSocialLink {
-    justify-content: center;
     align-items: center;
-    transition: color .3s ease-out;
-}
-  
-.footerSVGIcon {
-    width: 2.5vw;
-    height: 2.5vw;
-}
-
-@media (max-width: 1024px) { 
-    .footerImage {
-        width: 7vw;
-        height: 7vw;
-    }
-    
-    .footerSVGIcon {
-        width: 4vw;
-        height: 4vw;
-    }
-}
-
-@media (max-width: 768px) { 
-    .footerSVGIcon {
-        width: 3vw;
-        height: 3vw;
-    }
-}
-
-@media (max-width: 480px) { 
-    .footerImageWrapper{
-        display: none;
-    }
-
-    .footerSocialWrapper {
-        margin-left: 5vw;
-    }
-
-    .footerSVGIcon {
-        width: 5vw;
-        height: 5vw;
-    }
+    justify-content: center;
+    width: 3vw; 
+    height: auto;
+    color: white;
+    fill: currentColor; 
 }
