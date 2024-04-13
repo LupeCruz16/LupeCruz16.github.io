@@ -16,15 +16,6 @@
   padding-bottom: 0.4vw;
 }
 
-.resume-button{
-  padding: 0.5vw 1vw;
-  text-decoration: none;
-  border: none;
-  border-radius: 1vw;
-  background-color: var(--accent-200);
-  width: fit-content;
-}
-
 .resume-button-link{
   text-decoration: none;
   border: none;

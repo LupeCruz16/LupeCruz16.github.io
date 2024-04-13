@@ -1,10 +1,14 @@
 import { HamburgerMenuSVGIcon, CloseSVGIcon } from '../../assets/SVGs.js';
 import useMobileView from '../../functions/useMobileView.js';
+import useHoverScale from '../../effects/useHoverScale.js';
+import Modal from '../../functions/Modal.js'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import "./navigation.css"
+import './navigation.css';
 
 function Navigation() {
+    const { handleMouseEnter, handleMouseLeave, getScaleStyle } = useHoverScale();
+
     //Mobile view active for screens less than 768px
     const isMobileView = useMobileView();
 
@@ -17,6 +21,12 @@ function Navigation() {
 
     const closeMobileMenu = () => {
         setMobileMenuOpen(false);
+    };
+
+    const [showModal, setShowModal] = useState(false);
+
+    const toggleModal = () => {
+        setShowModal(!showModal);
     };
 
     return (
@@ -44,7 +54,10 @@ function Navigation() {
                         // Regular Links
                         <div className = "nav-links-right">
                             <Link to = "/about" className = "text-s nav-link">About Me</Link>
-                            <Link to = "/contact" className = "text-s nav-link">Contact</Link>
+                            <div className="button-styles" style={getScaleStyle('contact')} onMouseEnter={() => handleMouseEnter('contact')} onMouseLeave={handleMouseLeave}>
+                                <div onClick={toggleModal} className="text-s text-color-sec">Contact</div>
+                            </div>
+                            <Modal show={showModal} onClose={toggleModal} />
                         </div>
                     )}
                         

@@ -35,6 +35,17 @@ grid-template-columns:
   grid-template-columns: inherit;
 }
 
+/* Button */
+.button-styles{
+  padding: 0.5vw 1vw;
+  text-decoration: none;
+  border: none;
+  border-radius: 1vw;
+  background-color: var(--accent-200);
+  width: fit-content;
+}
+
+
 /* Padding */
 .padding-bottom-m {
   padding-bottom: 5vw;

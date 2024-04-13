@@ -14,7 +14,7 @@ function HeroSection () {
       <div className= "text-align-left">
         <div className = "text-xs text-muted">About Me</div>
         <div className = "text-l spacer">Hi, I'm Guadalupe Cruz, Software Engineer.</div>
-        <div className="resume-button" style={getScaleStyle('resume')} onMouseEnter={() => handleMouseEnter('resume')} onMouseLeave={handleMouseLeave}>
+        <div className="button-styles" style={getScaleStyle('resume')} onMouseEnter={() => handleMouseEnter('resume')} onMouseLeave={handleMouseLeave}>
           <a href= {resume} download="Guadalupes_Resume.pdf" className="resume-button-link">
             <div className="text-s text-color-sec">View My Resume</div>
           </a>
