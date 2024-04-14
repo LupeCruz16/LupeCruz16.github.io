@@ -4,7 +4,7 @@ import max from './images/max.jpg';
 import zoo from './images/zoo.jpg';
 import cat_display from './images/cat.jpg';
 import six from './images/six.jpg';
-import sigparser_logo from './images/sigparser.png'
+import sigparser_logo from './images/sigparser.jpg'
 
 import headshot from './images/headshot.jpg';
 import pacificTech from './images/pacific_tech_client.jpg';
