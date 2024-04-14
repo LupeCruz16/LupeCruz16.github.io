@@ -76,13 +76,12 @@ const GifSection = () => {
           <div key={index} style={{ '--i': index + 1 }}><IconComponent /></div>
         ))}
       </div>
-      <Lottie options={{ loop: true, autoplay: true, animationData: aiBrainMapping, rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }}} />
+      <Lottie className = "project-num-lottie" options={{ loop: true, autoplay: true, animationData: aiBrainMapping, rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }}} />
     </div>
   );
 };
 
 function SigParser () {
-
   const fadeIn = useFadeIn();
 
   return (
