@@ -1,7 +1,12 @@
+import { AmazonSVGIcon, FlaskSVGIcon, ReactSVGIcon, PythonSVGIcon } from "../../../assets/SVGs.js";
 import Navigation from "../../../components/navigation/Navigation.js";
+import { aiBrainMapping } from "../../../assets/Animations.js";
 import useFadeIn from '../../../effects/FadeIn/useFadeIn.js';
 import { sigparser_logo } from "../../../assets/Images.js";
+import React, { useEffect, useRef, useState } from 'react';
 import Footer from "../../../components/footer/Footer.js";
+
+import Lottie from 'react-lottie';
 import '../css/sigparser.css'
 
 const HeroSection = () => {
@@ -38,6 +43,44 @@ const HeroSection = () => {
   );
 };
 
+const GifSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isAnimatingOut, setIsAnimatingOut] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const sectionElement = sectionRef.current;  
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsAnimatingOut(!entry.isIntersecting && isVisible);
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    if (sectionElement) {
+      observer.observe(sectionElement);
+    }
+
+    return () => {
+      if (sectionElement) {
+        observer.unobserve(sectionElement);
+      }
+    };
+  }, [sectionRef, isVisible]);
+
+  return (
+    <div ref={sectionRef} className={`gif-section ${isVisible ? 'animate' : ''} ${isAnimatingOut ? 'animate-out' : ''}`}>
+      <div className="icon-container">
+        {[AmazonSVGIcon, FlaskSVGIcon, ReactSVGIcon, PythonSVGIcon].map((IconComponent, index) => (
+          <div key={index} style={{ '--i': index + 1 }}><IconComponent /></div>
+        ))}
+      </div>
+      <Lottie options={{ loop: true, autoplay: true, animationData: aiBrainMapping, rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }}} />
+    </div>
+  );
+};
+
 function SigParser () {
 
   const fadeIn = useFadeIn();
@@ -47,6 +90,7 @@ function SigParser () {
       <Navigation />
       <div className = "content-grid">
         <HeroSection />
+        <GifSection />
         <Footer />
       </div> 
     </div>
