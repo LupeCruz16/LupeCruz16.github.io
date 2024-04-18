@@ -2,7 +2,6 @@ import { AmazonSVGIcon, FlaskSVGIcon, ReactSVGIcon, PythonSVGIcon } from "../../
 import Navigation from "../../../components/navigation/Navigation.js";
 import { aiBrainMapping } from "../../../assets/Animations.js";
 import useFadeIn from '../../../effects/FadeIn/useFadeIn.js';
-import { sigparser_logo } from "../../../assets/Images.js";
 import React, { useEffect, useRef, useState } from 'react';
 import Footer from "../../../components/footer/Footer.js";
 
@@ -13,10 +12,7 @@ const HeroSection = () => {
   return (
     <div className = "project-num-hero-container text-align-left">
       <div className = "project-num-details-container">
-        <div className = "project-num-details">
-          <div className = 'project-num-img-wrapper'>
-            <img src = { sigparser_logo } alt = 'SigParser Logo'></img>
-          </div>
+        <div className = "project-num-details" style={{ paddingTop: '12px' }}>
           <div>
             <div className = "text-xs">Company</div>
             <div className = "text-muted text-s">SigParser</div>

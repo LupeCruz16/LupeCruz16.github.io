@@ -1,5 +1,6 @@
 .primary-header {
     height: 10vh;
+    padding-top: 1vw;
     align-items: center;
 }
 
@@ -19,9 +20,20 @@
     color: var(--accent-100)
 }
 
-.nav-links-left {
+.nav-left {
     display: flex;
     justify-content: flex-start;
+}
+
+.personal-logo-wapper {
+    width: 4vw;
+    height: auto;
+}
+
+.personal-logo-wapper svg {
+    fill: white;
+    width: 100%;
+    height: 100%;
 }
 
 .nav-links-right {

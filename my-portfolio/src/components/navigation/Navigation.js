@@ -1,4 +1,4 @@
-import { HamburgerMenuSVGIcon, CloseSVGIcon } from '../../assets/SVGs.js';
+import { PersonalLogoSVG, HamburgerMenuSVGIcon, CloseSVGIcon } from '../../assets/SVGs.js';
 import useMobileView from '../../functions/useMobileView.js';
 import useHoverScale from '../../effects/useHoverScale.js';
 import Modal from '../../functions/Modal.js'
@@ -35,8 +35,12 @@ function Navigation() {
 
                 {/* Left side of navigation */}
                 {!isMobileView && (
-                    <div className = "nav-links-left">
-                        <Link to = "/" className = "text-s nav-link">gc</Link>
+                    <div className = "nav-left">
+                        <Link to = "/">
+                            <div className = "personal-logo-wapper">
+                                <PersonalLogoSVG />
+                            </div>
+                        </Link>
                     </div>
                 )}
 

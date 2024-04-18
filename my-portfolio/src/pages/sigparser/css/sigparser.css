@@ -23,21 +23,6 @@
     width: 100%;
 }
 
-
-.project-num-img-wrapper {
-    height: 4vw;
-    width: 4vw;
-    overflow: hidden;
-    border-radius: 50%;
-}
-
-.project-num-img-wrapper img {
-    width: 100%;  
-    height: 100%; 
-    object-fit: fill; 
-    border-radius: 50%; 
-}
-
 /* Gif Section */
 .gif-section {
     position: relative;

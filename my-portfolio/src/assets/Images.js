@@ -4,10 +4,9 @@ import max from './images/max.jpg';
 import zoo from './images/zoo.jpg';
 import cat_display from './images/cat.jpg';
 import six from './images/six.jpg';
-import sigparser_logo from './images/sigparser.jpg'
 
 import headshot from './images/headshot.jpg';
 import pacificTech from './images/pacific_tech_client.jpg';
 
 export { museum, taylort_swift, max, zoo, cat_display, six,
-        headshot, pacificTech, sigparser_logo };
+        headshot, pacificTech };
