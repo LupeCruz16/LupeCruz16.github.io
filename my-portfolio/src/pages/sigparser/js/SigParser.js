@@ -4,18 +4,45 @@ import { aiBrainMapping } from "../../../assets/Animations.js";
 import useFadeIn from '../../../effects/FadeIn/useFadeIn.js';
 import React, { useEffect, useRef, useState } from 'react';
 import Footer from "../../../components/footer/Footer.js";
-
 import Lottie from 'react-lottie';
 import '../css/sigparser.css'
 
 const HeroSection = () => {
   return (
+    <div className = "sigparser-hero-container text-align-left">
+      <div className = "grid-1-3-col-container">
+        <div className = "text-xs" style={{ paddingTop: '12px' }}>LLM Tool Development</div>
+        <div className = "text-m">Enhancing Customer experience  through AI</div>
+      </div>
+    </div>
+  );
+};
+
+const ViceSection = () => {
+  return (
+    <div className = "vice-container">
+      <img></img>
+      <div className = "text-muted text-s text-align-left">Phase 1: VICE</div>
+      <div className = "grid-1-3-col-container text-align-left">
+        <div></div>
+        <div className = "text-s">Chatbot specifics</div>
+      </div>
+    </div>
+  );
+};
+
+const OverviewSection = () => {
+  return (
     <div className = "project-num-hero-container text-align-left">
-      <div className = "project-num-details-container">
+      <div className = "grid-1-3-col-container">
         <div className = "project-num-details" style={{ paddingTop: '12px' }}>
           <div>
             <div className = "text-xs">Company</div>
             <div className = "text-muted text-s">SigParser</div>
+          </div>
+          <div>
+            <div className = "text-xs">Role</div>
+            <div className = "text-muted text-s">Developer</div>
           </div>
           <div>
             <div className = "text-xs">Year</div>
@@ -87,7 +114,8 @@ function SigParser () {
       <Navigation />
       <div className = "content-grid">
         <HeroSection />
-        <GifSection />
+        <OverviewSection />
+        <ViceSection />
         <Footer />
       </div> 
     </div>
