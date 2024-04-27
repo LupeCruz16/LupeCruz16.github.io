@@ -10,9 +10,9 @@ import '../css/home.css';
 const projectsData = [
   {id: 1, link: "/sigparser", title: "Next-Gen LLM Innovations", company: "SigParser", 
   duration: "Ongoing since 2023", animation: ai},
-  {id: 2, link: "/treobytes", title: "Arduino Lead Educator", company: "Treobytes", 
+  {id: 2, link: "/s3", title: "Arduino Lead Educator", company: "Treobytes", 
   duration: "Ongoing since 2023", animation: educator},
-  {id: 3, link: "/travel", title: "Travel Location Generator", company: "Personal Project", 
+  {id: 3, link: "/s3", title: "Travel Location Generator", company: "Personal Project", 
   duration: "Completed in 2023", animation: travel}
 ];
 
