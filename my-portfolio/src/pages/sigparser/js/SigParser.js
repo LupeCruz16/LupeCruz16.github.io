@@ -1,10 +1,7 @@
-import { AmazonSVGIcon, FlaskSVGIcon, ReactSVGIcon, PythonSVGIcon } from "../../../assets/SVGs.js";
 import Navigation from "../../../components/navigation/Navigation.js";
-import { aiBrainMapping } from "../../../assets/Animations.js";
+import { toolHubSettings, toolHubVICE } from "../../../assets/Videos.js";
 import useFadeIn from '../../../effects/FadeIn/useFadeIn.js';
-import React, { useEffect, useRef, useState } from 'react';
 import Footer from "../../../components/footer/Footer.js";
-import Lottie from 'react-lottie';
 import '../css/sigparser.css'
 
 const HeroSection = () => {
@@ -18,11 +15,30 @@ const HeroSection = () => {
   );
 };
 
+const SigParserHomeSection = () => {
+  return (
+    <div className = "vice-container">
+      <video autoPlay loop muted playsInline>
+        <source src= { toolHubSettings } type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className = "text-muted text-s text-align-left">Phase 1: The Home Page</div>
+      <div className = "grid-1-3-col-container text-align-left">
+        <div></div>
+        <div className = "text-s">Our team focused on a simple but easy to manuver user interface.</div>
+      </div>
+    </div>
+  );
+};
+
 const ViceSection = () => {
   return (
     <div className = "vice-container">
-      <img></img>
-      <div className = "text-muted text-s text-align-left">Phase 1: VICE</div>
+      <video autoPlay loop muted playsInline>
+        <source src= { toolHubVICE } type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className = "text-muted text-s text-align-left">Phase 2: VICE</div>
       <div className = "grid-1-3-col-container text-align-left">
         <div></div>
         <div className = "text-s">Chatbot specifics</div>
@@ -68,44 +84,6 @@ const OverviewSection = () => {
   );
 };
 
-const GifSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isAnimatingOut, setIsAnimatingOut] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const sectionElement = sectionRef.current;  
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsAnimatingOut(!entry.isIntersecting && isVisible);
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.5 }
-    );
-
-    if (sectionElement) {
-      observer.observe(sectionElement);
-    }
-
-    return () => {
-      if (sectionElement) {
-        observer.unobserve(sectionElement);
-      }
-    };
-  }, [sectionRef, isVisible]);
-
-  return (
-    <div ref={sectionRef} className={`gif-section ${isVisible ? 'animate' : ''} ${isAnimatingOut ? 'animate-out' : ''}`}>
-      <div className="icon-container">
-        {[AmazonSVGIcon, FlaskSVGIcon, ReactSVGIcon, PythonSVGIcon].map((IconComponent, index) => (
-          <div key={index} style={{ '--i': index + 1 }}><IconComponent /></div>
-        ))}
-      </div>
-      <Lottie className = "project-num-lottie" options={{ loop: true, autoplay: true, animationData: aiBrainMapping, rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }}} />
-    </div>
-  );
-};
-
 function SigParser () {
   const fadeIn = useFadeIn();
 
@@ -114,6 +92,7 @@ function SigParser () {
       <Navigation />
       <div className = "content-grid">
         <HeroSection />
+        <SigParserHomeSection />
         <OverviewSection />
         <ViceSection />
         <Footer />
