@@ -1,3 +1,8 @@
+/* Text Decoration */
+.underline {
+    text-decoration: underline;
+}
+
 /* Hero Section */
 .sigparser-hero-container {
     display: flex;  
@@ -15,13 +20,19 @@
     align-items: start;
 }
 
-/* VICE Section */
-.vice-container {
+/* Phase Sections */
+.sigparser-phase-container {
     display: flex;
     flex-direction: column;
+    padding-bottom: 10vw;
 }
 
-.project-num-hero-container {
+.sigparser-phase-container video {
+    border-radius: 15px;
+}
+
+/* Overview Section */
+.sigparser-overview-container {
     display: flex;  
     flex-direction: column;
     justify-content: center; 
@@ -31,7 +42,7 @@
     padding: 10vw 0 10vw 0;
 }
 
-.project-num-details {
+.sigparser-overview-details {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -111,4 +122,3 @@
 .gif-section.animate .icon-container div:nth-child(4) {
     transform: translateX(950px) translateY(200px); 
 }
-  
