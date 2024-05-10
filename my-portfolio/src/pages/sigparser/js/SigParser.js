@@ -1,7 +1,10 @@
-import Navigation from "../../../components/navigation/Navigation.js";
+import { FlaskSVGIcon, ReactSVGIcon, AmazonSVGIcon } from "../../../assets/SVGs.js";
+import { PythonSVGIcon, JavaScriptSVGIcon } from "../../../assets/SVGs.js";
 import { toolHubSettings, toolHubVICE } from "../../../assets/Videos.js";
+import Navigation from "../../../components/navigation/Navigation.js";
 import useFadeIn from '../../../effects/FadeIn/useFadeIn.js';
 import Footer from "../../../components/footer/Footer.js";
+import { langchain } from "../../../assets/Images.js";
 import React, { useRef, useEffect } from 'react';
 import '../css/sigparser.css';
 
@@ -76,10 +79,17 @@ const HomeSection = () => {
 
 const TechStack = () => {
   return (
-    <div className = "sigparser-hero-container text-align-left">
+    <div className = "sigparser-hero-container text-align-left" style={{ paddingTop: '0' }}>
       <div className = "grid-1-3-col-container">
-        <div className = "text-xs" style={{ paddingTop: '12px' }}>Tech Stack</div>
-        <div className = "text-m">Technologies</div>
+        <div className = "text-muted text-s text-align-left">Tech Stack</div>
+        <div className = "tech-stack">
+          <PythonSVGIcon />
+          <FlaskSVGIcon />
+          <img src = { langchain } alt = "Langchain"></img>
+          <AmazonSVGIcon/>
+          <ReactSVGIcon />
+          <JavaScriptSVGIcon />
+        </div>
       </div>
     </div>
   );
