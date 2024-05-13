@@ -81,7 +81,7 @@ const TechStack = () => {
   return (
     <div className = "sigparser-hero-container text-align-left" style={{ paddingTop: '0' }}>
       <div className = "grid-1-3-col-container">
-        <div className = "text-muted text-s text-align-left">Tech Stack</div>
+        <div className = "text-muted text-s text-align-left">The Tech Stack</div>
         <div className = "tech-stack">
           <PythonSVGIcon />
           <FlaskSVGIcon />
@@ -123,6 +123,27 @@ const ViceSection = () => {
   );
 };
 
+const QueryGenSection = () => {
+  return (
+    <div className = "sigparser-phase-container">
+      <video autoPlay loop muted playsInline>
+        <source src= { toolHubSettings } type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className = "text-muted text-s text-align-left">Phase 3: The Query Generator</div>
+      <div className = "grid-1-3-col-container text-align-left">
+        <div></div>
+        <div className = "text-s">
+          For this tool I handled securley manaing login credentials and completed the UI. SigParser recognized 
+          that their existing filtering system was too complex and sought out an LLM based solution. As 
+          such, we implemented a tool with the capabilities of querying an LLM using a preformatted prompt
+          that would return a JSON payload that would integrate into their existing system seamlessly.
+        </div>
+      </div>
+    </div>
+  );
+};
+
 function SigParser () {
   const fadeIn = useFadeIn();
 
@@ -131,10 +152,11 @@ function SigParser () {
       <Navigation />
       <div className = "content-grid">
         <HeroSection />
-        <OverviewSection />
         <HomeSection />
         <TechStack />
         <ViceSection />
+        <QueryGenSection />
+        <OverviewSection />
         <Footer />
       </div> 
     </div>
