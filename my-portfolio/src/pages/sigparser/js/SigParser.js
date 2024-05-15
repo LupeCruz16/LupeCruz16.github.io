@@ -65,7 +65,7 @@ const HomeSection = () => {
             <div className = "phase-1-description">
               <div className="text-muted text-s">Phase 1: The Home Page</div>
               <div className="text-s">
-                The UI, built with React utilizes Flask for frontend and backend communication while 
+                The UI, built with React, utilizes Flask for frontend and backend communication while 
                 prioritizing the user experience. Each tool has customizable settings 
                 for modifying LLMs and, uniquely, our Chatbot (VICE) allows database updates. Transparent 
                 pricing is provided for developer convenience. This hub empowers developers to refine LLM 
