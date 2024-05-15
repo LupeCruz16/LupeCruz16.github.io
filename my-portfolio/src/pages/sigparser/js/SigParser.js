@@ -1,6 +1,6 @@
 import { FlaskSVGIcon, ReactSVGIcon, AmazonSVGIcon } from "../../../assets/SVGs.js";
 import { PythonSVGIcon, JavaScriptSVGIcon } from "../../../assets/SVGs.js";
-import { toolHubSettings, toolHubVICE } from "../../../assets/Videos.js";
+import { sigparser_home, vice_demo, query_demo } from "../../../assets/Videos.js";
 import Navigation from "../../../components/navigation/Navigation.js";
 import useFadeIn from '../../../effects/FadeIn/useFadeIn.js';
 import Footer from "../../../components/footer/Footer.js";
@@ -60,7 +60,7 @@ const HomeSection = () => {
   return (
     <div className = "sigparser-phase-container">
       <video autoPlay loop muted playsInline>
-        <source src= { toolHubSettings } type="video/mp4" />
+        <source src= { sigparser_home } type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className = "text-muted text-s text-align-left">Phase 1: The Home Page</div>
@@ -107,7 +107,7 @@ const ViceSection = () => {
   return (
     <div className = "sigparser-phase-container">
       <video ref={videoRef} autoPlay loop muted playsInline>
-        <source src= { toolHubVICE } type="video/mp4" />
+        <source src= { vice_demo } type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className = "text-muted text-s text-align-left">Phase 2: VICE</div>
@@ -127,7 +127,7 @@ const QueryGenSection = () => {
   return (
     <div className = "sigparser-phase-container">
       <video autoPlay loop muted playsInline>
-        <source src= { toolHubSettings } type="video/mp4" />
+        <source src= { query_demo } type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className = "text-muted text-s text-align-left">Phase 3: The Query Generator</div>

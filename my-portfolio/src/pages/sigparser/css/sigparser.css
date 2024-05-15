@@ -13,6 +13,10 @@
     padding: 10vw 0 10vw 0;
 }
 
+.sigparser-phase-container video {
+    margin-bottom: 1vw;
+}
+
 .grid-1-3-col-container {
     display: grid;
     grid-template-columns: 1fr 3fr;

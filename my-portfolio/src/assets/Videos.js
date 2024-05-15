@@ -1,4 +1,5 @@
-import toolHubSettings from './videos/toolHubSettings.mp4';
-import toolHubVICE from './videos/toolHubVICE.mp4';
+import sigparser_home from './videos/sigparser_home_demo.mp4';
+import query_demo from './videos/sigparser_query_demo.mp4';
+import vice_demo from './videos/sigparser_vice_demo.mp4';
 
-export { toolHubSettings, toolHubVICE };
+export { sigparser_home, vice_demo, query_demo };
