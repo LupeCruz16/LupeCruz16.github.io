@@ -8,8 +8,8 @@ import Lottie from 'react-lottie';
 import '../css/home.css'; 
 
 const projectsData = [
-  {id: 1, link: "/sigparser", title: "Next-Gen LLM Innovations", company: "SigParser", 
-  duration: "Ongoing since 2023", animation: ai},
+  {id: 1, link: "/sigparser", title: "AI Integrations", company: "SigParser", 
+  duration: "2023-2024", animation: ai},
   {id: 2, link: "/s3", title: "Arduino Lead Educator", company: "Treobytes", 
   duration: "Ongoing since 2023", animation: educator},
   {id: 3, link: "/s3", title: "Travel Location Generator", company: "Personal Project", 
