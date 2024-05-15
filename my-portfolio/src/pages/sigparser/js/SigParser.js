@@ -58,19 +58,33 @@ const OverviewSection = () => {
 
 const HomeSection = () => {
   return (
-    <div className = "sigparser-phase-container">
-      <video autoPlay loop muted playsInline>
-        <source src= { sigparser_home } type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div className = "text-muted text-s text-align-left">Phase 1: The Home Page</div>
-      <div className = "grid-1-3-col-container text-align-left">
-        <div></div>
-        <div className = "text-s">
-          The UI, built with React, prioritizes user experience. Each tool has customizable settings 
-          for modifying LLMs and, uniquely, our Chatbot (VICE) allows database updates. Transparent 
-          pricing is provided for developer convenience. This hub empowers developers to refine LLM 
-          tools for Sigparser's systems, with the Chatbot serving as a proof of concept.
+    <div className="sigparser-phase-container full-width">
+      <div className="grid-1-1half-col-container">
+        <div className="text-align-left">
+          <div className = "text-container">
+            <div className = "phase-1-description">
+              <div className="text-muted text-s">Phase 1: The Home Page</div>
+              <div className="text-s">
+                The UI, built with React utilizes Flask for frontend and backend communication while 
+                prioritizing the user experience. Each tool has customizable settings 
+                for modifying LLMs and, uniquely, our Chatbot (VICE) allows database updates. Transparent 
+                pricing is provided for developer convenience. This hub empowers developers to refine LLM 
+                tools for Sigparser's systems, with the Chatbot serving as a proof of concept.
+              </div>
+            </div>
+            <div className = "sigparser-tech-graphics">
+              <ReactSVGIcon />
+              <FlaskSVGIcon />
+            </div>
+          </div>
+          <div></div>
+        </div>
+
+        <div className="video-container">
+          <video autoPlay loop muted playsInline className = "rounded-left">
+            <source src={sigparser_home} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>
@@ -106,11 +120,11 @@ const ViceSection = () => {
 
   return (
     <div className = "sigparser-phase-container">
-      <video ref={videoRef} autoPlay loop muted playsInline>
+      <video ref={videoRef} autoPlay loop muted playsInline className = "sigparser-phase-video">
         <source src= { vice_demo } type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className = "text-muted text-s text-align-left">Phase 2: VICE</div>
+      <div className = "sigparser-phase-title text-muted text-s text-align-left">Phase 2: VICE</div>
       <div className = "grid-1-3-col-container text-align-left">
         <div></div>
         <div className = "text-s">
@@ -126,11 +140,11 @@ const ViceSection = () => {
 const QueryGenSection = () => {
   return (
     <div className = "sigparser-phase-container">
-      <video autoPlay loop muted playsInline>
+      <video autoPlay loop muted playsInline className = "sigparser-phase-video">
         <source src= { query_demo } type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className = "text-muted text-s text-align-left">Phase 3: The Query Generator</div>
+      <div className = "sigparser-phase-title text-muted text-s text-align-left">Phase 3: The Query Generator</div>
       <div className = "grid-1-3-col-container text-align-left">
         <div></div>
         <div className = "text-s">
