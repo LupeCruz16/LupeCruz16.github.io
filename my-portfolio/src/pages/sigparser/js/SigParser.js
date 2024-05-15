@@ -68,10 +68,12 @@ const ViceSection = () => {
       <div className = "phase-2-details-container">
         <div className = "text-muted text-m">Phase 2: VICE</div>
         <div className = "text-s">
-          VICE (Virtual Interface for Customer Enhancement) served as a playful 
-          acronym for our Chatbot. Leading its backend development, I orchestrated 
-          the integration with AWS, managed web scraping, and crafted conversation logic
-          through Langchain.
+          VICE (Virtual Interface for Customer Enhancement) was a playful acronym for our Chatbot. 
+          As the lead for its backend development, I orchestrated the integration with AWS, managed 
+          web scraping, and crafted conversation logic through Langchain. This tool served as a 
+          proof of concept, demonstrating that we could achieve similar functionality to AWS's 
+          integrated chatbot model, which cost $30,000 per month, while our solution was implemented 
+          for a fraction of the cost.
         </div>
         <div className = "sigparser-tech-graphics">
           <AmazonSVGIcon/>
@@ -102,10 +104,11 @@ const QueryGenSection = () => {
             <div className = "phase-1-and-3-description">
               <div className="text-muted text-m">Phase 3: The Query Generator</div>
               <div className="text-s">
-                For this tool I handled securley manaing login credentials and completed the UI. SigParser recognized 
-                that their existing filtering system was too complex and sought out an LLM based solution. As 
-                such, we implemented a tool with the capabilities of querying an LLM using a preformatted prompt
-                that would return a JSON payload that would integrate into their existing system seamlessly.
+                SigParser recognized that their existing filtering system was too complex and sought 
+                an LLM-based solution. To address this, we implemented a tool capable of querying an
+                LLM using a preformatted prompt, which would return a JSON payload seamlessly integrating 
+                into their existing system. I was responsible for securely managing login credentials and 
+                completing the UI. Throughout this project, the entire backend was built with Python.
               </div>
             </div>
             <div className = "sigparser-tech-graphics">
