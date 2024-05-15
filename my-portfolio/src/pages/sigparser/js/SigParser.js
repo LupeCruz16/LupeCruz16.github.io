@@ -13,7 +13,7 @@ const HeroSection = () => {
     <div className = "sigparser-hero-container text-align-left">
       <div className = "grid-1-3-col-container">
         <div className = "text-xs" style={{ paddingTop: '12px' }}>LLM Tool Development</div>
-        <div className = "text-m">Enhancing Customer experience  through AI</div>
+        <div className = "text-m">Enhancing Customer Experiences Through AI</div>
       </div>
     </div>
   );
@@ -63,7 +63,7 @@ const HomeSection = () => {
         <div className="text-align-left">
           <div className = "text-container">
             <div className = "phase-1-description">
-              <div className="text-muted text-s">Phase 1: The Home Page</div>
+              <div className="text-muted text-m">Phase 1: The Home Page</div>
               <div className="text-s">
                 The UI, built with React, utilizes Flask for frontend and backend communication while 
                 prioritizing the user experience. Each tool has customizable settings 
@@ -120,19 +120,23 @@ const ViceSection = () => {
 
   return (
     <div className = "sigparser-phase-container">
+      <div className = "phase-2-details-container">
+        <div className = "text-muted text-m">Phase 2: VICE</div>
+        <div className = "text-s">
+          VICE (Virtual Interface for Customer Enhancement) served as a playful 
+          acronym for our Chatbot. Leading its backend development, I orchestrated 
+          the integration with AWS, managed web scraping, and crafted conversation logic
+          through Langchain.
+        </div>
+        <div className = "sigparser-tech-graphics smaller-phase-graphics">
+          <AmazonSVGIcon/>
+          <img src = { langchain } alt = "Langchain"></img>
+        </div>
+      </div>
       <video ref={videoRef} autoPlay loop muted playsInline className = "sigparser-phase-video">
         <source src= { vice_demo } type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className = "sigparser-phase-title text-muted text-s text-align-left">Phase 2: VICE</div>
-      <div className = "grid-1-3-col-container text-align-left">
-        <div></div>
-        <div className = "text-s">
-          VICE (Virtual Interface for Customer Enhancement) served as a playful 
-          acronym for our Chatbot. Leading its backend development, I orchestrated 
-          the integration with AWS, managed web scraping, and crafted conversation logic.
-        </div>
-      </div>
     </div>
   );
 };

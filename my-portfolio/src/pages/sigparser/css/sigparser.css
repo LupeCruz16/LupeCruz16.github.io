@@ -54,14 +54,14 @@
 }
 
 .sigparser-tech-graphics {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
+    display: flex;
+    justify-content: center;
     gap: 20px;
     width: 100%;
 }
 
 .sigparser-tech-graphics * {
-    width: 80%;
+    width: 60%;
     height: auto;
 }
 
@@ -70,6 +70,19 @@
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
+
+/* Vice Section */
+.phase-2-details-container {
+    text-align: center;
+    align-items: center;
+    padding: 0 12vw 2vw 12vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Query Generator Section */
 
 /* Phase Sections */
 .sigparser-phase-container {
@@ -83,10 +96,10 @@
     margin-bottom: 12px;
 }
 
-.sigparser-phase-title{
-    margin-top: 12px;
+.smaller-phase-graphics * {
+    width: 30%;
+    height: auto;
 }
-
 /* Overview Section */
 .sigparser-overview-container {
     display: flex;  
