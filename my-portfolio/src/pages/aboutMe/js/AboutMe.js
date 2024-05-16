@@ -19,7 +19,7 @@ function HeroSection() {
                 <div className="text-l spacer">Hi, I'm Guadalupe Cruz, Software Engineer.</div>
                 <div className="button-styles" style={getScaleStyle('resume')} onMouseEnter={() => handleMouseEnter('resume')} onMouseLeave={handleMouseLeave}>
                     <a href={resume} download="Guadalupes_Resume.pdf" className="resume-button-link">
-                        <div className="text-s text-color-sec">View My Resume</div>
+                        <div className="text-s text-color-sec">Download My Resume</div>
                     </a>
                 </div>
             </div>

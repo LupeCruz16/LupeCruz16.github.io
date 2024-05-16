@@ -104,8 +104,8 @@ const QueryGenSection = () => {
             <div className = "phase-1-and-3-description">
               <div className="text-muted text-m">Phase 3: The Query Generator</div>
               <div className="text-s">
-                SigParser recognized that their existing filtering system was too complex and sought 
-                an LLM-based solution. To address this, we implemented a tool capable of querying an
+                SigParser sought an LLM-based solution to filtering on their client portals. 
+                To address this, we implemented a tool capable of querying an
                 LLM using a preformatted prompt, which would return a JSON payload seamlessly integrating 
                 into their existing system. I was responsible for securely managing login credentials and 
                 completing the UI. Throughout this project, the entire backend was built with Python.
