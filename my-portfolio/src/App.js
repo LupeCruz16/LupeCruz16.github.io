@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <main className = "App-main">
       <Router>
-          <Routes>
+          <Routes className="content-grid">
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutMe />} />
             <Route path="/sigparser" element={<SigParser />} />

@@ -38,7 +38,7 @@ grid-template-columns:
 
 /* Button */
 .button-styles{
-  padding: 0.5vw 1vw;
+  padding: 0.2vw 0.8vw;
   text-decoration: none;
   border: none;
   border-radius: 1vw;
@@ -93,13 +93,6 @@ grid-template-columns:
 }
 
 /* Other */
-.large-container {
-  margin-right: auto !important;
-  margin-left: auto !important;
-  width: 100%;
-  max-width: 100%;
-}
-
 .link-styles {
   text-decoration: none;
   color: white;
@@ -107,47 +100,6 @@ grid-template-columns:
 }
 
 /* Old css */
-.paddingGlobal {
-  padding-left: 15vw;
-  padding-right: 15vw;
-}
-
-.paddingSection-S-Bottom {
-  padding-bottom: 2.5vw;
-}
-
-.paddingS {
-  padding: 1vw;
-}
-  
-.marginLeft-S {
-  margin-left: 2vw;;
-}
-
-.bottomMarginL{
-  margin-bottom: 4vw;
-}
-
-.bottomMarginXS {
-  margin-bottom: 2vw;
-}
-  
-.textStyleCaption {
-  letter-spacing: 1.5vw;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.textAlign-Right {
-  text-align: right;
-}
-
-/* Other styling */
-
-.inlineBlockElem {
-  max-width: 100%;
-  display: inline-block;
-}
 
 @media (max-width: 1024px) { 
   .paddingGlobal {

@@ -13,33 +13,35 @@ function HeroSection() {
     const { handleMouseEnter, handleMouseLeave, getScaleStyle } = useHoverScale();
 
     return (
-        <div className="hero-section breakout">
-            <div className="text-align-left">
-                <div className="text-xs text-muted">About Me</div>
-                <div className="text-l spacer">Hi, I'm Guadalupe Cruz, Software Engineer.</div>
-                <div className="button-styles" style={getScaleStyle('resume')} onMouseEnter={() => handleMouseEnter('resume')} onMouseLeave={handleMouseLeave}>
-                    <a href={resume} download="Guadalupes_Resume.pdf" className="resume-button-link">
-                        <div className="text-s text-color-sec">Download My Resume</div>
-                    </a>
+        <div className = "breakout">
+            <div className="hero-section breakout">
+                <div className="text-align-left">
+                    <div className="text-xs text-muted">About Me</div>
+                    <div className="text-l spacer">Hi, I'm Guadalupe Cruz, Software Engineer.</div>
+                    <div className="button-styles" style={getScaleStyle('resume')} onMouseEnter={() => handleMouseEnter('resume')} onMouseLeave={handleMouseLeave}>
+                        <a href={resume} download="Guadalupes_Resume.pdf" className="resume-button-link">
+                            <div className="text-s text-color-sec">Download My Resume</div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div className="heroSection-imageWrapper">
-                    <div className="heroSection-backgroundShape"></div>
-                    <img src={headshot} alt="Guadalupe Cruz" loading="lazy"/>
+                <div>
+                    <div className="heroSection-imageWrapper">
+                        <div className="heroSection-backgroundShape"></div>
+                        <img src={headshot} alt="Guadalupe Cruz" loading="lazy"/>
+                    </div>
                 </div>
-            </div>
-            <div className="about-me-lottie-wrapper">
-                <Lottie
-                    options={{
-                        loop: true,
-                        autoplay: true,
-                        animationData: arrowDown,
-                        rendererSettings: {
-                            preserveAspectRatio: 'xMidYMid slice'
-                        }
-                    }}
-                />
+                <div className="about-me-lottie-wrapper">
+                    <Lottie
+                        options={{
+                            loop: true,
+                            autoplay: true,
+                            animationData: arrowDown,
+                            rendererSettings: {
+                                preserveAspectRatio: 'xMidYMid slice'
+                            }
+                        }}
+                    />
+                </div>
             </div>
         </div>
     );
@@ -77,13 +79,11 @@ function AboutMe() {
   const fadeIn = useFadeIn();
 
   return (
-    <div className={`AboutMe-Page ${fadeIn ? 'fade-in' : ''}`}>
-      <Navigation />
-      <div className="content-grid">
+    <div className={`AboutMe-Page content-grid ${fadeIn ? 'fade-in' : ''}`}>
+        <Navigation />
         <HeroSection />
         <BentoBox />
         <Footer />
-      </div>
     </div>
   );
 }

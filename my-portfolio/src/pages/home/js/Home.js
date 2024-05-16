@@ -32,7 +32,7 @@ const Projects = () => {
   const currentProject = projectsData[currentProjectIndex];
 
   return (
-    <div className="large-container">
+    <div className="full-width">
       <div className="projects-section">
         {/* Navigation for projects */}
         <div className="project-layout">
