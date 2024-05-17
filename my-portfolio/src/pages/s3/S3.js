@@ -1,9 +1,9 @@
-import Navigation from "../../../components/navigation/Navigation.js";
-import useFadeIn from '../../../effects/FadeIn/useFadeIn.js';
-import Footer from "../../../components/footer/Footer.js";
-import { cats } from "../../../assets/Animations.js";
+import Navigation from "../../components/navigation/Navigation.js";
+import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
+import Footer from "../../components/footer/Footer.js";
+import { cats } from "../../assets/Animations.js";
 import Lottie from 'react-lottie';
-import '../css/s3.css';
+import './s3.css';
 
 const HeroSection = () => {
   return (

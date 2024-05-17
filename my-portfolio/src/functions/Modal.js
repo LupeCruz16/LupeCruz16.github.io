@@ -1,5 +1,5 @@
-import React from 'react';
 import Footer from '../components/footer/Footer';
+import React from 'react';
 
 const Modal = ({ show, onClose }) => {
     if (!show) {

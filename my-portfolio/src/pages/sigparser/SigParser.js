@@ -1,12 +1,12 @@
-import { FlaskSVGIcon, ReactSVGIcon, AmazonSVGIcon } from "../../../assets/SVGs.js";
-import { sigparser_home, vice_demo, query_demo } from "../../../assets/Videos.js";
-import Navigation from "../../../components/navigation/Navigation.js";
-import useFadeIn from '../../../effects/FadeIn/useFadeIn.js';
-import Footer from "../../../components/footer/Footer.js";
-import { PythonSVGIcon } from "../../../assets/SVGs.js";
-import { langchain } from "../../../assets/Images.js";
+import { FlaskSVGIcon, ReactSVGIcon, AmazonSVGIcon } from "../../assets/SVGs.js";
+import { sigparser_home, vice_demo, query_demo } from "../../assets/Videos.js";
+import Navigation from "../../components/navigation/Navigation.js";
+import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
+import Footer from "../../components/footer/Footer.js";
+import { PythonSVGIcon } from "../../assets/SVGs.js";
+import { langchain } from "../../assets/Images.js";
 import React, { useRef, useEffect } from 'react';
-import '../css/sigparser.css';
+import './sigparser.css';
 
 const HeroSection = () => {
   return (

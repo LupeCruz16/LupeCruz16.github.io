@@ -1,19 +1,19 @@
-import Navigation from "../../../components/navigation/Navigation.js";
-import { ai, educator, travel } from '../../../assets/Animations.js';
-import useHoverScale from '../../../effects/useHoverScale.js';
-import useFadeIn from '../../../effects/FadeIn/useFadeIn.js';
+import { ai, educator, webDevelopment } from '../../assets/Animations.js';
+import Navigation from "../../components/navigation/Navigation.js";
+import useHoverScale from '../../effects/useHoverScale.js';
+import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Lottie from 'react-lottie';
-import '../css/home.css'; 
+import './home.css'; 
 
 const projectsData = [
   {id: 1, link: "/sigparser", title: "AI Integrations", company: "SigParser", 
   duration: "2023-2024", animation: ai},
-  {id: 2, link: "/s3", title: "Arduino Lead Educator", company: "Treobytes", 
-  duration: "Ongoing since 2023", animation: educator},
-  {id: 3, link: "/s3", title: "Travel Location Generator", company: "Personal Project", 
-  duration: "Completed in 2023", animation: travel}
+  {id: 2, link: "/s3", title: "Wordpress Redesign", company: "S3 Coffee Bar", 
+  duration: "Completed in 2023", animation: webDevelopment},
+  {id: 3, link: "/in-progress", title: "Arduino Lead Educator", company: "Treobytes", 
+  duration: "Ongoing since 2023", animation: educator}
 ];
 
 const Projects = () => {

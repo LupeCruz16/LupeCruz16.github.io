@@ -1,13 +1,13 @@
-import { six, museum, taylort_swift, max, zoo, cat_display, headshot } from '../../../assets/Images.js';
-import Navigation from "../../../components/navigation/Navigation.js";
-import useHoverScale from '../../../effects/useHoverScale.js';
-import useFadeIn from '../../../effects/FadeIn/useFadeIn.js';
-import Footer from "../../../components/footer/Footer.js";
-import { arrowDown } from "../../../assets/Animations.js";
-import resume from "../../../assets/resume/Resume.pdf";
+import { six, museum, taylort_swift, max, zoo, cat_display, headshot } from '../../assets/Images.js';
+import Navigation from "../../components/navigation/Navigation.js";
+import useHoverScale from '../../effects/useHoverScale.js';
+import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
+import Footer from "../../components/footer/Footer.js";
+import { arrowDown } from "../../assets/Animations.js";
+import resume from "../../assets/resume/Resume.pdf";
 import Lottie from 'react-lottie';
-import '../css/aboutme.css';
 import React from 'react';
+import './aboutMe.css';
 
 function HeroSection() {
     const { handleMouseEnter, handleMouseLeave, getScaleStyle } = useHoverScale();

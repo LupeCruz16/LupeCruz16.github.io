@@ -1,0 +1,13 @@
+.in-progress-container {
+    display: flex;  
+    justify-content: center; 
+    align-items: center; 
+    height: auto;
+    width: 100%; 
+    padding: 10vw 0 10vw 0;
+}
+
+.in-progress-styles {
+    justify-content: center;
+    align-items: center;
+}
