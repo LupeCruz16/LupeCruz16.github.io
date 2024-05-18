@@ -10,9 +10,9 @@ import './sigparser.css';
 
 const HeroSection = () => {
   return (
-    <div className = "sigparser-hero-container text-align-left">
+    <div className = "project-details-heading-container text-align-left">
       <div className = "grid-1-3-col-container">
-        <div className = "text-xs" style={{ paddingTop: '12px' }}>LLM Tool Development</div>
+        <div className = "text-xs" style={{ paddingTop: '12px' }}>AI Integrations</div>
         <div className = "text-m">Enhancing Customer Experiences Through AI</div>
       </div>
     </div>
@@ -125,7 +125,7 @@ const QueryGenSection = () => {
 const OverviewSection = () => {
   return (
     <div className = "sigparser-overview-container text-align-left">
-      <div className= "text-muted text-m overview-title">Project Overview</div>
+      <div className= "text-muted text-m overview-title">Overview:</div>
       <div className = "grid-1-3-col-container">
         <div className = "sigparser-overview-details" style={{ paddingTop: '12px' }}>
           <div>
