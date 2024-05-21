@@ -75,8 +75,12 @@ grid-template-columns:
 }
 
 /* Text Styling */
-.text-color-sec{
-  color: var(--text-200);
+.text-color-sec {
+  color: var(--accent-100);
+}
+
+.text-color-accent {
+  color: var(--accent-200);
 }
 
 .text-xs {
@@ -92,7 +96,8 @@ grid-template-columns:
   font-size: 2.5vw;
   margin: 0;
   margin-bottom: 0;
-  line-height: 1;
+  line-height: 1.4;
+  
 }
 
 .text-l {

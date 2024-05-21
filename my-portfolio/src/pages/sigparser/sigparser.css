@@ -75,10 +75,15 @@
     height: auto;
 }
 
+.sigparser-tech-graphics svg,
+.sigparser-tech-graphics img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
 .sigparser-tech-graphics svg:hover,
 .sigparser-tech-graphics img:hover {
-    transition: transform 0.3s ease;
-    transform: scale(1.1);
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 /* Overview Section */
@@ -108,3 +113,22 @@
     align-items: flex-start; 
     width: 100%;
 }
+
+/* Progress Bar Styles */
+.progress-bar-container {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    width: 10px;
+    height: 100%;
+    z-index: 1000;
+    border-radius: 5px;
+}
+  
+.progress-bar {
+    width: 100%;
+    background: rgba(222, 220, 255, 0.7);
+    border-radius: 5px;
+    transition: height 0.25s ease-out;
+}
+  

@@ -5,7 +5,7 @@ import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
 import Footer from "../../components/footer/Footer.js";
 import { PythonSVGIcon } from "../../assets/SVGs.js";
 import { langchain } from "../../assets/Images.js";
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './sigparser.css';
 
 const HeroSection = () => {
@@ -21,7 +21,7 @@ const HeroSection = () => {
 
 const HomeSection = () => {
   return (
-    <div className="sigparser-phase-container full-width">
+    <div id = "home" className="sigparser-phase-container full-width">
       <div className="grid-1-1half-col-container">
         <div className="text-align-left">
           <div className = "phases-details-container">
@@ -64,7 +64,7 @@ const ViceSection = () => {
   }, []);
 
   return (
-    <div className = "sigparser-phase-container">
+    <div id = "vice" className = "sigparser-phase-container">
       <div className = "phase-2-details-container">
         <div className = "text-muted text-m">Phase 2: VICE</div>
         <div className = "text-s">
@@ -90,7 +90,7 @@ const ViceSection = () => {
 
 const QueryGenSection = () => {
   return (
-    <div className="sigparser-phase-container full-width">
+    <div id = "querygen" className="sigparser-phase-container full-width">
       <div className="grid-1half-1-col-container">
         <div className="video-container">
           <video autoPlay loop muted playsInline className = "rounded-right">
@@ -124,7 +124,7 @@ const QueryGenSection = () => {
 
 const OverviewSection = () => {
   return (
-    <div className = "sigparser-overview-container text-align-left">
+    <div id = "overview" className = "sigparser-overview-container text-align-left">
       <div className= "text-muted text-m overview-title">Overview:</div>
       <div className = "grid-1-3-col-container">
         <div className = "sigparser-overview-details" style={{ paddingTop: '12px' }}>
@@ -161,20 +161,41 @@ const OverviewSection = () => {
   );
 };
 
-function SigParser () {
+function SigParser() {
   const fadeIn = useFadeIn();
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    setScrollProgress(scrollPercent);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <div className= {`${fadeIn ? 'fade-in' : ''}`}>
+    <div className={`${fadeIn ? 'fade-in' : ''}`}>
       <Navigation />
-      <div className = "content-grid">
+      <div className="content-grid">
         <HeroSection />
         <HomeSection />
         <ViceSection />
         <QueryGenSection />
         <OverviewSection />
         <Footer />
-      </div> 
+      </div>
+      <div className="progress-bar-container">
+        <div
+          className="progress-bar"
+          style={{ height: `${scrollProgress}%` }}
+        ></div>
+      </div>
     </div>
   );
 }
