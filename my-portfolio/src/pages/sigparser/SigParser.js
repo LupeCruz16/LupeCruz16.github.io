@@ -87,13 +87,13 @@ const ViceSection = () => {
           <div className = "phase-2-img-container">
             <div className = "phase-2-proven-concept-container text-s">
               <div>
-                <CurvedArrowSVGIcon className = "curved-arrow-top-left" />
+                <CurvedArrowSVGIcon className = "curved-arrow-top-left" useGradient = { true } />
                 <div>SigParsers' Integrated <br></br> Chatbot</div>
               </div>
 
               <div>
                 <div>My Teams <br></br> Implmentation</div>
-                <StraightArrowSVGIcon className = "straight-arrow-down"/>
+                <StraightArrowSVGIcon className = "straight-arrow-down" useGradient = { true }/>
               </div>
             </div>
             <img src = { sigparser_proof } alt = "Proof of concept" className = "phase-2-proof-img"></img>

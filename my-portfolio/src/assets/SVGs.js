@@ -205,7 +205,7 @@ export const JavaScriptSVGIcon = () => {
   );
 };
 
-export const StraightArrowSVGIcon = ({ className }) => {
+export const StraightArrowSVGIcon = ({ className, useGradient = false }) => {
   return (
     <svg
       className={className}
@@ -214,13 +214,19 @@ export const StraightArrowSVGIcon = ({ className }) => {
       fill="#FFFFFF"
     >
       <defs>
+        {useGradient && (
+          <linearGradient id="verticalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style={{ stopColor: 'rgba(222,220,255,1)', stopOpacity: 1 }} />
+            <stop offset="100%" style={{ stopColor: 'rgba(67,59,255,1)', stopOpacity: 1 }} />
+          </linearGradient>
+        )}
         <style>
           {`.cls-1 {
             fill: none;
-            stroke: #FFFFFF;
+            stroke: ${useGradient ? 'url(#verticalGradient)' : '#FFFFFF'};
             stroke-linecap: round;
             stroke-linejoin: round;
-            stroke-width: 10.00px;
+            stroke-width: 10px;
           }`}
         </style>
       </defs>
@@ -233,7 +239,7 @@ export const StraightArrowSVGIcon = ({ className }) => {
   );
 };
 
-export const CurvedArrowSVGIcon = ({ className }) => {
+export const CurvedArrowSVGIcon = ({ className, useGradient = false }) => {
   return (
     <svg
       className={className}
@@ -241,13 +247,19 @@ export const CurvedArrowSVGIcon = ({ className }) => {
       viewBox="0 0 192 192"
     >
       <defs>
+        {useGradient && (
+          <linearGradient id="horizontalGradient" x1="100%" y1="0%" x2="0%" y2="0%">
+            <stop offset="0%" style={{ stopColor: 'rgba(222,220,255,1)', stopOpacity: 1 }} />
+            <stop offset="100%" style={{ stopColor: 'rgba(67,59,255,1)', stopOpacity: 1 }} />
+          </linearGradient>
+        )}
         <style>
           {`.cls-1 {
             fill: none;
-            stroke: #FFFFFF;
+            stroke: ${useGradient ? 'url(#horizontalGradient)' : '#FFFFFF'};
             stroke-linecap: round;
             stroke-linejoin: round;
-            stroke-width: 7.00px;
+            stroke-width: 7px;
           }`}
         </style>
       </defs>
