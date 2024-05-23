@@ -7,7 +7,8 @@ import max from './images/max.jpg';
 import zoo from './images/zoo.jpg';
 import six from './images/six.jpg';
 
+import sigparser_proof from './images/sigparser_proof.png'
 import s3_home from './images/s3_home_page.png';
 
 export { museum, taylort_swift, max, zoo, cat_display, six,
-        headshot, langchain, s3_home };
+        headshot, langchain, s3_home, sigparser_proof };

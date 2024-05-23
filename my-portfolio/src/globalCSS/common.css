@@ -37,11 +37,19 @@ grid-template-columns:
 }
 
 /* Grids */
+.grid-1-1-col-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  align-items: center;
+}
+
 .grid-1-1half-col-container {
   display: grid;
   grid-template-columns: 1fr 1.5fr; 
   gap: 20px;
   width: 100%;
+  align-items: center;
 }  
 
 .grid-1half-1-col-container {
@@ -49,13 +57,14 @@ grid-template-columns:
   grid-template-columns: 1.5fr 1fr; 
   gap: 20px;
   width: 100%;
+  align-items: center;
 }  
 
 .grid-1-3-col-container {
   display: grid;
   grid-template-columns: 1fr 3fr;
   width: 100%;
-  align-items: start;
+  align-items: center;
 }
 
 /* Button */

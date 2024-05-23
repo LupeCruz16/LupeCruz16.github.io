@@ -1,11 +1,11 @@
-import { FlaskSVGIcon, ReactSVGIcon, AmazonSVGIcon } from "../../assets/SVGs.js";
+import { FlaskSVGIcon, ReactSVGIcon, AmazonSVGIcon, StraightArrowSVGIcon, CurvedArrowSVGIcon } from "../../assets/SVGs.js";
 import { sigparser_home, vice_demo, query_demo } from "../../assets/Videos.js";
 import Navigation from "../../components/navigation/Navigation.js";
 import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
 import Footer from "../../components/footer/Footer.js";
 import { PythonSVGIcon } from "../../assets/SVGs.js";
-import { langchain } from "../../assets/Images.js";
-import React, { useRef, useEffect, useState } from 'react';
+import { langchain, sigparser_proof } from "../../assets/Images.js";
+import React, { useRef, useEffect } from 'react';
 import './sigparser.css';
 
 const HeroSection = () => {
@@ -35,10 +35,10 @@ const HomeSection = () => {
                 tools for Sigparser's systems, with the Chatbot serving as a proof of concept.
               </div>
             </div>
-            <div className = "sigparser-tech-graphics">
+            {/* <div className = "sigparser-tech-graphics">
               <ReactSVGIcon />
               <FlaskSVGIcon />
-            </div>
+            </div> */}
           </div>
           <div></div>
         </div>
@@ -64,20 +64,41 @@ const ViceSection = () => {
   }, []);
 
   return (
-    <div id = "vice" className = "sigparser-phase-container">
+    <div id = "vice" className = "sigparser-phase-container breakout">
       <div className = "phase-2-details-container">
-        <div className = "text-muted text-m">The Chatbot</div>
-        <div className = "text-s">
-          VICE (Virtual Interface for Customer Enhancement) was a playful acronym for our Chatbot. 
-          As the lead for its backend development, I orchestrated the integration with AWS, managed 
-          web scraping, and crafted conversation logic through Langchain. This tool served as a 
-          proof of concept, demonstrating that we could achieve similar functionality to AWS's 
-          integrated chatbot model, which cost $30,000 per month, while our solution was implemented 
-          for a fraction of the cost.
-        </div>
-        <div className = "sigparser-tech-graphics">
-          <AmazonSVGIcon/>
-          <img src = { langchain } alt = "Langchain"></img>
+        <div className = "grid-1-1-col-container text-align-left" style={{ alignItems: 'center' }}>
+          <div>
+            <div className = "text-muted text-m">The Chatbot</div>
+            <div className = "text-s">
+              VICE (Virtual Interface for Customer Enhancement) was a playful acronym for our Chatbot. 
+              As the lead for its backend development, I orchestrated the integration with AWS, managed 
+              web scraping, and crafted conversation logic through Langchain. This tool served as a 
+              proof of concept, demonstrating that we could achieve similar functionality to AWS's 
+              integrated chatbot model, which cost <span className = "underline">$30,000</span> per
+              month, while our solution was implemented 
+              for a fraction of the cost.
+            </div>
+            {/* <div className = "sigparser-tech-graphics">
+              <AmazonSVGIcon/>
+              <img src = { langchain } alt = "Langchain"></img>
+            </div> */}
+          </div>
+
+          <div className = "phase-2-img-container">
+            <div className = "phase-2-proven-concept-container text-s">
+              <div>
+                <CurvedArrowSVGIcon className = "curved-arrow-top-left" />
+                <div>SigParsers' Integrated <br></br> Chatbot</div>
+              </div>
+
+              <div>
+                <div>My Teams <br></br> Implmentation</div>
+                <StraightArrowSVGIcon className = "straight-arrow-down"/>
+              </div>
+            </div>
+            <img src = { sigparser_proof } alt = "Proof of concept" className = "phase-2-proof-img"></img>
+          </div>
+
         </div>
       </div>
       <video ref={videoRef} autoPlay loop muted playsInline className = "sigparser-phase-2-video">
@@ -111,9 +132,9 @@ const QueryGenSection = () => {
                 completing the UI. Throughout this project, the entire backend was built with Python.
               </div>
             </div>
-            <div className = "sigparser-tech-graphics">
+            {/* <div className = "sigparser-tech-graphics">
               <PythonSVGIcon />
-            </div>
+            </div> */}
           </div>
           <div></div>
         </div>
@@ -165,21 +186,6 @@ const OverviewSection = () => {
 
 function SigParser() {
   const fadeIn = useFadeIn();
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  const handleScroll = () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / docHeight) * 100;
-    setScrollProgress(scrollPercent);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     <div className={`${fadeIn ? 'fade-in' : ''}`}>
@@ -191,12 +197,6 @@ function SigParser() {
         <QueryGenSection />
         <OverviewSection />
         <Footer />
-      </div>
-      <div className="progress-bar-container">
-        <div
-          className="progress-bar"
-          style={{ height: `${scrollProgress}%` }}
-        ></div>
       </div>
     </div>
   );
