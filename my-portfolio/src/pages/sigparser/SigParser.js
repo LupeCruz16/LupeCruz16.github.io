@@ -26,7 +26,7 @@ const HomeSection = () => {
         <div className="text-align-left">
           <div className = "phases-details-container">
             <div className = "phase-1-and-3-description">
-              <div className="text-muted text-m">Phase 1: The Home Page</div>
+              <div className="text-muted text-m">The Home Page</div>
               <div className="text-s">
                 The UI, built with React, utilizes Flask for frontend and backend communication while 
                 prioritizing the user experience. Each tool has customizable settings 
@@ -66,7 +66,7 @@ const ViceSection = () => {
   return (
     <div id = "vice" className = "sigparser-phase-container">
       <div className = "phase-2-details-container">
-        <div className = "text-muted text-m">Phase 2: VICE</div>
+        <div className = "text-muted text-m">The Chatbot</div>
         <div className = "text-s">
           VICE (Virtual Interface for Customer Enhancement) was a playful acronym for our Chatbot. 
           As the lead for its backend development, I orchestrated the integration with AWS, managed 
@@ -102,7 +102,7 @@ const QueryGenSection = () => {
         <div className="text-align-left">
           <div className = "phases-details-container">
             <div className = "phase-1-and-3-description">
-              <div className="text-muted text-m">Phase 3: The Query Generator</div>
+              <div className="text-muted text-m">The Query Generator</div>
               <div className="text-s">
                 SigParser sought an LLM-based solution to filtering on their client portals. 
                 To address this, we implemented a tool capable of querying an
@@ -124,40 +124,42 @@ const QueryGenSection = () => {
 
 const OverviewSection = () => {
   return (
-    <div id = "overview" className = "sigparser-overview-container text-align-left">
-      <div className= "text-muted text-m overview-title">Overview:</div>
-      <div className = "grid-1-3-col-container">
-        <div className = "sigparser-overview-details" style={{ paddingTop: '12px' }}>
-          <div>
-            <div className = "text-xs">Company</div>
-            <div className = "text-muted text-s">SigParser</div>
+    <section id = "overview" className = "sigparser-overview-container full-width">
+      <div className = "content-grid text-color-bg text-align-left">
+        <div className= "text-m overview-title">Overview:</div>
+        <div className = "grid-1-3-col-container">
+          <div className = "sigparser-overview-details" style={{ paddingTop: '12px' }}>
+            <div>
+              <div className = "text-xs">Company</div>
+              <div className = "text-s">SigParser</div>
+            </div>
+            <div>
+              <div className = "text-xs">Role</div>
+              <div className = "text-s">Developer</div>
+            </div>
+            <div>
+              <div className = "text-xs">Duration</div>
+              <div className = "text-s">2023-2024</div>
+            </div>
           </div>
-          <div>
-            <div className = "text-xs">Role</div>
-            <div className = "text-muted text-s">Developer</div>
+          <div className = "sigparser-overview-details text-s">
+            <div>
+              For my senior capstone project, I had the distinct opportunity to collaborate with SigParser. 
+              Over the course of this year-long endeavor, my team and I developed a suite of internal LLM tools 
+              designed to enhance operational efficiency and streamline workflows.
+            </div>
+            <div>
+              We adopted a robust <span className = "underline">CI/CD pipeline</span>,  
+              leveraging <span className = "underline">Amazon Bedrock</span> services to ensure security 
+              while optimizing cost-effectiveness. This foundation enabled us to deploy a centralized 
+              platform, built with React, that provided SigParser's staff with seamless access to manage and adapt 
+              their tools effectively. This project not only honed my technical skills but also reinforced the 
+              importance of <span className = "underline">agile methodologies</span> in real-world software development.
+            </div>        
           </div>
-          <div>
-            <div className = "text-xs">Duration</div>
-            <div className = "text-muted text-s">2023-2024</div>
-          </div>
-        </div>
-        <div className = "sigparser-overview-details text-s">
-          <div>
-            For my senior capstone project, I had the distinct opportunity to collaborate with SigParser. 
-            Over the course of this year-long endeavor, my team and I developed a suite of internal LLM tools 
-            designed to enhance operational efficiency and streamline workflows.
-          </div>
-          <div>
-            We adopted a robust <span className = "underline text-muted">CI/CD pipeline</span>,  
-            leveraging <span className = "underline text-muted">Amazon Bedrock</span> services to ensure security 
-            while optimizing cost-effectiveness. This foundation enabled us to deploy a centralized 
-            platform, built with React, that provided SigParser's staff with seamless access to manage and adapt 
-            their tools effectively. This project not only honed my technical skills but also reinforced the 
-            importance of <span className = "underline text-muted">agile methodologies</span> in real-world software development.
-          </div>        
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

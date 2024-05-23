@@ -79,8 +79,8 @@ grid-template-columns:
   color: var(--accent-100);
 }
 
-.text-color-accent {
-  color: var(--accent-200);
+.text-color-bg {
+  color: var(--bg-100);
 }
 
 .text-xs {
