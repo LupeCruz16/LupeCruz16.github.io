@@ -128,10 +128,8 @@
 /* Overview Section */
 .sigparser-overview-container {
     display: flex;  
-    flex-direction: column;
     justify-content: center; 
     align-items: center; 
-    gap: 20px;
     height: auto; 
     width: 100%; 
     margin-bottom: 5vw;
@@ -145,7 +143,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     background: radial-gradient(circle, rgba(222,220,255,1) 0%, rgba(67,59,255,1) 100%);
     transform: skewY(-2deg);
