@@ -102,29 +102,6 @@
     object-fit: cover;
 }
 
-.sigparser-tech-graphics {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-}
-
-.sigparser-tech-graphics * {
-    width: 30%;
-    height: auto;
-}
-
-.sigparser-tech-graphics svg,
-.sigparser-tech-graphics img {
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.sigparser-tech-graphics svg:hover,
-.sigparser-tech-graphics img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.2);
-}
-
 /* Overview Section */
 .sigparser-overview-container {
     display: flex;  
@@ -166,21 +143,34 @@
     width: 100%;
 }
 
-/* Progress Bar Styles */
-.progress-bar-container {
-    position: fixed;
-    top: 0;
-    right: 20px;
-    width: 10px;
-    height: 100%;
-    z-index: 1000;
-    border-radius: 5px;
-}
-  
-.progress-bar {
+/* Tech Stack Section */
+.tech-stack-tite {
     width: 100%;
-    background: rgba(222, 220, 255, 0.7);
-    border-radius: 5px;
-    transition: height 0.25s ease-out;
+    padding: 20px 0 0 5vw;
+}
+
+.tech-stack-graphics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 5vw 10vw 5vw;
 }
   
+.tech-stack-graphics svg,
+.tech-stack-graphics img {
+    flex: 1;
+    max-width: 8vw;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.tech-stack-graphics img { 
+    max-width: 10vw;
+}
+  
+.tech-stack-graphics svg:hover,
+.tech-stack-graphics img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}

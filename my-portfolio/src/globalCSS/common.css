@@ -31,7 +31,8 @@ grid-template-columns:
 
 .content-grid > .full-width {
   grid-column: full-width;
-  display: grid;
+  /* Taken out because it would not allow flexbox */
+  /* display: grid; */
   /* Taken out because woud only apply to bg */
   /* grid-template-columns: inherit; */
 }
