@@ -5,7 +5,7 @@ import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
 import Footer from "../../components/footer/Footer.js";
 import { PythonSVGIcon } from "../../assets/SVGs.js";
 import { langchain, sigparser_proof } from "../../assets/Images.js";
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './sigparser.css';
 
 const HeroSection = () => {
@@ -171,16 +171,57 @@ const OverviewSection = () => {
 };
 
 const TechStackSection = () => {
+  const [hoverInfo, setHoverInfo] = useState('');
+
+  const handleMouseEnter = (info) => {
+    setHoverInfo(info);
+  };
+
+  const handleMouseLeave = () => {
+    setHoverInfo('');
+  };
+
   return (
-    <section className="full-width text-align-left">
-      <h2 className="tech-stack-tite text-m text-muted">The Tech Stack</h2>
+    <section className="full-width text-align-left tech-stack-section">
+      <h2 className="tech-stack-title text-m text-muted">The Tech Stack</h2>
       <div className="tech-stack-graphics">
-        <PythonSVGIcon />
-        <AmazonSVGIcon/>
-        <img src={langchain} alt="Langchain" />
-        <ReactSVGIcon />
-        <FlaskSVGIcon />
+        <div 
+          className="tech-item" 
+          onMouseEnter={() => handleMouseEnter('Python - A powerful programming language used for backend development.')} 
+          onMouseLeave={handleMouseLeave}
+        >
+          <PythonSVGIcon />
+        </div>
+        <div 
+          className="tech-item" 
+          onMouseEnter={() => handleMouseEnter('Amazon Web Services - Cloud services for hosting and more.')} 
+          onMouseLeave={handleMouseLeave}
+        >
+          <AmazonSVGIcon />
+        </div>
+        <div 
+          className="tech-item" 
+          onMouseEnter={() => handleMouseEnter('Langchain - A library for processing language data.')} 
+          onMouseLeave={handleMouseLeave}
+        >
+          <img src={langchain} alt="Langchain" />
+        </div>
+        <div 
+          className="tech-item" 
+          onMouseEnter={() => handleMouseEnter('React - A JavaScript library for building user interfaces.')} 
+          onMouseLeave={handleMouseLeave}
+        >
+          <ReactSVGIcon />
+        </div>
+        <div 
+          className="tech-item" 
+          onMouseEnter={() => handleMouseEnter('Flask - A lightweight WSGI web application framework.')} 
+          onMouseLeave={handleMouseLeave}
+        >
+          <FlaskSVGIcon />
+        </div>
       </div>
+      {hoverInfo && <div className="hover-info text-s text-color-bg">{hoverInfo}</div>}
     </section>
   );
 };
