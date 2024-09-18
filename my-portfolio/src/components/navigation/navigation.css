@@ -1,89 +1,89 @@
 .primary-header {
-    height: 10vh;
-    padding-top: 1vw;
-    align-items: center;
+  height: 10vh;
+  padding-top: 1vw;
+  align-items: center;
 }
 
 .primary-header_layout {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav-link {
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--text-100);
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-100);
 }
 
 .nav-link:hover {
-    color: var(--accent-100)
+  color: var(--accent-100);
 }
 
 .nav-left {
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .personal-logo-wapper {
-    width: 4vw;
-    height: auto;
+  width: 4vw;
+  height: auto;
 }
 
 .personal-logo-wapper svg {
-    fill: white;
-    width: 100%;
-    height: 100%;
+  fill: white;
+  width: 100%;
+  height: 100%;
 }
 
 .nav-links-right {
-    gap: max(5vw, 1rem);
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: flex-end;
+  gap: max(5vw, 1rem);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .mobile-menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin-left: 50%;
-    width: 50%;
-    height: 100vh;
-    background-color: white;
-    background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    z-index: 1001; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 50%;
+  width: 50%;
+  height: 100vh;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 1001;
 }
 
 .close-nav-svg-wrapper {
-    width: 8vw;
-    height: auto;
-    padding-bottom: 4vw;
+  width: 8vw;
+  height: auto;
+  padding-bottom: 4vw;
 }
 
 .mobile-menu-links {
-    display: flex;
-    flex-direction: column;
-    padding-left: 5vw;
-    padding-top: 5vw;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5vw;
+  padding-top: 5vw;
+  text-align: left;
 }
 
 @media (max-width: 480px) {
-    .hamburgerSVGWrapper {
-        width: 8vw;
-        height: auto;
-    }
+  .hamburgerSVGWrapper {
+    width: 8vw;
+    height: auto;
+  }
 
-    .navLinks {
-        justify-content: flex-end;
-        align-items: flex-end;
-        height: auto;
-    }
+  .navLinks {
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: auto;
+  }
 }

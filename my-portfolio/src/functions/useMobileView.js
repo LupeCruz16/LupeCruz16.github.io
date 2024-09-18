@@ -1,23 +1,23 @@
 import { useState, useEffect } from 'react';
 
 function useMobileView() {
-    const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
 
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobileView(window.innerWidth <= 480);
-        };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 480);
+    };
 
-        // Adding a resize event listener to update the mobile view state
-        window.addEventListener('resize', handleResize);
+    // Adding a resize event listener to update the mobile view state
+    window.addEventListener('resize', handleResize);
 
-        // Remove the event listener when the component unmounts
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
-    return isMobileView;
+  return isMobileView;
 }
 
 export default useMobileView;

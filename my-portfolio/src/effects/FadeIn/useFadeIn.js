@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import "./fadeIn.css"
+import './fadeIn.css';
 
 const useFadeIn = () => {
   const [fadeIn, setFadeIn] = useState(false);

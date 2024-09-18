@@ -1,18 +1,26 @@
-import { FlaskSVGIcon, ReactSVGIcon, AmazonSVGIcon, StraightArrowSVGIcon, CurvedArrowSVGIcon } from "../../assets/SVGs.js";
-import { sigparser_home, vice_demo, query_demo } from "../../assets/Videos.js";
-import { langchain, sigparser_proof } from "../../assets/Images.js";
-import Navigation from "../../components/navigation/Navigation.js";
+import {
+  FlaskSVGIcon,
+  ReactSVGIcon,
+  AmazonSVGIcon,
+  StraightArrowSVGIcon,
+  CurvedArrowSVGIcon,
+} from '../../assets/SVGs.js';
+import { sigparser_home, vice_demo, query_demo } from '../../assets/Videos.js';
+import { langchain, sigparser_proof } from '../../assets/Images.js';
+import Navigation from '../../components/navigation/Navigation.js';
 import React, { useRef, useEffect, useState } from 'react';
 import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
-import Footer from "../../components/footer/Footer.js";
-import { PythonSVGIcon } from "../../assets/SVGs.js";
+import Footer from '../../components/footer/Footer.js';
+import { PythonSVGIcon } from '../../assets/SVGs.js';
 import './sigparser.css';
 
 const HeroSection = () => {
   return (
     <header className="project-details-heading-container text-align-left">
       <div className="grid-1-3-col-container">
-        <h1 className="text-xs" style={{ paddingTop: '12px' }}>AI Integrations</h1>
+        <h1 className="text-xs" style={{ paddingTop: '12px' }}>
+          AI Integrations
+        </h1>
         <h2 className="text-m">Enhancing Customer Experiences Through AI</h2>
       </div>
     </header>
@@ -25,7 +33,10 @@ const OverviewSection = () => {
       <div className="content-grid text-color-bg text-align-left">
         <h2 className="text-m overview-title">Overview:</h2>
         <div className="grid-1-3-col-container" style={{ alignItems: 'start' }}>
-          <div className="sigparser-overview-details" style={{ paddingTop: '12px' }}>
+          <div
+            className="sigparser-overview-details"
+            style={{ paddingTop: '12px' }}
+          >
             <div>
               <h3 className="text-xs">Company</h3>
               <p className="text-s">SigParser</p>
@@ -41,18 +52,24 @@ const OverviewSection = () => {
           </div>
           <div className="sigparser-overview-details text-s">
             <p>
-              For my senior capstone project, I had the distinct opportunity to collaborate with SigParser. 
-              Over the course of this year-long endeavor, my team and I developed a suite of internal LLM tools 
-              designed to enhance operational efficiency and streamline workflows.
+              For my senior capstone project, I had the distinct opportunity to
+              collaborate with SigParser. Over the course of this year-long
+              endeavor, my team and I developed a suite of internal LLM tools
+              designed to enhance operational efficiency and streamline
+              workflows.
             </p>
             <p>
-              We adopted a robust <span className="underline">CI/CD pipeline</span>,  
-              leveraging <span className="underline">Amazon Bedrock</span> services to ensure security 
-              while optimizing cost-effectiveness. This foundation enabled us to deploy a centralized 
-              platform, built with React, that provided SigParser's staff with seamless access to manage and adapt 
-              their tools effectively. This project not only honed my technical skills but also reinforced the 
-              importance of <span className="underline">agile methodologies</span> in real-world software development.
-            </p>        
+              We adopted a robust{' '}
+              <span className="underline">CI/CD pipeline</span>, leveraging{' '}
+              <span className="underline">Amazon Bedrock</span> services to
+              ensure security while optimizing cost-effectiveness. This
+              foundation enabled us to deploy a centralized platform, built with
+              React, that provided SigParser's staff with seamless access to
+              manage and adapt their tools effectively. This project not only
+              honed my technical skills but also reinforced the importance of{' '}
+              <span className="underline">agile methodologies</span> in
+              real-world software development.
+            </p>
           </div>
         </div>
       </div>
@@ -69,13 +86,15 @@ const HomeSection = () => {
             <div className="phase-1-and-3-description">
               <h3 className="text-muted text-m">The Home Page</h3>
               <p className="text-s">
-                The UI, built with <span className="underline">React</span>, utilizes 
-                Flask for frontend and backend communication while 
-                prioritizing the user experience. Each tool has <span className="underline">customizable</span> settings 
-                for modifying LLMs and, uniquely, our Chatbot (VICE) allows database updates. Transparent 
-                pricing is provided for developer <span className="underline">convenience</span>. This hub empowers 
-                developers to refine LLM tools for Sigparser's systems, with the 
-                Chatbot serving as a proof of concept.
+                The UI, built with <span className="underline">React</span>,
+                utilizes Flask for frontend and backend communication while
+                prioritizing the user experience. Each tool has{' '}
+                <span className="underline">customizable</span> settings for
+                modifying LLMs and, uniquely, our Chatbot (VICE) allows database
+                updates. Transparent pricing is provided for developer{' '}
+                <span className="underline">convenience</span>. This hub
+                empowers developers to refine LLM tools for Sigparser's systems,
+                with the Chatbot serving as a proof of concept.
               </p>
             </div>
           </div>
@@ -104,38 +123,64 @@ const ViceSection = () => {
   return (
     <section id="vice" className="sigparser-phase-container breakout">
       <div className="phase-2-details-container">
-        <div className="grid-1-1-col-container text-align-left" style={{ alignItems: 'center' }}>
+        <div
+          className="grid-1-1-col-container text-align-left"
+          style={{ alignItems: 'center' }}
+        >
           <article>
             <h3 className="text-muted text-m">The Chatbot</h3>
             <p className="text-s">
-              VICE (Virtual Interface for Customer Enhancement) was a playful acronym for our Chatbot. 
-              As the <span className="underline">lead</span> for its backend development, I 
-              orchestrated the integration with <span className="underline">AWS</span>, managed 
-              web scraping, and crafted conversation logic through Langchain. This tool served as a 
-              proof of concept, demonstrating that we could achieve similar functionality to AWS's 
-              integrated chatbot model, which cost <span className="underline">$30,000</span> per
-              month, while our solution was implemented 
-              for a fraction of the cost.
+              VICE (Virtual Interface for Customer Enhancement) was a playful
+              acronym for our Chatbot. As the{' '}
+              <span className="underline">lead</span> for its backend
+              development, I orchestrated the integration with{' '}
+              <span className="underline">AWS</span>, managed web scraping, and
+              crafted conversation logic through Langchain. This tool served as
+              a proof of concept, demonstrating that we could achieve similar
+              functionality to AWS's integrated chatbot model, which cost{' '}
+              <span className="underline">$30,000</span> per month, while our
+              solution was implemented for a fraction of the cost.
             </p>
           </article>
 
           <div className="phase-2-img-container">
             <div className="phase-2-proven-concept-container text-s">
               <div>
-                <CurvedArrowSVGIcon className="curved-arrow-top-left" useGradient={true} />
-                <p>SigParsers' Integrated <br /> Chatbot</p>
+                <CurvedArrowSVGIcon
+                  className="curved-arrow-top-left"
+                  useGradient={true}
+                />
+                <p>
+                  SigParsers' Integrated <br /> Chatbot
+                </p>
               </div>
 
               <div>
-                <p>My Teams <br /> Implementation</p>
-                <StraightArrowSVGIcon className="straight-arrow-down" useGradient={true} />
+                <p>
+                  My Teams <br /> Implementation
+                </p>
+                <StraightArrowSVGIcon
+                  className="straight-arrow-down"
+                  useGradient={true}
+                />
               </div>
             </div>
-            <img src={sigparser_proof} alt="Proof of concept" className="phase-2-proof-img" />
+            <img
+              src={sigparser_proof}
+              alt="Proof of concept"
+              className="phase-2-proof-img"
+            />
           </div>
         </div>
       </div>
-      <video ref={videoRef} autoPlay loop muted playsInline className="sigparser-phase-2-video">
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="sigparser-phase-2-video"
+      >
         <source src={vice_demo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -159,13 +204,16 @@ const QueryGenSection = () => {
             <div className="phase-1-and-3-description">
               <h3 className="text-muted text-m">The Query Generator</h3>
               <p className="text-s">
-                SigParser sought an LLM-based solution to filtering on their client portals. 
-                To address this, we implemented a tool capable of querying an
-                LLM using a <span className="underline">preformatted</span> prompt, which would return a JSON 
-                payload <span className="underline">seamlessly</span> integrating 
-                into their existing system. I was responsible 
-                for <span className="underline">securely</span> managing login credentials and completing the UI. 
-                Throughout this project, the entire backend was built with Python.
+                SigParser sought an LLM-based solution to filtering on their
+                client portals. To address this, we implemented a tool capable
+                of querying an LLM using a{' '}
+                <span className="underline">preformatted</span> prompt, which
+                would return a JSON payload{' '}
+                <span className="underline">seamlessly</span> integrating into
+                their existing system. I was responsible for{' '}
+                <span className="underline">securely</span> managing login
+                credentials and completing the UI. Throughout this project, the
+                entire backend was built with Python.
               </p>
             </div>
           </div>
@@ -190,43 +238,65 @@ const TechStackSection = () => {
     <section className="full-width text-align-left tech-stack-section">
       <h2 className="tech-stack-title text-m text-muted">The Tech Stack</h2>
       <div className="tech-stack-graphics">
-        <div 
-          className="tech-item" 
-          onMouseEnter={() => handleMouseEnter('Python - A powerful programming language used for backend development.')} 
+        <div
+          className="tech-item"
+          onMouseEnter={() =>
+            handleMouseEnter(
+              'Python - A powerful programming language used for backend development.'
+            )
+          }
           onMouseLeave={handleMouseLeave}
         >
           <PythonSVGIcon />
         </div>
-        <div 
-          className="tech-item" 
-          onMouseEnter={() => handleMouseEnter('Amazon Web Services - Cloud services for hosting and more.')} 
+        <div
+          className="tech-item"
+          onMouseEnter={() =>
+            handleMouseEnter(
+              'Amazon Web Services - Cloud services for hosting and more.'
+            )
+          }
           onMouseLeave={handleMouseLeave}
         >
           <AmazonSVGIcon />
         </div>
-        <div 
-          className="tech-item" 
-          onMouseEnter={() => handleMouseEnter('Langchain - A library for processing language data.')} 
+        <div
+          className="tech-item"
+          onMouseEnter={() =>
+            handleMouseEnter(
+              'Langchain - A library for processing language data.'
+            )
+          }
           onMouseLeave={handleMouseLeave}
         >
           <img src={langchain} alt="Langchain" />
         </div>
-        <div 
-          className="tech-item" 
-          onMouseEnter={() => handleMouseEnter('React - A JavaScript library for building user interfaces.')} 
+        <div
+          className="tech-item"
+          onMouseEnter={() =>
+            handleMouseEnter(
+              'React - A JavaScript library for building user interfaces.'
+            )
+          }
           onMouseLeave={handleMouseLeave}
         >
           <ReactSVGIcon />
         </div>
-        <div 
-          className="tech-item" 
-          onMouseEnter={() => handleMouseEnter('Flask - A lightweight WSGI web application framework.')} 
+        <div
+          className="tech-item"
+          onMouseEnter={() =>
+            handleMouseEnter(
+              'Flask - A lightweight WSGI web application framework.'
+            )
+          }
           onMouseLeave={handleMouseLeave}
         >
           <FlaskSVGIcon />
         </div>
       </div>
-      {hoverInfo && <div className="hover-info text-s text-color-bg">{hoverInfo}</div>}
+      {hoverInfo && (
+        <div className="hover-info text-s text-color-bg">{hoverInfo}</div>
+      )}
     </section>
   );
 };

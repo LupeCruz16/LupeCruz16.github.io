@@ -1,32 +1,32 @@
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5vw 0vw;
-    gap: 20px;
-    flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vw 0vw;
+  gap: 20px;
+  flex-direction: row;
 }
-  
+
 .footer-socials {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .email-link {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .email-link:hover {
-    color: var(--accent-100)
+  color: var(--accent-100);
 }
-  
+
 .footer-social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2vw; 
-    height: auto;
-    color: white;
-    fill: currentColor; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2vw;
+  height: auto;
+  color: white;
+  fill: currentColor;
 }

@@ -1,13 +1,48 @@
-:root{
-    /* Color Variables */
-    --text-100: #f0f0f0;
-    --text-200: #2F27CE;
-    --accent-100: #433BFF;
-    --accent-200: #DEDCFF;
-    --bg-100: #1b1918;
-    --bg-200: #404A3B;
-      
-    /* Font Variables */
-    --font-primary: "Open Sans", sans-serif;
-    --font-secondary: 'Satoshi', sans-serif; 
+:root {
+  /* Color Variables */
+  --text-100: #f0f0f0;
+  --text-200: #2f27ce;
+  --accent-100: #433bff;
+  --accent-200: #dedcff;
+  --bg-100: #1b1918;
+  --bg-200: #404a3b;
+
+  /* Font Variables */
+  --font-primary: 'Open Sans', sans-serif;
+  --font-secondary: 'Satoshi', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  width: 100%;
+  line-height: 2vw;
+  text-align: center;
+  color: var(--text-100);
+  background-color: var(--bg-100);
+  font-family: var(--font-primary), var(--font-secondary);
+}
+
+.App-main img {
+  max-width: 100%;
+}
+
+.App-main * {
+  box-sizing: border-box;
+}
+
+.Home-Page {
+  display: grid;
+  /* Navigation takes the space it needs, Projects take the remaining space */
+  grid-template-rows: auto 1fr;
+  height: 90vh;
+  max-height: 90vh;
+  overflow: hidden;
 }
