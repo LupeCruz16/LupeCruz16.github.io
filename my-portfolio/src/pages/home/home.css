@@ -1,9 +1,9 @@
 /* Home Page */
 .scroll-container {
-  scroll-snap-type: y mandatory;
   height: 100vh;
   overflow-y: auto;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 /* Hide scrollbar for Webkit-based browsers (Chrome, Safari) */
@@ -17,9 +17,9 @@
 }
 
 .home-scroll-section {
-  scroll-snap-align: start;
-  min-height: 100vh;
   display: flex;
-  align-items: center;
   padding: 20px;
+  min-height: 100vh;
+  align-items: center;
+  scroll-snap-align: start;
 }
