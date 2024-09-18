@@ -1,48 +1,19 @@
-.content-grid {
-  --padding-inline: 1rem;
-  --content-max-width: 1400px;
-  --breakout-max-width: 1800px;
-
-  --breakout-size: calc(
-    (var(--breakout-max-width) - var(--content-max-width)) / 2
-  );
-
-  display: grid;
-  grid-template-columns:
-    [full-width-start] minmax(var(--padding-inline), 1fr)
-    [breakout-start] minmax(0, var(--breakout-size))
-    [content-start] min(
-      100% - (var(--padding-inline) * 2),
-      var(--content-max-width)
-    )
-    [content-end]
-    minmax(0, var(--breakout-size)) [breakout-end]
-    minmax(var(--padding-inline), 1fr) [full-width-end];
-}
-
-.content-grid > :not(.breakout, .full-width),
-.full-width > :not(.breakout, .full-width) {
-  grid-column: content;
-}
-
-.content-grid > .breakout {
-  grid-column: breakout;
-}
-
-.content-grid > .full-width {
-  grid-column: full-width;
-  /* Taken out because it would not allow flexbox */
-  /* display: grid; */
-  /* Taken out because woud only apply to bg */
-  /* grid-template-columns: inherit; */
+/* Flex Containers */
+.flex-container-1-1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /* Grids */
 .grid-1-1-col-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   width: 100%;
+  display: grid;
   align-items: center;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
 }
 
 .grid-1-1half-col-container {

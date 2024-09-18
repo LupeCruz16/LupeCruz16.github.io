@@ -48,7 +48,8 @@ const Expereince = () => {
   const currentProject = projectsData[currentProjectIndex];
 
   return (
-    <div className="full-width">
+    // home-scroll-section class used for scrolling on home page
+    <div className="full-width home-scroll-section">
       <div className="projects-section">
         <div className="project-layout">
           <div

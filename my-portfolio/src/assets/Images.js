@@ -1,6 +1,6 @@
 import taylort_swift from './images/taylor_swift.jpg';
 import langchain from './images/langchain.png';
-import headshot from './images/headshot.jpg';
+import headshot from './images/headshot.png';
 import cat_display from './images/cat.jpg';
 import museum from './images/museum.png';
 import max from './images/max.jpg';

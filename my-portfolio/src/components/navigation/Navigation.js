@@ -1,24 +1,20 @@
+import useMobileView from '../../functions/useMobileView.js';
+import useHoverScale from '../../effects/useHoverScale.js';
+import resume from '../../assets/resume/Resume.pdf';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import './navigation.css';
 import {
   PersonalLogoSVG,
   HamburgerMenuSVGIcon,
   CloseSVGIcon,
 } from '../../assets/SVGs.js';
-import useMobileView from '../../functions/useMobileView.js';
-import useHoverScale from '../../effects/useHoverScale.js';
-import resume from '../../assets/resume/Resume.pdf';
-import Modal from '../../functions/Modal.js';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import './navigation.css';
 
-function Navigation() {
+function Navigation({ toggleModal }) {
+  // Accept toggleModal as a prop
   const { handleMouseEnter, handleMouseLeave, getScaleStyle } = useHoverScale();
-
-  //Mobile view active for screens less than 768px
   const isMobileView = useMobileView();
-
-  //Mobile menu used for hamburger menu
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false); // Declare isMobileMenuOpen state variable
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
@@ -28,16 +24,9 @@ function Navigation() {
     setMobileMenuOpen(false);
   };
 
-  const [showModal, setShowModal] = useState(false);
-
-  const toggleModal = () => {
-    setShowModal(!showModal);
-  };
-
   return (
     <header className="primary-header content-grid">
       <div className="primary-header_layout breakout">
-        {/* Left side of navigation */}
         {!isMobileView && (
           <div className="nav-left">
             <Link to="/">
@@ -48,20 +37,14 @@ function Navigation() {
           </div>
         )}
 
-        {/* Right side of navigation */}
         <div>
-          {/* Conditionally render regular links or hamburger icon */}
           {isMobileView ? (
-            // Mobile Hamburger Menu Icon
             <div className="hamburgerSVGWrapper" onClick={toggleMobileMenu}>
-              {isMobileView && (
-                <HamburgerMenuSVGIcon
-                  className={`line ${isMobileMenuOpen ? 'active' : ''}`}
-                />
-              )}
+              <HamburgerMenuSVGIcon
+                className={`line ${isMobileMenuOpen ? 'active' : ''}`}
+              />
             </div>
           ) : (
-            // Regular Links
             <div className="nav-links-right">
               <Link to="/about" className="text-s nav-link">
                 About Me
@@ -83,11 +66,9 @@ function Navigation() {
                   <div className="text-s text-color-sec">Resume</div>
                 </a>
               </div>
-              <Modal show={showModal} onClose={toggleModal} />
             </div>
           )}
 
-          {/* Mobile Menu Overlay */}
           {isMobileMenuOpen && (
             <div className="mobile-menu-overlay" onClick={closeMobileMenu}>
               <div className="mobile-menu-links">

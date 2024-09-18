@@ -53,7 +53,7 @@ export const OpenInWindow = ({ href }) => {
         <g
           id="SVGRepo_tracerCarrier"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         ></g>
         <g id="SVGRepo_iconCarrier">
           <path
@@ -100,7 +100,7 @@ export const ProjectArrowSVGIcon = ({ classAttributes }) => {
       <g
         id="SVGRepo_tracerCarrier"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         <g class="st0" id="grid_system"></g>
@@ -129,7 +129,7 @@ export const HamburgerMenuSVGIcon = () => {
       <g
         id="SVGRepo_tracerCarrier"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         {' '}
@@ -206,7 +206,7 @@ export const CloseSVGIcon = () => {
       <g
         id="SVGRepo_tracerCarrier"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         {' '}
@@ -225,7 +225,7 @@ export const AmazonSVGIcon = () => {
       <g
         id="SVGRepo_tracerCarrier"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         {' '}
@@ -255,7 +255,7 @@ export const FlaskSVGIcon = () => {
       <g
         id="SVGRepo_tracerCarrier"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         {' '}
@@ -273,7 +273,7 @@ export const ReactSVGIcon = () => {
       <g
         id="SVGRepo_tracerCarrier"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         {' '}
@@ -409,7 +409,7 @@ export const StraightArrowSVGIcon = ({ className, useGradient = false }) => {
             fill: none;
             stroke: ${useGradient ? 'url(#verticalGradient)' : '#FFFFFF'};
             stroke-linecap: round;
-            stroke-linejoin: round;
+            strokeLinejoin: round;
             stroke-width: 10px;
           }`}
         </style>
@@ -460,7 +460,7 @@ export const CurvedArrowSVGIcon = ({ className, useGradient = false }) => {
             fill: none;
             stroke: ${useGradient ? 'url(#horizontalGradient)' : '#FFFFFF'};
             stroke-linecap: round;
-            stroke-linejoin: round;
+            strokeLinejoin: round;
             stroke-width: 7px;
           }`}
         </style>

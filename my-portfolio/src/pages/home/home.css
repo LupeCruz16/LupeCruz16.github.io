@@ -1,95 +1,51 @@
-.projects-section {
-  width: 100%;
-  /* Accounting for navigation height */
-  height: calc(100vh - 10vh);
-  justify-content: space-evenly;
-}
-
-/* Used to layout the three sections: prev, current, next */
-.project-layout {
-  display: grid;
-  height: calc(100vh - 10vh);
-  padding-bottom: 10vh;
-  grid-template-columns: 15vw 1fr 15vw;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.transition-text {
-  transform: rotate(270deg) !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.transition-text:hover {
-  color: var(--accent-200);
-}
-
-.current-project {
-  display: flex;
-  flex-direction: column;
-  gap: 1vw;
-  transition: opacity 0.5s ease-out;
-  opacity: 0;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.current-project.show {
-  opacity: 1;
-}
-
-.current-project-grid {
-  width: 100%;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1.25fr;
-  grid-auto-columns: 1fr;
-  display: grid;
-}
-
-.current-project-details {
+/* Hook Section */
+.hook-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1vw;
 }
 
-.project-specifics-row {
+.button-row {
+  gap: 20px;
   display: flex;
-  flex-direction: row;
-  white-space: pre-wrap;
 }
 
-.project-eye-catcher-container {
-  width: 100%;
-  height: auto;
+.circular-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hook-image {
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+/* Home Page */
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Webkit-based browsers (Chrome, Safari) */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for other browsers (Firefox, etc.) */
+.scroll-container {
+  scrollbar-width: none; /* Firefox */
+}
+
+.home-scroll-section {
+  scroll-snap-align: start;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-@media (max-width: 1024px) {
-  .currentProjectGrid {
-    grid-template-columns: 1.75fr 0.5fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .currentProjectGrid {
-    grid-template-columns: 1.75fr 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .projectEyeCatcherContainer {
-    display: none;
-  }
-
-  .currentProjectGrid {
-    grid-template-columns: 1.5fr;
-  }
+  padding: 20px;
 }
