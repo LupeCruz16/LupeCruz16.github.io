@@ -49,7 +49,7 @@ const Expereince = () => {
 
   return (
     // home-scroll-section class used for scrolling on home page
-    <div className="full-width home-scroll-section">
+    <div className="full-width home-scroll-section" id="experience">
       <div className="projects-section">
         <div className="project-layout">
           <div

@@ -6,7 +6,6 @@ import Navigation from './components/navigation/Navigation.js';
 
 import S3 from './pages/s3/S3.js';
 import Home from './pages/home/Home.js';
-import AboutMe from './pages/aboutMe/AboutMe.js';
 import SigParser from './pages/sigparser/SigParser.js';
 import InProgress from './pages/inProgress/inProgress.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -16,9 +15,11 @@ import Contact from './pages/contact/Contact.js';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
+  const [modalContent, setModalContent] = useState(null); // Track which modal content to show
 
-  const toggleModal = () => {
+  const toggleModal = (content = null) => {
     setShowModal(!showModal);
+    setModalContent(content); // Update modal content type
   };
 
   return (
@@ -28,14 +29,18 @@ function App() {
           <Navigation toggleModal={toggleModal} />
           <Routes className="content-grid">
             <Route path="/" element={<Home toggleModal={toggleModal} />} />
-            <Route path="/about" element={<AboutMe />} />
-            <Route path="/sigparser" element={<SigParser />} />
-            <Route path="/s3" element={<S3 />} />
-            <Route path="/in-progress" element={<InProgress />} />
+
+            {/* Currently using in progress page as 404 page */}
+            <Route path="*" element={<InProgress />} />
           </Routes>
         </Router>
-        <Modal show={showModal} onClose={toggleModal}>
-          <Contact />
+
+        {/* Dynamic Modal */}
+        <Modal show={showModal} onClose={() => toggleModal(null)}>
+          {modalContent === 'contact' && <Contact />}
+
+          {modalContent === 'sigparser' && <SigParser />}
+          {modalContent === 's3' && <S3 />}
         </Modal>
       </main>
     </div>

@@ -1,29 +1,3 @@
-/* Hook Section */
-.hook-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.button-row {
-  gap: 20px;
-  display: flex;
-}
-
-.circular-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hook-image {
-  width: 550px;
-  height: 550px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #fff;
-}
-
 /* Home Page */
 .scroll-container {
   scroll-snap-type: y mandatory;

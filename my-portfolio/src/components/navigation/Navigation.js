@@ -1,7 +1,6 @@
 import useMobileView from '../../functions/useMobileView.js';
 import useHoverScale from '../../effects/useHoverScale.js';
 import resume from '../../assets/resume/Resume.pdf';
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import './navigation.css';
 import {
@@ -11,7 +10,6 @@ import {
 } from '../../assets/SVGs.js';
 
 function Navigation({ toggleModal }) {
-  // Accept toggleModal as a prop
   const { handleMouseEnter, handleMouseLeave, getScaleStyle } = useHoverScale();
   const isMobileView = useMobileView();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,16 +22,24 @@ function Navigation({ toggleModal }) {
     setMobileMenuOpen(false);
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="primary-header content-grid">
       <div className="primary-header_layout breakout">
         {!isMobileView && (
           <div className="nav-left">
-            <Link to="/">
-              <div className="personal-logo-wapper">
-                <PersonalLogoSVG />
-              </div>
-            </Link>
+            <div
+              className="personal-logo-wapper"
+              onClick={() => scrollToSection('hero')}
+            >
+              <PersonalLogoSVG />
+            </div>
           </div>
         )}
 
@@ -46,11 +52,29 @@ function Navigation({ toggleModal }) {
             </div>
           ) : (
             <div className="nav-links-right">
-              <Link to="/about" className="text-s nav-link">
+              <div
+                className="text-s nav-link"
+                onClick={() => scrollToSection('hero')}
+              >
+                Home
+              </div>
+              <div
+                className="text-s nav-link"
+                onClick={() => scrollToSection('experience')}
+              >
+                Experience
+              </div>
+              <div
+                className="text-s nav-link"
+                onClick={() => scrollToSection('about')}
+              >
                 About Me
-              </Link>
-              <div onClick={toggleModal} className="text-s nav-link">
-                Contact
+              </div>
+              <div
+                onClick={() => toggleModal('contact')}
+                className="text-s nav-link"
+              >
+                Get in Touch
               </div>
               <div
                 className="button-styles"
@@ -75,18 +99,24 @@ function Navigation({ toggleModal }) {
                 <div className="close-nav-svg-wrapper">
                   <CloseSVGIcon onClick={closeMobileMenu} />
                 </div>
-                <Link to="/" className="text-s nav-link">
-                  gc
-                </Link>
-                <Link to="/about" className="text-s nav-link">
+                <div
+                  className="text-s nav-link"
+                  onClick={() => scrollToSection('hero')}
+                >
+                  Home
+                </div>
+                <div
+                  className="text-s nav-link"
+                  onClick={() => scrollToSection('experience')}
+                >
+                  Experience
+                </div>
+                <div
+                  className="text-s nav-link"
+                  onClick={() => scrollToSection('about')}
+                >
                   About Me
-                </Link>
-                <Link to="/contact" className="text-s nav-link">
-                  Contact
-                </Link>
-                <Link to="/resume" className="text-s nav-link">
-                  Resume
-                </Link>
+                </div>
               </div>
             </div>
           )}

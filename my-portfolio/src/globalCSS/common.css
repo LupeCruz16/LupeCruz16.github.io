@@ -44,7 +44,7 @@
   padding: 0.2vw 0.8vw;
   text-decoration: none;
   border: none;
-  border-radius: 1vw;
+  border-radius: 10px;
   background-color: var(--accent-200);
   width: fit-content;
 }
