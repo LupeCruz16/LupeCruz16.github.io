@@ -10,6 +10,16 @@
   /* Font Variables */
   --font-primary: 'Open Sans', sans-serif;
   --font-secondary: 'Satoshi', sans-serif;
+  --font-backup: system-ui;
+
+  /* Font Sizing */
+  --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
+  --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+  --fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
+  --fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
+  --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
+  --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+  --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
 }
 
 html {
@@ -21,13 +31,31 @@ html {
   padding: 0;
 }
 
-.App {
+body {
   width: 100%;
   line-height: 2vw;
   text-align: center;
   color: var(--text-100);
   background-color: var(--bg-100);
-  font-family: var(--font-primary), var(--font-secondary);
+  font-family: var(--font-primary), var(--font-secondary), var(--font-backup);
+  font-size: var(--fs-400);
+}
+
+h1 {
+  line-height: 5rem;
+  font-size: var(--fs-900);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
+  margin: 0;
+  font-weight: 100;
 }
 
 .App-main img {

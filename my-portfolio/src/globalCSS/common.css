@@ -40,13 +40,21 @@
 }
 
 /* Button */
-.button-styles {
-  padding: 0.2vw 0.8vw;
+.global-bttn {
+  padding: 0.75rem 1rem;
   text-decoration: none;
-  border: none;
   border-radius: 10px;
-  background-color: var(--accent-200);
   width: fit-content;
+  font-size: var(--fs-400);
+  background-color: var(--accent-200);
+}
+
+.global-bttn a {
+  text-decoration: none;
+}
+
+.global-bttn p {
+  color: var(--accent-100);
 }
 
 /* Padding */

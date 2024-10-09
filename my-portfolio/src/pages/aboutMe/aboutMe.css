@@ -1,4 +1,4 @@
-/* Hero Section css for about me page */
+/* Hero Section css for about me page
 .hero-section {
   gap: 5vw;
   width: 100%;
@@ -46,7 +46,7 @@
 }
 
 /* Bento css */
-.bento-title {
+/* .bento-title {
   grid-column: 1 / -1;
   text-align: center;
   padding: 5vw 0vw;
@@ -107,7 +107,6 @@
   }
 }
 
-/* Stagger the animation start times */
 .bento-image-item:nth-child(1) {
   animation-delay: 0.3s;
 }
@@ -134,4 +133,4 @@
   to {
     transform: scale(1.1);
   }
-}
+} */

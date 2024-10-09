@@ -10,33 +10,29 @@ function HeroSection({ toggleModal }) {
     <section className="home-scroll-section content-grid" id="hero">
       <div className="hero-section breakout">
         <div className="text-align-left">
-          <div className="text-xs text-muted">Hello!</div>
-          <div className="text-m spacer">
+          <p className="text-muted">Hello!</p>
+          <h1 className="spacer">
             I'm Guadalupe Cruz, Software Engineer extraordinaire.
-          </div>
+          </h1>
           <div className="button-row">
             <button
-              className="button-styles"
+              className="global-bttn"
               style={getScaleStyle('resume')}
               onMouseEnter={() => handleMouseEnter('resume')}
               onMouseLeave={handleMouseLeave}
             >
-              <a
-                href={resume}
-                download="Guadalupes_Resume.pdf"
-                className="resume-button-link"
-              >
-                <div className="text-s text-color-sec">Download My Resume</div>
+              <a href={resume} download="Guadalupes_Resume.pdf">
+                <p>Download My Resume</p>
               </a>
             </button>
             <button
-              className="button-styles"
+              className="global-bttn"
               style={getScaleStyle('contact')}
               onMouseEnter={() => handleMouseEnter('contact')}
               onMouseLeave={handleMouseLeave}
               onClick={() => toggleModal('contact')} // Trigger modal from App.js
             >
-              <div className="text-s text-color-sec">Get in Touch</div>
+              <p>Get in Touch</p>
             </button>
           </div>
         </div>

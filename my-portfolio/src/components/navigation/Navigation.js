@@ -1,6 +1,7 @@
 import useMobileView from '../../functions/useMobileView.js';
 import useHoverScale from '../../effects/useHoverScale.js';
 import resume from '../../assets/resume/Resume.pdf';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import './navigation.css';
 import {
@@ -52,42 +53,29 @@ function Navigation({ toggleModal }) {
             </div>
           ) : (
             <div className="nav-links-right">
-              <div
-                className="text-s nav-link"
-                onClick={() => scrollToSection('hero')}
-              >
+              <Link to="/#hero" className="nav-link">
                 Home
-              </div>
-              <div
-                className="text-s nav-link"
-                onClick={() => scrollToSection('experience')}
-              >
+              </Link>
+              <Link to="/#experience" className="nav-link">
                 Experience
-              </div>
-              <div
-                className="text-s nav-link"
-                onClick={() => scrollToSection('about')}
-              >
+              </Link>
+              <Link to="/#about" className="nav-link">
                 About Me
-              </div>
-              <div
-                onClick={() => toggleModal('contact')}
-                className="text-s nav-link"
-              >
+              </Link>
+              <div onClick={() => toggleModal('contact')} className="nav-link">
                 Get in Touch
               </div>
               <div
-                className="button-styles"
-                style={getScaleStyle('resume')}
+                className="global-bttn"
+                style={{
+                  ...getScaleStyle('resume'),
+                  padding: '0.3rem 1rem',
+                }}
                 onMouseEnter={() => handleMouseEnter('resume')}
                 onMouseLeave={handleMouseLeave}
               >
-                <a
-                  href={resume}
-                  download="Guadalupes_Resume.pdf"
-                  className="resume-button-link"
-                >
-                  <div className="text-s text-color-sec">Resume</div>
+                <a href={resume} download="Guadalupes_Resume.pdf" className="">
+                  <p>Resume</p>
                 </a>
               </div>
             </div>
@@ -100,19 +88,19 @@ function Navigation({ toggleModal }) {
                   <CloseSVGIcon onClick={closeMobileMenu} />
                 </div>
                 <div
-                  className="text-s nav-link"
+                  className="nav-link"
                   onClick={() => scrollToSection('hero')}
                 >
                   Home
                 </div>
                 <div
-                  className="text-s nav-link"
+                  className="nav-link"
                   onClick={() => scrollToSection('experience')}
                 >
                   Experience
                 </div>
                 <div
-                  className="text-s nav-link"
+                  className="nav-link"
                   onClick={() => scrollToSection('about')}
                 >
                   About Me

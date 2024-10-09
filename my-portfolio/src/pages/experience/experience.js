@@ -1,4 +1,4 @@
-import { ai, educator, webDevelopment } from '../../assets/Animations.js';
+import { ai, webDevelopment } from '../../assets/Animations.js';
 import useHoverScale from '../../effects/useHoverScale.js';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -9,26 +9,29 @@ const projectsData = [
   {
     id: 1,
     link: '/sigparser',
-    title: 'AI Integrations',
-    company: 'SigParser',
-    duration: '2023-2024',
+    title: 'Software Engineer',
+    company: 'The ZETTLER Group',
+    duration: '2024-Present',
+    skills: ['React', 'Raspberry PI', 'Web Development'],
     animation: ai,
   },
   {
     id: 2,
+    link: '/sigparser',
+    title: 'AI Integrations',
+    company: 'SigParser',
+    duration: '2023-2024',
+    skills: ['AWS', 'React', 'Webscraping'],
+    animation: ai,
+  },
+  {
+    id: 3,
     link: '/s3',
     title: 'Wordpress Redesign',
     company: 'S3 Coffee Bar',
     duration: 'Completed in 2023',
+    skills: ['Design', 'Freelance', 'Small Business'],
     animation: webDevelopment,
-  },
-  {
-    id: 3,
-    link: '/in-progress',
-    title: 'Arduino Lead Educator',
-    company: 'Treobytes',
-    duration: 'Ongoing since 2023',
-    animation: educator,
   },
 ];
 
@@ -51,6 +54,7 @@ const Expereince = () => {
     // home-scroll-section class used for scrolling on home page
     <div className="full-width home-scroll-section" id="experience">
       <div className="projects-section">
+        <div className="projects-section-title text-m">Experience</div>
         <div className="project-layout">
           <div
             onClick={() =>
@@ -63,7 +67,7 @@ const Expereince = () => {
             style={getScaleStyle('prev-text')}
             onMouseEnter={() => handleMouseEnter('prev-text')}
             onMouseLeave={handleMouseLeave}
-            className="text-s transition-text"
+            className="transition-text"
           >
             Previous
           </div>
@@ -74,23 +78,32 @@ const Expereince = () => {
           >
             <div className="current-project-grid">
               <div className="current-project-details">
-                <div className="text-s">
+                <p>
                   <span>{currentProjectIndex + 1}</span>/
                   <span className="text-muted">{projectsData.length}</span>
-                </div>
+                </p>
                 <Link
                   to={currentProject.link}
-                  className="project-specifics-row text-m link-styles"
+                  className="project-specifics-row link-styles"
                 >
-                  {currentProject.title}
+                  <h2>{currentProject.title}</h2>
                 </Link>
                 <Link
                   to={currentProject.link}
-                  className="project-specifics-row text-s text-muted link-styles"
+                  className="project-specifics-row text-muted link-styles"
                 >
-                  {currentProject.company ? `${currentProject.company} | ` : ''}
-                  {currentProject.duration}
+                  <p>
+                    {currentProject.company
+                      ? `${currentProject.company} | `
+                      : ''}
+                    {currentProject.duration}
+                  </p>
                 </Link>
+                <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
+                  <li>{currentProject.skills[0]}</li>
+                  <li>{currentProject.skills[1]}</li>
+                  <li>{currentProject.skills[2]}</li>
+                </ul>
               </div>
               <Link
                 to={currentProject.link}
@@ -119,7 +132,7 @@ const Expereince = () => {
             style={getScaleStyle('next-text')}
             onMouseEnter={() => handleMouseEnter('next-text')}
             onMouseLeave={handleMouseLeave}
-            className="text-s transition-text"
+            className="transition-text"
           >
             Next
           </div>

@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import Navigation from './components/navigation/Navigation.js';
 
-import S3 from './pages/s3/S3.js';
+// import S3 from './pages/s3/S3.js';
 import Home from './pages/home/Home.js';
 import SigParser from './pages/sigparser/SigParser.js';
 import InProgress from './pages/inProgress/inProgress.js';
@@ -29,6 +29,7 @@ function App() {
           <Navigation toggleModal={toggleModal} />
           <Routes className="content-grid">
             <Route path="/" element={<Home toggleModal={toggleModal} />} />
+            <Route path="/sigparser" element={<SigParser />} />
 
             {/* Currently using in progress page as 404 page */}
             <Route path="*" element={<InProgress />} />
@@ -39,8 +40,8 @@ function App() {
         <Modal show={showModal} onClose={() => toggleModal(null)}>
           {modalContent === 'contact' && <Contact />}
 
-          {modalContent === 'sigparser' && <SigParser />}
-          {modalContent === 's3' && <S3 />}
+          {/* Example of other modal */}
+          {/* {modalContent === 'example' && <Example />} */}
         </Modal>
       </main>
     </div>
