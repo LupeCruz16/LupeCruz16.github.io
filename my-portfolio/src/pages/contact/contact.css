@@ -25,19 +25,20 @@ input,
 textarea {
   width: 100%;
   padding: 0.75rem;
-  border-radius: 4px;
+  border-radius: 10px;
   border: 1px solid #ccc;
 }
 
-button.global-bttn {
+.contact-form button {
   margin: 0 auto;
+  margin-top: 20px;
 }
 
 .social-icons {
   gap: 1rem;
   display: flex;
   margin-top: 2rem;
-  justify-content: center;
+  justify-content: right;
 }
 
 .social-icon {
@@ -45,6 +46,10 @@ button.global-bttn {
   height: 40px;
   cursor: pointer;
   fill: var(--text-100);
+}
+
+.social-icon:hover {
+  fill: var(--accent-100);
 }
 
 .social-icons a {
