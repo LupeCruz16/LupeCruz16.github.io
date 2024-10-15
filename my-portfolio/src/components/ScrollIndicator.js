@@ -9,7 +9,7 @@ const ScrollIndicator = () => {
     if (!scrollContainer) return;
 
     const handleScroll = () => {
-      const sections = ['hero', 'experience', 'about'];
+      const sections = ['hero', 'experience', 'about', 'contact'];
       sections.forEach((section) => {
         const sectionElement = document.getElementById(section);
         if (sectionElement) {
@@ -58,6 +58,14 @@ const ScrollIndicator = () => {
           onClick={() =>
             document
               .getElementById('about')
+              .scrollIntoView({ behavior: 'smooth' })
+          }
+        ></div>
+        <div
+          className={`dot dot-4 ${activeSection === 'contact' ? 'active' : ''}`}
+          onClick={() =>
+            document
+              .getElementById('contact')
               .scrollIntoView({ behavior: 'smooth' })
           }
         ></div>

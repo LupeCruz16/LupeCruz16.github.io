@@ -29,15 +29,19 @@
 }
 
 .dot-1 {
-  top: 10%;
+  top: 20%;
 }
 
 .dot-2 {
-  top: 50%;
+  top: 40%;
 }
 
 .dot-3 {
-  bottom: 10%;
+  bottom: 40%;
+}
+
+.dot-4 {
+  bottom: 20%;
 }
 
 .scroll-indicator .dot.active {

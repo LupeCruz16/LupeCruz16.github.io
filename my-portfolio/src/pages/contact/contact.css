@@ -1,0 +1,53 @@
+.contact-form {
+  gap: 1rem;
+  display: flex;
+  margin-top: 1rem;
+  text-align: left;
+  flex-direction: column;
+}
+
+.name-email-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.name-email-container .form-group {
+  flex: 1;
+}
+
+.form-group {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button.global-bttn {
+  margin: 0 auto;
+}
+
+.social-icons {
+  gap: 1rem;
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  fill: var(--text-100);
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: var(--text-100);
+}

@@ -116,6 +116,16 @@
   cursor: pointer;
 }
 
+.global-link-2 {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--accent-200);
+}
+
+.global-link-2:hover {
+  color: var(--accent-100);
+}
+
 .global-circular-image {
   display: flex;
   justify-content: center;

@@ -1,11 +1,10 @@
+import { museum, taylor_swift, cat_display } from '../../assets/Images.js';
 import React from 'react';
 import './aboutMe.css';
 
-import { museum, taylor_swift, cat_display } from '../../assets/Images.js';
-
 function AboutMe() {
   return (
-    <section className={'home-scroll-section content-grid'} id="about">
+    <section className="home-scroll-section content-grid" id="about">
       <div className="grid-1-1-col-container">
         <div className="fun-image-layout">
           <div className="global-circular-image image-stack image-1">
