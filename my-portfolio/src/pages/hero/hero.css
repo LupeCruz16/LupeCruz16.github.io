@@ -28,16 +28,7 @@
   padding-top: 10px;
 }
 
-.circular-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .hero-image {
   width: 550px;
   height: 550px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #fff;
 }

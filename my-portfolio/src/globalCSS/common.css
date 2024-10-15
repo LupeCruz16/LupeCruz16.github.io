@@ -116,6 +116,18 @@
   cursor: pointer;
 }
 
+.global-circular-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.global-circular-image img {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
 /* Old css */
 
 @media (max-width: 1024px) {

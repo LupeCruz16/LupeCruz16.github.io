@@ -1,4 +1,4 @@
-import taylort_swift from './images/taylor_swift.jpg';
+import taylor_swift from './images/taylor_swift.jpg';
 import langchain from './images/langchain.png';
 import headshot from './images/headshot.png';
 import cat_display from './images/cat.jpg';
@@ -12,7 +12,7 @@ import s3_home from './images/s3_home_page.png';
 
 export {
   museum,
-  taylort_swift,
+  taylor_swift,
   max,
   zoo,
   cat_display,

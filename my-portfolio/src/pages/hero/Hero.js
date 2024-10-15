@@ -37,7 +37,7 @@ function HeroSection({ toggleModal }) {
           </div>
         </div>
         <div>
-          <div className="circular-image">
+          <div className="global-circular-image">
             <img
               src={headshot}
               alt="Guadalupe Cruz"
