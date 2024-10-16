@@ -18,16 +18,37 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here (e.g., send the form data to an email service or backend)
-    console.log(formData);
-    alert('Thank you for reaching out!');
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
+
+    // Create the body payload
+    const requestBody = JSON.stringify({
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }),
     });
+
+    // Print the body payload
+    // console.log('Request body being sent:', requestBody);
+
+    const response = await fetch('', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: requestBody,
+    });
+
+    if (response.ok) {
+      console.log(
+        'Thank you for reaching out! A confirmation email has been sent.'
+      );
+      setFormData({ name: '', email: '', message: '' });
+    } else {
+      console.log('Something went wrong, please try again.');
+    }
   };
 
   return (
