@@ -33,7 +33,10 @@ const Contact = () => {
     // Print the body payload
     // console.log('Request body being sent:', requestBody);
 
-    const response = await fetch('', {
+    // Using .env file to store API URL
+    const apiUrl = process.env.REACT_APP_FORM_API_URL;
+
+    const response = await fetch(apiUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
