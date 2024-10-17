@@ -1,7 +1,6 @@
 import useMobileView from '../../functions/useMobileView.js';
 import useHoverScale from '../../effects/useHoverScale.js';
 import resume from '../../assets/resume/Resume.pdf';
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import './navigation.css';
 import {
@@ -27,6 +26,7 @@ function Navigation({ toggleModal }) {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
+      setMobileMenuOpen(false); // Close mobile menu after scrolling
     }
   };
 
@@ -53,16 +53,25 @@ function Navigation({ toggleModal }) {
             </div>
           ) : (
             <div className="nav-links-right">
-              <Link to="/#hero" className="nav-link">
+              <div className="nav-link" onClick={() => scrollToSection('hero')}>
                 Home
-              </Link>
-              <Link to="/#experience" className="nav-link">
+              </div>
+              <div
+                className="nav-link"
+                onClick={() => scrollToSection('experience')}
+              >
                 Experience
-              </Link>
-              <Link to="/#about" className="nav-link">
+              </div>
+              <div
+                className="nav-link"
+                onClick={() => scrollToSection('about')}
+              >
                 About Me
-              </Link>
-              <div onClick={() => toggleModal('contact')} className="nav-link">
+              </div>
+              <div
+                onClick={() => scrollToSection('contact')}
+                className="nav-link"
+              >
                 Get in Touch
               </div>
               <div
@@ -75,7 +84,7 @@ function Navigation({ toggleModal }) {
                 onMouseLeave={handleMouseLeave}
               >
                 <a href={resume} download="Guadalupes_Resume.pdf" className="">
-                  <p>Resume</p>
+                  <p>Download Resume</p>
                 </a>
               </div>
             </div>

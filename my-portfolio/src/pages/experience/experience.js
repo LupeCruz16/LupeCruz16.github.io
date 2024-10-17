@@ -1,4 +1,4 @@
-import { ai, webDevelopment } from '../../assets/Animations.js';
+import { ai, webDevelopment, zettler } from '../../assets/Animations.js';
 import useHoverScale from '../../effects/useHoverScale.js';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -12,8 +12,8 @@ const projectsData = [
     title: 'Software Engineer',
     company: 'The ZETTLER Group',
     duration: '2024-Present',
-    skills: ['React', 'Raspberry PI', 'Web Development'],
-    animation: ai,
+    skills: ['React', 'Web Development', 'Embedded Systems'],
+    animation: zettler,
   },
   {
     id: 2,

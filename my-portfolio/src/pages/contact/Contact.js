@@ -1,7 +1,7 @@
+import { LinkedInSVGIcon, GitHubSVGIcon } from '../../assets/SVGs';
 import React, { useState } from 'react';
 import './contact.css';
-
-import { LinkedInSVGIcon, GitHubSVGIcon } from '../../assets/SVGs';
+import SystemFeedback from '../../components/SysFeedback';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +9,8 @@ const Contact = () => {
     email: '',
     message: '',
   });
+
+  const [feedback, setFeedback] = useState({ message: '', type: '' });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,9 +32,6 @@ const Contact = () => {
       }),
     });
 
-    // Print the body payload
-    // console.log('Request body being sent:', requestBody);
-
     // Using .env file to store API URL
     const apiUrl = process.env.REACT_APP_FORM_API_URL;
 
@@ -45,12 +44,16 @@ const Contact = () => {
     });
 
     if (response.ok) {
-      console.log(
-        'Thank you for reaching out! A confirmation email has been sent.'
-      );
+      setFeedback({
+        message: 'Thank you for reaching out! I will get back to you asap.',
+        type: 'positive',
+      });
       setFormData({ name: '', email: '', message: '' });
     } else {
-      console.log('Something went wrong, please try again.');
+      setFeedback({
+        message: 'Something went wrong, please try again.',
+        type: 'negative',
+      });
     }
   };
 
@@ -104,18 +107,31 @@ const Contact = () => {
           </button>
         </form>
 
-        <div className="social-icons">
-          <a href="mailto:guacruz.16@gmail.com" className="global-link-2">
-            guacruz.16@gmail.com
-          </a>
-          <GitHubSVGIcon
-            href="https://github.com/LupeCruz16"
-            classAttributes="social-icon"
+        {feedback.message && (
+          <SystemFeedback
+            message={feedback.message}
+            type={feedback.type}
+            clearFeedback={() => setFeedback({ message: '', type: '' })}
           />
-          <LinkedInSVGIcon
-            href="https://www.linkedin.com/in/guadalupe-cruz-a65a31254/"
-            classAttributes="social-icon"
-          />
+        )}
+
+        <div className="contact-footer-container">
+          <div>
+            <p>Powered by AWS: Lambda, SES and API Gateway</p>
+          </div>
+          <div>
+            <a href="mailto:guacruz.16@gmail.com" className="global-link-2">
+              <p>guacruz.16@gmail.com</p>
+            </a>
+            <GitHubSVGIcon
+              href="https://github.com/LupeCruz16"
+              classAttributes="social-icon"
+            />
+            <LinkedInSVGIcon
+              href="https://www.linkedin.com/in/guadalupe-cruz-a65a31254/"
+              classAttributes="social-icon"
+            />
+          </div>
         </div>
       </div>
     </section>

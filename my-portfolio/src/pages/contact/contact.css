@@ -34,11 +34,20 @@ textarea {
   margin-top: 20px;
 }
 
-.social-icons {
+.contact-footer-container {
+  display: flex;
+  margin-top: 4rem;
+  justify-content: space-between;
+}
+
+.contact-footer-container div {
   gap: 1rem;
   display: flex;
-  margin-top: 2rem;
-  justify-content: right;
+}
+
+.contact-footer-container a {
+  text-decoration: none;
+  color: var(--text-100);
 }
 
 .social-icon {
@@ -50,9 +59,4 @@ textarea {
 
 .social-icon:hover {
   fill: var(--accent-100);
-}
-
-.social-icons a {
-  text-decoration: none;
-  color: var(--text-100);
 }
