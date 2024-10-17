@@ -14,7 +14,7 @@ import './sigparser.css';
 
 const OverviewSection = () => {
   return (
-    <section id="overview" className="sigparser-overview-container full-width">
+    <div id="overview" className="sigparser-overview-container full-width">
       <div className="content-grid text-color-bg text-align-left">
         <h2 className="text-m overview-title">Overview:</h2>
         <div className="grid-1-3-col-container" style={{ alignItems: 'start' }}>
@@ -58,13 +58,13 @@ const OverviewSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
 const HomeSection = () => {
   return (
-    <section id="home" className="sigparser-phase-container full-width">
+    <div id="home" className="sigparser-phase-container full-width">
       <div className="grid-1-1half-col-container">
         <article className="text-align-left">
           <div className="phases-details-container">
@@ -90,7 +90,7 @@ const HomeSection = () => {
           </video>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
@@ -104,7 +104,7 @@ const ViceSection = () => {
   }, []);
 
   return (
-    <section id="vice" className="sigparser-phase-container breakout">
+    <div id="vice" className="sigparser-phase-container breakout">
       <div className="phase-2-details-container">
         <div
           className="grid-1-1-col-container text-align-left"
@@ -167,13 +167,13 @@ const ViceSection = () => {
         <source src={vice_demo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-    </section>
+    </div>
   );
 };
 
 const QueryGenSection = () => {
   return (
-    <section id="querygen" className="sigparser-phase-container full-width">
+    <div id="querygen" className="sigparser-phase-container full-width">
       <div className="grid-1half-1-col-container">
         <div className="video-container">
           <video autoPlay loop muted playsInline className="rounded-right">
@@ -200,7 +200,7 @@ const QueryGenSection = () => {
           </div>
         </article>
       </div>
-    </section>
+    </div>
   );
 };
 
@@ -216,7 +216,7 @@ const TechStackSection = () => {
   };
 
   return (
-    <section className="full-width text-align-left tech-stack-section">
+    <div className="full-width text-align-left tech-stack-section">
       <h2 className="tech-stack-title text-m text-muted">The Tech Stack</h2>
       <div className="tech-stack-graphics">
         <div
@@ -278,7 +278,7 @@ const TechStackSection = () => {
       {hoverInfo && (
         <div className="hover-info text-s text-color-bg">{hoverInfo}</div>
       )}
-    </section>
+    </div>
   );
 };
 
@@ -286,7 +286,7 @@ function SigParser() {
   const fadeIn = useFadeIn();
 
   return (
-    <div className={`${fadeIn ? 'fade-in' : ''}`}>
+    <section className={`${fadeIn ? 'fade-in' : ''}`}>
       <div className="content-grid">
         <OverviewSection />
         <HomeSection />
@@ -294,7 +294,7 @@ function SigParser() {
         <QueryGenSection />
         <TechStackSection />
       </div>
-    </div>
+    </section>
   );
 }
 

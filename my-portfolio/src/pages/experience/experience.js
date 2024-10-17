@@ -82,13 +82,17 @@ const Expereince = ({ toggleModal }) => {
                   <span className="text-muted">{projectsData.length}</span>
                 </p>
                 <div
-                  onClick={() => toggleModal(currentProject.link)}
+                  onClick={() =>
+                    toggleModal(currentProject.link, currentProject.title)
+                  }
                   className="project-specifics-row link-styles"
                 >
                   <h2>{currentProject.title}</h2>
                 </div>
                 <div
-                  onClick={() => toggleModal(currentProject.link)}
+                  onClick={() =>
+                    toggleModal(currentProject.link, currentProject.title)
+                  }
                   to={currentProject.link}
                   className="project-specifics-row text-muted link-styles"
                 >
@@ -106,7 +110,9 @@ const Expereince = ({ toggleModal }) => {
                 </ul>
               </div>
               <div
-                onClick={() => toggleModal(currentProject.link)}
+                onClick={() =>
+                  toggleModal(currentProject.link, currentProject.title)
+                }
                 to={currentProject.link}
                 className="project-eye-catcher-container link-styles"
               >

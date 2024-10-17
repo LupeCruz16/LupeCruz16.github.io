@@ -1,11 +1,46 @@
-/* Hero Section */
-.project-details-heading-container {
+/* Overview Section */
+.sigparser-overview-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: auto;
   width: 100%;
-  padding: 10vw 0 10vw 0;
+  margin-bottom: 8vw;
+  padding: 5vw 0 5vw 0;
+  position: relative;
+  isolation: isolate;
+}
+
+.sigparser-overview-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(222, 220, 255, 1) 0%,
+    rgba(67, 59, 255, 1) 100%
+  );
+  /* transform: skewY(-2deg); */
+  z-index: -1;
+}
+
+.overview-title {
+  width: 100%;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.sigparser-overview-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  width: 100%;
 }
 
 /* Home Section */
@@ -100,51 +135,6 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-}
-
-/* Overview Section */
-.sigparser-overview-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  width: 100%;
-  margin-bottom: 10vw;
-  padding: 5vw 0 5vw 0;
-  position: relative;
-  isolation: isolate;
-}
-
-.sigparser-overview-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle,
-    rgba(222, 220, 255, 1) 0%,
-    rgba(67, 59, 255, 1) 100%
-  );
-  transform: skewY(-2deg);
-  z-index: -1;
-}
-
-.overview-title {
-  width: 100%;
-}
-
-.underline {
-  text-decoration: underline;
-}
-
-.sigparser-overview-details {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: flex-start;
-  width: 100%;
 }
 
 /* Tech Stack Section */

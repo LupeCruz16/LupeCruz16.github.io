@@ -16,10 +16,12 @@ import Modal from './components/Modal.js';
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState(null); // Track which modal content to show
+  const [modalTitle, setModalTitle] = useState(null); // For storing title
 
-  const toggleModal = (content = null) => {
+  const toggleModal = (content = null, title = null) => {
     setShowModal(!showModal);
     setModalContent(content); // Update modal content type
+    setModalTitle(title);
   };
 
   return (
@@ -36,7 +38,11 @@ function App() {
         </Router>
 
         {/* Dynamic Modal */}
-        <Modal show={showModal} onClose={() => toggleModal(null)}>
+        <Modal
+          show={showModal}
+          onClose={() => toggleModal(null, null)}
+          title={modalTitle}
+        >
           {modalContent === 'sigparser' && <SigParser />}
           {modalContent === 's3' && <S3 />}
         </Modal>
