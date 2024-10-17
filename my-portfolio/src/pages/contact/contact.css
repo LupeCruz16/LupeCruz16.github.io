@@ -34,6 +34,10 @@ textarea {
   margin-top: 20px;
 }
 
+.contact-form button:hover {
+  cursor: pointer;
+}
+
 .contact-footer-container {
   display: flex;
   margin-top: 4rem;

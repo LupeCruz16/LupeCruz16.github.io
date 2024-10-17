@@ -3,8 +3,15 @@ import resume from '../../assets/resume/Resume.pdf';
 import { headshot } from '../../assets/Images.js';
 import './hero.css';
 
-function HeroSection({ toggleModal }) {
+function HeroSection() {
   const { handleMouseEnter, handleMouseLeave, getScaleStyle } = useHoverScale();
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="home-scroll-section content-grid" id="hero">
@@ -30,7 +37,7 @@ function HeroSection({ toggleModal }) {
               style={getScaleStyle('contact')}
               onMouseEnter={() => handleMouseEnter('contact')}
               onMouseLeave={handleMouseLeave}
-              onClick={() => toggleModal('contact')} // Trigger modal from App.js
+              onClick={() => scrollToSection('contact')}
             >
               <p>Get in Touch</p>
             </button>

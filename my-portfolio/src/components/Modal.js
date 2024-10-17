@@ -24,6 +24,9 @@ const Modal = ({ show, onClose, children }) => {
     padding: '2vw',
     borderRadius: '8px',
     boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    maxHeight: '90vh',
+    overflowY: 'auto',
+    width: '80%',
   };
 
   return (

@@ -7,25 +7,10 @@ import {
 } from '../../assets/SVGs.js';
 import { sigparser_home, vice_demo, query_demo } from '../../assets/Videos.js';
 import { langchain, sigparser_proof } from '../../assets/Images.js';
-import Navigation from '../../components/navigation/Navigation.js';
 import React, { useRef, useEffect, useState } from 'react';
 import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
-import Footer from '../../components/footer/Footer.js';
 import { PythonSVGIcon } from '../../assets/SVGs.js';
 import './sigparser.css';
-
-const HeroSection = () => {
-  return (
-    <header className="project-details-heading-container text-align-left">
-      <div className="grid-1-3-col-container">
-        <h1 className="text-xs" style={{ paddingTop: '12px' }}>
-          AI Integrations
-        </h1>
-        <h2 className="text-m">Enhancing Customer Experiences Through AI</h2>
-      </div>
-    </header>
-  );
-};
 
 const OverviewSection = () => {
   return (
@@ -53,10 +38,10 @@ const OverviewSection = () => {
           <div className="sigparser-overview-details text-s">
             <p>
               For my senior capstone project, I had the distinct opportunity to
-              collaborate with SigParser. Over the course of this year-long
-              endeavor, my team and I developed a suite of internal LLM tools
-              designed to enhance operational efficiency and streamline
-              workflows.
+              collaborate with SigParser, a local company based in San Marcos.
+              Over the course of this year-long endeavor, my team and I
+              developed a suite of internal LLM tools designed to enhance
+              operational efficiency and streamline workflows.
             </p>
             <p>
               We adopted a robust{' '}
@@ -87,14 +72,12 @@ const HomeSection = () => {
               <h3 className="text-muted text-m">The Home Page</h3>
               <p className="text-s">
                 The UI, built with <span className="underline">React</span>,
-                utilizes Flask for frontend and backend communication while
-                prioritizing the user experience. Each tool has{' '}
-                <span className="underline">customizable</span> settings for
-                modifying LLMs and, uniquely, our Chatbot (VICE) allows database
-                updates. Transparent pricing is provided for developer{' '}
-                <span className="underline">convenience</span>. This hub
-                empowers developers to refine LLM tools for Sigparser's systems,
-                with the Chatbot serving as a proof of concept.
+                utilizes <span className="underline">Flask</span> for frontend
+                and backend communication. The home page contained both our
+                tools: Query Generator and VICE. These tools boasted{' '}
+                <span className="underline">customization</span> options in each
+                tools settings options, while displaying pricing changes for
+                different LLM selections.
               </p>
             </div>
           </div>
@@ -131,11 +114,11 @@ const ViceSection = () => {
             <h3 className="text-muted text-m">The Chatbot</h3>
             <p className="text-s">
               VICE (Virtual Interface for Customer Enhancement) was a playful
-              acronym for our Chatbot. As the{' '}
-              <span className="underline">lead</span> for its backend
-              development, I orchestrated the integration with{' '}
+              acronym for our Chatbot. As the lead for its backend development,
+              I orchestrated the integration with{' '}
               <span className="underline">AWS</span>, managed web scraping, and
-              crafted conversation logic through Langchain. This tool served as
+              crafted conversation logic through{' '}
+              <span className="underline">Langchain</span>. This tool served as
               a proof of concept, demonstrating that we could achieve similar
               functionality to AWS's integrated chatbot model, which cost{' '}
               <span className="underline">$30,000</span> per month, while our
@@ -205,15 +188,13 @@ const QueryGenSection = () => {
               <h3 className="text-muted text-m">The Query Generator</h3>
               <p className="text-s">
                 SigParser sought an LLM-based solution to filtering on their
-                client portals. To address this, we implemented a tool capable
-                of querying an LLM using a{' '}
+                client portals. To address this, my team and I implemented a
+                tool capable of querying an LLM using a{' '}
                 <span className="underline">preformatted</span> prompt, which
-                would return a JSON payload{' '}
-                <span className="underline">seamlessly</span> integrating into
-                their existing system. I was responsible for{' '}
-                <span className="underline">securely</span> managing login
-                credentials and completing the UI. Throughout this project, the
-                entire backend was built with Python.
+                would return a JSON payload. This payload would seamlessly
+                integrate into their{' '}
+                <span className="underline">existing system</span>, filtering
+                based on a clients prompt.
               </p>
             </div>
           </div>
@@ -306,15 +287,12 @@ function SigParser() {
 
   return (
     <div className={`${fadeIn ? 'fade-in' : ''}`}>
-      <Navigation />
       <div className="content-grid">
-        <HeroSection />
         <OverviewSection />
         <HomeSection />
         <ViceSection />
         <QueryGenSection />
         <TechStackSection />
-        <Footer />
       </div>
     </div>
   );

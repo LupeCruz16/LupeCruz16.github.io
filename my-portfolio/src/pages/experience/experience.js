@@ -1,14 +1,13 @@
 import { ai, webDevelopment, zettler } from '../../assets/Animations.js';
 import useHoverScale from '../../effects/useHoverScale.js';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import Lottie from 'react-lottie';
 import './experience.css';
 
 const projectsData = [
   {
     id: 1,
-    link: '/sigparser',
+    link: 'sigparser',
     title: 'Software Engineer',
     company: 'The ZETTLER Group',
     duration: '2024-Present',
@@ -17,7 +16,7 @@ const projectsData = [
   },
   {
     id: 2,
-    link: '/sigparser',
+    link: 'sigparser',
     title: 'AI Integrations',
     company: 'SigParser',
     duration: '2023-2024',
@@ -26,7 +25,7 @@ const projectsData = [
   },
   {
     id: 3,
-    link: '/s3',
+    link: 's3',
     title: 'Wordpress Redesign',
     company: 'S3 Coffee Bar',
     duration: 'Completed in 2023',
@@ -35,7 +34,7 @@ const projectsData = [
   },
 ];
 
-const Expereince = () => {
+const Expereince = ({ toggleModal }) => {
   const { handleMouseEnter, handleMouseLeave, getScaleStyle } = useHoverScale();
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const [showDetails, setShowDetails] = useState(true);
@@ -82,13 +81,14 @@ const Expereince = () => {
                   <span>{currentProjectIndex + 1}</span>/
                   <span className="text-muted">{projectsData.length}</span>
                 </p>
-                <Link
-                  to={currentProject.link}
+                <div
+                  onClick={() => toggleModal(currentProject.link)}
                   className="project-specifics-row link-styles"
                 >
                   <h2>{currentProject.title}</h2>
-                </Link>
-                <Link
+                </div>
+                <div
+                  onClick={() => toggleModal(currentProject.link)}
                   to={currentProject.link}
                   className="project-specifics-row text-muted link-styles"
                 >
@@ -98,14 +98,15 @@ const Expereince = () => {
                       : ''}
                     {currentProject.duration}
                   </p>
-                </Link>
+                </div>
                 <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
                   <li>{currentProject.skills[0]}</li>
                   <li>{currentProject.skills[1]}</li>
                   <li>{currentProject.skills[2]}</li>
                 </ul>
               </div>
-              <Link
+              <div
+                onClick={() => toggleModal(currentProject.link)}
                 to={currentProject.link}
                 className="project-eye-catcher-container link-styles"
               >
@@ -117,7 +118,7 @@ const Expereince = () => {
                     rendererSettings: { preserveAspectRatio: 'xMidYMid slice' },
                   }}
                 />
-              </Link>
+              </div>
             </div>
           </div>
 

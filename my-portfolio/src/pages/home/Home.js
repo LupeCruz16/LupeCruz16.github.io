@@ -13,8 +13,8 @@ function Home({ toggleModal }) {
     <div className={`${fadeIn ? 'fade-in' : ''}`}>
       <div className="scroll-container">
         <ScrollIndicator />
-        <HeroSection toggleModal={toggleModal} />
-        <Experience />
+        <HeroSection />
+        <Experience toggleModal={toggleModal} />
         <AboutMe />
         <Contact />
       </div>

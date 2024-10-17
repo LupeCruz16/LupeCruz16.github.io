@@ -49,6 +49,10 @@
   background-color: var(--accent-200);
 }
 
+.global-bttn:hover {
+  cursor: pointer;
+}
+
 .global-bttn a {
   text-decoration: none;
 }

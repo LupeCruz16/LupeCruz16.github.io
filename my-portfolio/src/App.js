@@ -2,16 +2,16 @@ import './globalCSS/common.css';
 import './globalCSS/constants.css';
 import { useState } from 'react';
 
-import Navigation from './components/navigation/Navigation.js';
-
-// import S3 from './pages/s3/S3.js';
+// Navigation Paths
+import S3 from './pages/s3/S3.js';
 import Home from './pages/home/Home.js';
 import SigParser from './pages/sigparser/SigParser.js';
 import InProgress from './pages/inProgress/inProgress.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+// Components
+import Navigation from './components/navigation/Navigation.js';
 import Modal from './components/Modal.js';
-import Contact from './pages/contact/Contact.js';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -26,10 +26,9 @@ function App() {
     <div className="App">
       <main className="App-main">
         <Router>
-          <Navigation toggleModal={toggleModal} />
+          <Navigation />
           <Routes className="content-grid">
             <Route path="/" element={<Home toggleModal={toggleModal} />} />
-            <Route path="/sigparser" element={<SigParser />} />
 
             {/* Currently using in progress page as 404 page */}
             <Route path="*" element={<InProgress />} />
@@ -38,10 +37,8 @@ function App() {
 
         {/* Dynamic Modal */}
         <Modal show={showModal} onClose={() => toggleModal(null)}>
-          {modalContent === 'contact' && <Contact />}
-
-          {/* Example of other modal */}
-          {/* {modalContent === 'example' && <Example />} */}
+          {modalContent === 'sigparser' && <SigParser />}
+          {modalContent === 's3' && <S3 />}
         </Modal>
       </main>
     </div>

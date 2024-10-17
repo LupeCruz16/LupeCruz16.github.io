@@ -9,7 +9,7 @@ import {
   CloseSVGIcon,
 } from '../../assets/SVGs.js';
 
-function Navigation({ toggleModal }) {
+function Navigation() {
   const { handleMouseEnter, handleMouseLeave, getScaleStyle } = useHoverScale();
   const isMobileView = useMobileView();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
