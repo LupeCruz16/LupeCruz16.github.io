@@ -16,26 +16,23 @@ const OverviewSection = () => {
   return (
     <div id="overview" className="sigparser-overview-container full-width">
       <div className="content-grid text-color-bg text-align-left">
-        <h2 className="text-m overview-title">Overview:</h2>
+        <h2 className="overview-title">Overview:</h2>
         <div className="grid-1-3-col-container" style={{ alignItems: 'start' }}>
-          <div
-            className="sigparser-overview-details"
-            style={{ paddingTop: '12px' }}
-          >
+          <div className="sigparser-overview-details">
             <div>
-              <h3 className="text-xs">Company</h3>
-              <p className="text-s">SigParser</p>
+              <p>Company</p>
+              <h3>SigParser</h3>
             </div>
             <div>
-              <h3 className="text-xs">Role</h3>
-              <p className="text-s">Developer</p>
+              <p>Role</p>
+              <h3>Developer</h3>
             </div>
             <div>
-              <h3 className="text-xs">Duration</h3>
-              <p className="text-s">2023-2024</p>
+              <p>Duration</p>
+              <h3>2023-2024</h3>
             </div>
           </div>
-          <div className="sigparser-overview-details text-s">
+          <div className="sigparser-overview-details">
             <p>
               For my senior capstone project, I had the distinct opportunity to
               collaborate with SigParser, a local company based in San Marcos.
@@ -69,8 +66,8 @@ const HomeSection = () => {
         <article className="text-align-left">
           <div className="phases-details-container">
             <div className="phase-1-and-3-description">
-              <h3 className="text-muted text-m">The Home Page</h3>
-              <p className="text-s">
+              <h2 className="text-muted">The Home Page</h2>
+              <p>
                 The UI, built with <span className="underline">React</span>,
                 utilizes <span className="underline">Flask</span> for frontend
                 and backend communication. The home page contained both our
@@ -111,8 +108,8 @@ const ViceSection = () => {
           style={{ alignItems: 'center' }}
         >
           <article>
-            <h3 className="text-muted text-m">The Chatbot</h3>
-            <p className="text-s">
+            <h2 className="text-muted">The Chatbot</h2>
+            <p>
               VICE (Virtual Interface for Customer Enhancement) was a playful
               acronym for our Chatbot. As the lead for its backend development,
               I orchestrated the integration with{' '}
@@ -127,7 +124,7 @@ const ViceSection = () => {
           </article>
 
           <div className="phase-2-img-container">
-            <div className="phase-2-proven-concept-container text-s">
+            <div className="phase-2-proven-concept-container">
               <div>
                 <CurvedArrowSVGIcon
                   className="curved-arrow-top-left"
@@ -185,8 +182,8 @@ const QueryGenSection = () => {
         <article className="text-align-left">
           <div className="phases-details-container">
             <div className="phase-1-and-3-description">
-              <h3 className="text-muted text-m">The Query Generator</h3>
-              <p className="text-s">
+              <h2 className="text-muted">The Query Generator</h2>
+              <p>
                 SigParser sought an LLM-based solution to filtering on their
                 client portals. To address this, my team and I implemented a
                 tool capable of querying an LLM using a{' '}
@@ -217,7 +214,7 @@ const TechStackSection = () => {
 
   return (
     <div className="full-width text-align-left tech-stack-section">
-      <h2 className="tech-stack-title text-m text-muted">The Tech Stack</h2>
+      <h2 className="tech-stack-title text-muted">The Tech Stack</h2>
       <div className="tech-stack-graphics">
         <div
           className="tech-item"

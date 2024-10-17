@@ -1,13 +1,8 @@
-.in-progress-container {
+.s3-content-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  width: 100%;
-  padding: 10vw 0 10vw 0;
-}
-
-.in-progress-styles {
-  justify-content: center;
-  align-items: center;
+  text-align: left;
+  justify-content: space-between;
+  flex-direction: column;
+  /* padding: 60px; */
+  height: 100%;
 }
