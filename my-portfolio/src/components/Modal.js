@@ -27,6 +27,9 @@ const Modal = ({ show, onClose, children, title = null }) => {
     overflowY: 'auto',
     width: '80%',
     position: 'relative',
+    // Scrollbar styling for Firefox
+    scrollbarWidth: 'thin', // Make the scrollbar thin
+    scrollbarColor: '#555 #222', // Dark scrollbar thumb and track
   };
 
   const topBarStyle = {
@@ -49,9 +52,28 @@ const Modal = ({ show, onClose, children, title = null }) => {
     cursor: 'pointer',
   };
 
+  // Custom scrollbar style for WebKit browsers (Chrome, Safari)
+  const customScrollBarStyle = `
+    /* WebKit browsers */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #222; /* Dark track */
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #555; /* Dark thumb */
+      border-radius: 10px;
+      border: 2px solid #222; /* Adds some space around the thumb */
+    }
+  `;
+
   return (
     <div style={overlayStyle} onClick={onClose}>
       <div style={contentStyle} onClick={(e) => e.stopPropagation()}>
+        {/* Inject custom scrollbar style */}
+        <style>{customScrollBarStyle}</style>
+
         {/* Sticky Top Bar with X to Close */}
         <div style={topBarStyle}>
           {title && <p>{title}</p>} {/* Only show if title is not null */}

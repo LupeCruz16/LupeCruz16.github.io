@@ -5,6 +5,7 @@ import { useState } from 'react';
 // Navigation Paths
 import S3 from './pages/s3/S3.js';
 import Home from './pages/home/Home.js';
+import Zettler from './pages/zettler/Zettler.js';
 import SigParser from './pages/sigparser/SigParser.js';
 import InProgress from './pages/inProgress/inProgress.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -43,6 +44,7 @@ function App() {
           onClose={() => toggleModal(null, null)}
           title={modalTitle}
         >
+          {modalContent === 'zettler' && <Zettler />}
           {modalContent === 'sigparser' && <SigParser />}
           {modalContent === 's3' && <S3 />}
         </Modal>

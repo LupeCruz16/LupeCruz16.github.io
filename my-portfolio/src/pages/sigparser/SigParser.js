@@ -5,91 +5,14 @@ import {
   StraightArrowSVGIcon,
   CurvedArrowSVGIcon,
 } from '../../assets/SVGs.js';
+import ExpereinceOverview from '../../components/experience/experienceOverview.js';
 import { sigparser_home, vice_demo, query_demo } from '../../assets/Videos.js';
+import InfoSection from '../../components/experience/infoSection.js';
 import { langchain, sigparser_proof } from '../../assets/Images.js';
 import React, { useRef, useEffect, useState } from 'react';
 import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
 import { PythonSVGIcon } from '../../assets/SVGs.js';
 import './sigparser.css';
-
-const OverviewSection = () => {
-  return (
-    <div id="overview" className="sigparser-overview-container full-width">
-      <div className="content-grid text-color-bg text-align-left">
-        <h2 className="overview-title">Overview:</h2>
-        <div className="grid-1-3-col-container" style={{ alignItems: 'start' }}>
-          <div className="sigparser-overview-details">
-            <div>
-              <p>Company</p>
-              <h3>SigParser</h3>
-            </div>
-            <div>
-              <p>Role</p>
-              <h3>Developer</h3>
-            </div>
-            <div>
-              <p>Duration</p>
-              <h3>2023-2024</h3>
-            </div>
-          </div>
-          <div className="sigparser-overview-details">
-            <p>
-              For my senior capstone project, I had the distinct opportunity to
-              collaborate with SigParser, a local company based in San Marcos.
-              Over the course of this year-long endeavor, my team and I
-              developed a suite of internal LLM tools designed to enhance
-              operational efficiency and streamline workflows.
-            </p>
-            <p>
-              We adopted a robust{' '}
-              <span className="underline">CI/CD pipeline</span>, leveraging{' '}
-              <span className="underline">Amazon Bedrock</span> services to
-              ensure security while optimizing cost-effectiveness. This
-              foundation enabled us to deploy a centralized platform, built with
-              React, that provided SigParser's staff with seamless access to
-              manage and adapt their tools effectively. This project not only
-              honed my technical skills but also reinforced the importance of{' '}
-              <span className="underline">agile methodologies</span> in
-              real-world software development.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const HomeSection = () => {
-  return (
-    <div id="home" className="sigparser-phase-container full-width">
-      <div className="grid-1-1half-col-container">
-        <article className="text-align-left">
-          <div className="phases-details-container">
-            <div className="phase-1-and-3-description">
-              <h2 className="text-muted">The Home Page</h2>
-              <p>
-                The UI, built with <span className="underline">React</span>,
-                utilizes <span className="underline">Flask</span> for frontend
-                and backend communication. The home page contained both our
-                tools: Query Generator and VICE. These tools boasted{' '}
-                <span className="underline">customization</span> options in each
-                tools settings options, while displaying pricing changes for
-                different LLM selections.
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <div className="video-container">
-          <video autoPlay loop muted playsInline className="rounded-left">
-            <source src={sigparser_home} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const ViceSection = () => {
   const videoRef = useRef(null);
@@ -164,39 +87,6 @@ const ViceSection = () => {
         <source src={vice_demo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-    </div>
-  );
-};
-
-const QueryGenSection = () => {
-  return (
-    <div id="querygen" className="sigparser-phase-container full-width">
-      <div className="grid-1half-1-col-container">
-        <div className="video-container">
-          <video autoPlay loop muted playsInline className="rounded-right">
-            <source src={query_demo} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <article className="text-align-left">
-          <div className="phases-details-container">
-            <div className="phase-1-and-3-description">
-              <h2 className="text-muted">The Query Generator</h2>
-              <p>
-                SigParser sought an LLM-based solution to filtering on their
-                client portals. To address this, my team and I implemented a
-                tool capable of querying an LLM using a{' '}
-                <span className="underline">preformatted</span> prompt, which
-                would return a JSON payload. This payload would seamlessly
-                integrate into their{' '}
-                <span className="underline">existing system</span>, filtering
-                based on a clients prompt.
-              </p>
-            </div>
-          </div>
-        </article>
-      </div>
     </div>
   );
 };
@@ -285,10 +175,44 @@ function SigParser() {
   return (
     <section className={`${fadeIn ? 'fade-in' : ''}`}>
       <div className="content-grid">
-        <OverviewSection />
-        <HomeSection />
+        <ExpereinceOverview
+          company="SigParser"
+          role="Developer"
+          duration="2023-2024"
+          details={[
+            {
+              text: 'For my senior capstone project, I had the distinct opportunity to collaborate with SigParser, a local company based in San Marcos. We adopted a robust CI/CD pipeline, leveraging Amazon Bedrock services to ensure security while optimizing cost-effectiveness.',
+              underline: ['CI/CD', 'Amazon Bedrock'],
+            },
+            {
+              text: 'This project honed my technical skills and reinforced the importance of agile methodologies in real-world software development.',
+              underline: ['agile methodologies'],
+            },
+          ]}
+        />
+
+        <InfoSection
+          title="The Home Page"
+          description="The UI, built with React, utilizes Flask for frontend and backend communication. The home page contained both our tools: Query Generator and VICE. These tools boasted customization options in each tools settings options, while displaying pricing changes for different LLM selections."
+          underlineWords={['React', 'Flask', 'customization']}
+          mediaType="video"
+          mediaSrc={sigparser_home}
+          mediaAlt="SigParser Home Page Video"
+          mediaFirst={false}
+        />
+
         <ViceSection />
-        <QueryGenSection />
+
+        <InfoSection
+          title="The Query Generator"
+          description="SigParser sought an LLM-based solution to filtering on their client portals. To address this, my team and I implemented a tool capable of querying an LLM using a preformatted prompt, which would return a JSON payload. This payload would seamlessly integrate into their existing system, filtering based on a clients prompt."
+          underlineWords={['preformatted', 'existing system']}
+          mediaType="video"
+          mediaSrc={query_demo}
+          mediaAlt="Query Generator Video"
+          mediaFirst={true}
+        />
+
         <TechStackSection />
       </div>
     </section>

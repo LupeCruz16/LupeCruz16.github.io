@@ -5,11 +5,7 @@ import '../../globalCSS/constants.css';
 
 const OverviewSection = () => {
   return (
-    <div
-      id="overview"
-      className="sigparser-overview-container full-width"
-      style={{ padding: '1vw 0 1vw 0', marginBottom: '5vw' }}
-    >
+    <div className="s3-overview-container full-width">
       <div
         className="content-grid text-color-bg text-align-left"
         style={{ padding: '20px' }}

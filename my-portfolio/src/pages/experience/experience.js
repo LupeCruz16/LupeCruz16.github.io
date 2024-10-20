@@ -7,7 +7,7 @@ import './experience.css';
 const projectsData = [
   {
     id: 1,
-    link: 'sigparser',
+    link: 'zettler',
     title: 'Software Engineer',
     company: 'The ZETTLER Group',
     duration: '2024-Present',
