@@ -7,11 +7,12 @@ import {
 } from '../../assets/SVGs.js';
 import ExpereinceOverview from '../../components/experience/experienceOverview.js';
 import { sigparser_home, vice_demo, query_demo } from '../../assets/Videos.js';
+import ExperienceStack from '../../components/experience/experienceStack.js';
 import InfoSection from '../../components/experience/infoSection.js';
 import { langchain, sigparser_proof } from '../../assets/Images.js';
-import React, { useRef, useEffect, useState } from 'react';
 import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
 import { PythonSVGIcon } from '../../assets/SVGs.js';
+import React, { useRef, useEffect } from 'react';
 import './sigparser.css';
 
 const ViceSection = () => {
@@ -91,84 +92,6 @@ const ViceSection = () => {
   );
 };
 
-const TechStackSection = () => {
-  const [hoverInfo, setHoverInfo] = useState('');
-
-  const handleMouseEnter = (info) => {
-    setHoverInfo(info);
-  };
-
-  const handleMouseLeave = () => {
-    setHoverInfo('');
-  };
-
-  return (
-    <div className="full-width text-align-left tech-stack-section">
-      <h2 className="tech-stack-title text-muted">The Tech Stack</h2>
-      <div className="tech-stack-graphics">
-        <div
-          className="tech-item"
-          onMouseEnter={() =>
-            handleMouseEnter(
-              'Python - A powerful programming language used for backend development.'
-            )
-          }
-          onMouseLeave={handleMouseLeave}
-        >
-          <PythonSVGIcon />
-        </div>
-        <div
-          className="tech-item"
-          onMouseEnter={() =>
-            handleMouseEnter(
-              'Amazon Web Services - Cloud services for hosting and more.'
-            )
-          }
-          onMouseLeave={handleMouseLeave}
-        >
-          <AmazonSVGIcon />
-        </div>
-        <div
-          className="tech-item"
-          onMouseEnter={() =>
-            handleMouseEnter(
-              'Langchain - A library for processing language data.'
-            )
-          }
-          onMouseLeave={handleMouseLeave}
-        >
-          <img src={langchain} alt="Langchain" />
-        </div>
-        <div
-          className="tech-item"
-          onMouseEnter={() =>
-            handleMouseEnter(
-              'React - A JavaScript library for building user interfaces.'
-            )
-          }
-          onMouseLeave={handleMouseLeave}
-        >
-          <ReactSVGIcon />
-        </div>
-        <div
-          className="tech-item"
-          onMouseEnter={() =>
-            handleMouseEnter(
-              'Flask - A lightweight WSGI web application framework.'
-            )
-          }
-          onMouseLeave={handleMouseLeave}
-        >
-          <FlaskSVGIcon />
-        </div>
-      </div>
-      {hoverInfo && (
-        <div className="hover-info text-s text-color-bg">{hoverInfo}</div>
-      )}
-    </div>
-  );
-};
-
 function SigParser() {
   const fadeIn = useFadeIn();
 
@@ -213,7 +136,42 @@ function SigParser() {
           mediaFirst={true}
         />
 
-        <TechStackSection />
+        <ExperienceStack
+          title="The Tech Stack"
+          techStack={[
+            {
+              iconType: 'svg',
+              IconComponent: PythonSVGIcon,
+              description:
+                'Python - Used as the primary backend programming language to implement server-side logic and handle data processing.',
+            },
+            {
+              iconType: 'svg',
+              IconComponent: AmazonSVGIcon,
+              description:
+                'Amazon Web Services (AWS) - Integrated Lambda for serverless functions and S3 for data storage, enabling seamless scalability and cost efficiency.',
+            },
+            {
+              iconType: 'image',
+              imageSrc: langchain,
+              altText: 'Langchain',
+              description:
+                'Langchain - Essential for building the chatbot’s logic, including managing prompt templates and processing Natural Language Toolkit (NLTK) data.',
+            },
+            {
+              iconType: 'svg',
+              IconComponent: ReactSVGIcon,
+              description:
+                'React - Our frontend development framework used to create an interactive and dynamic user interface for the web application.',
+            },
+            {
+              iconType: 'svg',
+              IconComponent: FlaskSVGIcon,
+              description:
+                'Flask - Acted as the middleware, facilitating communication between the React frontend and Python backend to ensure smooth data exchange.',
+            },
+          ]}
+        />
       </div>
     </section>
   );
