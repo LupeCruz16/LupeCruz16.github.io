@@ -1,19 +1,20 @@
-import {
-  FlaskSVGIcon,
-  ReactSVGIcon,
-  AmazonSVGIcon,
-  StraightArrowSVGIcon,
-  CurvedArrowSVGIcon,
-} from '../../assets/SVGs.js';
 import ExpereinceOverview from '../../components/experience/experienceOverview.js';
 import { sigparser_home, vice_demo, query_demo } from '../../assets/Videos.js';
 import ExperienceStack from '../../components/experience/experienceStack.js';
 import InfoSection from '../../components/experience/infoSection.js';
 import { langchain, sigparser_proof } from '../../assets/Images.js';
 import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
-import { PythonSVGIcon } from '../../assets/SVGs.js';
 import React, { useRef, useEffect } from 'react';
 import './sigparser.css';
+
+import {
+  FlaskSVGIcon,
+  PythonSVGIcon,
+  ReactSVGIcon,
+  AmazonSVGIcon,
+  StraightArrowSVGIcon,
+  CurvedArrowSVGIcon,
+} from '../../assets/SVGs.js';
 
 const ViceSection = () => {
   const videoRef = useRef(null);

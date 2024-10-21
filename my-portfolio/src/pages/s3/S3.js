@@ -1,53 +1,7 @@
+import ExpereinceOverview from '../../components/experience/experienceOverview.js';
 import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
 import { s3_home } from '../../assets/Images.js';
 import './s3.css';
-import '../../globalCSS/constants.css';
-
-const OverviewSection = () => {
-  return (
-    <div className="s3-overview-container full-width">
-      <div
-        className="content-grid text-color-bg text-align-left"
-        style={{ padding: '20px' }}
-      >
-        <h1 className="overview-title" style={{ paddingBottom: '10px' }}>
-          Overview:
-        </h1>
-        <div className="grid-1-3-col-container" style={{ alignItems: 'start' }}>
-          <div className="sigparser-overview-details">
-            <div>
-              <p>Company</p>
-              <h3>S3 Coffee Bar</h3>
-            </div>
-            <div>
-              <p>Role</p>
-              <h3>Developer</h3>
-            </div>
-            <div>
-              <p>Duration</p>
-              <h3>2023</h3>
-            </div>
-          </div>
-          <div className="sigparser-overview-details">
-            <p>
-              I had the distinct opportunity to work with a local coffee shop. I
-              used my Software Engineering practices to best understand the
-              owner's goals and business needs. The top priority was modernizing
-              her business site to attract more customers and improve the user
-              experience.
-            </p>
-            <p>
-              Throughout the project, I focused on improving site performance
-              and ensuring that the design was mobile-friendly. We also made
-              sure the website reflected the shop's unique atmosphere while
-              remaining easy to navigate for customers.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const ChallengesSection = () => {
   return (
@@ -76,9 +30,24 @@ function S3() {
     <div className={`${fadeIn ? 'fade-in' : ''}`}>
       <section className="content-grid">
         <div className="full-width">
+          <ExpereinceOverview
+            company="S3 Coffee Car"
+            role="Developer"
+            duration="2023"
+            details={[
+              {
+                text: 'I had the distinct opportunity to work with a local coffee shop. I used my Software Engineering practices to best understand the owners goals and business needs. The top priority was modernizing her business site to attract more customers and improve the user experience.',
+                underline: ['goals', 'modernizing'],
+              },
+              {
+                text: 'Throughout the project, I focused on improving site performance and ensuring that the design was mobile-friendly. We also made sure the website reflected the shops unique atmosphere while remaining easy to navigate for customers.',
+                underline: ['mobile-friendly'],
+              },
+            ]}
+          />
+
           <div className="grid-1-1-col-container">
             <div className="s3-content-container content-grid">
-              <OverviewSection />
               <ChallengesSection />
             </div>
             <img src={s3_home} alt="S3 Coffee Bar Home Page"></img>
