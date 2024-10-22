@@ -68,7 +68,6 @@ const Modal = ({ show, onClose, children, title = null }) => {
     @media only screen and (max-width: 425px) {
       .modal-content {
         width: 100%;
-        max-height: 100vh;
       }
     }
   `;
