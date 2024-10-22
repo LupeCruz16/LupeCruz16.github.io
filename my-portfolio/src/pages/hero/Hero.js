@@ -27,7 +27,7 @@ function HeroSection() {
               onMouseEnter={() => handleMouseEnter('resume')}
               onMouseLeave={handleMouseLeave}
             >
-              <a href="/resume/Resume.pdf" download="Guadalupes_Resume.pdf">
+              <a href="/Resume.pdf" download="Guadalupes_Resume.pdf">
                 <p>Download Resume</p>
               </a>
             </button>

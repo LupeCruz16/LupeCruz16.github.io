@@ -91,7 +91,7 @@ function Navigation() {
                 onMouseLeave={handleMouseLeave}
               >
                 <a
-                  href="/resume/Resume.pdf"
+                  href="/Resume.pdf"
                   download="Guadalupes_Resume.pdf"
                   className=""
                 >
@@ -144,7 +144,7 @@ function Navigation() {
                   onMouseLeave={handleMouseLeave}
                 >
                   <a
-                    href="/resume/Resume.pdf"
+                    href="/Resume.pdf"
                     download="Guadalupes_Resume.pdf"
                     className=""
                   >
