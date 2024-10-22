@@ -43,14 +43,9 @@ function HeroSection() {
             </button>
           </div>
         </div>
-        <div>
+        <div className="hero-image-container">
           <div className="global-circular-image">
-            <img
-              src={headshot}
-              alt="Guadalupe Cruz"
-              loading="lazy"
-              className="hero-image"
-            />
+            <img src={headshot} alt="Guadalupe Cruz" loading="lazy" />
           </div>
         </div>
       </div>

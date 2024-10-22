@@ -1,7 +1,6 @@
-/* Hook Section */
 .hero-section {
-  gap: 5vw;
-  width: 100%;
+  gap: 2vw;
+  width: 95%;
   display: grid;
   margin-left: auto;
   margin-right: auto;
@@ -9,6 +8,12 @@
   position: relative;
   grid-template-columns: 2fr 1fr;
   height: calc(100vh - 20vh);
+  justify-content: center;
+}
+
+.hero-image-container {
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -28,7 +33,8 @@
   padding-top: 10px;
 }
 
-.hero-image {
-  width: 550px;
-  height: 550px;
+@media only screen and (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+  }
 }

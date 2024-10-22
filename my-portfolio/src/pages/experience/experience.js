@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 import Lottie from 'react-lottie';
 import './experience.css';
 
+// Define the breakpoint for non-desktop devices
+const isDesktop = window.innerWidth >= 1024;
+
 const projectsData = [
   {
     id: 1,
@@ -50,11 +53,11 @@ const Expereince = ({ toggleModal }) => {
   const currentProject = projectsData[currentProjectIndex];
 
   return (
-    // home-scroll-section class used for scrolling on home page
     <div className="full-width home-scroll-section" id="experience">
       <div className="projects-section">
         <div className="projects-section-title text-m">Experience</div>
         <div className="project-layout">
+          {/* Previous Button */}
           <div
             onClick={() =>
               updateProject(
@@ -81,53 +84,108 @@ const Expereince = ({ toggleModal }) => {
                   <span>{currentProjectIndex + 1}</span>/
                   <span className="text-muted">{projectsData.length}</span>
                 </p>
-                <div
-                  onClick={() =>
-                    toggleModal(currentProject.link, currentProject.title)
-                  }
-                  className="project-specifics-row link-styles"
-                >
-                  <h2>{currentProject.title}</h2>
-                </div>
-                <div
-                  onClick={() =>
-                    toggleModal(currentProject.link, currentProject.title)
-                  }
-                  to={currentProject.link}
-                  className="project-specifics-row text-muted link-styles"
-                >
-                  <p>
-                    {currentProject.company
-                      ? `${currentProject.company} | `
-                      : ''}
-                    {currentProject.duration}
-                  </p>
-                </div>
+
+                {/* Project Title and Company */}
+                {isDesktop ? (
+                  <>
+                    {/* Content is clickable for desktop */}
+                    <div
+                      onClick={() =>
+                        toggleModal(currentProject.link, currentProject.title)
+                      }
+                      className="project-specifics-row link-styles"
+                    >
+                      <h2>{currentProject.title}</h2>
+                    </div>
+                    <div
+                      onClick={() =>
+                        toggleModal(currentProject.link, currentProject.title)
+                      }
+                      className="project-specifics-row text-muted link-styles"
+                    >
+                      <p>
+                        {currentProject.company
+                          ? `${currentProject.company} | `
+                          : ''}
+                        {currentProject.duration}
+                      </p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    {/* Content is not clickable for non-desktop */}
+                    <div className="project-specifics-row">
+                      <h2>{currentProject.title}</h2>
+                    </div>
+                    <div className="project-specifics-row text-muted">
+                      <p>
+                        {currentProject.company
+                          ? `${currentProject.company} | `
+                          : ''}
+                        {currentProject.duration}
+                      </p>
+                    </div>
+                  </>
+                )}
+
+                {/* Skills List */}
                 <ul style={{ listStyleType: 'circle', paddingLeft: '40px' }}>
                   <li>{currentProject.skills[0]}</li>
                   <li>{currentProject.skills[1]}</li>
                   <li>{currentProject.skills[2]}</li>
                 </ul>
+
+                {/* Open Modal Button for non-desktop */}
+                {!isDesktop && (
+                  <button
+                    className="global-bttn"
+                    style={{ marginTop: '5px', marginLeft: '40px' }}
+                    onClick={() =>
+                      toggleModal(currentProject.link, currentProject.title)
+                    }
+                  >
+                    <p>View Details</p>
+                  </button>
+                )}
               </div>
-              <div
-                onClick={() =>
-                  toggleModal(currentProject.link, currentProject.title)
-                }
-                to={currentProject.link}
-                className="project-eye-catcher-container link-styles"
-              >
-                <Lottie
-                  options={{
-                    loop: true,
-                    autoplay: true,
-                    animationData: currentProject.animation,
-                    rendererSettings: { preserveAspectRatio: 'xMidYMid slice' },
-                  }}
-                />
-              </div>
+
+              {/* Eye-catching Animation */}
+              {isDesktop ? (
+                <div
+                  onClick={() =>
+                    toggleModal(currentProject.link, currentProject.title)
+                  }
+                  className="project-eye-catcher-container link-styles"
+                >
+                  <Lottie
+                    options={{
+                      loop: true,
+                      autoplay: true,
+                      animationData: currentProject.animation,
+                      rendererSettings: {
+                        preserveAspectRatio: 'xMidYMid slice',
+                      },
+                    }}
+                  />
+                </div>
+              ) : (
+                <div className="project-eye-catcher-container">
+                  <Lottie
+                    options={{
+                      loop: true,
+                      autoplay: true,
+                      animationData: currentProject.animation,
+                      rendererSettings: {
+                        preserveAspectRatio: 'xMidYMid slice',
+                      },
+                    }}
+                  />
+                </div>
+              )}
             </div>
           </div>
 
+          {/* Next Button */}
           <div
             onClick={() =>
               updateProject(

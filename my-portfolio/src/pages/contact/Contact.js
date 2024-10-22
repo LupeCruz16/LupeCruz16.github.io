@@ -117,7 +117,7 @@ const Contact = () => {
 
         <div className="contact-footer-container">
           <div>
-            <p>Powered by AWS: Lambda, SES and API Gateway</p>
+            <p>Created using AWS: Lambda, SES and API Gateway</p>
           </div>
           <div>
             <a href="mailto:guacruz.16@gmail.com" className="global-link-2">
