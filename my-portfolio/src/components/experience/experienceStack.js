@@ -1,14 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ExperienceStack = ({ title, techStack }) => {
-  const [hoverInfo, setHoverInfo] = useState('');
+  const [hoverInfo, setHoverInfo] = useState(''); // To display the hover/tap content
+  const [selectedTech, setSelectedTech] = useState(null); // To track the selected tech in mobile view
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect if the screen is in mobile view (below 768px)
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize(); // Initialize on mount
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleMouseEnter = (info) => {
-    setHoverInfo(info);
+    if (!isMobile) {
+      setHoverInfo(info);
+    }
   };
 
   const handleMouseLeave = () => {
-    setHoverInfo('');
+    if (!isMobile) {
+      setHoverInfo('');
+    }
+  };
+
+  const handleTechClick = (tech) => {
+    if (isMobile) {
+      if (selectedTech === tech) {
+        setSelectedTech(null); // Deselect if the same tech is tapped again
+        setHoverInfo('');
+      } else {
+        setSelectedTech(tech);
+        setHoverInfo(tech.description);
+      }
+    }
   };
 
   return (
@@ -49,15 +80,36 @@ const ExperienceStack = ({ title, techStack }) => {
           }
 
           .hover-info {
-            position: absolute;
-            bottom: 6vw;
+            bottom: 80px;
             left: 50%;
+            text-align: center;
             transform: translateX(-50%);
             background: var(--accent-200);
             padding: 10px;
             border-radius: 8px;
             z-index: 1;
-            white-space: nowrap;
+          }
+
+          @media (min-width: 768px) {
+            .hover-info {
+              position: absolute;
+            }
+          }
+
+          @media (max-width: 768px) {
+            .tech-stack-graphics {
+              gap: 20px;
+              margin-bottom: 60px;
+              justify-content: center;
+            }
+
+            .tech-stack-graphics div {
+              max-width: 60px;
+            }
+
+            .hover-info {
+              position: relative;
+            }
           }
         `}
       </style>
@@ -66,9 +118,10 @@ const ExperienceStack = ({ title, techStack }) => {
         {techStack.map((tech, index) => (
           <div
             key={index}
-            className="tech-item"
+            className={`tech-item ${selectedTech === tech ? 'active' : ''}`}
             onMouseEnter={() => handleMouseEnter(tech.description)}
             onMouseLeave={handleMouseLeave}
+            onClick={() => handleTechClick(tech)} // Handle tap/click event for mobile
           >
             {tech.iconType === 'svg' ? (
               <tech.IconComponent />
