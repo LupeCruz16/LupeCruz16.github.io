@@ -30,7 +30,7 @@
 }
 
 .personal-logo-wapper {
-  width: 4vw;
+  width: 80px;
   height: auto;
 }
 
@@ -41,53 +41,124 @@
 }
 
 .nav-links-right {
-  gap: max(60px, 20px);
+  gap: max(60px, 10px);
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: flex-end;
 }
 
+/* Mobile CSS */
+.mobile-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .mobile-menu-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  margin-left: 50%;
-  width: 50%;
+  width: 0;
   height: 100vh;
-  background-color: white;
-  background-color: rgba(255, 255, 255, 0.6);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   z-index: 1001;
+  transition: width 0.3s ease;
+  backdrop-filter: blur(5px);
 }
 
 .close-nav-svg-wrapper {
-  width: 8vw;
+  width: 40px;
   height: auto;
-  padding-bottom: 4vw;
+  padding-bottom: 20px;
 }
 
 .mobile-menu-links {
   display: flex;
-  flex-direction: column;
-  padding-left: 5vw;
-  padding-top: 5vw;
+  gap: 40px;
+  padding-left: 40px;
+  padding-top: 40px;
   text-align: left;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  flex-direction: column;
+}
+
+.mobile-menu-overlay.open {
+  width: 100%;
 }
 
 @media (max-width: 480px) {
-  .hamburgerSVGWrapper {
-    width: 8vw;
+  .primary-header {
+    height: 80px;
+  }
+
+  .primary-header_layout {
+    display: block;
+  }
+
+  .mobile-icon {
+    width: 40px;
     height: auto;
   }
 
-  .navLinks {
-    justify-content: flex-end;
-    align-items: flex-end;
-    height: auto;
+  .nav-link {
+    padding-left: 2px;
+  }
+
+  .personal-logo-wapper {
+    width: 60px;
+  }
+}
+
+/* Responsive CSS for Desktop Mode */
+@media (max-width: 920px) {
+  .personal-logo-wapper {
+    display: none;
+  }
+
+  .primary-header_layout {
+    display: block;
+  }
+
+  .nav-links-right {
+    gap: 30px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .personal-logo-wapper {
+    display: block;
+  }
+
+  .primary-header_layout {
+    display: flex;
+  }
+
+  .nav-links-right button {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .personal-logo-wapper {
+    display: none;
+  }
+
+  .primary-header_layout {
+    display: block;
+  }
+
+  .nav-links-right button {
+    display: none;
   }
 }

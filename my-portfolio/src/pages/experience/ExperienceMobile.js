@@ -3,7 +3,10 @@ import Lottie from 'react-lottie';
 
 const ExperienceMobile = ({ toggleModal, projectsData }) => {
   return (
-    <div className="experience-mobile-container text-align-left">
+    <div
+      className="experience-mobile-container text-align-left"
+      id="experience"
+    >
       <h2 className="experience-mobile-title">Experience</h2>
       {projectsData.map((project) => (
         <div key={project.id} className="experience-mobile-project">

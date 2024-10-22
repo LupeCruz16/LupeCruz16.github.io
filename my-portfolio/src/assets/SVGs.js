@@ -116,75 +116,36 @@ export const ProjectArrowSVGIcon = ({ classAttributes }) => {
 // Mobile Icons
 export const HamburgerMenuSVGIcon = () => {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#000000"
-    >
-      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+    <svg viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        stroke-linecap="round"
+        stroke-linejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         {' '}
-        <title>Menu</title>
-        <g
-          id="Page-1"
-          stroke="none"
-          strokeWidth="1"
-          fill="none"
-          fillRule="evenodd"
-        >
-          <g id="Menu">
-            <rect
-              id="Rectangle"
-              fillRule="nonzero"
-              x="0"
-              y="0"
-              width="24"
-              height="24"
-            >
-              {' '}
-            </rect>
-            <line
-              x1="5"
-              y1="7"
-              x2="19"
-              y2="7"
-              id="Path"
-              stroke="#0C0310"
-              strokeWidth="2"
-              strokeLinecap="round"
-            ></line>{' '}
-            <line
-              x1="5"
-              y1="17"
-              x2="19"
-              y2="17"
-              id="Path"
-              stroke="#0C0310"
-              strokeWidth="2"
-              strokeLinecap="round"
-            >
-              {' '}
-            </line>
-            <line
-              x1="5"
-              y1="12"
-              x2="19"
-              y2="12"
-              id="Path"
-              stroke="#0C0310"
-              strokeWidth="2"
-              strokeLinecap="round"
-            >
-              {' '}
-            </line>{' '}
-          </g>{' '}
-        </g>{' '}
+        <path
+          d="M2 12.32H22"
+          stroke="#ffffff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>{' '}
+        <path
+          d="M2 18.32H22"
+          stroke="#ffffff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>{' '}
+        <path
+          d="M2 6.32001H22"
+          stroke="#ffffff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>{' '}
       </g>
     </svg>
   );
@@ -192,23 +153,25 @@ export const HamburgerMenuSVGIcon = () => {
 
 export const CloseSVGIcon = () => {
   return (
-    <svg
-      fill="#000000"
-      version="1.1"
-      id="Capa_1"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 51.976 51.976"
-    >
-      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        stroke-linecap="round"
+        stroke-linejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         {' '}
-        <g>
-          <path d="M44.373,7.603c-10.137-10.137-26.632-10.138-36.77,0c-10.138,10.138-10.137,26.632,0,36.77s26.632,10.138,36.77,0 C54.51,34.235,54.51,17.74,44.373,7.603z M36.241,36.241c-0.781,0.781-2.047,0.781-2.828,0l-7.425-7.425l-7.778,7.778 c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l7.778-7.778l-7.425-7.425c-0.781-0.781-0.781-2.048,0-2.828 c0.781-0.781,2.047-0.781,2.828,0l7.425,7.425l7.071-7.071c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828 l-7.071,7.071l7.425,7.425C37.022,34.194,37.022,35.46,36.241,36.241z"></path>{' '}
+        <g id="Edit / Close_Circle">
+          {' '}
+          <path
+            id="Vector"
+            d="M9 9L11.9999 11.9999M11.9999 11.9999L14.9999 14.9999M11.9999 11.9999L9 14.9999M11.9999 11.9999L14.9999 9M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>{' '}
         </g>{' '}
       </g>
     </svg>

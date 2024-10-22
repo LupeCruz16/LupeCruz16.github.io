@@ -29,7 +29,7 @@ function HeroSection() {
               onMouseLeave={handleMouseLeave}
             >
               <a href={resume} download="Guadalupes_Resume.pdf">
-                <p>Download My Resume</p>
+                <p>Download Resume</p>
               </a>
             </button>
             <button

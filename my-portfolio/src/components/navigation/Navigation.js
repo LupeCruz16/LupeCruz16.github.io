@@ -46,10 +46,18 @@ function Navigation() {
 
         <div>
           {isMobileView ? (
-            <div className="hamburgerSVGWrapper" onClick={toggleMobileMenu}>
-              <HamburgerMenuSVGIcon
-                className={`line ${isMobileMenuOpen ? 'active' : ''}`}
-              />
+            <div className="mobile-header">
+              <div className="mobile-icon" onClick={toggleMobileMenu}>
+                <HamburgerMenuSVGIcon
+                  className={`line ${isMobileMenuOpen ? 'active' : ''}`}
+                />
+              </div>
+              <div
+                className="personal-logo-wapper"
+                onClick={() => scrollToSection('hero')}
+              >
+                <PersonalLogoSVG />
+              </div>
             </div>
           ) : (
             <div className="nav-links-right">
@@ -74,7 +82,7 @@ function Navigation() {
               >
                 Get in Touch
               </div>
-              <div
+              <button
                 className="global-bttn"
                 style={{
                   ...getScaleStyle('resume'),
@@ -86,12 +94,15 @@ function Navigation() {
                 <a href={resume} download="Guadalupes_Resume.pdf" className="">
                   <p>Download Resume</p>
                 </a>
-              </div>
+              </button>
             </div>
           )}
 
           {isMobileMenuOpen && (
-            <div className="mobile-menu-overlay" onClick={closeMobileMenu}>
+            <div
+              className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}
+              onClick={closeMobileMenu}
+            >
               <div className="mobile-menu-links">
                 <div className="close-nav-svg-wrapper">
                   <CloseSVGIcon onClick={closeMobileMenu} />
@@ -114,6 +125,29 @@ function Navigation() {
                 >
                   About Me
                 </div>
+                <div
+                  className="nav-link"
+                  onClick={() => scrollToSection('contact')}
+                >
+                  Get in Touch
+                </div>
+                <button
+                  className="global-bttn"
+                  style={{
+                    ...getScaleStyle('resume'),
+                    padding: '0.3rem 1rem',
+                  }}
+                  onMouseEnter={() => handleMouseEnter('resume')}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <a
+                    href={resume}
+                    download="Guadalupes_Resume.pdf"
+                    className=""
+                  >
+                    <p>Download Resume</p>
+                  </a>
+                </button>
               </div>
             </div>
           )}
