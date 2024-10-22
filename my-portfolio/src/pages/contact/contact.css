@@ -4,6 +4,7 @@
   margin-top: 1rem;
   text-align: left;
   flex-direction: column;
+  padding: 0 20px;
 }
 
 .name-email-container {
@@ -47,6 +48,7 @@ textarea {
 .contact-footer-container div {
   gap: 1rem;
   display: flex;
+  padding: 0 20px;
 }
 
 .contact-footer-container a {
@@ -71,6 +73,16 @@ textarea {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .contact-form {
+    padding: 0;
+  }
+
+  .contact-footer-container div {
+    padding: 0;
   }
 }
 

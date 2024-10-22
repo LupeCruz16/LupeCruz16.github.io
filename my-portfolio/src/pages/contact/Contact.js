@@ -1,5 +1,5 @@
 import { LinkedInSVGIcon, GitHubSVGIcon } from '../../assets/SVGs';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './contact.css';
 import SystemFeedback from '../../components/SysFeedback';
 
@@ -8,9 +8,15 @@ const Contact = () => {
     name: '',
     email: '',
     message: '',
+    honeypot: '', // Honeypot field
   });
 
   const [feedback, setFeedback] = useState({ message: '', type: '' });
+  const [startTime, setStartTime] = useState(Date.now()); // Track start time
+
+  useEffect(() => {
+    setStartTime(Date.now()); // Set start time when component mounts
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,6 +28,25 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Time-based check: reject if submitted too fast (less than 2 seconds)
+    const timeTaken = Date.now() - startTime;
+    if (timeTaken < 2000) {
+      setFeedback({
+        message: 'Form submission was too fast, please try again.',
+        type: 'negative',
+      });
+      return;
+    }
+
+    // Honeypot check: if honeypot field is filled, reject submission
+    if (formData.honeypot) {
+      setFeedback({
+        message: 'Bot detected. Submission rejected.',
+        type: 'negative',
+      });
+      return;
+    }
 
     // Create the body payload
     const requestBody = JSON.stringify({
@@ -48,7 +73,7 @@ const Contact = () => {
         message: 'Thank you for reaching out! I will get back to you asap.',
         type: 'positive',
       });
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', message: '', honeypot: '' }); // Clear form including honeypot
     } else {
       setFeedback({
         message: 'Something went wrong, please try again.',
@@ -73,6 +98,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 placeholder="Your Name"
+                autoComplete="name"
               />
             </div>
 
@@ -86,6 +112,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 placeholder="Your Email"
+                autoComplete="email"
               />
             </div>
           </div>
@@ -99,7 +126,20 @@ const Contact = () => {
               onChange={handleChange}
               required
               placeholder="Your Message"
+              autoComplete="off"
             ></textarea>
+          </div>
+
+          {/* Honeypot Field (Hidden from Users) */}
+          <div style={{ display: 'none' }}>
+            <label htmlFor="honeypot">Leave this field blank</label>
+            <input
+              type="text"
+              id="honeypot"
+              name="honeypot"
+              value={formData.honeypot}
+              onChange={handleChange}
+            />
           </div>
 
           <button type="submit" className="global-bttn">

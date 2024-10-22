@@ -64,6 +64,13 @@ const Modal = ({ show, onClose, children, title = null }) => {
       border-radius: 10px;
       border: 2px solid #222;
     }
+
+    @media only screen and (max-width: 425px) {
+      .modal-content {
+        width: 100%;
+        max-height: 100vh;
+      }
+    }
   `;
 
   return (

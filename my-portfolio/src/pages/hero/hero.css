@@ -48,10 +48,19 @@
 
 @media only screen and (max-width: 425px) {
   .hero-section h1 {
+    line-height: 4rem;
     font-size: var(--fs-800);
   }
 
   .hero-section {
     margin-bottom: 80px;
+  }
+
+  .hero-image-container .global-circular-image {
+    max-width: 200px;
+  }
+
+  .hero-section div > p {
+    display: none;
   }
 }
