@@ -1,5 +1,4 @@
 import useHoverScale from '../../effects/useHoverScale.js';
-import resume from '../../assets/resume/Resume.pdf';
 import { headshot } from '../../assets/Images.js';
 import './hero.css';
 
@@ -28,7 +27,7 @@ function HeroSection() {
               onMouseEnter={() => handleMouseEnter('resume')}
               onMouseLeave={handleMouseLeave}
             >
-              <a href={resume} download="Guadalupes_Resume.pdf">
+              <a href="/resume/Resume.pdf" download="Guadalupes_Resume.pdf">
                 <p>Download Resume</p>
               </a>
             </button>

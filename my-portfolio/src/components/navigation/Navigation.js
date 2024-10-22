@@ -1,6 +1,5 @@
 import useMobileView from '../../functions/useMobileView.js';
 import useHoverScale from '../../effects/useHoverScale.js';
-import resume from '../../assets/resume/Resume.pdf';
 import { useState } from 'react';
 import './navigation.css';
 import {
@@ -91,7 +90,11 @@ function Navigation() {
                 onMouseEnter={() => handleMouseEnter('resume')}
                 onMouseLeave={handleMouseLeave}
               >
-                <a href={resume} download="Guadalupes_Resume.pdf" className="">
+                <a
+                  href="/resume/Resume.pdf"
+                  download="Guadalupes_Resume.pdf"
+                  className=""
+                >
                   <p>Download Resume</p>
                 </a>
               </button>
@@ -141,7 +144,7 @@ function Navigation() {
                   onMouseLeave={handleMouseLeave}
                 >
                   <a
-                    href={resume}
+                    href="/resume/Resume.pdf"
                     download="Guadalupes_Resume.pdf"
                     className=""
                   >
