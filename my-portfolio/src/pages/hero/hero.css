@@ -38,3 +38,10 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media only screen and (max-width: 472px) {
+  .button-row {
+    gap: 10px;
+    flex-direction: column;
+  }
+}

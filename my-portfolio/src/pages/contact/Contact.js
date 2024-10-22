@@ -60,7 +60,7 @@ const Contact = () => {
   return (
     <section className="home-scroll-section content-grid" id="contact">
       <div>
-        <div className="text-m">Get in Touch</div>
+        <h2>Get in Touch</h2>
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="name-email-container">
             <div className="form-group">

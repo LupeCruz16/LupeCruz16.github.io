@@ -64,3 +64,18 @@ textarea {
 .social-icon:hover {
   fill: var(--accent-100);
 }
+
+@media only screen and (max-width: 1020px) {
+  .contact-footer-container {
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .contact-footer-container div:nth-child(2) {
+    flex-direction: column;
+  }
+}

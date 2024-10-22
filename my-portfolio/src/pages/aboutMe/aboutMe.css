@@ -74,34 +74,34 @@
     grid-template-columns: 1fr;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the content horizontally */
+    align-items: center;
   }
 
   .fun-image-layout {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto; /* Adjust the height so it fits the content */
+    height: auto;
     position: relative;
   }
 
   .fun-image-layout .global-circular-image {
-    position: static; /* Remove absolute positioning for better stacking */
-    max-width: 200px; /* Reduce the size for smaller screens */
-    margin-bottom: 20px; /* Add some spacing between the images */
+    position: static;
+    max-width: 200px;
+    margin-bottom: 20px;
   }
 
   .image-1,
   .image-2,
   .image-3 {
-    transform: none; /* Remove rotation for simpler layout */
-    z-index: auto; /* Allow normal stacking */
+    transform: none;
+    z-index: auto;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .fun-image-layout .global-circular-image {
-    max-width: 150px; /* Further reduce image size for smaller screens */
-    margin-bottom: 15px; /* Adjust spacing */
+    max-width: 150px;
+    margin-bottom: 15px;
   }
 }
