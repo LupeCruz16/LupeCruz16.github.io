@@ -58,3 +58,13 @@
   border-radius: 15px;
   margin-bottom: 12px;
 }
+
+@media only screen and (max-width: 1400px) {
+  .phase-2-img-container {
+    display: none;
+  }
+
+  .phase-2-details-container .grid-1-1-col-container {
+    grid-template-columns: 1fr;
+  }
+}

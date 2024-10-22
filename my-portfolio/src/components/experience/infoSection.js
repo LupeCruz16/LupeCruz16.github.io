@@ -34,6 +34,12 @@ const InfoSection = ({
             gap: 20px;
           }
 
+          .exp-media-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+          }
+
           .exp-media-container .rounded-left {
             border-top-left-radius: 15px;
             border-bottom-left-radius: 15px;
@@ -44,23 +50,61 @@ const InfoSection = ({
             border-bottom-right-radius: 15px;
           }
 
+          .exp-media-container video,
+          .exp-media-container img {
+            width: 100%;
+            height: 100%; 
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          .underline {
+            text-decoration: underline;
+          }
+          
+          @media (max-width: 1024px) {
+          .exp-info .grid-1half-1-col-container,
+          .exp-info .grid-1-1half-col-container {
+            grid-template-columns: 1fr;
+          }
+
+          .exp-media-container {
+            width: 100%;
+            height: auto;
+            min-height: 350px;
+            margin-bottom: 20px;
+          }
+
+          .exp-media-container img,
           .exp-media-container video {
             width: 100%;
             height: auto;
             object-fit: cover;
           }
 
-          .exp-media-container img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
+          .exp-media-container .rounded-left {
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
           }
 
-          .underline {
-            text-decoration: underline;
+          .exp-media-container .rounded-right {
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
           }
+        }
+
+        @media (max-width: 425px) {
+          .exp-media-container img,
+          .exp-media-container video {
+            object-fit: contain !important;
+          }
+        }
+
         `}
       </style>
+
       <div
         className={
           mediaFirst
