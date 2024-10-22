@@ -5,86 +5,85 @@ const Modal = ({ show, onClose, children, title = null }) => {
     return null;
   }
 
-  const overlayStyle = {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    backdropFilter: 'blur(8px)',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    zIndex: 1000,
-  };
+  const styles = `
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
 
-  const contentStyle = {
-    background: 'black',
-    borderRadius: '8px',
-    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-    maxHeight: '90vh',
-    overflowY: 'auto',
-    width: '80%',
-    position: 'relative',
-    // Scrollbar styling for Firefox
-    scrollbarWidth: 'thin', // Make the scrollbar thin
-    scrollbarColor: '#555 #222', // Dark scrollbar thumb and track
-  };
+    .modal-content {
+      background: black;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-height: 90vh;
+      overflow-y: auto;
+      width: 80%;
+      position: relative;
+      scrollbar-width: thin; /* Firefox scrollbar */
+      scrollbar-color: #555 #222;
+    }
 
-  const topBarStyle = {
-    position: 'sticky',
-    top: 0,
-    backgroundColor: 'black',
-    display: 'flex',
-    justifyContent: title ? 'space-between' : 'flex-end',
-    alignItems: 'center',
-    padding: '10px 20px',
-    borderBottom: '4px solid #433bff',
-    zIndex: 1001,
-  };
+    .modal-top-bar {
+      position: sticky;
+      top: 0;
+      background-color: black;
+      display: flex;
+      justify-content: ${title ? 'space-between' : 'flex-end'};
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 4px solid #433bff;
+      z-index: 1001;
+    }
 
-  const closeButtonStyle = {
-    background: 'transparent',
-    border: 'none',
-    color: 'white',
-    fontSize: '24px',
-    cursor: 'pointer',
-  };
+    .modal-close-button {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
 
-  // Custom scrollbar style for WebKit browsers (Chrome, Safari)
-  const customScrollBarStyle = `
-    /* WebKit browsers */
+    /* Custom scrollbar for WebKit browsers */
     ::-webkit-scrollbar {
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #222; /* Dark track */
+      background: #222;
     }
     ::-webkit-scrollbar-thumb {
-      background-color: #555; /* Dark thumb */
+      background-color: #555;
       border-radius: 10px;
-      border: 2px solid #222; /* Adds some space around the thumb */
+      border: 2px solid #222;
     }
   `;
 
   return (
-    <div style={overlayStyle} onClick={onClose}>
-      <div style={contentStyle} onClick={(e) => e.stopPropagation()}>
-        {/* Inject custom scrollbar style */}
-        <style>{customScrollBarStyle}</style>
-
-        {/* Sticky Top Bar with X to Close */}
-        <div style={topBarStyle}>
-          {title && <p>{title}</p>} {/* Only show if title is not null */}
-          <button style={closeButtonStyle} onClick={onClose}>
-            &times;
-          </button>
+    <>
+      {/* Inject CSS styles */}
+      <style>{styles}</style>
+      <div className="modal-overlay" onClick={onClose}>
+        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+          {/* Sticky Top Bar with X to Close */}
+          <div className="modal-top-bar">
+            {title && <p>{title}</p>}
+            <button className="modal-close-button" onClick={onClose}>
+              &times;
+            </button>
+          </div>
+          {/* Modal Content */}
+          {children}
         </div>
-        {/* Modal Content */}
-        {children}
       </div>
-    </div>
+    </>
   );
 };
 
