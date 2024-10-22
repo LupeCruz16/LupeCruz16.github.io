@@ -1,25 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.99ed1f79.css",
-    "main.js": "/static/js/main.11144cb9.js",
+    "main.css": "/static/css/main.a44f1d75.css",
+    "main.js": "/static/js/main.3674d7f9.js",
     "static/js/787.2dcca737.chunk.js": "/static/js/787.2dcca737.chunk.js",
-    "static/media/taylor_swift_concert.png": "/static/media/taylor_swift_concert.92670611225617aa2648.png",
+    "static/media/headshot.png": "/static/media/headshot.b01f18444ede4c25e4e6.png",
+    "static/media/sigparser_vice_demo.mp4": "/static/media/sigparser_vice_demo.001946d5118392d19687.mp4",
+    "static/media/sigparser_query_demo.mp4": "/static/media/sigparser_query_demo.8af5c344fd4c6d7ac30e.mp4",
     "static/media/museum.png": "/static/media/museum.f71872497de8f826319f.png",
-    "static/media/disney.png": "/static/media/disney.6fa59ea5ed1495b3a362.png",
-    "static/media/roam_ready.png": "/static/media/roam_ready.a6a061a86eb173a203cd.png",
-    "static/media/arduino.jpg": "/static/media/arduino.d50c36206f5bd9ea5f33.jpg",
-    "static/media/pacific_tech_client.jpg": "/static/media/pacific_tech_client.a48fa0df959a7524f397.jpg",
-    "static/media/bookEz.png": "/static/media/bookEz.acada231bc2101e5107a.png",
-    "static/media/chatbot.png": "/static/media/chatbot.a7773cf0d089727e21cf.png",
-    "static/media/headshot.jpg": "/static/media/headshot.737a73d8da681320c003.jpg",
+    "static/media/six.jpg": "/static/media/six.0246141fd5616f949b9d.jpg",
+    "static/media/sigparser_home_demo.mp4": "/static/media/sigparser_home_demo.7be532ce03d285ee7de5.mp4",
+    "static/media/zoo.jpg": "/static/media/zoo.bbd418bae9897a479408.jpg",
+    "static/media/taylor_swift.jpg": "/static/media/taylor_swift.999875b6a76aa6a0805a.jpg",
+    "static/media/cat.jpg": "/static/media/cat.ea9822cb80f8858ee023.jpg",
+    "static/media/s3_hero.png": "/static/media/s3_hero.86f6ab9f03b15df158f5.png",
+    "static/media/max.jpg": "/static/media/max.ec8d8cf016f539efd2cc.jpg",
+    "static/media/s3_promise.png": "/static/media/s3_promise.c9c372b9d031a5502268.png",
+    "static/media/zettler_building.jpg": "/static/media/zettler_building.f6e466eb91dc36fa15ad.jpg",
+    "static/media/zettler_showcase.jpg": "/static/media/zettler_showcase.a21333b480ba932ab236.jpg",
+    "static/media/langchain.png": "/static/media/langchain.7c73126dd76fef1dbfd0.png",
     "static/media/Resume.pdf": "/static/media/Resume.514641ab02b668bbcb6c.pdf",
+    "static/media/sigparser_proof.png": "/static/media/sigparser_proof.a0cf17d4d65fef590d82.png",
     "index.html": "/index.html",
-    "main.99ed1f79.css.map": "/static/css/main.99ed1f79.css.map",
-    "main.11144cb9.js.map": "/static/js/main.11144cb9.js.map",
+    "main.a44f1d75.css.map": "/static/css/main.a44f1d75.css.map",
+    "main.3674d7f9.js.map": "/static/js/main.3674d7f9.js.map",
     "787.2dcca737.chunk.js.map": "/static/js/787.2dcca737.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.99ed1f79.css",
-    "static/js/main.11144cb9.js"
+    "static/css/main.a44f1d75.css",
+    "static/js/main.3674d7f9.js"
   ]
 }
