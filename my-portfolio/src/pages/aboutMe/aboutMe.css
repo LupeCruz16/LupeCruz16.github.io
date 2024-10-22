@@ -1,14 +1,13 @@
-.about-me-image {
-  width: 300px;
-  height: 300px;
-}
-
 .fun-image-layout {
   position: relative;
   width: 100%;
   justify-content: center;
   display: flex;
-  height: 500px;
+  height: 700px;
+}
+
+.fun-image-layout .global-circular-image {
+  max-width: 350px;
 }
 
 .image-stack {
@@ -39,4 +38,70 @@
   left: 0;
   transform: rotate(-10deg);
   z-index: 1;
+}
+
+@media only screen and (max-width: 1275px) {
+  .about-me-container {
+    gap: 40px;
+  }
+
+  .fun-image-layout {
+    height: 530px;
+  }
+
+  .fun-image-layout .global-circular-image {
+    max-width: 250px;
+  }
+
+  .image-1 {
+    top: 0;
+    left: 0;
+  }
+
+  .image-2 {
+    top: 160px;
+    left: 160px;
+  }
+
+  .image-3 {
+    top: 280px;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .about-me-container {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+  }
+
+  .fun-image-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto; /* Adjust the height so it fits the content */
+    position: relative;
+  }
+
+  .fun-image-layout .global-circular-image {
+    position: static; /* Remove absolute positioning for better stacking */
+    max-width: 200px; /* Reduce the size for smaller screens */
+    margin-bottom: 20px; /* Add some spacing between the images */
+  }
+
+  .image-1,
+  .image-2,
+  .image-3 {
+    transform: none; /* Remove rotation for simpler layout */
+    z-index: auto; /* Allow normal stacking */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .fun-image-layout .global-circular-image {
+    max-width: 150px; /* Further reduce image size for smaller screens */
+    margin-bottom: 15px; /* Adjust spacing */
+  }
 }

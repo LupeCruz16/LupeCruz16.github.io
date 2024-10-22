@@ -5,7 +5,7 @@ import './aboutMe.css';
 function AboutMe() {
   return (
     <section className="home-scroll-section content-grid" id="about">
-      <div className="grid-1-1-col-container">
+      <div className="grid-1-1-col-container about-me-container">
         <div className="fun-image-layout">
           <div className="global-circular-image image-stack image-1">
             <img
@@ -33,7 +33,7 @@ function AboutMe() {
           </div>
         </div>
         <div>
-          <div className="text-m">About Me</div>
+          <h2>About Me</h2>
           <p>
             When I'm not enjoying anime or embracing my homebody lifestyle, I
             love going to concerts. Recently, my girlfriend and I had an
