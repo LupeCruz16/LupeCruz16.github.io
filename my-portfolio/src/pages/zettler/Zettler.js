@@ -1,10 +1,10 @@
-import ExpereinceOverview from '../../components/experience/experienceOverview.js';
+import ExpereinceOverview from '../experience/experienceOverview.js';
 import { zettler_showcase, zettler_building } from '../../assets/Images.js';
-import InfoSection from '../../components/experience/infoSection.js';
+import InfoSection from '../experience/infoSection.js';
 import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
 import './zettler.css';
 
-import ExperienceStack from '../../components/experience/experienceStack.js';
+import ExperienceStack from '../experience/experienceStack.js';
 
 import {
   PythonSVGIcon,

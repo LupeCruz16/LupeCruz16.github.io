@@ -1,7 +1,7 @@
-import ExpereinceOverview from '../../components/experience/experienceOverview.js';
+import ExpereinceOverview from '../experience/experienceOverview.js';
 import { sigparser_home, vice_demo, query_demo } from '../../assets/Videos.js';
-import ExperienceStack from '../../components/experience/experienceStack.js';
-import InfoSection from '../../components/experience/infoSection.js';
+import ExperienceStack from '../experience/experienceStack.js';
+import InfoSection from '../experience/infoSection.js';
 import { langchain, sigparser_proof } from '../../assets/Images.js';
 import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
 import React, { useRef, useEffect } from 'react';

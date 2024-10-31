@@ -1,8 +1,8 @@
-import ExpereinceOverview from '../../components/experience/experienceOverview.js';
+import ExpereinceOverview from '../experience/experienceOverview.js';
 import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
 import './s3.css';
 
-import InfoSection from '../../components/experience/infoSection.js';
+import InfoSection from '../experience/infoSection.js';
 
 import { s3_hero, s3_promise } from '../../assets/Images.js';
 

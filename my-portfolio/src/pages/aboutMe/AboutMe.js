@@ -3,34 +3,30 @@ import React from 'react';
 import './aboutMe.css';
 
 function AboutMe() {
+  const aboutMeImages = [
+    { src: museum, alt: 'Museum' },
+    { src: taylor_swift, alt: 'Taylor Swift' },
+    { src: cat_display, alt: 'Cat Display' },
+  ];
+
   return (
     <section className="home-scroll-section content-grid" id="about">
       <div className="grid-1-1-col-container about-me-container">
         <div className="fun-image-layout">
-          <div className="global-circular-image image-stack image-1">
-            <img
-              src={museum}
-              alt="Museum"
-              loading="lazy"
-              className="about-me-image"
-            />
-          </div>
-          <div className="global-circular-image image-stack image-2">
-            <img
-              src={taylor_swift}
-              alt="Taylor Swift"
-              loading="lazy"
-              className="about-me-image"
-            />
-          </div>
-          <div className="global-circular-image image-stack image-3">
-            <img
-              src={cat_display}
-              alt="Cat Display"
-              loading="lazy"
-              className="about-me-image"
-            />
-          </div>
+          {aboutMeImages.map((image, index) => (
+            // Class CSS only works up to 3 images
+            <div
+              key={index}
+              className={`global-circular-image image-stack image-${index + 1}`}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                className="about-me-image"
+              />
+            </div>
+          ))}
         </div>
         <div>
           <h2>About Me</h2>

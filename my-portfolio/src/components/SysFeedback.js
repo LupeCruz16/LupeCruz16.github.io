@@ -22,8 +22,8 @@ const SystemFeedback = ({ message, type, duration = 10000, clearFeedback }) => {
       margin: '20px 0',
       marginTop: '2.2rem',
       fontWeight: 'bold',
-      transition: 'opacity 0.5s ease', // Smooth fade out effect
-      opacity: isVisible ? 1 : 0, // Hide when isVisible is false
+      transition: 'opacity 0.5s ease',
+      opacity: isVisible ? 1 : 0,
     },
     positive: {
       backgroundColor: '#d4edda',

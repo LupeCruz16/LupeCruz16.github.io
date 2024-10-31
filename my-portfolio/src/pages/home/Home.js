@@ -1,4 +1,4 @@
-import ScrollIndicator from '../../components/ScrollIndicator.js';
+import ScrollIndicator from '../../components/scroll_Indicator/ScrollIndicator.js';
 import useFadeIn from '../../effects/FadeIn/useFadeIn.js';
 import Experience from '../experience/Experience.js';
 import AboutMe from '../aboutMe/AboutMe.js';
